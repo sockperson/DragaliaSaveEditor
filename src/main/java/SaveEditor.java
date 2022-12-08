@@ -25,10 +25,23 @@ public class SaveEditor {
         }
     }
 
+    private static void yesNoQuestion(String question, Runnable func){
+        System.out.print(question + " (y/n): ");        //print the question
+        String in = input.nextLine();                   //take in the input
+        in = in.toUpperCase();                          //make the input not case-sensitive
+        if(in.equals("Y") || in.equals("YES")){         //if input is 'Y', print response and run the function
+            func.run();
+        } else if (in.equals("N") || in.equals("NO")){  //if input is 'N', do nothing
+            return;
+        } else {                                        //if input invalid, ask the question again
+            System.out.println("Invalid Input. Enter 'y' or 'n'");
+            yesNoQuestion(question, func);
+        }
+    }
+
     public static void main(String[] args){
-        //System.out.print("Enter path for save file: (Default: DLSaveEditor directory):");
-        //String path = input.nextLine();
-        String path = "";
+        System.out.print("Enter path for save file: (Default: DragaliaSaveEditor directory):");
+        String path = input.nextLine();
         if(path.equals("")){
             try{
                 String programPath = getFilePath();
@@ -53,19 +66,21 @@ public class SaveEditor {
                 () -> util.battleOnTheByroad());
         yesNoQuestion(
                 "Add all adventurers to roster?",
-                "Added all missing adventurers.",
-                () -> util.addMissingAdventurers());
+                () -> System.out.println("Added " + util.addMissingAdventurers() + " missing adventurers."));
         yesNoQuestion(
                 "Set all owned item count to 30,000?",
                 "Done!",
                 () -> util.addItems());
         yesNoQuestion(
                 "Enter the Kaleidoscape? (Replaces portrait print inventory to a strong set of prints)",
-                "",
                 () -> yesNoQuestion(
                         "This will delete portrait prints that you already have equipped. Is this ok?",
                         "Done!",
                         () -> util.backToTheMines()));
+        yesNoQuestion(
+                "Add missing weapon skins?",
+                () -> System.out.println("Added " + util.addMissingWeaponSkins() + " missing weapon skins."));
+        //TODO options to add dragons, add weapons
         util.writeToFile();
     }
 }

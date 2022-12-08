@@ -9,5 +9,13 @@
     "Skill Damage +40%": 340000020,
     "HP +15%": 340000070,
     "Dragon Haste +15%": 340000120,
-    "Critical Damage +15%": 340000090
+    "Critical Damage +15%": 340000090,
+
+    "galex_a1": 1968,
+    "ycass_a1": 1967,
+    "breakpun35": 694,
+
+    "last_boost": 927,
+    "last_bravery": 929,
+    "last_destruction": 934
 }

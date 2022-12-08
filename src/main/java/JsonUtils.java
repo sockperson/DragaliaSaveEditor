@@ -11,23 +11,36 @@ public class JsonUtils {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     private final String path;
-    private final String basePath;
+    private String basePath = "";
     private final String rsrcPath;
     private JsonObject jsonData;
     private JsonArray adventurerData;
 
+    //Ability Name --> Ability ID
     private HashMap<String, Integer> kscapeAbilityMap = new HashMap<>();
+    //Adventurer Title --> Portrait Print ID
     private HashMap<String, Integer> kscapeLabelsMap = new HashMap<>();
+    //Adventurer ID --> Adventurer Story ID
+    private HashMap<Integer, Integer> adventurerStoryMap = new HashMap<>();
+
+    private Set<Integer> weaponSkinSet = new HashSet<>();
 
     public JsonUtils(String path){
         this.path = path;
-        basePath = path.substring(0, path.indexOf("savedata"));
+        try {
+            basePath = path.substring(0, path.indexOf("savedata"));
+        } catch (StringIndexOutOfBoundsException e){
+            System.out.println("savedata.txt not found in directory!");
+            System.exit(99);
+        }
         rsrcPath = basePath + "src/resources/";
         try {
             this.jsonData = getSaveData().getAsJsonObject();
-            readAdventurerJson();
+            readAdventurerData();
             readKscapeData();
             readKscapeLabels();
+            readStoryData();
+            readWeaponSkinData();
         } catch (IOException e) {
             System.out.println("Unable to read JSON data!");
             System.exit(99);
@@ -43,12 +56,6 @@ public class JsonUtils {
             GSON.toJson(jsonData, fileWriter);
             fileWriter.flush();
             fileWriter.close();
-
-            /*
-            FileWriter file = new FileWriter(newPath);
-            file.write(jsonData.toString());
-            file.flush();
-             */
             System.out.println("Saved output JSON to " + newPath);
         } catch (IOException e) {
             e.printStackTrace();
@@ -73,42 +80,15 @@ public class JsonUtils {
     }
 
     public String getFieldAsString(String... memberNames){
-        JsonElement jsonEle = jsonData;
-        for(String memberName : memberNames){
-            if(jsonEle.isJsonObject()){
-                jsonEle = jsonEle.getAsJsonObject().get(memberName);
-                if(!jsonEle.isJsonObject()){
-                    return jsonEle.getAsString();
-                }
-            }
-        }
-        return null;
+        return getField(memberNames).getAsString();
     }
 
     public int getFieldAsInt(String... memberNames){
-        JsonElement jsonEle = jsonData;
-        for(String memberName : memberNames){
-            if(jsonEle.isJsonObject()){
-                jsonEle = jsonEle.getAsJsonObject().get(memberName);
-                if(!jsonEle.isJsonObject()){
-                    return jsonEle.getAsInt();
-                }
-            }
-        }
-        return -1;
+        return getField(memberNames).getAsInt();
     }
 
     public JsonArray getFieldAsJsonArray(String... memberNames){
-        JsonElement jsonEle = jsonData;
-        for(String memberName : memberNames){
-            if(jsonEle.isJsonObject()){
-                jsonEle = jsonEle.getAsJsonObject().get(memberName);
-                if(!jsonEle.isJsonObject()){
-                    return jsonEle.getAsJsonArray();
-                }
-            }
-        }
-        return null;
+        return getField(memberNames).getAsJsonArray();
     }
 
     private void writeInteger(int value, String... memberNames){
@@ -142,7 +122,7 @@ public class JsonUtils {
         return sum;
     }
 
-    private void readAdventurerJson() throws IOException {
+    private void readAdventurerData() throws IOException {
         System.out.println("Reading adventurers JSON...");
         adventurerData = getJsonArray("adventurers.json");
     }
@@ -156,7 +136,7 @@ public class JsonUtils {
     }
 
     private void readKscapeLabels() throws IOException {
-        System.out.println("Reading Kscape Labels JSON...");
+        System.out.println("Reading Kscape Labels TXT...");
         BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "kscapeLabels.txt").toFile()));
         String out = br.readLine();
         while(out != null){
@@ -165,6 +145,40 @@ public class JsonUtils {
             String label = split1[2];
             kscapeLabelsMap.put(label, id);
             out = br.readLine();
+        }
+    }
+
+    private void readStoryData() throws IOException {
+        System.out.println("Reading adventurer stories TXT...");
+        BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "UnitStory.txt").toFile()));
+        br.readLine(); //ignore first line of txt file
+        String out = br.readLine();
+        while(out != null){
+            String[] fields = out.split(",");
+            int storyID = Integer.parseInt(fields[0]);
+            int advID = Integer.parseInt(fields[7]);
+            out = br.readLine();
+            if(adventurerStoryMap.containsKey(advID)){
+                continue; //ignore if unit already has a story added
+            }
+            adventurerStoryMap.put(advID, storyID);
+        }
+    }
+
+    private void readWeaponSkinData() throws IOException {
+        System.out.println("Reading weapon skins TXT...");
+        BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "WeaponSkin.txt").toFile()));
+        br.readLine(); //ignore first line of txt file
+        String out = br.readLine();
+        while(out != null){
+            String[] fields = out.split(",");
+            int skinID = Integer.parseInt(fields[0]);
+            boolean isPlayable = fields[13].equals("1");
+            out = br.readLine();
+            if(!isPlayable){
+                continue; //ignore if skin is unplayable
+            }
+            weaponSkinSet.add(skinID);
         }
     }
 
@@ -197,11 +211,12 @@ public class JsonUtils {
     }
 
     //Returns a built adventurer in savedata.txt format
-    private JsonObject buildUnit(JsonObject adventurerData, boolean hasManaSpiral){
+    private JsonObject buildUnit(JsonObject adventurerData){
         JsonObject out = new JsonObject();
         if(adventurerData.get("FullName").getAsString().equals("Puppy")){
             return null; //no dogs allowed
         }
+        boolean hasManaSpiral = adventurerData.get("ManaSpiralDate") != null;
         int hp, str;
         if(hasManaSpiral){
             hp = getSum(adventurerData, "AddMaxHp1", "PlusHp0", "PlusHp1", "PlusHp2", "PlusHp3", "PlusHp4", "PlusHp5", "McFullBonusHp5");
@@ -237,11 +252,18 @@ public class JsonUtils {
         out.addProperty("ex_ability_level", 5);
         out.addProperty("ex_ability_2_level", 5);
         out.addProperty("is_temporary", 0);
-        //out.addProperty("is_unlock_edit_skill", adventurerData.get("EditSkillCost").getAsInt() == 0 ? 0 : 1);
-        out.addProperty("is_unlock_edit_skill", 1); //lols
+        out.addProperty("is_unlock_edit_skill", adventurerData.get("EditSkillCost").getAsInt() == 0 ? 0 : 1);
         out.add("mana_circle_piece_id_list", mc);
         out.addProperty("list_view_flag", 1);
         return out;
+    }
+
+    private void unlockAdventurerStory(int id){
+        int storyID = adventurerStoryMap.get(id);
+        JsonObject story = new JsonObject();
+        story.addProperty("unit_story_id", storyID);
+        story.addProperty("is_read", 0);
+        getFieldAsJsonArray("data", "unit_story_list").add(story);
     }
 
     /// Util Methods \\\
@@ -249,7 +271,8 @@ public class JsonUtils {
     public void plunderDonkay(){ writeInteger(1_000_000, "data", "user_data", "crystal"); }
     public void battleOnTheByroad(){ writeInteger(10_000_000, "data", "user_data", "dew_point"); }
 
-    public void addMissingAdventurers(){
+    public int addMissingAdventurers(){
+        int count = 0;
         //Compile a list of ID's you have
         List<Integer> ownedIdList = new ArrayList<>();
         JsonArray ownedAdventurers = getFieldAsJsonArray("data", "chara_list");
@@ -264,13 +287,16 @@ public class JsonUtils {
             int id = adventurer.get("IdLong").getAsInt();
             if(!ownedIdList.contains(id)){ //If you don't own this adventurer
                 //Construct new unit (Does this unit have a mana spiral?)
-                JsonObject newUnit = buildUnit(adventurer, adventurer.get("ManaSpiralDate") != null);
+                JsonObject newUnit = buildUnit(adventurer);
                 //Add it to your roster
                 if(newUnit != null){
                     getField("data", "chara_list").getAsJsonArray().add(newUnit);
+                    unlockAdventurerStory(id);
+                    count++;
                 }
             }
         }
+        return count;
     }
 
     public void addItems(){
@@ -317,6 +343,24 @@ public class JsonUtils {
                 adventurer.addProperty("equip_talisman_key_id", 0);
             }
         }
+    }
+
+    public int addMissingWeaponSkins(){
+        int count = 0;
+        List<Integer> ownedWeaponSkinIDs = new ArrayList<>();
+        getFieldAsJsonArray("data", "weapon_skin_list").forEach(jsonEle ->
+                ownedWeaponSkinIDs.add(jsonEle.getAsJsonObject().get("weapon_skin_id").getAsInt()));
+        for(Integer weaponSkinId : weaponSkinSet){
+            if(!ownedWeaponSkinIDs.contains(weaponSkinId)){
+                JsonObject newWeaponSkin = new JsonObject();
+                newWeaponSkin.addProperty("weapon_skin_id", weaponSkinId);
+                newWeaponSkin.addProperty("is_new", 1);
+                newWeaponSkin.addProperty("gettime", Instant.now().getEpochSecond());
+                getFieldAsJsonArray("data", "weapon_skin_list").add(newWeaponSkin);
+                count++;
+            }
+        }
+        return count;
     }
 
 }

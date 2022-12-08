@@ -3,15 +3,20 @@ public class KscapeCombos {
     public static String[] CRIT_EASY = {"Critical Rate +15%", "Easy Hitter I"};
     public static String[] DDMG_EASY = {"Dragon Damage +18%", "Easy Hitter I"};
     public static String[] SKD_EASY = {"Skill Damage +40%", "Easy Hitter I"};
+    public static String[] DHASTE_EASY = {"Dragon Haste +15%", "Easy Hitter I"};
     public static String[] STR_PREP = {"Strength +20%", "Skill Prep +50%"};
     public static String[] STR_CD = {"Strength +20%", "Critical Damage +15%"};
     public static String[] STR_LUCKY = {"Strength +20%", "Lucky Hitter I"};
-    public static String[] DHASTE_HASTY = {"Dragon Haste +15%", "Hasty Hitter I"};
     public static String[] HP_HASTY = {"HP +15%", "Hasty Hitter I"};
 
     public static String[] CRIT_EASY_PREP = {"Critical Rate +15%", "Easy Hitter I", "Skill Prep +50%"};
 
-    public static String[][] KSCAPES = {CRIT_EASY, CRIT_EASY, DDMG_EASY, SKD_EASY, STR_PREP, STR_CD, STR_LUCKY, DHASTE_HASTY, HP_HASTY, CRIT_EASY_PREP};
+    //messing around lol
+    public static String[] HACKED1 = {"galex_a1", "breakpun35", "ycass_a1"};
+    public static String[] HACKED2 = {"last_boost", "last_bravery", "last_destruction"};
+
+    public static String[][] KSCAPES = {CRIT_EASY, CRIT_EASY, DDMG_EASY, SKD_EASY, DHASTE_EASY, STR_PREP, STR_CD, STR_LUCKY, HP_HASTY};
+    public static String[][] KSCAPES_PLUS_HACKED = {CRIT_EASY, CRIT_EASY, DDMG_EASY, SKD_EASY, DHASTE_EASY, STR_PREP, STR_CD, STR_LUCKY, HP_HASTY, HACKED1, HACKED2};
 
     public static String[] FLAME = {
             "Suave Lithomancer", "Leader of the Horse Clan", "Summertime Mouse", "The Blazewolf", "Encouraging Cheerleader",
