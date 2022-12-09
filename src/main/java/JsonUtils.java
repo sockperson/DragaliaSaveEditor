@@ -498,7 +498,6 @@ public class JsonUtils {
 
     private void unlockAdventurerStory(int id){
         if(id == 10750102){
-            System.out.println("skipped");
             return; //Mega Man has no adventurer story
         }
         int storyID = adventurerStoryMap.get(id);
