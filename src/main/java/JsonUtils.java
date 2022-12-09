@@ -241,8 +241,16 @@ public class JsonUtils {
         String weaponSeries = weapon.get("WeaponSeries").getAsString();
         double bonus = 0.0;
         switch(weaponSeries){
-            case "Core", "Void", "Chimeratech" -> bonus = 0.5;
-            case "High Dragon", "Agito", "Primal Dragon" -> bonus = 1.5;
+            case "Core":
+            case "Void":
+            case "Chimeratech":
+                bonus = 0.5;
+                break;
+            case "High Dragon":
+            case "Agito":
+            case "Primal Dragon":
+                bonus = 1.5;
+                break;
         }
         if(bonus == 0.0){
             return; //no bonus added
@@ -271,9 +279,9 @@ public class JsonUtils {
         for(int i = 0; i < combo.length; i++){
             int id = kscapeAbilityMap.get(combo[i]);
             switch(i){
-                case 0 -> abilityId1 = id;
-                case 1 -> abilityId2 = id;
-                case 2 -> abilityId3 = id;
+                case 0: abilityId1 = id; break;
+                case 1: abilityId2 = id; break;
+                case 2: abilityId3 = id; break;
             }
         }
 
@@ -347,15 +355,15 @@ public class JsonUtils {
         int level = 0;
         int rarity = dragonData.get("Rarity").getAsInt();
         switch(rarity){
-            case 3 -> {
+            case 3:
                 xp = 0; //todo? idk lol
                 level = 60;
-            }
-            case 4 -> {
+                break;
+            case 4:
                 xp = 625170;
                 level = 80;
-            }
-            case 5 -> {
+                break;
+            case 5:
                 if(has5UB){
                     xp = 3365620;
                     level = 120;
@@ -363,7 +371,7 @@ public class JsonUtils {
                     xp = 1240020;
                     level = 100;
                 }
-            }
+                break;
         }
         int a1Level = has5UB ?
                 6 : dragonData.get("Abilities15").getAsInt() != 0 ?
@@ -394,15 +402,15 @@ public class JsonUtils {
         int level = 0;
         int rarity = dragonData.get("Rarity").getAsInt();
         switch(rarity){
-            case 3 -> { level = 60; }
-            case 4 -> { level = 80; }
-            case 5 -> {
+            case 3: level = 60; break;
+            case 4: level = 80; break;
+            case 5:
                 if(has5UB){
                     level = 120;
                 } else {
                     level = 100;
                 }
-            }
+                break;
         }
         out.addProperty("dragon_id", dragonData.get("Id").getAsInt());
         out.addProperty("max_level", level);
@@ -428,40 +436,43 @@ public class JsonUtils {
         //can't make copies of Mega Man collab weapons apparently...
         int copiesCount = weaponData.get("Name").getAsString().contains("Mega") ? 1 : 4;
         switch(weaponSeries){
-            case "Core" -> {
+            case "Core":
                 switch(rarity){
-                    case 3 -> level = 20;
-                    case 4 -> level = 30;
-                    case 5 -> level = 50;
+                    case 3: level = 20; break;
+                    case 4: level = 30; break;
+                    case 5: level = 50; break;
                 }
                 unbinds = 4;
                 if(!isNullElement){
                     fiveStarSlotCount = 1;
                 }
-            }
-            case "Void", "Chimeratech", "High Dragon" -> {
+                break;
+            case "Void":
+            case "Chimeratech":
+            case "High Dragon":
                 level = 70;
                 unbinds = 8;
                 refines = 1;
                 fiveStarSlotCount = 1;
-            }
-            case "Agito" -> {
+                break;
+            case "Agito":
                 level = 90;
                 unbinds = 9;
                 refines = 2;
                 fiveStarSlotCount = 1;
                 sindomSlotCount = 2;
-            }
-            case "Primal Dragon" -> {
+                break;
+            case "Primal Dragon":
                 level = 80;
                 unbinds = 8;
                 refines = 1;
                 fiveStarSlotCount = 1;
                 sindomSlotCount = 2;
-            }
-            case "Other" -> {
+                break;
+            case "Other":
+                break;
                 //too lazy to find out numbers for these
-            }
+
         }
         //too lazy to figure out mapping for these abilities + no one cares honestly
         JsonArray voidWeaponAbilities = new JsonArray();
