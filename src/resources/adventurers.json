@@ -22,7 +22,8 @@
         "AddMaxAtk1": 366,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Aeleen",
@@ -47,7 +48,8 @@
         "AddMaxAtk1": 337,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Akasha",
@@ -74,6 +76,7 @@
         "ManaSpiralDate": "2021-07-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -101,6 +104,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -126,7 +130,8 @@
         "AddMaxAtk1": 363,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Albert",
@@ -153,6 +158,7 @@
         "ManaSpiralDate": "2020-08-18 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -178,7 +184,8 @@
         "AddMaxAtk1": 355,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Alex",
@@ -203,7 +210,8 @@
         "AddMaxAtk1": 342,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Alfonse",
@@ -230,6 +238,7 @@
         "ManaSpiralDate": "2020-04-20 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -257,6 +266,7 @@
         "ManaSpiralDate": "2020-03-31 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -284,6 +294,7 @@
         "ManaSpiralDate": "2020-08-18 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -311,6 +322,7 @@
         "ManaSpiralDate": "2021-12-08 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -338,6 +350,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -363,7 +376,8 @@
         "AddMaxAtk1": 373,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Audric",
@@ -388,7 +402,8 @@
         "AddMaxAtk1": 344,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Aurien",
@@ -415,6 +430,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -440,7 +456,8 @@
         "AddMaxAtk1": 352,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Basileus",
@@ -465,7 +482,8 @@
         "AddMaxAtk1": 367,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Beautician Zardin",
@@ -490,7 +508,8 @@
         "AddMaxAtk1": 370,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Bellina",
@@ -515,7 +534,8 @@
         "AddMaxAtk1": 360,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Berserker",
@@ -540,7 +560,8 @@
         "AddMaxAtk1": 318,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Bondforged Prince",
@@ -565,7 +586,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Bondforged Zethia",
@@ -590,7 +612,8 @@
         "AddMaxAtk1": 366,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Botan",
@@ -617,6 +640,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -644,6 +668,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -671,6 +696,7 @@
         "ManaSpiralDate": "2022-01-05 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -696,7 +722,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Celliera",
@@ -723,6 +750,7 @@
         "ManaSpiralDate": "2020-05-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -748,7 +776,8 @@
         "AddMaxAtk1": 339,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Chelsea",
@@ -773,7 +802,8 @@
         "AddMaxAtk1": 355,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Child Ranzal",
@@ -798,7 +828,8 @@
         "AddMaxAtk1": 372,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Chitose",
@@ -823,7 +854,8 @@
         "AddMaxAtk1": 320,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Chrom",
@@ -848,7 +880,8 @@
         "AddMaxAtk1": 362,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Cibella",
@@ -873,7 +906,8 @@
         "AddMaxAtk1": 314,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Civilian Leif",
@@ -898,7 +932,8 @@
         "AddMaxAtk1": 360,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Cleo",
@@ -925,6 +960,7 @@
         "ManaSpiralDate": "2020-02-28 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -952,6 +988,7 @@
         "ManaSpiralDate": "2020-01-23 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -979,6 +1016,7 @@
         "ManaSpiralDate": "2020-01-29 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1006,6 +1044,7 @@
         "ManaSpiralDate": "2020-12-18 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1031,7 +1070,8 @@
         "AddMaxAtk1": 362,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Dragonyule Lily",
@@ -1056,7 +1096,8 @@
         "AddMaxAtk1": 334,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Dragonyule Malora",
@@ -1081,7 +1122,8 @@
         "AddMaxAtk1": 369,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Dragonyule Nefaria",
@@ -1108,6 +1150,7 @@
         "ManaSpiralDate": "2020-12-18 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1133,7 +1176,8 @@
         "AddMaxAtk1": 357,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Dragonyule Victor",
@@ -1158,7 +1202,8 @@
         "AddMaxAtk1": 373,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Dragonyule Xainfried",
@@ -1185,6 +1230,7 @@
         "ManaSpiralDate": "2020-12-18 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1210,7 +1256,8 @@
         "AddMaxAtk1": 232,
         "PlusAtk5": 62,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Durant",
@@ -1235,7 +1282,8 @@
         "AddMaxAtk1": 362,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Edward",
@@ -1260,7 +1308,8 @@
         "AddMaxAtk1": 319,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Eirene",
@@ -1285,7 +1334,8 @@
         "AddMaxAtk1": 325,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Eleonora",
@@ -1310,7 +1360,8 @@
         "AddMaxAtk1": 343,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Elias",
@@ -1335,7 +1386,8 @@
         "AddMaxAtk1": 302,
         "PlusAtk5": 34,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Elisanne",
@@ -1362,6 +1414,7 @@
         "ManaSpiralDate": "2020-09-27 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1387,7 +1440,8 @@
         "AddMaxAtk1": 338,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Erik",
@@ -1414,6 +1468,7 @@
         "ManaSpiralDate": "2020-03-31 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1441,6 +1496,7 @@
         "ManaSpiralDate": "2020-09-03 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1466,7 +1522,8 @@
         "AddMaxAtk1": 343,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Ezelith",
@@ -1493,6 +1550,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1518,7 +1576,8 @@
         "AddMaxAtk1": 364,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Faris",
@@ -1543,7 +1602,8 @@
         "AddMaxAtk1": 362,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Farren",
@@ -1568,7 +1628,8 @@
         "AddMaxAtk1": 356,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Felicia",
@@ -1593,7 +1654,8 @@
         "AddMaxAtk1": 318,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Finni",
@@ -1618,7 +1680,8 @@
         "AddMaxAtk1": 369,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Fjorm",
@@ -1645,6 +1708,7 @@
         "ManaSpiralDate": "2020-04-20 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1670,7 +1734,8 @@
         "AddMaxAtk1": 344,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Forager Cleo",
@@ -1695,7 +1760,8 @@
         "AddMaxAtk1": 348,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Forager Mitsuba",
@@ -1720,7 +1786,8 @@
         "AddMaxAtk1": 354,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Formal Joachim",
@@ -1745,7 +1812,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Formal Noelle",
@@ -1770,7 +1838,8 @@
         "AddMaxAtk1": 336,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Forte",
@@ -1795,7 +1864,8 @@
         "AddMaxAtk1": 367,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Francesca",
@@ -1820,7 +1890,8 @@
         "AddMaxAtk1": 324,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Fritz",
@@ -1845,7 +1916,8 @@
         "AddMaxAtk1": 330,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Gala Alex",
@@ -1872,6 +1944,7 @@
         "ManaSpiralDate": "2021-05-10 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1897,7 +1970,8 @@
         "AddMaxAtk1": 369,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Gala Chelle",
@@ -1922,7 +1996,8 @@
         "AddMaxAtk1": 363,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Gala Cleo",
@@ -1949,6 +2024,7 @@
         "ManaSpiralDate": "2021-08-10 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1976,6 +2052,7 @@
         "ManaSpiralDate": "2021-04-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2001,7 +2078,8 @@
         "AddMaxAtk1": 349,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Gala Gatov",
@@ -2026,7 +2104,8 @@
         "AddMaxAtk1": 372,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Gala Laxi",
@@ -2053,6 +2132,7 @@
         "ManaSpiralDate": "2021-06-09 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2080,6 +2160,7 @@
         "ManaSpiralDate": "2021-11-16 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2105,7 +2186,8 @@
         "AddMaxAtk1": 362,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Gala Luca",
@@ -2132,6 +2214,7 @@
         "ManaSpiralDate": "2021-06-15 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2157,7 +2240,8 @@
         "AddMaxAtk1": 372,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Gala Mym",
@@ -2184,6 +2268,7 @@
         "ManaSpiralDate": "2022-02-28 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2209,7 +2294,8 @@
         "AddMaxAtk1": 363,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Gala Notte",
@@ -2234,7 +2320,8 @@
         "AddMaxAtk1": 357,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Gala Prince",
@@ -2261,6 +2348,7 @@
         "ManaSpiralDate": "2021-04-07 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2288,6 +2376,7 @@
         "ManaSpiralDate": "2021-04-19 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2315,6 +2404,7 @@
         "ManaSpiralDate": "2022-01-31 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2342,6 +2432,7 @@
         "ManaSpiralDate": "2022-02-09 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2367,7 +2458,8 @@
         "AddMaxAtk1": 374,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Gauld",
@@ -2392,7 +2484,8 @@
         "AddMaxAtk1": 352,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Grace",
@@ -2417,7 +2510,8 @@
         "AddMaxAtk1": 337,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Grimnir",
@@ -2442,7 +2536,8 @@
         "AddMaxAtk1": 366,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Halloween Akasha",
@@ -2467,7 +2562,8 @@
         "AddMaxAtk1": 372,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Halloween Althemia",
@@ -2494,6 +2590,7 @@
         "ManaSpiralDate": "2020-10-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2521,6 +2618,7 @@
         "ManaSpiralDate": "2020-10-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2548,6 +2646,7 @@
         "ManaSpiralDate": "2020-06-19 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2573,7 +2672,8 @@
         "AddMaxAtk1": 360,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Halloween Lowen",
@@ -2598,7 +2698,8 @@
         "AddMaxAtk1": 325,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Halloween Melsa",
@@ -2623,7 +2724,8 @@
         "AddMaxAtk1": 348,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Halloween Mym",
@@ -2648,7 +2750,8 @@
         "AddMaxAtk1": 352,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Halloween Odetta",
@@ -2675,6 +2778,7 @@
         "ManaSpiralDate": "2020-10-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2700,7 +2804,8 @@
         "AddMaxAtk1": 339,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Hanabusa",
@@ -2725,7 +2830,8 @@
         "AddMaxAtk1": 336,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Harle",
@@ -2750,7 +2856,8 @@
         "AddMaxAtk1": 337,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Hawk",
@@ -2777,6 +2884,7 @@
         "ManaSpiralDate": "2020-03-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2804,6 +2912,7 @@
         "ManaSpiralDate": "2020-01-23 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2831,6 +2940,7 @@
         "ManaSpiralDate": "2020-08-18 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2856,7 +2966,8 @@
         "AddMaxAtk1": 318,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Housekeeper Pia",
@@ -2881,7 +2992,8 @@
         "AddMaxAtk1": 319,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Humanoid Jupiter",
@@ -2906,7 +3018,8 @@
         "AddMaxAtk1": 370,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Humanoid Mercury",
@@ -2931,7 +3044,8 @@
         "AddMaxAtk1": 357,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Humanoid Midgardsormr",
@@ -2956,7 +3070,8 @@
         "AddMaxAtk1": 336,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Humanoid Zodiark",
@@ -2981,7 +3096,8 @@
         "AddMaxAtk1": 363,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Hunter Berserker",
@@ -3006,7 +3122,8 @@
         "AddMaxAtk1": 362,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Hunter Sarisse",
@@ -3031,7 +3148,8 @@
         "AddMaxAtk1": 352,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Hunter Vanessa",
@@ -3056,7 +3174,8 @@
         "AddMaxAtk1": 364,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Ieyasu",
@@ -3083,6 +3202,7 @@
         "ManaSpiralDate": "2019-12-31 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3108,7 +3228,8 @@
         "AddMaxAtk1": 360,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Incognito Nefaria",
@@ -3133,7 +3254,8 @@
         "AddMaxAtk1": 368,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Irfan",
@@ -3158,7 +3280,8 @@
         "AddMaxAtk1": 322,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Isaac",
@@ -3183,7 +3306,8 @@
         "AddMaxAtk1": 336,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Izumo",
@@ -3208,7 +3332,8 @@
         "AddMaxAtk1": 331,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Jakob",
@@ -3233,7 +3358,8 @@
         "AddMaxAtk1": 314,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Jiang Ziya",
@@ -3258,7 +3384,8 @@
         "AddMaxAtk1": 334,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Joachim",
@@ -3283,7 +3410,8 @@
         "AddMaxAtk1": 343,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Joe",
@@ -3310,6 +3438,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3335,7 +3464,8 @@
         "AddMaxAtk1": 318,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Joker",
@@ -3360,7 +3490,8 @@
         "AddMaxAtk1": 360,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Julietta",
@@ -3387,6 +3518,7 @@
         "ManaSpiralDate": "2020-08-18 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3412,7 +3544,8 @@
         "AddMaxAtk1": 352,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Karina",
@@ -3439,6 +3572,7 @@
         "ManaSpiralDate": "2020-07-03 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3466,6 +3600,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3491,7 +3626,8 @@
         "AddMaxAtk1": 349,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Kimono Luca",
@@ -3516,7 +3652,8 @@
         "AddMaxAtk1": 352,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Kimono Notte",
@@ -3541,7 +3678,8 @@
         "AddMaxAtk1": 333,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Kirsty",
@@ -3568,6 +3706,7 @@
         "ManaSpiralDate": "2021-09-13 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3595,6 +3734,7 @@
         "ManaSpiralDate": "2020-04-28 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3620,7 +3760,8 @@
         "AddMaxAtk1": 350,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Kuzunoha",
@@ -3645,7 +3786,8 @@
         "AddMaxAtk1": 336,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Lapis",
@@ -3670,7 +3812,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Laranoa",
@@ -3697,6 +3840,7 @@
         "ManaSpiralDate": "2020-11-04 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3724,6 +3868,7 @@
         "ManaSpiralDate": "2020-01-23 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3749,7 +3894,8 @@
         "AddMaxAtk1": 354,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Lazry",
@@ -3776,6 +3922,7 @@
         "ManaSpiralDate": "2021-09-22 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3803,6 +3950,7 @@
         "ManaSpiralDate": "2021-08-17 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3830,6 +3978,7 @@
         "ManaSpiralDate": "2020-07-03 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3857,6 +4006,7 @@
         "ManaSpiralDate": "2020-03-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3882,7 +4032,8 @@
         "AddMaxAtk1": 374,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Linus",
@@ -3907,7 +4058,8 @@
         "AddMaxAtk1": 316,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Louise",
@@ -3934,6 +4086,7 @@
         "ManaSpiralDate": "2020-06-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3961,6 +4114,7 @@
         "ManaSpiralDate": "2020-06-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3988,6 +4142,7 @@
         "ManaSpiralDate": "2020-09-03 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4015,6 +4170,7 @@
         "ManaSpiralDate": "2020-09-03 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4042,6 +4198,7 @@
         "ManaSpiralDate": "2020-07-03 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4067,7 +4224,8 @@
         "AddMaxAtk1": 330,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Malora",
@@ -4092,7 +4250,8 @@
         "AddMaxAtk1": 319,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Maribelle",
@@ -4119,6 +4278,7 @@
         "ManaSpiralDate": "2020-09-27 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4146,6 +4306,7 @@
         "ManaSpiralDate": "2020-04-20 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4173,6 +4334,7 @@
         "ManaSpiralDate": "2020-09-11 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4198,7 +4360,8 @@
         "AddMaxAtk1": 337,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Mega Man",
@@ -4223,7 +4386,8 @@
         "AddMaxAtk1": 339,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Melody",
@@ -4250,6 +4414,7 @@
         "ManaSpiralDate": "2020-06-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4275,7 +4440,8 @@
         "AddMaxAtk1": 324,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Mikoto",
@@ -4302,6 +4468,7 @@
         "ManaSpiralDate": "2020-09-27 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4327,7 +4494,8 @@
         "AddMaxAtk1": 340,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Mitsuhide",
@@ -4352,7 +4520,8 @@
         "AddMaxAtk1": 356,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Mona",
@@ -4377,7 +4546,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Mordecai",
@@ -4402,7 +4572,8 @@
         "AddMaxAtk1": 318,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Musashi",
@@ -4427,7 +4598,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Myriam",
@@ -4452,7 +4624,8 @@
         "AddMaxAtk1": 349,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Nadine",
@@ -4477,7 +4650,8 @@
         "AddMaxAtk1": 366,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Natalie",
@@ -4502,7 +4676,8 @@
         "AddMaxAtk1": 374,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Naveed",
@@ -4529,6 +4704,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4556,6 +4732,7 @@
         "ManaSpiralDate": "2020-02-28 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4581,7 +4758,8 @@
         "AddMaxAtk1": 342,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Nicolas",
@@ -4606,7 +4784,8 @@
         "AddMaxAtk1": 349,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Nina",
@@ -4631,7 +4810,8 @@
         "AddMaxAtk1": 336,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Nino",
@@ -4656,7 +4836,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Nobunaga",
@@ -4681,7 +4862,8 @@
         "AddMaxAtk1": 373,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Noelle",
@@ -4706,7 +4888,8 @@
         "AddMaxAtk1": 339,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Norwin",
@@ -4731,7 +4914,8 @@
         "AddMaxAtk1": 344,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Nurse Aeleen",
@@ -4758,6 +4942,7 @@
         "ManaSpiralDate": "2021-05-03 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4783,7 +4968,8 @@
         "AddMaxAtk1": 349,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Opera Karina",
@@ -4808,7 +4994,8 @@
         "AddMaxAtk1": 339,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Origa",
@@ -4833,7 +5020,8 @@
         "AddMaxAtk1": 367,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Orion",
@@ -4858,7 +5046,8 @@
         "AddMaxAtk1": 331,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Orsem",
@@ -4883,7 +5072,8 @@
         "AddMaxAtk1": 345,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Panther",
@@ -4908,7 +5098,8 @@
         "AddMaxAtk1": 366,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Patia",
@@ -4935,6 +5126,7 @@
         "ManaSpiralDate": "2020-01-23 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4960,7 +5152,8 @@
         "AddMaxAtk1": 360,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Peony",
@@ -4985,7 +5178,8 @@
         "AddMaxAtk1": 348,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Phares",
@@ -5010,7 +5204,8 @@
         "AddMaxAtk1": 348,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Philia",
@@ -5035,7 +5230,8 @@
         "AddMaxAtk1": 336,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Pia",
@@ -5060,7 +5256,8 @@
         "AddMaxAtk1": 319,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Pietro",
@@ -5085,7 +5282,8 @@
         "AddMaxAtk1": 318,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Pinon",
@@ -5110,7 +5308,8 @@
         "AddMaxAtk1": 352,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Pipple",
@@ -5135,7 +5334,8 @@
         "AddMaxAtk1": 338,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Puppy",
@@ -5160,7 +5360,8 @@
         "AddMaxAtk1": 325,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 99
     },
     {
         "FullName": "Radiant Xuan Zang",
@@ -5185,7 +5386,8 @@
         "AddMaxAtk1": 348,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Raemond",
@@ -5210,7 +5412,8 @@
         "AddMaxAtk1": 342,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Ramona",
@@ -5235,7 +5438,8 @@
         "AddMaxAtk1": 372,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Ranzal",
@@ -5262,6 +5466,7 @@
         "ManaSpiralDate": "2020-05-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5287,7 +5492,8 @@
         "AddMaxAtk1": 325,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Regina",
@@ -5312,7 +5518,8 @@
         "AddMaxAtk1": 372,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Rena",
@@ -5337,7 +5544,8 @@
         "AddMaxAtk1": 338,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Renee",
@@ -5364,6 +5572,7 @@
         "ManaSpiralDate": "2020-11-04 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5391,6 +5600,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5416,7 +5626,8 @@
         "AddMaxAtk1": 351,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Ricardt",
@@ -5443,6 +5654,7 @@
         "ManaSpiralDate": "2020-07-03 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5470,6 +5682,7 @@
         "ManaSpiralDate": "2020-04-28 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5495,7 +5708,8 @@
         "AddMaxAtk1": 318,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Ryszarda",
@@ -5520,7 +5734,8 @@
         "AddMaxAtk1": 330,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Saiga",
@@ -5545,7 +5760,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Sandalphon",
@@ -5570,7 +5786,8 @@
         "AddMaxAtk1": 334,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Sazanka",
@@ -5597,6 +5814,7 @@
         "ManaSpiralDate": "2022-01-18 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5622,7 +5840,8 @@
         "AddMaxAtk1": 368,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Serena",
@@ -5649,6 +5868,7 @@
         "ManaSpiralDate": "2020-12-07 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5674,7 +5894,8 @@
         "AddMaxAtk1": 351,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Sharena",
@@ -5699,7 +5920,8 @@
         "AddMaxAtk1": 330,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Sharpshooter Joe",
@@ -5724,7 +5946,8 @@
         "AddMaxAtk1": 342,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Sharpshooter Sarisse",
@@ -5749,7 +5972,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Sheila",
@@ -5774,7 +5998,8 @@
         "AddMaxAtk1": 358,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Shingen",
@@ -5799,7 +6024,8 @@
         "AddMaxAtk1": 334,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Sinoa",
@@ -5824,7 +6050,8 @@
         "AddMaxAtk1": 339,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Sophie",
@@ -5851,6 +6078,7 @@
         "ManaSpiralDate": "2020-04-28 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5876,7 +6104,8 @@
         "AddMaxAtk1": 350,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Student Maribelle",
@@ -5901,7 +6130,8 @@
         "AddMaxAtk1": 368,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Su Fang",
@@ -5928,6 +6158,7 @@
         "ManaSpiralDate": "2020-03-12 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5953,7 +6184,8 @@
         "AddMaxAtk1": 338,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Summer Amane",
@@ -5978,7 +6210,8 @@
         "AddMaxAtk1": 334,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Summer Celliera",
@@ -6005,6 +6238,7 @@
         "ManaSpiralDate": "2020-07-20 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6030,7 +6264,8 @@
         "AddMaxAtk1": 366,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Summer Cleo",
@@ -6057,6 +6292,7 @@
         "ManaSpiralDate": "2020-08-18 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6082,7 +6318,8 @@
         "AddMaxAtk1": 338,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Summer Ieyasu",
@@ -6107,7 +6344,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Summer Julietta",
@@ -6134,6 +6372,7 @@
         "ManaSpiralDate": "2020-07-20 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6159,7 +6398,8 @@
         "AddMaxAtk1": 367,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Summer Luca",
@@ -6184,7 +6424,8 @@
         "AddMaxAtk1": 357,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Summer Mikoto",
@@ -6209,7 +6450,8 @@
         "AddMaxAtk1": 352,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Summer Mitsuhide",
@@ -6234,7 +6476,8 @@
         "AddMaxAtk1": 358,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Summer Mym",
@@ -6259,7 +6502,8 @@
         "AddMaxAtk1": 363,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Summer Norwin",
@@ -6284,7 +6528,8 @@
         "AddMaxAtk1": 357,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Summer Patia",
@@ -6309,7 +6554,8 @@
         "AddMaxAtk1": 373,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Summer Prince",
@@ -6334,7 +6580,8 @@
         "AddMaxAtk1": 342,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Summer Ranzal",
@@ -6359,7 +6606,8 @@
         "AddMaxAtk1": 325,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Summer Sinoa",
@@ -6384,7 +6632,8 @@
         "AddMaxAtk1": 349,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Summer Verica",
@@ -6411,6 +6660,7 @@
         "ManaSpiralDate": "2021-05-28 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6438,6 +6688,7 @@
         "ManaSpiralDate": "2020-04-28 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6463,7 +6714,8 @@
         "AddMaxAtk1": 355,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Templar Hope",
@@ -6488,7 +6740,8 @@
         "AddMaxAtk1": 316,
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Thaniel",
@@ -6513,7 +6766,8 @@
         "AddMaxAtk1": 324,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "The Prince",
@@ -6540,6 +6794,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6565,7 +6820,8 @@
         "AddMaxAtk1": 357,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Tobias",
@@ -6590,7 +6846,8 @@
         "AddMaxAtk1": 354,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Undercover Grace",
@@ -6615,7 +6872,8 @@
         "AddMaxAtk1": 362,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Valentine's Addis",
@@ -6640,7 +6898,8 @@
         "AddMaxAtk1": 356,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Valentine's Chelsea",
@@ -6665,7 +6924,8 @@
         "AddMaxAtk1": 354,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Valentine's Ezelith",
@@ -6690,7 +6950,8 @@
         "AddMaxAtk1": 331,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Valentine's Hildegarde",
@@ -6717,6 +6978,7 @@
         "ManaSpiralDate": "2020-11-16 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6742,7 +7004,8 @@
         "AddMaxAtk1": 352,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Valentine's Orion",
@@ -6769,6 +7032,7 @@
         "ManaSpiralDate": "2020-11-16 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6796,6 +7060,7 @@
         "ManaSpiralDate": "2022-04-06 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6821,7 +7086,8 @@
         "AddMaxAtk1": 369,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Vanessa",
@@ -6848,6 +7114,7 @@
         "ManaSpiralDate": "2020-09-11 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6873,7 +7140,8 @@
         "AddMaxAtk1": 368,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Verica",
@@ -6898,7 +7166,8 @@
         "AddMaxAtk1": 325,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Veronica",
@@ -6925,6 +7194,7 @@
         "ManaSpiralDate": "2020-04-20 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6952,6 +7222,7 @@
         "ManaSpiralDate": "2020-03-31 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6979,6 +7250,7 @@
         "ManaSpiralDate": "2021-12-15 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7004,7 +7276,8 @@
         "AddMaxAtk1": 325,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Vixel",
@@ -7031,6 +7304,7 @@
         "ManaSpiralDate": "2021-08-04 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 4,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7056,7 +7330,8 @@
         "AddMaxAtk1": 319,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Wedding Aoi",
@@ -7083,6 +7358,7 @@
         "ManaSpiralDate": "2021-10-13 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 3,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7108,7 +7384,8 @@
         "AddMaxAtk1": 344,
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Wedding Xania",
@@ -7133,7 +7410,8 @@
         "AddMaxAtk1": 325,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Wu Kong",
@@ -7158,7 +7436,8 @@
         "AddMaxAtk1": 339,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Xainfried",
@@ -7185,6 +7464,7 @@
         "ManaSpiralDate": "2020-02-28 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7212,6 +7492,7 @@
         "ManaSpiralDate": "2020-07-03 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7239,6 +7520,7 @@
         "ManaSpiralDate": "2019-12-26 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7264,7 +7546,8 @@
         "AddMaxAtk1": 331,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Xuan Zang",
@@ -7289,7 +7572,8 @@
         "AddMaxAtk1": 331,
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Yachiyo",
@@ -7314,7 +7598,8 @@
         "AddMaxAtk1": 360,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Yaten",
@@ -7341,6 +7626,7 @@
         "ManaSpiralDate": "2021-08-30 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 5,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7366,7 +7652,8 @@
         "AddMaxAtk1": 361,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Yue",
@@ -7391,7 +7678,8 @@
         "AddMaxAtk1": 325,
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Yukata Cassandra",
@@ -7418,6 +7706,7 @@
         "ManaSpiralDate": "2021-05-19 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7443,7 +7732,8 @@
         "AddMaxAtk1": 350,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 1
     },
     {
         "FullName": "Yukata Curran",
@@ -7468,7 +7758,8 @@
         "AddMaxAtk1": 356,
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 4
+        "EditSkillCost": 4,
+        "ElementalTypeId": 4
     },
     {
         "FullName": "Yukata Lathna",
@@ -7493,7 +7784,8 @@
         "AddMaxAtk1": 373,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 7
+        "EditSkillCost": 7,
+        "ElementalTypeId": 3
     },
     {
         "FullName": "Yukimura",
@@ -7518,7 +7810,8 @@
         "AddMaxAtk1": 367,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 6
+        "EditSkillCost": 6,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Yurius",
@@ -7543,7 +7836,8 @@
         "AddMaxAtk1": 367,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 0
+        "EditSkillCost": 0,
+        "ElementalTypeId": 2
     },
     {
         "FullName": "Yuya",
@@ -7570,6 +7864,7 @@
         "ManaSpiralDate": "2020-12-07 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
+        "ElementalTypeId": 1,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7595,7 +7890,8 @@
         "AddMaxAtk1": 349,
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Zardin",
@@ -7622,6 +7918,7 @@
         "ManaSpiralDate": "2020-07-03 06:00:00",
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
+        "ElementalTypeId": 2,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7647,7 +7944,8 @@
         "AddMaxAtk1": 368,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 3
+        "EditSkillCost": 3,
+        "ElementalTypeId": 5
     },
     {
         "FullName": "Zhu Bajie",
@@ -7672,6 +7970,7 @@
         "AddMaxAtk1": 369,
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
-        "EditSkillCost": 5
+        "EditSkillCost": 5,
+        "ElementalTypeId": 4
     }
 ]

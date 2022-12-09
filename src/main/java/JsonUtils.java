@@ -8,6 +8,8 @@ import com.google.gson.stream.JsonReader;
 
 public class JsonUtils {
 
+    private static final int MAX_DRAGON_CAPACITY = 525;
+
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     private final String path;
@@ -15,6 +17,8 @@ public class JsonUtils {
     private final String rsrcPath;
     private JsonObject jsonData;
     private JsonArray adventurerData;
+    private JsonArray dragonsData;
+    private JsonArray weaponsData;
 
     //Ability Name --> Ability ID
     private HashMap<String, Integer> kscapeAbilityMap = new HashMap<>();
@@ -37,10 +41,12 @@ public class JsonUtils {
         try {
             this.jsonData = getSaveData().getAsJsonObject();
             readAdventurerData();
+            readDragonsData();
             readKscapeData();
             readKscapeLabels();
             readStoryData();
             readWeaponSkinData();
+            readWeaponsData();
         } catch (IOException e) {
             System.out.println("Unable to read JSON data!");
             System.exit(99);
@@ -60,6 +66,11 @@ public class JsonUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public double addDoubles(double val1, double val2){
+        //sure hope this prevents floating point inaccuracy
+        return ((10.0 * val1) + (10.0 * val2)) / 10;
     }
 
     public JsonObject getJsonData(){ return jsonData; }
@@ -123,12 +134,18 @@ public class JsonUtils {
     }
 
     private void readAdventurerData() throws IOException {
-        System.out.println("Reading adventurers JSON...");
         adventurerData = getJsonArray("adventurers.json");
     }
 
+    private void readDragonsData() throws IOException {
+        dragonsData = getJsonArray("dragons.json");
+    }
+
+    private void readWeaponsData() throws IOException {
+        weaponsData = getJsonArray("weapons.json");
+    }
+
     private void readKscapeData() throws IOException {
-        System.out.println("Reading Kscape Abilities JSON...");
         JsonObject kscapeJson = getJsonObject("kscape.json");
         for(Map.Entry<String, JsonElement> entry : kscapeJson.entrySet()){
             kscapeAbilityMap.put(entry.getKey(), entry.getValue().getAsInt());
@@ -136,7 +153,6 @@ public class JsonUtils {
     }
 
     private void readKscapeLabels() throws IOException {
-        System.out.println("Reading Kscape Labels TXT...");
         BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "kscapeLabels.txt").toFile()));
         String out = br.readLine();
         while(out != null){
@@ -149,7 +165,6 @@ public class JsonUtils {
     }
 
     private void readStoryData() throws IOException {
-        System.out.println("Reading adventurer stories TXT...");
         BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "UnitStory.txt").toFile()));
         br.readLine(); //ignore first line of txt file
         String out = br.readLine();
@@ -166,7 +181,6 @@ public class JsonUtils {
     }
 
     private void readWeaponSkinData() throws IOException {
-        System.out.println("Reading weapon skins TXT...");
         BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "WeaponSkin.txt").toFile()));
         br.readLine(); //ignore first line of txt file
         String out = br.readLine();
@@ -179,6 +193,73 @@ public class JsonUtils {
                 continue; //ignore if skin is unplayable
             }
             weaponSkinSet.add(skinID);
+        }
+    }
+
+    private void addAdventurerEncyclopediaBonus(JsonObject adv){
+        boolean hasManaSpiral = adv.get("ManaSpiralDate") != null;
+        double bonus = hasManaSpiral ? 0.3 : 0.2;
+        int elementID = adv.get("ElementalTypeId").getAsInt();
+        JsonArray albumBonuses = getFieldAsJsonArray("data", "fort_bonus_list", "chara_bonus_by_album");
+        for(JsonElement jsonEle : albumBonuses){
+            JsonObject albumBonus = jsonEle.getAsJsonObject();
+            if(albumBonus.get("elemental_type").getAsInt() == elementID){
+                double hp = albumBonus.get("hp").getAsDouble();
+                double attack = albumBonus.get("attack").getAsDouble();
+                double resultHp = addDoubles(hp, bonus);
+                double resultStr = addDoubles(attack, bonus);
+                albumBonus.remove("hp");
+                albumBonus.remove("attack");
+                albumBonus.addProperty("hp", resultHp);
+                albumBonus.addProperty("attack", resultStr);
+            }
+        }
+    }
+
+    private void addDragonEncyclopediaBonus(JsonObject dragon){
+        boolean has5UB = dragon.get("MaxLimitBreakCount").getAsInt() == 5;
+        double hpBonus = has5UB ? 0.3 : 0.2;
+        double strBonus = 0.1;
+        int elementID = dragon.get("ElementalTypeId").getAsInt();
+        JsonArray albumBonuses = getFieldAsJsonArray("data", "fort_bonus_list", "dragon_bonus_by_album");
+        for(JsonElement jsonEle : albumBonuses){
+            JsonObject albumBonus = jsonEle.getAsJsonObject();
+            if(albumBonus.get("elemental_type").getAsInt() == elementID){
+                double hp = albumBonus.get("hp").getAsDouble();
+                double attack = albumBonus.get("attack").getAsDouble();
+                double resultHp = addDoubles(hp, hpBonus);
+                double resultStr = addDoubles(attack, strBonus);
+                albumBonus.remove("hp");
+                albumBonus.remove("attack");
+                albumBonus.addProperty("hp", resultHp);
+                albumBonus.addProperty("attack", resultStr);
+            }
+        }
+    }
+
+    private void addWeaponBonus(JsonObject weapon){
+        String weaponSeries = weapon.get("WeaponSeries").getAsString();
+        double bonus = 0.0;
+        switch(weaponSeries){
+            case "Core", "Void", "Chimeratech" -> bonus = 0.5;
+            case "High Dragon", "Agito", "Primal Dragon" -> bonus = 1.5;
+        }
+        if(bonus == 0.0){
+            return; //no bonus added
+        }
+        int weaponTypeId = weapon.get("WeaponTypeId").getAsInt();
+        JsonArray weaponBonuses = getFieldAsJsonArray("data", "fort_bonus_list", "param_bonus_by_weapon");
+        for(JsonElement jsonEle : weaponBonuses){
+            JsonObject weaponBonus = jsonEle.getAsJsonObject();
+            if(weaponBonus.get("weapon_type").getAsInt() == weaponTypeId){
+                //for weapon bonuses: hp will always be equal to str
+                double value = weaponBonus.get("hp").getAsDouble();
+                double resultBonus = addDoubles(value, bonus);
+                weaponBonus.remove("hp");
+                weaponBonus.remove("attack");
+                weaponBonus.addProperty("hp", resultBonus);
+                weaponBonus.addProperty("attack", resultBonus);
+            }
         }
     }
 
@@ -258,6 +339,152 @@ public class JsonUtils {
         return out;
     }
 
+    //Returns a built dragon in savedata.txt format
+    private JsonObject buildDragon(JsonObject dragonData, int keyIdMin, int keyIdOffset){
+        JsonObject out = new JsonObject();
+        boolean has5UB = dragonData.get("MaxLimitBreakCount").getAsInt() == 5;
+        int xp = 0;
+        int level = 0;
+        int rarity = dragonData.get("Rarity").getAsInt();
+        switch(rarity){
+            case 3 -> {
+                xp = 0; //todo? idk lol
+                level = 60;
+            }
+            case 4 -> {
+                xp = 625170;
+                level = 80;
+            }
+            case 5 -> {
+                if(has5UB){
+                    xp = 3365620;
+                    level = 120;
+                } else {
+                    xp = 1240020;
+                    level = 100;
+                }
+            }
+        }
+        int a1Level = has5UB ?
+                6 : dragonData.get("Abilities15").getAsInt() != 0 ?
+                    5 : 0;
+        int a2Level = has5UB ?
+                6 : dragonData.get("Abilities25").getAsInt() != 0 ?
+                    5 : 0;
+
+        out.addProperty("dragon_key_id", keyIdMin + 200 * keyIdOffset);
+        out.addProperty("dragon_id", dragonData.get("Id").getAsInt());
+        out.addProperty("level", level);
+        out.addProperty("hp_plus_count", 50);
+        out.addProperty("attack_plus_count", 50);
+        out.addProperty("exp", xp);
+        out.addProperty("is_lock", 0);
+        out.addProperty("is_new", 1);
+        out.addProperty("get_time", Instant.now().getEpochSecond());
+        out.addProperty("skill_1_level", 2);
+        out.addProperty("ability_1_level", a1Level);
+        out.addProperty("ability_2_level", a2Level);
+        out.addProperty("limit_break_count", has5UB ? 5 : 4);
+        return out;
+    }
+
+    private JsonObject buildDragonAlbumData(JsonObject dragonData){
+        JsonObject out = new JsonObject();
+        boolean has5UB = dragonData.get("MaxLimitBreakCount").getAsInt() == 5;
+        int level = 0;
+        int rarity = dragonData.get("Rarity").getAsInt();
+        switch(rarity){
+            case 3 -> { level = 60; }
+            case 4 -> { level = 80; }
+            case 5 -> {
+                if(has5UB){
+                    level = 120;
+                } else {
+                    level = 100;
+                }
+            }
+        }
+        out.addProperty("dragon_id", dragonData.get("Id").getAsInt());
+        out.addProperty("max_level", level);
+        out.addProperty("max_limit_break_count", has5UB ? 5 : 4);
+        return out;
+    }
+
+    private JsonObject buildWeapon(JsonObject weaponData){
+        JsonObject out = new JsonObject();
+        String weaponSeries = weaponData.get("WeaponSeries").getAsString();
+        int rarity = weaponData.get("Rarity").getAsInt();
+        if(rarity == 1){
+            return null; //unused weapons
+        }
+
+        boolean isNullElement = weaponData.get("ElementalTypeId").getAsInt() == 99;
+
+        int level = 1;
+        int unbinds = 0;
+        int refines = 0;
+        int fiveStarSlotCount = 0;
+        int sindomSlotCount = 0;
+        //can't make copies of Mega Man collab weapons apparently...
+        int copiesCount = weaponData.get("Name").getAsString().contains("Mega") ? 1 : 4;
+        switch(weaponSeries){
+            case "Core" -> {
+                switch(rarity){
+                    case 3 -> level = 20;
+                    case 4 -> level = 30;
+                    case 5 -> level = 50;
+                }
+                unbinds = 4;
+                if(!isNullElement){
+                    fiveStarSlotCount = 1;
+                }
+            }
+            case "Void", "Chimeratech", "High Dragon" -> {
+                level = 70;
+                unbinds = 8;
+                refines = 1;
+                fiveStarSlotCount = 1;
+            }
+            case "Agito" -> {
+                level = 90;
+                unbinds = 9;
+                refines = 2;
+                fiveStarSlotCount = 1;
+                sindomSlotCount = 2;
+            }
+            case "Primal Dragon" -> {
+                level = 80;
+                unbinds = 8;
+                refines = 1;
+                fiveStarSlotCount = 1;
+                sindomSlotCount = 2;
+            }
+            case "Other" -> {
+                //too lazy to find out numbers for these
+            }
+        }
+        //too lazy to figure out mapping for these abilities + no one cares honestly
+        JsonArray voidWeaponAbilities = new JsonArray();
+        for(int i = 0; i < 15; i++){
+            voidWeaponAbilities.add(0);
+        }
+
+        out.addProperty("weapon_body_id", weaponData.get("Id").getAsInt());         //ID
+        out.addProperty("buildup_count", level);                                    //level
+        out.addProperty("limit_break_count", unbinds);                              //unbinds
+        out.addProperty("limit_over_count", refines);                               //refines
+        out.addProperty("equipable_count", copiesCount);                            //equip count
+        out.addProperty("additional_crest_slot_type_1_count", fiveStarSlotCount);   //5* slot count
+        out.addProperty("additional_crest_slot_type_2_count", 0);
+        out.addProperty("additional_crest_slot_type_3_count", sindomSlotCount);     //sindom slot count
+        out.addProperty("additional_effect_count", 0);                         //?
+        out.add( "unlock_weapon_passive_ability_no_list", voidWeaponAbilities);      //void weapon abilities?
+        out.addProperty("fort_passive_chara_weapon_buildup_count", 1);        //weapon bonus
+        out.addProperty("is_new", 1);
+        out.addProperty("gettime", Instant.now().getEpochSecond());
+        return out;
+    }
+
     private void unlockAdventurerStory(int id){
         int storyID = adventurerStoryMap.get(id);
         JsonObject story = new JsonObject();
@@ -292,11 +519,77 @@ public class JsonUtils {
                 if(newUnit != null){
                     getField("data", "chara_list").getAsJsonArray().add(newUnit);
                     unlockAdventurerStory(id);
+                    addAdventurerEncyclopediaBonus(adventurer);
                     count++;
                 }
             }
         }
         return count;
+    }
+
+    //return response message
+    public String addMissingDragons(boolean toExcludeLowRarityDragons){
+        int count = 0;
+        int expandAmount = 0;
+        int keyIdMax = 0;   //need to keep track of keyId so we don't run into dupe keyId issue when adding new dragons...
+        //Compile a list of ID's you have
+        Set<Integer> ownedIdSet = new HashSet<>();
+        JsonArray ownedDragons = getFieldAsJsonArray("data", "dragon_list");
+        for(JsonElement jsonEle : ownedDragons){
+            JsonObject dragon = jsonEle.getAsJsonObject();
+            ownedIdSet.add(dragon.get("dragon_id").getAsInt());
+            keyIdMax = Math.max(keyIdMax, dragon.get("dragon_key_id").getAsInt());
+        }
+        //Compile a list of ID's from your encyclopedia
+        Set<Integer> albumIDSet = new HashSet<>();
+        getFieldAsJsonArray("data", "album_dragon_list").forEach(jsonEle ->
+                albumIDSet.add(jsonEle.getAsJsonObject().get("dragon_id").getAsInt()));
+
+        //Go through a list of all the dragons in the game
+        for(JsonElement jsonEle : dragonsData){
+            JsonObject dragon = jsonEle.getAsJsonObject();
+            int id = dragon.get("Id").getAsInt();
+            int rarity = dragon.get("Rarity").getAsInt();
+            boolean isPlayable = dragon.get("IsPlayable").getAsInt() == 1;
+            if(!isPlayable || (toExcludeLowRarityDragons && (rarity == 3 || rarity == 4))){
+                continue; //ignore un-playable dragons or maybe low rarity dragons
+            }
+            if(!ownedIdSet.contains(id)){ //If you don't own this dragon
+                //Construct new dragon (Does this dragon have 5UB?)
+                JsonObject newDragon = buildDragon(dragon, keyIdMax, count);
+                //Add it to your roster
+                int dragonListSize = getFieldAsJsonArray("data", "dragon_list").size();
+                int dragonListCapacity = getFieldAsInt("data", "user_data", "max_dragon_quantity");
+                if(dragonListSize == dragonListCapacity){           //if dragon roster is full...
+                    if(dragonListCapacity == MAX_DRAGON_CAPACITY){  //if dragon capacity is maxed... can't do anything
+                        return "Dragon roster capacity is maxed! Unable to add new dragons...";
+                    } else {                                        //expand dragon capacity if able to
+                        writeInteger(dragonListCapacity + 5, "data", "user_data", "max_dragon_quantity");
+                        expandAmount += 5;
+                    }
+                }
+                getFieldAsJsonArray("data", "dragon_list").add(newDragon);
+
+                //If you've never owned this dragon before
+                if(!albumIDSet.contains(id)){
+                    //Add to encyclopedia
+                    getFieldAsJsonArray("data", "album_dragon_list").add(buildDragonAlbumData(dragon));
+                    addDragonEncyclopediaBonus(dragon);
+                    //Add dragon bond obj
+                    JsonObject dragonBond = new JsonObject();
+                    dragonBond.addProperty("dragon_id", id);
+                    dragonBond.addProperty("gettime", Instant.now().getEpochSecond());
+                    dragonBond.addProperty("reliability_level", 1);
+                    dragonBond.addProperty("reliability_total_exp", 0);
+                    dragonBond.addProperty("last_contact_time", Instant.now().getEpochSecond());
+                    getField("data", "dragon_reliability_list").getAsJsonArray().add(dragonBond);
+                }
+                count++;
+            }
+        }
+        return expandAmount == 0 ?
+                "Added " + count + " missing dragons." :
+                "Added " + count + " missing dragons. Dragon inventory capacity was raised by " + expandAmount + ".";
     }
 
     public void addItems(){
@@ -358,6 +651,31 @@ public class JsonUtils {
                 newWeaponSkin.addProperty("gettime", Instant.now().getEpochSecond());
                 getFieldAsJsonArray("data", "weapon_skin_list").add(newWeaponSkin);
                 count++;
+            }
+        }
+        return count;
+    }
+
+    public int addMissingWeapons(){
+        int count = 0;
+        //Compile a set of ID's you have
+        Set<Integer> ownedIdSet = new HashSet<>();
+        getFieldAsJsonArray("data", "weapon_body_list").forEach(jsonEle ->
+                ownedIdSet.add(jsonEle.getAsJsonObject().get("weapon_body_id").getAsInt()));
+
+        //Go through a list of all the weapons in the game
+        for(JsonElement jsonEle : weaponsData){
+            JsonObject weapon = jsonEle.getAsJsonObject();
+            int id = weapon.get("Id").getAsInt();
+            if(!ownedIdSet.contains(id)){ //If you don't own this weapon
+                //Construct new weapon
+                JsonObject newWeapon = buildWeapon(weapon);
+                //Add it to your inventory
+                if(newWeapon != null){
+                    getField("data", "weapon_body_list").getAsJsonArray().add(newWeapon);
+                    addWeaponBonus(weapon);
+                    count++;
+                }
             }
         }
         return count;
