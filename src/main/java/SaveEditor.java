@@ -1,9 +1,7 @@
 import java.io.File;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
+import java.util.function.Consumer;
 
 public class SaveEditor {
 
@@ -56,6 +54,17 @@ public class SaveEditor {
         }
     }
 
+    private static void continuousInput(String val, Consumer<String> func){
+        while(true){
+            System.out.print(val + " (Enter 'exit' to return):");
+            String in = input.nextLine().toUpperCase();
+            if(in.equals("EXIT")){
+                return;
+            }
+            func.accept(in);
+        }
+    }
+
     public static void main(String[] args){
         System.out.print("Enter path for save file: (Default: DragaliaSaveEditor directory):");
         String path = input.nextLine();
@@ -83,16 +92,25 @@ public class SaveEditor {
                 () -> util.battleOnTheByroad());
         yesNoQuestion(
                 "Add all missing adventurers to roster?",
-                () -> System.out.println("Added " + util.addMissingAdventurers() + " missing adventurers."));
+                () -> System.out.println("Added " + util.addMissingAdventurers() + " missing adventurers."),
+                () -> yesNoQuestion("\tWould you like to add specific adventurers to roster?",
+                        () -> continuousInput("\t\tEnter adventurer name",
+                        (advName) -> util.addAdventurer(advName))));
         yesNoQuestion(
                 "Add all missing dragons to roster?",
                 () -> yesNoQuestion(
                         "\tExclude 3-star and 4-star dragons?",
                         () -> System.out.println(util.addMissingDragons(true)),
-                        () -> System.out.println(util.addMissingDragons(false))));
+                        () -> System.out.println(util.addMissingDragons(false))),
+                () -> yesNoQuestion("\tWould you like to add specific dragons to roster?",
+                        () -> continuousInput("\t\tEnter dragon name",
+                        (dragonName) -> util.addDragon(dragonName))));
         yesNoQuestion(
                 "Add all missing weapons?",
                 () -> System.out.println("Added " + util.addMissingWeapons() + " missing weapons."));
+        yesNoQuestion(
+                "Add all missing wyrmprints?",
+                () -> System.out.println("Added " + util.addMissingWyrmprints() + " missing wyrmprints."));
         yesNoQuestion(
                 "Set all owned item count to 30,000?",
                 "Done!",
@@ -106,9 +124,18 @@ public class SaveEditor {
         yesNoQuestion(
                 "Add missing weapon skins?",
                 () -> System.out.println("Added " + util.addMissingWeaponSkins() + " missing weapon skins."));
+        yesNoQuestion(
+                "Do additional hacked options?",
+                () -> {
+                    yesNoQuestion("\tGenerate random portrait prints? (This will replace your portrait print inventory)",
+                    () -> util.kscapeRandomizer());
+                });
+        if(util.isSaveData2Present()){
+            yesNoQuestion(
+                    "savedata2.txt already exists in this directory. Would you like to overwrite it?",
+                    () -> util.setOverwrite(true));
+        }
         util.writeToFile();
-        System.out.println("Press Enter to exit.");
-        input.nextLine();
     }
 
 }

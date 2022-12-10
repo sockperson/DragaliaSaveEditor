@@ -15,17 +15,34 @@ public class JsonUtils {
     private final String path;
     private String basePath = "";
     private final String rsrcPath;
+    private boolean toOverwrite = false;
+
+    private Random rng = new Random();
+
+    //savefile
     private JsonObject jsonData;
+
+    //pulled from wiki
     private JsonArray adventurerData;
     private JsonArray dragonsData;
     private JsonArray weaponsData;
+    private JsonArray printsData;
+
+    //pulled from datamine
+    private JsonArray abilitiesList;
 
     //Ability Name --> Ability ID
     private HashMap<String, Integer> kscapeAbilityMap = new HashMap<>();
     //Adventurer Title --> Portrait Print ID
     private HashMap<String, Integer> kscapeLabelsMap = new HashMap<>();
+    private List<Integer> kscapePortraitIDs = new ArrayList<>();
     //Adventurer ID --> Adventurer Story ID
     private HashMap<Integer, Integer> adventurerStoryMap = new HashMap<>();
+
+    //Adventurer Name --> Adventurer Obj
+    private HashMap<String, JsonObject> adventurerMap = new HashMap<>();
+    //Dragon Name --> Dragon Obj
+    private HashMap<String, JsonObject> dragonMap = new HashMap<>();
 
     private Set<Integer> weaponSkinSet = new HashSet<>();
 
@@ -47,6 +64,8 @@ public class JsonUtils {
             readStoryData();
             readWeaponSkinData();
             readWeaponsData();
+            readPrintsData();
+            readAbilitiesData();
         } catch (IOException e) {
             System.out.println("Unable to read JSON data!");
             System.exit(99);
@@ -56,7 +75,16 @@ public class JsonUtils {
 
     public void writeToFile(){
         try {
-            String newPath = basePath + "savedata2.txt";
+            String newPath;
+            if(isSaveData2Present() && !toOverwrite){
+                int count = 3;
+                while(new File(basePath + "savedata" + count + ".txt").exists()){
+                    count++;
+                }
+                newPath = basePath + "savedata" + count + ".txt";
+            } else {
+                newPath = basePath + "savedata2.txt";
+            }
 
             FileWriter fileWriter = new FileWriter(newPath);
             GSON.toJson(jsonData, fileWriter);
@@ -66,6 +94,14 @@ public class JsonUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public boolean isSaveData2Present(){
+        return new File(basePath + "savedata2.txt").exists();
+    }
+
+    public void setOverwrite(boolean toOverwrite){
+        this.toOverwrite = toOverwrite;
     }
 
     public double addDoubles(double val1, double val2){
@@ -135,14 +171,51 @@ public class JsonUtils {
 
     private void readAdventurerData() throws IOException {
         adventurerData = getJsonArray("adventurers.json");
+        for(JsonElement jsonEle : adventurerData){
+            JsonObject adv = jsonEle.getAsJsonObject();
+            String name = adv.get("FullName").getAsString().toUpperCase();
+            if(name.equals("PUPPY")){
+                continue; //dog check
+            }
+            adventurerMap.put(name, adv);
+        }
     }
 
     private void readDragonsData() throws IOException {
         dragonsData = getJsonArray("dragons.json");
+        for(JsonElement jsonEle : dragonsData){
+            JsonObject drg = jsonEle.getAsJsonObject();
+            String name = drg.get("FullName").getAsString();
+            if(drg.get("IsPlayable").getAsInt() == 0){
+                continue;
+            }
+            switch(name){ //add aliases
+                case "Puppy": continue; //no dogs allowed
+                case "Ars\u00e8ne":
+                    dragonMap.put("ARSENE", drg); break;
+                case "Gala Cat S\u00ecth":
+                    dragonMap.put("GALA CAT SITH", drg); break;
+                case "Lumi\u00e8re Pandora":
+                    dragonMap.put("LUMIERE PANDORA", drg); break;
+                case "Poli\u02bbahu":
+                    dragonMap.put("POLI'AHU", drg); break;
+                case "Summer Cat S\u00ecth":
+                    dragonMap.put("SUMMER CAT SITH", drg); break;
+            }
+            dragonMap.put(name.toUpperCase(), drg);
+        }
+    }
+
+    private void readAbilitiesData() throws IOException {
+        abilitiesList = getJsonArray("abilities.json");
     }
 
     private void readWeaponsData() throws IOException {
         weaponsData = getJsonArray("weapons.json");
+    }
+
+    private void readPrintsData() throws IOException {
+        printsData = getJsonArray("prints.json");
     }
 
     private void readKscapeData() throws IOException {
@@ -160,6 +233,7 @@ public class JsonUtils {
             int id = Integer.parseInt(split1[0].split("_")[2]);
             String label = split1[2];
             kscapeLabelsMap.put(label, id);
+            kscapePortraitIDs.add(id);
             out = br.readLine();
         }
     }
@@ -292,6 +366,24 @@ public class JsonUtils {
         out.addProperty("talisman_ability_id_1", abilityId1);
         out.addProperty("talisman_ability_id_2", abilityId2);
         out.addProperty("talisman_ability_id_3", abilityId3);
+        out.addProperty("additional_hp", 0);
+        out.addProperty("additional_attack", 0);
+        out.addProperty("gettime", Instant.now().getEpochSecond());
+
+        return out;
+    }
+
+    private JsonObject buildRandomTalisman(int id, int keyIdOffset){
+        JsonObject out = new JsonObject();
+        int totalAbilitiesCount = abilitiesList.size();
+
+        out.addProperty("talisman_key_id", 200000 + 100 * keyIdOffset);
+        out.addProperty("talisman_id", id);
+        out.addProperty("is_lock", 0);
+        out.addProperty("is_new", 1);
+        out.addProperty("talisman_ability_id_1", abilitiesList.get(rng.nextInt(totalAbilitiesCount)).getAsJsonObject().get("Id").getAsInt());
+        out.addProperty("talisman_ability_id_2", abilitiesList.get(rng.nextInt(totalAbilitiesCount)).getAsJsonObject().get("Id").getAsInt());
+        out.addProperty("talisman_ability_id_3", abilitiesList.get(rng.nextInt(totalAbilitiesCount)).getAsJsonObject().get("Id").getAsInt());
         out.addProperty("additional_hp", 0);
         out.addProperty("additional_attack", 0);
         out.addProperty("gettime", Instant.now().getEpochSecond());
@@ -496,6 +588,46 @@ public class JsonUtils {
         return out;
     }
 
+    private JsonObject buildWyrmprint(JsonObject printData){
+        JsonObject out = new JsonObject();
+        int rarity = printData.get("Rarity").getAsInt();
+        int level = 1;
+        int augmentCount = 0;
+        switch(rarity){
+            case 2:
+                level = 10;
+                augmentCount = 50;
+                break;
+            case 3:
+                level = 20;
+                augmentCount = 50;
+                break;
+            case 4:
+                level = 40;
+                augmentCount = 50;
+                break;
+            case 5:
+                level = 50;
+                augmentCount = 50;
+                break;
+            case 9: //sindom
+                level = 30;
+                augmentCount = 40;
+                break;
+        }
+
+        out.addProperty("ability_crest_id", printData.get("Id").getAsInt());
+        out.addProperty("buildup_count", level);
+        out.addProperty("limit_break_count", 4);
+        out.addProperty("equipable_count", 4);
+        out.addProperty("hp_plus_count", augmentCount);
+        out.addProperty("attack_plus_count", augmentCount);
+        out.addProperty("is_new", 1);
+        out.addProperty("is_favorite", 0);
+        out.addProperty("gettime", Instant.now().getEpochSecond());
+        return out;
+    }
+
     private void unlockAdventurerStory(int id){
         if(id == 10750102){
             return; //Mega Man has no adventurer story
@@ -541,6 +673,54 @@ public class JsonUtils {
         return count;
     }
 
+    public void addAdventurer(String advName){
+        JsonObject advData = adventurerMap.get(advName);
+        if(advData == null){
+            System.out.println("Can't find adventurer with name '" + advName + "'. Try again!");
+            return;
+        }
+        //Compile a list of ID's you have
+        Set<Integer> ownedIdSet = new HashSet<>();
+        getFieldAsJsonArray("data", "chara_list").forEach(jsonEle ->
+                ownedIdSet.add(jsonEle.getAsJsonObject().get("chara_id").getAsInt()));
+        int id = advData.get("IdLong").getAsInt();
+        if(ownedIdSet.contains(id)){
+            System.out.println("You already own '" + advName + "'!");
+            return;
+        }
+        //Construct new unit (Does this unit have a mana spiral?)
+        JsonObject newUnit = buildUnit(advData);
+        //Add it to your roster
+        if(newUnit != null){
+            getField("data", "chara_list").getAsJsonArray().add(newUnit);
+            unlockAdventurerStory(id);
+            addAdventurerEncyclopediaBonus(advData);
+            System.out.println("Added '" + advName + "'!");
+        }
+    }
+
+    public int addMissingWyrmprints(){
+        int count = 0;
+        //Compile a list of ID's you have
+        Set<Integer> ownedIdSet = new HashSet<>();
+        getFieldAsJsonArray("data", "ability_crest_list").forEach(jsonEle ->
+                ownedIdSet.add(jsonEle.getAsJsonObject().get("ability_crest_id").getAsInt()));
+
+        //Go through a list of all the wyrmprints in the game
+        for(JsonElement jsonEle : printsData){
+            JsonObject wyrmprint = jsonEle.getAsJsonObject();
+            int id = wyrmprint.get("Id").getAsInt();
+            if(!ownedIdSet.contains(id)){ //If you don't own this print
+                //Construct new print
+                JsonObject newPrint = buildWyrmprint(wyrmprint);
+                //Add it to your inventory
+                getField("data", "ability_crest_list").getAsJsonArray().add(newPrint);
+                count++;
+            }
+        }
+        return count;
+    }
+
     //return response message
     public String addMissingDragons(boolean toExcludeLowRarityDragons){
         int count = 0;
@@ -570,7 +750,7 @@ public class JsonUtils {
             }
             if(!ownedIdSet.contains(id)){ //If you don't own this dragon
                 //Construct new dragon (Does this dragon have 5UB?)
-                JsonObject newDragon = buildDragon(dragon, keyIdMax, count);
+                JsonObject newDragon = buildDragon(dragon, keyIdMax, count + 1);
                 //Add it to your roster
                 int dragonListSize = getFieldAsJsonArray("data", "dragon_list").size();
                 int dragonListCapacity = getFieldAsInt("data", "user_data", "max_dragon_quantity");
@@ -590,13 +770,15 @@ public class JsonUtils {
                     getFieldAsJsonArray("data", "album_dragon_list").add(buildDragonAlbumData(dragon));
                     addDragonEncyclopediaBonus(dragon);
                     //Add dragon bond obj
-                    JsonObject dragonBond = new JsonObject();
-                    dragonBond.addProperty("dragon_id", id);
-                    dragonBond.addProperty("gettime", Instant.now().getEpochSecond());
-                    dragonBond.addProperty("reliability_level", 1);
-                    dragonBond.addProperty("reliability_total_exp", 0);
-                    dragonBond.addProperty("last_contact_time", Instant.now().getEpochSecond());
-                    getField("data", "dragon_reliability_list").getAsJsonArray().add(dragonBond);
+                    if(id != 20050522){ //Arsene check
+                        JsonObject dragonBond = new JsonObject();
+                        dragonBond.addProperty("dragon_id", id);
+                        dragonBond.addProperty("gettime", Instant.now().getEpochSecond());
+                        dragonBond.addProperty("reliability_level", 1);
+                        dragonBond.addProperty("reliability_total_exp", 0);
+                        dragonBond.addProperty("last_contact_time", Instant.now().getEpochSecond());
+                        getField("data", "dragon_reliability_list").getAsJsonArray().add(dragonBond);
+                    }
                 }
                 count++;
             }
@@ -604,6 +786,67 @@ public class JsonUtils {
         return expandAmount == 0 ?
                 "Added " + count + " missing dragons." :
                 "Added " + count + " missing dragons. Dragon inventory capacity was raised by " + expandAmount + ".";
+    }
+
+    public void addDragon(String drgName){
+        int expandAmount = 0;
+        int keyIdMax = 0;   //need to keep track of keyId so we don't run into dupe keyId issue when adding new dragons...
+
+        //Obtain keyIdMax
+        JsonArray ownedDragons = getFieldAsJsonArray("data", "dragon_list");
+        for(JsonElement jsonEle : ownedDragons){
+            JsonObject dragon = jsonEle.getAsJsonObject();
+            keyIdMax = Math.max(keyIdMax, dragon.get("dragon_key_id").getAsInt());
+        }
+        //Compile a list of ID's from your encyclopedia
+        Set<Integer> albumIDSet = new HashSet<>();
+        getFieldAsJsonArray("data", "album_dragon_list").forEach(jsonEle ->
+                albumIDSet.add(jsonEle.getAsJsonObject().get("dragon_id").getAsInt()));
+
+        JsonObject drgData = dragonMap.get(drgName);
+        if(drgData == null){
+            System.out.println("Can't find dragon with name '" + drgName + "'. Try again!");
+            return;
+        }
+        int id = drgData.get("Id").getAsInt();
+
+        //Construct new dragon (Does this dragon have 5UB?)
+        JsonObject newDragon = buildDragon(drgData, keyIdMax, 1);
+        //Add it to your roster
+        int dragonListSize = getFieldAsJsonArray("data", "dragon_list").size();
+        int dragonListCapacity = getFieldAsInt("data", "user_data", "max_dragon_quantity");
+        if(dragonListSize == dragonListCapacity){           //if dragon roster is full...
+            if(dragonListCapacity == MAX_DRAGON_CAPACITY){  //if dragon capacity is maxed... can't do anything
+                System.out.println("Dragon roster capacity is maxed! Unable to add new dragons...");
+                return;
+            } else {                                        //expand dragon capacity if able to
+                writeInteger(dragonListCapacity + 5, "data", "user_data", "max_dragon_quantity");
+                expandAmount += 5;
+            }
+        }
+        getFieldAsJsonArray("data", "dragon_list").add(newDragon);
+
+        //If you've never owned this dragon before
+        if(!albumIDSet.contains(id)){
+            //Add to encyclopedia
+            getFieldAsJsonArray("data", "album_dragon_list").add(buildDragonAlbumData(drgData));
+            addDragonEncyclopediaBonus(drgData);
+            //Add dragon bond obj
+            if(id != 20050522){ //Arsene check
+                JsonObject dragonBond = new JsonObject();
+                dragonBond.addProperty("dragon_id", id);
+                dragonBond.addProperty("gettime", Instant.now().getEpochSecond());
+                dragonBond.addProperty("reliability_level", 1);
+                dragonBond.addProperty("reliability_total_exp", 0);
+                dragonBond.addProperty("last_contact_time", Instant.now().getEpochSecond());
+                getField("data", "dragon_reliability_list").getAsJsonArray().add(dragonBond);
+            }
+        }
+
+        String out = expandAmount == 0 ?
+                "Added '" + drgName + "'!" :
+                "Added '" + drgName + "'! Dragon inventory capacity was raised by " + expandAmount + ".";
+        System.out.println(out);
     }
 
     public void addItems(){
@@ -623,7 +866,7 @@ public class JsonUtils {
 
         String[][] kscapeCombos = KscapeCombos.KSCAPES;
         String[][] kscapeLabels = KscapeCombos.KSCAPE_LABELS;
-        int keyIdOffset = 0;
+        int keyIdOffset = 1;
         JsonObject jsonData = getField("data").getAsJsonObject();
         jsonData.remove("talisman_list");
         JsonArray talismans = new JsonArray();
@@ -695,4 +938,34 @@ public class JsonUtils {
         return count;
     }
 
+    //Hacked options
+
+    public void kscapeRandomizer(){
+        JsonArray talismans = new JsonArray();
+
+        for(int i = 1; i <= 500; i++){
+            //get random adventurer portrait ID
+            int portraitListSize = kscapePortraitIDs.size();
+            int portraitID = kscapePortraitIDs.get(rng.nextInt(portraitListSize));
+
+            //get random talisman
+            JsonObject randomTalisman = buildRandomTalisman(portraitID, i);
+            talismans.add(randomTalisman);
+        }
+
+        getField("data").getAsJsonObject().remove("talisman_list");
+        getField("data").getAsJsonObject().add("talisman_list", talismans);
+
+        //delete equipped kscapes, since old kscape ID's will now point to
+        //a kscape that no longer exists
+        JsonArray partyList = getFieldAsJsonArray("data", "party_list");
+        for(JsonElement jsonEle : partyList){
+            JsonObject party = jsonEle.getAsJsonObject();
+            for(JsonElement jsonEle2 : party.getAsJsonArray("party_setting_list")){
+                JsonObject adventurer = jsonEle2.getAsJsonObject();
+                adventurer.remove("equip_talisman_key_id");
+                adventurer.addProperty("equip_talisman_key_id", 0);
+            }
+        }
+    }
 }
