@@ -77,8 +77,9 @@ public class SaveEditor {
                 e.printStackTrace();
             }
         }
-        System.out.println("Save data path: " + path);
+        System.out.println();
         JsonUtils util = new JsonUtils(path);
+        System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
         yesNoQuestion(
                 "Uncap mana? (Sets mana to 10m)",
                 "Mana uncapped!",
