@@ -1,5 +1,6 @@
 import java.io.File;
 import java.net.URISyntaxException;
+import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
@@ -71,7 +72,7 @@ public class SaveEditor {
         if(path.equals("")){
             try{
                 String programPath = getFilePath();
-                path = programPath.substring(0,programPath.indexOf("DragaliaSaveEditor")) + "/DragaliaSaveEditor/savedata.txt";
+                path = Paths.get(programPath.substring(0, programPath.indexOf("DragaliaSaveEditor")), "DragaliaSaveEditor", "savedata.txt").toString();
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             }
@@ -129,6 +130,8 @@ public class SaveEditor {
                 () -> {
                     yesNoQuestion("\tGenerate random portrait prints? (This will replace your portrait print inventory)",
                     () -> util.kscapeRandomizer());
+                    yesNoQuestion("\tAdd goofy kscapes?",
+                    () -> util.addGoofyKscapes());
                 });
         if(util.isSaveData2Present()){
             yesNoQuestion(
