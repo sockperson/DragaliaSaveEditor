@@ -1,6 +1,7 @@
 
 
 Options:
+- Max out owned adventurers / dragons / weapons / wyrmprints
 - Add all missing adventurers or add them individually
 - Add all missing dragons or add them individually
 - Set mana value
