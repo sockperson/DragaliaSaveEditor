@@ -57,7 +57,7 @@ public class SaveEditor {
 
     private static void continuousInput(String val, Consumer<String> func){
         while(true){
-            System.out.print(val + " (Enter 'exit' to return):");
+            System.out.print(val + " (Enter 'exit' to return): ");
             String in = input.nextLine().toUpperCase();
             if(in.equals("EXIT")){
                 return;
@@ -67,18 +67,21 @@ public class SaveEditor {
     }
 
     public static void main(String[] args){
-        System.out.print("Enter path for save file: (Default: DragaliaSaveEditor directory):");
+        System.out.print("Enter path for save file: (Default: DragaliaSaveEditor directory): ");
         String path = input.nextLine();
-        if(path.equals("")){
-            try{
-                String programPath = getFilePath();
-                path = Paths.get(programPath.substring(0, programPath.indexOf("DragaliaSaveEditor")), "DragaliaSaveEditor", "savedata.txt").toString();
-            } catch (URISyntaxException e) {
-                e.printStackTrace();
-            }
+        String programPath = null;
+        try {
+            programPath = getFilePath();
+            programPath = programPath.substring(0, programPath.indexOf("DragaliaSaveEditor"));
+            programPath = Paths.get(programPath, "DragaliaSaveEditor").toString();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        if(path.equals("")){ //default
+            path = Paths.get(programPath.substring(0, programPath.indexOf("DragaliaSaveEditor")), "DragaliaSaveEditor", "savedata.txt").toString();
         }
         System.out.println();
-        JsonUtils util = new JsonUtils(path);
+        JsonUtils util = new JsonUtils(path, programPath);
         System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
         yesNoQuestion(
                 "Uncap mana? (Sets mana to 10m)",

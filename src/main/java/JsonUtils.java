@@ -45,19 +45,24 @@ public class JsonUtils {
     private HashMap<Integer, WyrmprintMeta> idToPrint = new HashMap<>();
     private HashMap<Integer, FacilityMeta> idToFacility = new HashMap<>();
 
+    //Alias Maps
+    private HashMap<String, List<String>> adventurerAliases = new HashMap<>();
+    private HashMap<String, List<String>> dragonAliases = new HashMap<>();
+
     private Set<Integer> weaponSkinSet = new HashSet<>();
 
-    public JsonUtils(String path) {
-        this.path = path;
+    public JsonUtils(String savePath, String jarPath) {
+        this.path = savePath;
         try {
-            basePath = path.substring(0, path.indexOf("savedata"));
+            basePath = savePath.substring(0, savePath.indexOf("savedata"));
         } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("savedata.txt not found in directory!");
+            System.out.println("savedata.txt not found in directory: '" + savePath + "'!");
             System.exit(99);
         }
-        rsrcPath = Paths.get(basePath, "src", "resources").toString();
+        rsrcPath = Paths.get(jarPath, "src", "resources").toString();
         try {
             this.jsonData = getSaveData().getAsJsonObject();
+            readAliasesData();
             readAdventurerData();
             readDragonsData();
             readKscapeData();
@@ -181,6 +186,34 @@ public class JsonUtils {
         return sum;
     }
 
+    private void readAliasesData() throws IOException {
+        //Get aliases
+        BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "adventurerAliases.txt").toFile()));
+        String out = br.readLine();
+        while (out != null) {
+            String[] split = out.split(" ");
+            String name = split[0].replace("-", " ").toUpperCase();
+            List<String> advAliases = new ArrayList<>();
+            for(int i = 1; i < split.length; i++){
+                advAliases.add(split[i].replace("-", " ").toUpperCase());
+            }
+            adventurerAliases.put(name, advAliases);
+            out = br.readLine();
+        }
+        br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "dragonAliases.txt").toFile()));
+        out = br.readLine();
+        while (out != null) {
+            String[] split = out.split(" "); //use underscore instead of '-' for space replacement since some
+            String name = split[0].replace("_", " ").toUpperCase(); //dragons have '-' in their name
+            List<String> drgAliases = new ArrayList<>();
+            for(int i = 1; i < split.length; i++){
+                drgAliases.add(split[i].replace("_", " ").toUpperCase());
+            }
+            dragonAliases.put(name, drgAliases);
+            out = br.readLine();
+        }
+    }
+
     private void readAdventurerData() throws IOException {
         for (JsonElement jsonEle : getJsonArray("adventurers.json")) {
             JsonObject adv = jsonEle.getAsJsonObject();
@@ -205,13 +238,16 @@ public class JsonUtils {
                     adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral);
             idToAdventurer.put(id, unit);
             nameToAdventurer.put(name, unit);
+            if(adventurerAliases.containsKey(name)){
+                adventurerAliases.get(name).forEach(alias -> nameToAdventurer.put(alias.toUpperCase(), unit));
+            }
         }
     }
 
     private void readDragonsData() throws IOException {
         for (JsonElement jsonEle : getJsonArray("dragons.json")) {
             JsonObject drg = jsonEle.getAsJsonObject();
-            String name = drg.get("FullName").getAsString();
+            String name = drg.get("FullName").getAsString().toUpperCase();
             if (drg.get("IsPlayable").getAsInt() == 0) {
                 continue;
             }
@@ -228,27 +264,10 @@ public class JsonUtils {
             DragonMeta unit = new DragonMeta(name, id, drg.get("ElementalTypeId").getAsInt(),
                 a1Level, a2Level, rarity, has5UB);
             idToDragon.put(id, unit);
-            //
-            switch (name) { //add aliases
-                case "Puppy":
-                    continue; //no dogs allowed
-                case "Ars\u00e8ne":
-                    nameToDragon.put("ARSENE", unit);
-                    break;
-                case "Gala Cat S\u00ecth":
-                    nameToDragon.put("GALA CAT SITH", unit);
-                    break;
-                case "Lumi\u00e8re Pandora":
-                    nameToDragon.put("LUMIERE PANDORA", unit);
-                    break;
-                case "Poli\u02bbahu":
-                    nameToDragon.put("POLI'AHU", unit);
-                    break;
-                case "Summer Cat S\u00ecth":
-                    nameToDragon.put("SUMMER CAT SITH", unit);
-                    break;
+            nameToDragon.put(name, unit);
+            if(dragonAliases.containsKey(name)){
+                dragonAliases.get(name).forEach(alias -> nameToDragon.put(alias.toUpperCase(), unit));
             }
-            nameToDragon.put(name.toUpperCase(), unit);
         }
     }
 
@@ -597,7 +616,6 @@ public class JsonUtils {
         boolean has5UB = dragonData.has5UB();
         int xp = dragonData.getMaxXp();
         int level = dragonData.getMaxLevel();
-        int rarity = dragonData.getRarity();
 
         int a1Level = dragonData.getA1Max();
         int a2Level = dragonData.getA2Max();
@@ -622,28 +640,9 @@ public class JsonUtils {
     private JsonObject buildDragon2(DragonMeta dragonData, int keyId, int getTime) {
         JsonObject out = new JsonObject();
         boolean has5UB = dragonData.has5UB();
-        int xp = 0;
-        int level = 0;
-        int rarity = dragonData.getRarity();
-        switch (rarity) {
-            case 3:
-                xp = 0; //todo? idk lol
-                level = 60;
-                break;
-            case 4:
-                xp = 625170;
-                level = 80;
-                break;
-            case 5:
-                if (has5UB) {
-                    xp = 3365620;
-                    level = 120;
-                } else {
-                    xp = 1240020;
-                    level = 100;
-                }
-                break;
-        }
+        int xp = dragonData.getMaxXp();
+        int level = dragonData.getMaxLevel();
+
         int a1Level = dragonData.getA1Max();
         int a2Level = dragonData.getA2Max();
 
@@ -666,23 +665,8 @@ public class JsonUtils {
     private JsonObject buildDragonAlbumData(DragonMeta dragonData) {
         JsonObject out = new JsonObject();
         boolean has5UB = dragonData.has5UB();
-        int level = 0;
-        int rarity = dragonData.getRarity();
-        switch (rarity) {
-            case 3:
-                level = 60;
-                break;
-            case 4:
-                level = 80;
-                break;
-            case 5:
-                if (has5UB) {
-                    level = 120;
-                } else {
-                    level = 100;
-                }
-                break;
-        }
+        int level = dragonData.getMaxLevel();
+
         out.addProperty("dragon_id", dragonData.getId());
         out.addProperty("max_level", level);
         out.addProperty("max_limit_break_count", has5UB ? 5 : 4);
@@ -918,8 +902,9 @@ public class JsonUtils {
         getFieldAsJsonArray("data", "chara_list").forEach(jsonEle ->
                 ownedIdSet.add(jsonEle.getAsJsonObject().get("chara_id").getAsInt()));
         int id = advData.getId();
+        String name = advData.getName();
         if (ownedIdSet.contains(id)) {
-            System.out.println("You already own '" + advName + "'!");
+            System.out.println("You already own '" + name + "'!");
             return;
         }
         //Construct new unit (Does this unit have a mana spiral?)
@@ -929,7 +914,7 @@ public class JsonUtils {
             getField("data", "chara_list").getAsJsonArray().add(newUnit);
             unlockAdventurerStory(id);
             addAdventurerEncyclopediaBonus(advData);
-            System.out.println("Added '" + advName + "'!");
+            System.out.println("Added '" + name + "'!");
         }
     }
 
@@ -1042,6 +1027,7 @@ public class JsonUtils {
             return;
         }
         int id = drgData.getId();
+        String name = drgData.getName();
 
         //Construct new dragon (Does this dragon have 5UB?)
         JsonObject newDragon = buildDragon(drgData, keyIdMax, 1);
@@ -1077,8 +1063,8 @@ public class JsonUtils {
         }
 
         String out = expandAmount == 0 ?
-                "Added '" + drgName + "'!" :
-                "Added '" + drgName + "'! Dragon inventory capacity was raised by " + expandAmount + ".";
+                "Added '" + name + "'!" :
+                "Added '" + name + "'! Dragon inventory capacity was raised by " + expandAmount + ".";
         System.out.println(out);
     }
 
@@ -1369,9 +1355,11 @@ public class JsonUtils {
     public void addGoofyKscapes() {
         for(int i = 0; i < 4; i++){
             addTalisman("Born Ruler", 805, 806, 721); //(Water) Skill Recharge +65%, Skill Prep +100%
+            addTalisman("The Blazewolf", 100100205, 1237, 100100204); //ar20 + flame ar20 + ar10
+            addTalisman("Summertime Boar", 100100205, 1225, 100100204); //ar20 + hp70 ar10 + ar10
+            addTalisman("Arc in the Storm", 2172, 2175, 721); //bolk
         }
-
-        addTalisman("The Blazewolf", 100100205, 1237, 100100204); //ar20 + flame ar20 + ar10
-        addTalisman("Summertime Boar", 100100205, 1225, 100100204); //ar20 + hp70 ar10 + ar10
+        addTalisman("Blessed Alchemist", 1237, 400000822, 400000821); //dyilia
+        addTalisman("Unwavering Auspex", 2677, 3004, 3003); //gzena
     }
 }
