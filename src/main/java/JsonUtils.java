@@ -202,7 +202,7 @@ public class JsonUtils {
             }
             AdventurerMeta unit = new AdventurerMeta(name, id,
                     adv.get("ElementalTypeId").getAsInt(), hp, str,adv.get("MaxLimitBreakCount").getAsInt(),
-                    adv.get("EditSkillCost").getAsInt() == 0, hasManaSpiral);
+                    adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral);
             idToAdventurer.put(id, unit);
             nameToAdventurer.put(name, unit);
         }
@@ -1367,7 +1367,10 @@ public class JsonUtils {
     }
 
     public void addGoofyKscapes() {
-        addTalisman("Born Ruler", 805, 806, 721); //(Water) Skill Recharge +65%, Skill Prep +100%
+        for(int i = 0; i < 4; i++){
+            addTalisman("Born Ruler", 805, 806, 721); //(Water) Skill Recharge +65%, Skill Prep +100%
+        }
+
         addTalisman("The Blazewolf", 100100205, 1237, 100100204); //ar20 + flame ar20 + ar10
         addTalisman("Summertime Boar", 100100205, 1225, 100100204); //ar20 + hp70 ar10 + ar10
     }

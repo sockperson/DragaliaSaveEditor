@@ -112,10 +112,15 @@ public class SaveEditor {
                         (advName) -> util.addAdventurer(advName))));
         yesNoQuestion(
                 "Add all missing dragons to roster?",
-                () -> yesNoQuestion(
-                        "\tExclude 3-star and 4-star dragons?",
-                        () -> System.out.println(util.addMissingDragons(true)),
-                        () -> System.out.println(util.addMissingDragons(false))),
+                () -> {
+                        yesNoQuestion(
+                            "\tExclude 3-star and 4-star dragons?",
+                            () -> System.out.println(util.addMissingDragons(true)),
+                            () -> System.out.println(util.addMissingDragons(false)));
+                        yesNoQuestion("\tAdd additional dragons to roster?",
+                            () -> continuousInput("\t\tEnter dragon name",
+                            (dragonName) -> util.addDragon(dragonName)));
+                    },
                 () -> yesNoQuestion("\tWould you like to add specific dragons to roster?",
                         () -> continuousInput("\t\tEnter dragon name",
                         (dragonName) -> util.addDragon(dragonName))));
