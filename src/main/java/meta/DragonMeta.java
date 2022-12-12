@@ -24,4 +24,31 @@ public class DragonMeta {
     public int getA2Max(){ return a2Max; }
     public int getRarity(){ return rarity; }
     public boolean has5UB(){ return has5UB; }
+
+    public int getMaxLevel(){
+        switch(rarity){
+            case 3: return 60;
+            case 4: return 80;
+            case 5:
+                if(has5UB){
+                    return 120;
+                }
+                return 100;
+        }
+        return -1;
+    }
+
+    public int getMaxXp(){
+        switch(rarity){
+            case 3: return 277320;
+            case 4: return 625170;
+            case 5:
+                if(has5UB){
+                    return 3365620;
+                }
+                return 1240020;
+        }
+        return -1;
+    }
+
 }

@@ -93,6 +93,18 @@ public class SaveEditor {
                 "Set eldwater to 10m.",
                 () -> util.battleOnTheByroad());
         yesNoQuestion(
+                "Max out existing adventurers/dragon/weapons/wyrmprints?",
+                () -> {
+                    yesNoQuestion("\tMax out existing adventurers?",
+                            () -> util.maxAdventurers());
+                    yesNoQuestion("\tMax out existing dragons?",
+                            () -> util.maxDragons());
+                    yesNoQuestion("\tMax out existing weapons?",
+                            () -> util.maxWeapons());
+                    yesNoQuestion("\tMax out existing wyrmprints?",
+                            () -> util.maxWyrmprints());
+                });
+        yesNoQuestion(
                 "Add all missing adventurers to roster?",
                 () -> System.out.println("Added " + util.addMissingAdventurers() + " missing adventurers."),
                 () -> yesNoQuestion("\tWould you like to add specific adventurers to roster?",
@@ -131,7 +143,7 @@ public class SaveEditor {
                 () -> {
                     yesNoQuestion("\tGenerate random portrait prints? (This will replace your portrait print inventory)",
                     () -> util.kscapeRandomizer());
-                    yesNoQuestion("\tAdd goofy kscapes?",
+                    yesNoQuestion("\tAdd some hacked portrait prints?",
                     () -> util.addGoofyKscapes());
                 });
         if(util.isSaveData2Present()){
