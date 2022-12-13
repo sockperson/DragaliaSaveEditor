@@ -953,7 +953,6 @@ public class JsonUtils {
         }
         //eh
         if(!foundSingles){
-            System.out.println("I shit myself");
             JsonObject newTicketCount = new JsonObject();
             newTicketCount.addProperty("key_id", keyIdMax + 200);
             newTicketCount.addProperty("summon_ticket_id", 10101);
@@ -962,7 +961,6 @@ public class JsonUtils {
             ticketsList.add(newTicketCount);
         }
         if(!foundTenfolds){
-            System.out.println("I shit myself again");
             JsonObject newTicketCount = new JsonObject();
             newTicketCount.addProperty("key_id", keyIdMax + 400);
             newTicketCount.addProperty("summon_ticket_id", 10102);
