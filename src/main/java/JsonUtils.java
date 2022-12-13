@@ -1,4 +1,5 @@
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.time.Instant;
 import java.util.*;
@@ -13,10 +14,13 @@ public class JsonUtils {
 
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
-    private final String path;
+    private final String savePath;
+    private String jarPath;
+
     private String basePath = "";
     private final String rsrcPath;
     private boolean toOverwrite = false;
+    private boolean inJar;
 
     private Random rng = new Random();
 
@@ -42,6 +46,7 @@ public class JsonUtils {
     private HashMap<String, DragonMeta> nameToDragon = new HashMap<>();
 
     private HashMap<Integer, WeaponMeta> idToWeapon = new HashMap<>();
+    private HashMap<Integer, String> idToWeaponSkinName = new HashMap<>();
     private HashMap<Integer, WyrmprintMeta> idToPrint = new HashMap<>();
     private HashMap<Integer, FacilityMeta> idToFacility = new HashMap<>();
 
@@ -49,26 +54,15 @@ public class JsonUtils {
     private HashMap<String, List<String>> adventurerAliases = new HashMap<>();
     private HashMap<String, List<String>> dragonAliases = new HashMap<>();
 
-    private Set<Integer> weaponSkinSet = new HashSet<>();
+    private JsonObject maxedFacilityBonuses;
 
-    public JsonUtils(String savePath, String jarPath) {
-        this.path = savePath;
+    public JsonUtils(String savePath, String jarPath, boolean inJar) {
+        log("Initializing JsonUtils...");
+        this.savePath = savePath;
+        this.jarPath = jarPath;
+        this.inJar = inJar;
+        rsrcPath = Paths.get(jarPath, "rsrc").toString();
         try {
-            basePath = savePath.substring(0, savePath.indexOf("savedata"));
-        } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("savedata not found in directory: '" + savePath + "'!");
-            System.exit(99);
-        }
-        rsrcPath = Paths.get(jarPath, "src", "resources").toString();
-        try {
-            //further checks for filepath
-            String srcPath = Paths.get(basePath, "src").toString();
-            if(!new File(srcPath).exists()){
-                System.out.println("'src' directory not found in " + basePath + "!");
-            }
-            if(!new File(rsrcPath).exists()){
-                System.out.println("'resources' directory not found in " + srcPath + "!");
-            }
             this.jsonData = getSaveData().getAsJsonObject();
             readAliasesData();
             readAdventurerData();
@@ -81,7 +75,9 @@ public class JsonUtils {
             readPrintsData();
             readAbilitiesData();
             readFacilitiesData();
+
         } catch (IOException e) {
+            e.printStackTrace();
             System.out.println("Unable to read JSON data!");
             System.exit(99);
         }
@@ -130,14 +126,43 @@ public class JsonUtils {
     }
 
     private JsonObject getSaveData() throws IOException {
-        if(!new File(path).exists()){
-            System.out.println("savedata.txt not found at path: '" + path + "'!");
-            throw new IOException();
-        }
-        JsonReader reader = new JsonReader(new FileReader(path));
+        JsonReader reader = new JsonReader(new FileReader(savePath));
         return GSON.fromJson(reader, JsonObject.class);
     }
 
+    private BufferedReader getBufferedReader(String... more){
+        return new BufferedReader(getRsrcReader(more));
+    }
+
+    private InputStreamReader getRsrcReader(String... more){
+        //getResourceAsStream() doesn't like backslashes i think...?
+        //hope this doesn't break on other OS...
+        String path = (File.separator + Paths.get("rsrc", more)).replace("\\", "/");
+        InputStream in;
+        in = JsonUtils.class.getResourceAsStream(path);
+        if(in == null){
+            System.out.println("i shit my pants");
+            System.out.println(path);
+            in = JsonUtils.class.getClassLoader().getResourceAsStream(path);
+        }
+        if(in == null){
+            System.out.println("Could not load resource!");
+            System.exit(92);
+        }
+        return new InputStreamReader(in, StandardCharsets.UTF_8);
+    }
+
+    private JsonArray getJsonArray(String more) throws IOException {
+        JsonReader reader = new JsonReader(getRsrcReader(more));
+        return GSON.fromJson(reader, JsonArray.class);
+    }
+
+    private JsonObject getJsonObject(String more) throws IOException {
+        JsonReader reader = new JsonReader(getRsrcReader(more));
+        return GSON.fromJson(reader, JsonObject.class);
+    }
+
+    /*
     private JsonObject getJsonObject(String more) throws IOException {
         JsonReader reader = new JsonReader(new FileReader(Paths.get(rsrcPath, more).toString()));
         return GSON.fromJson(reader, JsonObject.class);
@@ -146,7 +171,7 @@ public class JsonUtils {
     private JsonArray getJsonArray(String more) throws IOException {
         JsonReader reader = new JsonReader(new FileReader(Paths.get(rsrcPath, more).toString()));
         return GSON.fromJson(reader, JsonArray.class);
-    }
+    } */
 
     public String getFieldAsString(String... memberNames) {
         return getField(memberNames).getAsString();
@@ -197,7 +222,7 @@ public class JsonUtils {
 
     private void readAliasesData() throws IOException {
         //Get aliases
-        BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "adventurerAliases.txt").toFile()));
+        BufferedReader br = getBufferedReader("adventurerAliases.txt");
         String out = br.readLine();
         while (out != null) {
             String[] split = out.split(",");
@@ -209,7 +234,7 @@ public class JsonUtils {
             adventurerAliases.put(name, advAliases);
             out = br.readLine();
         }
-        br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "dragonAliases.txt").toFile()));
+        br = getBufferedReader("dragonAliases.txt");
         out = br.readLine();
         while (out != null) {
             String[] split = out.split(",");
@@ -226,7 +251,8 @@ public class JsonUtils {
     private void readAdventurerData() throws IOException {
         for (JsonElement jsonEle : getJsonArray("adventurers.json")) {
             JsonObject adv = jsonEle.getAsJsonObject();
-            String name = adv.get("FullName").getAsString().toUpperCase();
+            String baseName = adv.get("FullName").getAsString();
+            String name = baseName.toUpperCase();
             if (name.equals("PUPPY")) {
                 continue; //dog check
             }
@@ -242,7 +268,7 @@ public class JsonUtils {
                 hp = getSum(adv, "MaxHp", "PlusHp0", "PlusHp1", "PlusHp2", "PlusHp3", "PlusHp4", "McFullBonusHp5");
                 str = getSum(adv, "MaxAtk", "PlusAtk0", "PlusAtk1", "PlusAtk2", "PlusAtk3", "PlusAtk4", "McFullBonusAtk5");
             }
-            AdventurerMeta unit = new AdventurerMeta(name, adv.get("Title").getAsString(), id,
+            AdventurerMeta unit = new AdventurerMeta(baseName, adv.get("Title").getAsString(), id,
                     adv.get("ElementalTypeId").getAsInt(), hp, str,adv.get("MaxLimitBreakCount").getAsInt(),
                     adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral);
             idToAdventurer.put(id, unit);
@@ -256,7 +282,8 @@ public class JsonUtils {
     private void readDragonsData() throws IOException {
         for (JsonElement jsonEle : getJsonArray("dragons.json")) {
             JsonObject drg = jsonEle.getAsJsonObject();
-            String name = drg.get("FullName").getAsString().toUpperCase();
+            String baseName = drg.get("FullName").getAsString();
+            String name = baseName.toUpperCase();
             if (drg.get("IsPlayable").getAsInt() == 0) {
                 continue;
             }
@@ -270,7 +297,7 @@ public class JsonUtils {
             int a2Level = has5UB ?
                     6 : drg.get("Abilities25").getAsInt() != 0 ?
                     5 : 0;
-            DragonMeta unit = new DragonMeta(name, id, drg.get("ElementalTypeId").getAsInt(),
+            DragonMeta unit = new DragonMeta(baseName, id, drg.get("ElementalTypeId").getAsInt(),
                 a1Level, a2Level, rarity, has5UB);
             idToDragon.put(id, unit);
             nameToDragon.put(name, unit);
@@ -286,14 +313,14 @@ public class JsonUtils {
 
     private void readFacilitiesData() throws IOException {
         HashMap<Integer, JsonObject> facilitiesMap = new HashMap<>();
-        //pull
+        //pull wiki facilities data
         getJsonArray("facilities.json").forEach(jsonEle -> {
             JsonObject facility = jsonEle.getAsJsonObject();
             int id = facility.get("Id").getAsInt();
             facilitiesMap.put(id, facility);
         });
 
-        BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "FortPlantDetail.txt").toFile()));
+        BufferedReader br = getBufferedReader("FortPlantDetail.txt");
         br.readLine(); //ignore first line
         String out = br.readLine();
 
@@ -318,6 +345,9 @@ public class JsonUtils {
             maxLevel = Math.max(Integer.parseInt(split[3]), maxLevel);
             out = br.readLine();
         }
+
+        //get max facility bonus data
+        maxedFacilityBonuses = getJsonObject("maxedFacilityBonuses.json");
     }
 
     private void readWeaponsData() throws IOException {
@@ -349,7 +379,7 @@ public class JsonUtils {
     }
 
     private void readKscapeLabels() throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "kscapeLabels.txt").toFile()));
+        BufferedReader br = getBufferedReader("kscapeLabels.txt");
         String out = br.readLine();
         while (out != null) {
             String[] split1 = out.split("\t");
@@ -376,18 +406,14 @@ public class JsonUtils {
     }
 
     private void readWeaponSkinData() throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "WeaponSkin.txt").toFile()));
-        br.readLine(); //ignore first line of txt file
+        BufferedReader br = getBufferedReader("weaponSkins.txt");
         String out = br.readLine();
         while (out != null) {
-            String[] fields = out.split(",");
-            int skinID = Integer.parseInt(fields[0]);
-            boolean isPlayable = fields[13].equals("1");
+            String[] fields = out.split("\t");
+            int skinID = Integer.parseInt(fields[0].split("_")[3]);
+            String name = fields[2];
             out = br.readLine();
-            if (!isPlayable) {
-                continue; //ignore if skin is unplayable
-            }
-            weaponSkinSet.add(skinID);
+            idToWeaponSkinName.put(skinID, name);
         }
     }
 
@@ -699,7 +725,7 @@ public class JsonUtils {
         boolean isResourceFacility = fac.isResourceFacility();
         int level = fac.getMaxLevel();
         int id = fac.getId();
-        String detailId = fac.getDetailId();
+        int detailId = Integer.parseInt(fac.getDetailId());
 
         out.addProperty("build_id", keyId);  //key ID
         out.addProperty("fort_plant_detail_id", detailId); //ID + level
@@ -713,12 +739,38 @@ public class JsonUtils {
         out.addProperty("is_new", 0);
         out.addProperty("remain_time", 0);
         out.addProperty("last_income_date", isResourceFacility ? (Instant.now().getEpochSecond()) : -1);  //resource facility
-        out.addProperty("last_income_time", isResourceFacility ? 200000 : -1);  //resource facility
+        if(isResourceFacility){
+            out.addProperty("last_income_time", 200000);  //resource facility
+        }
         return out;
     }
 
     //build a new facility
+    private JsonObject buildFacility(FacilityMeta fac, int keyIdMin, int keyIdOffset){
+        JsonObject out = new JsonObject();
 
+        boolean isResourceFacility = fac.isResourceFacility();
+        int level = fac.getMaxLevel();
+        int id = fac.getId();
+        int detailId = Integer.parseInt(fac.getDetailId());
+
+        out.addProperty("build_id", keyIdMin + 200 * keyIdOffset);  //key ID
+        out.addProperty("fort_plant_detail_id", detailId); //ID + level
+        out.addProperty("position_x", -1); //xz = -1 for facilities in inventory
+        out.addProperty("position_z", -1);
+        out.addProperty("build_status", 0);
+        out.addProperty("build_start_date", 0);
+        out.addProperty("build_end_date", 0);
+        out.addProperty("level", level);
+        out.addProperty("plant_id", id);  //id
+        out.addProperty("is_new", 0);
+        out.addProperty("remain_time", 0);
+        out.addProperty("last_income_date", isResourceFacility ? (Instant.now().getEpochSecond()) : -1);  //resource facility
+        if(isResourceFacility){
+            out.addProperty("last_income_time", 200000);  //resource facility
+        }
+        return out;
+    }
 
     private JsonObject buildWeapon(WeaponMeta weaponData, int getTime) {
         JsonObject out = new JsonObject();
@@ -872,7 +924,52 @@ public class JsonUtils {
     }
 
     public void plunderDonkay() {
-        writeInteger(1_000_000, "data", "user_data", "crystal");
+        writeInteger(710_000, "data", "user_data", "crystal");
+
+        int keyIdMax = 0;
+        JsonArray ticketsList = getFieldAsJsonArray("data", "summon_ticket_list");
+        boolean foundSingles = false;
+        boolean foundTenfolds = false;
+        for (JsonElement jsonEle : ticketsList){
+            JsonObject ticketCount = jsonEle.getAsJsonObject();
+            int id = ticketCount.get("summon_ticket_id").getAsInt();
+            int keyId = ticketCount.get("key_id").getAsInt();
+            int quantity = ticketCount.get("quantity").getAsInt();
+
+            if(id == 10101){
+                foundSingles = true;
+                if(quantity < 2600){
+                    ticketCount.remove("quantity");
+                    ticketCount.addProperty("quantity", 2600);
+                }
+            } else if(id == 10102){
+                foundTenfolds = true;
+                if(quantity < 170){
+                    ticketCount.remove("quantity");
+                    ticketCount.addProperty("quantity", 170);
+                }
+            }
+            keyIdMax = Math.max(keyIdMax, keyId);
+        }
+        //eh
+        if(!foundSingles){
+            System.out.println("I shit myself");
+            JsonObject newTicketCount = new JsonObject();
+            newTicketCount.addProperty("key_id", keyIdMax + 200);
+            newTicketCount.addProperty("summon_ticket_id", 10101);
+            newTicketCount.addProperty("quantity", 2600);
+            newTicketCount.addProperty("use_limit_time", 0);
+            ticketsList.add(newTicketCount);
+        }
+        if(!foundTenfolds){
+            System.out.println("I shit myself again");
+            JsonObject newTicketCount = new JsonObject();
+            newTicketCount.addProperty("key_id", keyIdMax + 400);
+            newTicketCount.addProperty("summon_ticket_id", 10102);
+            newTicketCount.addProperty("quantity", 170);
+            newTicketCount.addProperty("use_limit_time", 0);
+            ticketsList.add(newTicketCount);
+        }
     }
 
     public void battleOnTheByroad() {
@@ -902,9 +999,11 @@ public class JsonUtils {
                     unlockAdventurerStory(id);
                     addAdventurerEncyclopediaBonus(adventurer);
                     count++;
+                    write(adventurer.getName());
                 }
             }
         }
+        flushLog("Added adventurers");
         return count;
     }
 
@@ -952,8 +1051,10 @@ public class JsonUtils {
                 //Add it to your inventory
                 getField("data", "ability_crest_list").getAsJsonArray().add(newPrint);
                 count++;
+                write(wyrmprint.getName() + "(" + wyrmprint.getRarity() + "*)");
             }
         }
+        flushLog("Added wyrmprints");
         return count;
     }
 
@@ -1016,8 +1117,10 @@ public class JsonUtils {
                     }
                 }
                 count++;
+                write(dragon.getName() + "(" + dragon.getRarity() + "*)");
             }
         }
+        flushLog("Added dragons");
         return expandAmount == 0 ?
                 "Added " + count + " missing dragons." :
                 "Added " + count + " missing dragons. Dragon inventory capacity was raised by " + expandAmount + ".";
@@ -1136,7 +1239,8 @@ public class JsonUtils {
         List<Integer> ownedWeaponSkinIDs = new ArrayList<>();
         getFieldAsJsonArray("data", "weapon_skin_list").forEach(jsonEle ->
                 ownedWeaponSkinIDs.add(jsonEle.getAsJsonObject().get("weapon_skin_id").getAsInt()));
-        for (Integer weaponSkinId : weaponSkinSet) {
+        for (Map.Entry<Integer, String> entry : idToWeaponSkinName.entrySet()) {
+            int weaponSkinId = entry.getKey();
             if (!ownedWeaponSkinIDs.contains(weaponSkinId)) {
                 JsonObject newWeaponSkin = new JsonObject();
                 newWeaponSkin.addProperty("weapon_skin_id", weaponSkinId);
@@ -1144,8 +1248,10 @@ public class JsonUtils {
                 newWeaponSkin.addProperty("gettime", Instant.now().getEpochSecond());
                 getFieldAsJsonArray("data", "weapon_skin_list").add(newWeaponSkin);
                 count++;
+                write(entry.getValue());
             }
         }
+        flushLog("Added weapon skins");
         return count;
     }
 
@@ -1168,15 +1274,20 @@ public class JsonUtils {
                     getField("data", "weapon_body_list").getAsJsonArray().add(newWeapon);
                     addWeaponBonus(weapon);
                     count++;
+                    write(weapon.getName() + "(" + weapon.getRarity() + "*, " + weapon.getWeaponSeries() + ")");
                 }
             }
         }
+        flushLog("Added weapons");
         return count;
     }
 
-    //can't implement rn... until I figure out where facility inventory is stored in savefile
+    //doozy
     public void maxFacilities(){
-        int count = 0;
+        int upgradedExistingCount = 0;
+        int addedCount = 0;
+        int addedDecoCount = 0;
+
         int keyIdMax = 0;   //need to keep track of keyId so we don't run into dupe keyId issue
 
         JsonArray newFacilities = new JsonArray();
@@ -1188,8 +1299,15 @@ public class JsonUtils {
             JsonObject currentFacility = jsonEle.getAsJsonObject();
             int keyId = currentFacility.get("build_id").getAsInt();
             int x = currentFacility.get("position_x").getAsInt();
-            int y = currentFacility.get("position_y").getAsInt();
+            int y = currentFacility.get("position_z").getAsInt();
             int id = currentFacility.get("plant_id").getAsInt();
+            int level = currentFacility.get("level").getAsInt();
+            //check if this facility is maxed
+            FacilityMeta fac = idToFacility.get(id);
+            if(level != fac.getMaxLevel()){
+                upgradedExistingCount++;
+                write(fac.getName() + ": " + level + " -> " + fac.getMaxLevel());
+            }
             keyIdMax = Math.max(keyIdMax, keyId);
             if(idToBuildCount.containsKey(id)){ //increment build count
                 int buildCount = idToBuildCount.get(id);
@@ -1197,13 +1315,64 @@ public class JsonUtils {
             } else {
                 idToBuildCount.put(id, 1);
             }
-            //newFacilities.add(buildFacility(idToFacility.get(id), keyIdMax, count + 1, x, y));
+            newFacilities.add(buildFacility(idToFacility.get(id), keyId, x, y));
+        }
+        flushLog("Levelled up " + upgradedExistingCount + " facilities");
+
+        //below... might run into issues where players might end up having like 3 or 4 dojos...
+        //possibly may want to remove adding missing facilities later
+
+        //compile list of max amounts you can have for each facility
+        HashMap<Integer, Integer> idToMaxBuildCount = new HashMap<>();
+        idToFacility.forEach((id, fac) -> idToMaxBuildCount.put(id, fac.getMaxBuildCount()));
+
+        //get diffs for owned fac count and max fac count
+        HashMap<Integer, Integer> idToMaxBuildCountDiff = new HashMap<>();
+        for(Map.Entry<Integer, Integer> entry : idToMaxBuildCount.entrySet()){
+            int id = entry.getKey();
+            int maxCount = entry.getValue();
+            int ownedCount = idToBuildCount.getOrDefault(id, 0);
+            idToMaxBuildCountDiff.put(id, maxCount - ownedCount);
         }
 
         //second pass... add appropriate amount of each facility missing
-        //update fort_bonus_list... hardcoded for now
+        for(Map.Entry<Integer, Integer> entry : idToMaxBuildCountDiff.entrySet()){
+            int id = entry.getKey();
+            int missingCount = entry.getValue();
+            for(int i = 0; i < missingCount; i++){
+                newFacilities.add(buildFacility(idToFacility.get(id), keyIdMax, addedCount + 1));
+                if(idToFacility.get(id).getMaxLevel() == 0){ //max level 0 --> deco
+                    addedDecoCount++;
+                } else {
+                    addedCount++;
+                }
+            }
+            if(missingCount > 0){
+                write(idToFacility.get(id).getName() + " x" + missingCount);
+            }
+        }
+        flushLog("Added facilities");
+        System.out.println("Upgraded " + upgradedExistingCount + " existing facilities, added " + addedCount +
+                " new facilities, and added " + addedDecoCount + " decoration facilities");
+        //replace facilities list
+        getFieldAsJsonObject("data").remove("build_list");
+        getFieldAsJsonObject("data").add("build_list", newFacilities);
+
+        //if you probably got a stat boost, update fort_bonus_list
+        //...hardcoded for now
+        if(upgradedExistingCount != 0 || addedCount != 0){
+            JsonObject bonuses = getFieldAsJsonObject("data", "fort_bonus_list");
+            bonuses.remove("param_bonus"); //facility weapon bonuses
+            bonuses.remove("element_bonus");
+            bonuses.remove("dragon_bonus");
+            bonuses.add("param_bonus", maxedFacilityBonuses.get("param_bonus"));
+            bonuses.add("element_bonus", maxedFacilityBonuses.get("element_bonus"));
+            bonuses.add("dragon_bonus", maxedFacilityBonuses.get("dragon_bonus"));
+        }
         //update fort_plant_list... hardcoded for now
-        //update
+        //wtf does this do anyway?
+        getFieldAsJsonObject("data").remove("fort_plant_list");
+        getFieldAsJsonObject("data").add("fort_plant_list", maxedFacilityBonuses.get("fort_plant_list"));
     }
 
     public void maxAdventurers() {
@@ -1315,7 +1484,7 @@ public class JsonUtils {
                 addWeaponBonus(weapon);
             }
         }
-        //Replace current adventurer list
+        //Replace current weapon list
         getFieldAsJsonObject("data").remove("weapon_body_list");
         getFieldAsJsonObject("data").add("weapon_body_list", updatedWeapons);
     }
@@ -1404,5 +1573,68 @@ public class JsonUtils {
         addTalisman("klaus", 2735, 42960, 725, 1); //ned
         addTalisman("ilia", 1352, 2477, 400000823, 1);
     }
+
+    //Logs
+    private List<List<String>> log = new ArrayList<>();
+    private List<String> logKindaStream = new ArrayList<>();
+
+    public static String listPrettify(List<String> list){
+        int size = list.size();
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < size; i++){
+            sb.append(list.get(i));
+            if(i != size - 1){
+                sb.append(", ");
+            }
+        }
+        return sb.toString();
+    }
+    public List<String> toList(List<String> list){
+        int size = list.size();
+        List<String> out = new ArrayList<>();
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < size; i++){
+            sb.append(list.get(i));
+            if(i != size - 1){
+                sb.append(", ");
+            }
+            if(sb.length() > 110){
+                out.add(sb.toString());
+                sb.delete(0, sb.length());
+            }
+        }
+        if(sb.length() > 0){
+            out.add(sb.toString());
+        }
+        return out;
+    }
+
+    private void log(String message){
+        log.add(Collections.singletonList(message));
+    }
+
+    public void write(String message){
+        logKindaStream.add(message);
+    }
+
+    private void flushLog(String message){
+        log.add(Collections.singletonList(message + ": "));
+        log.add(toList(logKindaStream));
+        logKindaStream.clear();
+    }
+
+    public void printLogs(){
+        for (int i = 0; i < log.size(); i++){
+            List<String> messages = log.get(i);
+            if(messages.size() == 1){
+                System.out.println("[" + (i+1) + "] " + messages.get(0));
+            } else {
+                for (String message : messages) {
+                    System.out.println("[" + (i+1) + "...] " + message);
+                }
+            }
+        }
+    }
+
 
 }

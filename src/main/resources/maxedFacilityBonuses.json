@@ -1,0 +1,165 @@
+{
+  "param_bonus": [
+    {
+      "weapon_type": 1,
+      "hp": 39,
+      "attack": 39
+    },
+    {
+      "weapon_type": 2,
+      "hp": 45,
+      "attack": 45
+    },
+    {
+      "weapon_type": 3,
+      "hp": 45,
+      "attack": 45
+    },
+    {
+      "weapon_type": 4,
+      "hp": 45,
+      "attack": 45
+    },
+    {
+      "weapon_type": 5,
+      "hp": 39,
+      "attack": 39
+    },
+    {
+      "weapon_type": 6,
+      "hp": 45,
+      "attack": 45
+    },
+    {
+      "weapon_type": 7,
+      "hp": 45,
+      "attack": 45
+    },
+    {
+      "weapon_type": 8,
+      "hp": 45,
+      "attack": 45
+    },
+    {
+      "weapon_type": 9,
+      "hp": 45,
+      "attack": 45
+    }
+  ],
+  "element_bonus": [
+    {
+      "elemental_type": 1,
+      "hp": 70.5,
+      "attack": 69.5
+    },
+    {
+      "elemental_type": 2,
+      "hp": 80,
+      "attack": 78
+    },
+    {
+      "elemental_type": 3,
+      "hp": 70.5,
+      "attack": 69.5
+    },
+    {
+      "elemental_type": 4,
+      "hp": 80,
+      "attack": 78
+    },
+    {
+      "elemental_type": 5,
+      "hp": 70.5,
+      "attack": 69.5
+    },
+    {
+      "elemental_type": 99,
+      "hp": 0,
+      "attack": 0
+    }
+  ],
+  "dragon_bonus": [
+    {
+      "elemental_type": 1,
+      "dragon_bonus": 50,
+      "hp": 11.5,
+      "attack": 11.5
+    },
+    {
+      "elemental_type": 2,
+      "dragon_bonus": 50,
+      "hp": 11.5,
+      "attack": 11.5
+    },
+    {
+      "elemental_type": 3,
+      "dragon_bonus": 50,
+      "hp": 11.5,
+      "attack": 11.5
+    },
+    {
+      "elemental_type": 4,
+      "dragon_bonus": 50,
+      "hp": 11.5,
+      "attack": 11.5
+    },
+    {
+      "elemental_type": 5,
+      "dragon_bonus": 50,
+      "hp": 11.5,
+      "attack": 11.5
+    },
+    {
+      "elemental_type": 99,
+      "dragon_bonus": 0,
+      "hp": 0,
+      "attack": 0
+    }
+  ],
+  "fort_plant_list": [
+    {
+      "plant_id": 100201,
+      "is_new": 1
+    },
+    {
+      "plant_id": 100401,
+      "is_new": 1
+    },
+    {
+      "plant_id": 100402,
+      "is_new": 1
+    },
+    {
+      "plant_id": 100403,
+      "is_new": 1
+    },
+    {
+      "plant_id": 100404,
+      "is_new": 1
+    },
+    {
+      "plant_id": 100405,
+      "is_new": 1
+    },
+    {
+      "plant_id": 100701,
+      "is_new": 1
+    },
+    {
+      "plant_id": 100702,
+      "is_new": 1
+    },
+    {
+      "plant_id": 100703,
+      "is_new": 1
+    },
+    {
+      "plant_id": 100704,
+      "is_new": 1
+    },
+    {
+      "plant_id": 100705,
+      "is_new": 1
+    }
+  ]
+}

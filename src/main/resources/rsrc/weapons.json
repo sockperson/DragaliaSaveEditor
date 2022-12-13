@@ -1,0 +1,2490 @@
+[
+    {
+        "Name": "Absolute Aqua",
+        "Id": 30150208,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Absolute Crimson",
+        "Id": 30150107,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Absolute Hex",
+        "Id": 30150503,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Absolute Lightning",
+        "Id": 30150410,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Absolute Tempest",
+        "Id": 30150307,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Abyssbringer",
+        "Id": 30150502,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Aeternal Flame",
+        "Id": 30350102,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Ame no Habakiri",
+        "Id": 30260201,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 2,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Ame no Hajiyumi",
+        "Id": 30660201,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 6,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Ame no Murakumo",
+        "Id": 30160201,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 1,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Ame no Nuhoko",
+        "Id": 30560201,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 5,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Ame no Torifune",
+        "Id": 30960201,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 9,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Ancient Mage's Windcane",
+        "Id": 30850301,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Anemone",
+        "Id": 30250301,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Antique Manacaster",
+        "Id": 30949901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 9,
+        "Rarity": 4,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Aqua Trigger",
+        "Id": 30950203,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Aquamarine Trigger",
+        "Id": 30960204,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 9,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Aquatic Spiral",
+        "Id": 30750206,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Aqueous Prison",
+        "Id": 30760204,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 7,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Areadbhar",
+        "Id": 30560401,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 5,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Aria of Lamentation",
+        "Id": 30850502,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Arondight",
+        "Id": 30260301,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 2,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Astral Echo",
+        "Id": 30650407,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Avalon",
+        "Id": 30860301,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 8,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Axe of the Blazing King",
+        "Id": 30450101,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Axe of the Southern Cross",
+        "Id": 30450301,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Azure Mercurius",
+        "Id": 30650204,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Battleworn Axe",
+        "Id": 30419901,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 4,
+        "Rarity": 1,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Battleworn Blade",
+        "Id": 30219901,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 2,
+        "Rarity": 1,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Battleworn Bow",
+        "Id": 30619901,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 6,
+        "Rarity": 1,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Battleworn Dagger",
+        "Id": 30319901,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 3,
+        "Rarity": 1,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Battleworn Lance",
+        "Id": 30519901,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 5,
+        "Rarity": 1,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Battleworn Manacaster",
+        "Id": 30919901,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 9,
+        "Rarity": 1,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Battleworn Staff",
+        "Id": 30819901,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 8,
+        "Rarity": 1,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Battleworn Sword",
+        "Id": 30119901,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 1,
+        "Rarity": 1,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Battleworn Wand",
+        "Id": 30719901,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 7,
+        "Rarity": 1,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Bejeweled Dagger",
+        "Id": 30339901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 3,
+        "Rarity": 3,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Big Bang Trigger",
+        "Id": 30960104,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 9,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Black Dahlia Bow",
+        "Id": 30650502,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Blackwing",
+        "Id": 30250501,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Blazegambol",
+        "Id": 30850104,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Blinding Conflagration",
+        "Id": 30250104,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Blitzfang",
+        "Id": 30450407,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Bracing Waters",
+        "Id": 30850201,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Brilliant Flash",
+        "Id": 30250404,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Brilliant Lightflash",
+        "Id": 30550405,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Brionac",
+        "Id": 30760401,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 7,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Br\u00edsingr",
+        "Id": 30760101,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 7,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Caduceus",
+        "Id": 30850501,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Caladbolg",
+        "Id": 30160401,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 1,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Calamitous Torrent",
+        "Id": 30260204,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 2,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Calamity Trigger",
+        "Id": 30550101,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Camelot",
+        "Id": 30760301,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 7,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Cane of Soul's Repose",
+        "Id": 30859901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Carnwennan",
+        "Id": 30360301,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 3,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chanzelian Caster",
+        "Id": 30959901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Chanzelian Caster Mk. 21",
+        "Id": 30950302,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chanzelian Caster Mk. 62",
+        "Id": 30950402,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Chanzelian Caster Mk. 65",
+        "Id": 30950102,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Chanzelian Caster Mk. 72",
+        "Id": 30950202,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Chanzelian Caster Mk. 81",
+        "Id": 30950502,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Chimeratech Ajwain",
+        "Id": 30650308,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chimeratech Al Nasr",
+        "Id": 30950410,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Chimeratech Anomalocaris",
+        "Id": 30150212,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Chimeratech Archmage",
+        "Id": 30750107,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Chimeratech Arcturus",
+        "Id": 30550412,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Chimeratech Benzoin",
+        "Id": 30250307,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chimeratech Betelgeuse",
+        "Id": 30750409,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Chimeratech Canopus",
+        "Id": 30250410,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Chimeratech Cantata",
+        "Id": 30950510,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Chimeratech Capella",
+        "Id": 30350409,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Chimeratech Caraway",
+        "Id": 30550307,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chimeratech Cardinal",
+        "Id": 30850107,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Chimeratech Coda",
+        "Id": 30850507,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Chimeratech Commander",
+        "Id": 30150111,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Chimeratech Concerto",
+        "Id": 30650507,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Chimeratech Cypress",
+        "Id": 30150310,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chimeratech Elegy",
+        "Id": 30550508,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Chimeratech Elite",
+        "Id": 30350108,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Chimeratech Fennel",
+        "Id": 30950310,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chimeratech Frankin",
+        "Id": 30750307,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chimeratech Fugue",
+        "Id": 30450508,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Chimeratech Gunner",
+        "Id": 30950110,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Chimeratech Hadranax",
+        "Id": 30250209,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Chimeratech Hallucigenia",
+        "Id": 30650208,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Chimeratech Helmetia",
+        "Id": 30450209,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Chimeratech Hurdia",
+        "Id": 30750208,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Chimeratech Lancemaster",
+        "Id": 30550108,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Chimeratech Lord",
+        "Id": 30250108,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Chimeratech Marella",
+        "Id": 30950210,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Chimeratech Marjoram",
+        "Id": 30850307,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chimeratech Metaldetes",
+        "Id": 30850208,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Chimeratech Nocturne",
+        "Id": 30150510,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Chimeratech Oratorio",
+        "Id": 30750508,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Chimeratech Palmarosa",
+        "Id": 30450307,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chimeratech Procyon",
+        "Id": 30850409,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Chimeratech Requiem",
+        "Id": 30250507,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Chimeratech Rhapsody",
+        "Id": 30350508,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Chimeratech Rigel",
+        "Id": 30450410,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Chimeratech Sirius",
+        "Id": 30150414,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Chimeratech Sniper",
+        "Id": 30650107,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Chimeratech Takakkawia",
+        "Id": 30550209,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Chimeratech Tea Tree",
+        "Id": 30350307,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Chimeratech Vega",
+        "Id": 30650410,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Chimeratech Vetulicola",
+        "Id": 30350208,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Chimeratech Warlord",
+        "Id": 30450108,
+        "WeaponSeries": "Chimeratech",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Cla\u00edomh Solais",
+        "Id": 30360401,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 3,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Composite Bow",
+        "Id": 30639901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 6,
+        "Rarity": 3,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Consuming Darkness",
+        "Id": 30860504,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 8,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Cosmic Ruler",
+        "Id": 30860404,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 8,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Crimson Trigger",
+        "Id": 30950103,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Curse Trigger",
+        "Id": 30950503,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Cyclone Trigger",
+        "Id": 30960304,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 9,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "D\u00e1insleif",
+        "Id": 30150501,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Dane's Favor",
+        "Id": 30259901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Dark Hunger",
+        "Id": 30850503,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Darkbinder",
+        "Id": 30750504,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Daunting Flash",
+        "Id": 30260404,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 2,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Death Aeon",
+        "Id": 30150408,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Death Seeker",
+        "Id": 30350503,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Del Frith",
+        "Id": 30860401,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 8,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Dirge of Desperation",
+        "Id": 30750503,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Divine Trigger",
+        "Id": 30960404,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 9,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Dominus of Ever",
+        "Id": 30850406,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Draupnir",
+        "Id": 30960101,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 9,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Durandal",
+        "Id": 30150301,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Dusk Trigger",
+        "Id": 30960504,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 9,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Ebon Plague Lance",
+        "Id": 30560504,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 5,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Ebon Scourge Lance",
+        "Id": 30550504,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Electron Burst",
+        "Id": 30760404,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 7,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Endless Azure Core",
+        "Id": 30850202,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Endless Demise",
+        "Id": 30850102,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Endless Horizon",
+        "Id": 30250304,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Eoantide",
+        "Id": 30150202,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Eternal Abyss",
+        "Id": 30260504,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 2,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Everfrost Bow",
+        "Id": 30650202,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Excalibur",
+        "Id": 30160301,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 1,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Executor",
+        "Id": 30649901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 6,
+        "Rarity": 4,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Failnaught",
+        "Id": 30660301,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 6,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Fangtian Huaji",
+        "Id": 30460501,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 4,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Final Eclipse",
+        "Id": 30550503,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Firmament Auger",
+        "Id": 30650304,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Flamedance Lance",
+        "Id": 30550102,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Flamerollick",
+        "Id": 30860104,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 8,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Flameruler's Fang",
+        "Id": 30360104,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 3,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Flameruler's Maw",
+        "Id": 30350105,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Fragarach",
+        "Id": 30260401,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 2,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Frigid Sting",
+        "Id": 30350203,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Fulminator's Fang",
+        "Id": 30360404,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 3,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Fulminator's Maw",
+        "Id": 30350404,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Futsu no Mitama",
+        "Id": 30360201,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 3,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Gae Assail",
+        "Id": 30960401,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 9,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Gale's Aid",
+        "Id": 30560304,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 5,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Gallatin",
+        "Id": 30960301,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 9,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Genocide Cleaver",
+        "Id": 30450503,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Gjallarhorn",
+        "Id": 30860101,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 8,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Glorystorm's Guide",
+        "Id": 30450305,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Grand Seadragon",
+        "Id": 30450201,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Grand Tempest",
+        "Id": 30750305,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Guardian Seal",
+        "Id": 30249901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 2,
+        "Rarity": 4,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Guiding Gale",
+        "Id": 30550305,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Gungnir",
+        "Id": 30560101,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 5,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Hardbreaker",
+        "Id": 30349901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 3,
+        "Rarity": 4,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Heaven's Acuity",
+        "Id": 30250101,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Heavensneer",
+        "Id": 30850404,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Heavenwing",
+        "Id": 30250401,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Heavenwrath Gaze",
+        "Id": 30450102,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Hellblaze",
+        "Id": 30760104,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 7,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Hellish Prophecy",
+        "Id": 30650503,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Hero's Sword",
+        "Id": 30159901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Highwater Slicer",
+        "Id": 30250202,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Hollow Lightning",
+        "Id": 30250407,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Honor Edge",
+        "Id": 30350501,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Hrotti",
+        "Id": 30360101,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 3,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Indomitable Thundercrash",
+        "Id": 30460404,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 4,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Inferno Apogee",
+        "Id": 30150102,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Infernoblaze",
+        "Id": 30750104,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Jagged Bolt",
+        "Id": 30450303,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Jiu Ci",
+        "Id": 30760501,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 7,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Jormungand's Fury",
+        "Id": 30650305,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Jormungand's Wrath",
+        "Id": 30660304,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 6,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Judge of Oceans",
+        "Id": 30150203,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Jupiter's Shimmer",
+        "Id": 30660404,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 6,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Jupiter's Sky",
+        "Id": 30650405,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Karlsnautr",
+        "Id": 30350301,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Knight's Sword",
+        "Id": 30139901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 1,
+        "Rarity": 3,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Knights' Grace",
+        "Id": 30149901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 1,
+        "Rarity": 4,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Kris Naga",
+        "Id": 30359901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Kunado",
+        "Id": 30860201,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 8,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Latchkey",
+        "Id": 30749901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 7,
+        "Rarity": 4,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Levatein",
+        "Id": 30150101,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Li Zhang",
+        "Id": 30860501,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 8,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Light of Judgment",
+        "Id": 30850401,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Limpid Cascade",
+        "Id": 30560204,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 5,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Limpid Rush",
+        "Id": 30550205,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Longshe Gong",
+        "Id": 30660501,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 6,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Lucky Hanetsuki Paddle",
+        "Id": 30159904,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Lupis Solis",
+        "Id": 30650101,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Lux Lamina",
+        "Id": 30350201,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Maar Oasis",
+        "Id": 30250201,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Marmyadose",
+        "Id": 30460301,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 4,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Mega Axe",
+        "Id": 30459904,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Mega Blade",
+        "Id": 30259905,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Mega Bow",
+        "Id": 30659905,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Mega Dagger",
+        "Id": 30359904,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Mega Lance",
+        "Id": 30559904,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Mega Staff",
+        "Id": 30859904,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Mega Sword",
+        "Id": 30159905,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Mega Wand",
+        "Id": 30759904,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Merciful Claw",
+        "Id": 30350406,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Mercy's Azure Tide",
+        "Id": 30450205,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Mercy's Jeweled Tide",
+        "Id": 30460204,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 4,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Mighty Thundercrash",
+        "Id": 30450404,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Mistilteinn",
+        "Id": 30550501,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Mj\u00f6lnir",
+        "Id": 30460101,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 4,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Necro Arcus",
+        "Id": 30650501,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Nightfall's Darkbite Axe",
+        "Id": 30460504,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 4,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Nightmare Prophecy",
+        "Id": 30660504,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 6,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Nightsky Ripper",
+        "Id": 30250502,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Nitralica's Koto",
+        "Id": 30659901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Noble Crimson Heat",
+        "Id": 30460104,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 4,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Noble Horizon",
+        "Id": 30260304,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 2,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Nothung",
+        "Id": 30160101,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 1,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Ocean Lord",
+        "Id": 30550201,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Ocean Monarch",
+        "Id": 30750202,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Ocean's Embrace",
+        "Id": 30850204,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Ohohagari",
+        "Id": 30460201,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 4,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Omizununo",
+        "Id": 30760201,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 7,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Omniflame Lance",
+        "Id": 30560104,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 5,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Pactspear",
+        "Id": 30559901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Peacock's Whorl",
+        "Id": 30650201,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Permafrost Crash",
+        "Id": 30450203,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Phytalmios",
+        "Id": 30750301,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Plain Axe",
+        "Id": 30449901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 4,
+        "Rarity": 4,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Primal Aqua",
+        "Id": 30160204,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 1,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Primal Crimson",
+        "Id": 30160104,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 1,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Primal Hex",
+        "Id": 30160504,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 1,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Primal Lightning",
+        "Id": 30160404,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 1,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Primal Tempest",
+        "Id": 30160304,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 1,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Primeval Thunder",
+        "Id": 30750404,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Primordial Titan",
+        "Id": 30450501,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Pureflame Lance",
+        "Id": 30550104,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Qinghong Jian",
+        "Id": 30360501,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 3,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Qinglong Yanyuedao",
+        "Id": 30560501,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 5,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Qixing Baodao",
+        "Id": 30260501,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 2,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Radiant Lightflash",
+        "Id": 30560404,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 5,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Radiant Swath",
+        "Id": 30450401,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Raging Conflagration",
+        "Id": 30260104,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 2,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Rhongomyniad",
+        "Id": 30560301,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 5,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Roaring Weald",
+        "Id": 30150303,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Rog Mol",
+        "Id": 30460401,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 4,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Royal Crimson Heat",
+        "Id": 30450104,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Ruinous Torrent",
+        "Id": 30250204,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Ruler of the Jeweled Tide",
+        "Id": 30860204,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 8,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Sapphire Mercurius",
+        "Id": 30660204,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 6,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Scepter of Infinite Fire",
+        "Id": 30750102,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Shaderuler's Fang",
+        "Id": 30360504,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 3,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Shaderuler's Maw",
+        "Id": 30350504,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Shadowy Darkbite Axe",
+        "Id": 30450504,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Skypainter Staff",
+        "Id": 30850303,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Skyrender",
+        "Id": 30250102,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Soldier's Brand",
+        "Id": 30129901,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 1,
+        "Rarity": 2,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Spear of the Northern Cross",
+        "Id": 30550301,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Spirit Breaker",
+        "Id": 30750204,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Squallruler",
+        "Id": 30860304,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 8,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Staff of Grace",
+        "Id": 30839901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 8,
+        "Rarity": 3,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Staff of Life",
+        "Id": 30849901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 8,
+        "Rarity": 4,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Staff of the Red Emperor",
+        "Id": 30850101,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Starpiercer",
+        "Id": 30550408,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Stellar Pegasus",
+        "Id": 30650302,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Storm Chaser",
+        "Id": 30760304,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 7,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Stormruler",
+        "Id": 30850304,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 8,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Stormsquall Crash",
+        "Id": 30250303,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Strohm Mare",
+        "Id": 30550203,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Strong Halberd",
+        "Id": 30549901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 5,
+        "Rarity": 4,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Subjugator",
+        "Id": 30239901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 2,
+        "Rarity": 3,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Tathlum",
+        "Id": 30660401,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 6,
+        "Rarity": 6,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Tempest Trigger",
+        "Id": 30950303,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Tempest's Guide",
+        "Id": 30460304,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 4,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Terranigmus",
+        "Id": 30750101,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "The Gale",
+        "Id": 30350303,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Thunder King's Greatspear",
+        "Id": 30550402,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Thunder Trigger",
+        "Id": 30950403,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 9,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Thunderblade Sugaar",
+        "Id": 30350401,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Thunderbow",
+        "Id": 30650402,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Tideruler's Fang",
+        "Id": 30360204,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 3,
+        "Rarity": 6,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Tideruler's Maw",
+        "Id": 30350205,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 2
+    },
+    {
+        "Name": "Trident",
+        "Id": 30539901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 5,
+        "Rarity": 3,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "True Abyss",
+        "Id": 30250503,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 2,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Twilight Shimmer",
+        "Id": 30750401,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "Typhoon's Rule",
+        "Id": 30750303,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Tyrfing",
+        "Id": 30260101,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 2,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Umbral Chaser",
+        "Id": 30760504,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 7,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Underworld Despair",
+        "Id": 30750501,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Valkyrie's Fire",
+        "Id": 30650104,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Valkyrie's Hellfire",
+        "Id": 30660104,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 6,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Vermillion Pain",
+        "Id": 30350103,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Victory Axe",
+        "Id": 30459901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 4,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Vulcanrage",
+        "Id": 30650102,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 6,
+        "Rarity": 5,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Wand of the Torrent",
+        "Id": 30759901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Wanli Qi Yunyan",
+        "Id": 30960501,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 9,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Warrior's Axe",
+        "Id": 30439901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 4,
+        "Rarity": 3,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Windruler's Fang",
+        "Id": 30360304,
+        "WeaponSeries": "Primal Dragon",
+        "WeaponTypeId": 3,
+        "Rarity": 6,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Windruler's Maw",
+        "Id": 30350305,
+        "WeaponSeries": "High Dragon",
+        "WeaponTypeId": 3,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Windsovereign Trident",
+        "Id": 30550303,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 5,
+        "Rarity": 5,
+        "ElementalTypeId": 3
+    },
+    {
+        "Name": "Wizard's Rod",
+        "Id": 30739901,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 7,
+        "Rarity": 3,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Worldshaker",
+        "Id": 30750406,
+        "WeaponSeries": "Void",
+        "WeaponTypeId": 7,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    },
+    {
+        "Name": "\u00dddalir",
+        "Id": 30660101,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 6,
+        "Rarity": 6,
+        "ElementalTypeId": 1
+    },
+    {
+        "Name": "Yitian Jian",
+        "Id": 30160501,
+        "WeaponSeries": "Agito",
+        "WeaponTypeId": 1,
+        "Rarity": 6,
+        "ElementalTypeId": 5
+    },
+    {
+        "Name": "Zethia's Staff",
+        "Id": 39900001,
+        "WeaponSeries": "Other",
+        "WeaponTypeId": 8,
+        "Rarity": 1,
+        "ElementalTypeId": 99
+    },
+    {
+        "Name": "Zex's End",
+        "Id": 30150401,
+        "WeaponSeries": "Core",
+        "WeaponTypeId": 1,
+        "Rarity": 5,
+        "ElementalTypeId": 4
+    }
+]

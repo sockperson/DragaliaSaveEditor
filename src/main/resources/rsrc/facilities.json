@@ -1,0 +1,452 @@
+[
+    {
+        "Name": "Abyssal Bell",
+        "Id": 102901,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Aero Slime Statue",
+        "Id": 101903,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Aqua Slime Statue",
+        "Id": 101902,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Arctos Monument",
+        "Id": 102001,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Axe Dojo",
+        "Id": 100504,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Balloon Wagon",
+        "Id": 100902,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Battle Standard",
+        "Id": 100705,
+        "Type": "Decorative",
+        "Available": 5
+    },
+    {
+        "Name": "Blade Dojo",
+        "Id": 100502,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Blue Flowers",
+        "Id": 100702,
+        "Type": "Decorative",
+        "Available": 5
+    },
+    {
+        "Name": "Bow Dojo",
+        "Id": 100506,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Broadleaf Tree",
+        "Id": 100704,
+        "Type": "Decorative",
+        "Available": 5
+    },
+    {
+        "Name": "Circus Tent",
+        "Id": 100901,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Cleansing Fount",
+        "Id": 102801,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Conifer Tree",
+        "Id": 100703,
+        "Type": "Decorative",
+        "Available": 5
+    },
+    {
+        "Name": "Dagger Dojo",
+        "Id": 100503,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Double Bass",
+        "Id": 102702,
+        "Type": "Decorative",
+        "Available": 1
+    },
+    {
+        "Name": "Dr. Schmidt's Lab",
+        "Id": 103001,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Drago\u00f1ata",
+        "Id": 101801,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Dragontree",
+        "Id": 100301,
+        "Type": "Production",
+        "Available": 1
+    },
+    {
+        "Name": "Eggy Luca",
+        "Id": 101802,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Eggy Sarisse",
+        "Id": 101803,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Extra Large Tropical Juice",
+        "Id": 102902,
+        "Type": "Decorative",
+        "Available": 1
+    },
+    {
+        "Name": "Fafnir Statue (Flame)",
+        "Id": 101001,
+        "Type": "Dragon",
+        "Available": 1
+    },
+    {
+        "Name": "Fafnir Statue (Light)",
+        "Id": 101004,
+        "Type": "Dragon",
+        "Available": 1
+    },
+    {
+        "Name": "Fafnir Statue (Shadow)",
+        "Id": 101005,
+        "Type": "Dragon",
+        "Available": 1
+    },
+    {
+        "Name": "Fafnir Statue (Water)",
+        "Id": 101002,
+        "Type": "Dragon",
+        "Available": 1
+    },
+    {
+        "Name": "Fafnir Statue (Wind)",
+        "Id": 101003,
+        "Type": "Dragon",
+        "Available": 1
+    },
+    {
+        "Name": "Festival Stage",
+        "Id": 102501,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Flame Altar",
+        "Id": 100401,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Flame Dracolith",
+        "Id": 100601,
+        "Type": "Dragon",
+        "Available": 1
+    },
+    {
+        "Name": "Flame Tree",
+        "Id": 102301,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Foodie's Fork",
+        "Id": 102402,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Halidom",
+        "Id": 100101,
+        "Type": "General",
+        "Available": 1
+    },
+    {
+        "Name": "Hinomotoan Fan",
+        "Id": 102502,
+        "Type": "Decorative",
+        "Available": 1
+    },
+    {
+        "Name": "Iron Weather Vane",
+        "Id": 102002,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Jack-o'-Lantern",
+        "Id": 101502,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Lance Dojo",
+        "Id": 100505,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Lectern",
+        "Id": 101702,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Library Obscura",
+        "Id": 101701,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Light Altar",
+        "Id": 100404,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Light Dracolith",
+        "Id": 100604,
+        "Type": "Dragon",
+        "Available": 1
+    },
+    {
+        "Name": "Light Tree",
+        "Id": 102304,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Little Pi Plushie",
+        "Id": 102802,
+        "Type": "Decorative",
+        "Available": 1
+    },
+    {
+        "Name": "Magma Slime Statue",
+        "Id": 101901,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Manacaster Dojo",
+        "Id": 100509,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Metall",
+        "Id": 102201,
+        "Type": "Decorative",
+        "Available": 10
+    },
+    {
+        "Name": "Opera House",
+        "Id": 102701,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Palm Tree",
+        "Id": 101302,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Poison Slime Statue",
+        "Id": 101905,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Preservation Pod",
+        "Id": 103002,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Pumpkin Mariti",
+        "Id": 102101,
+        "Type": "Decorative",
+        "Available": 3
+    },
+    {
+        "Name": "Red Flowers",
+        "Id": 100701,
+        "Type": "Decorative",
+        "Available": 5
+    },
+    {
+        "Name": "Rupie Mine",
+        "Id": 100201,
+        "Type": "Production",
+        "Available": 4
+    },
+    {
+        "Name": "Seabed Stage",
+        "Id": 101301,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Shadow Altar",
+        "Id": 100405,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Shadow Dracolith",
+        "Id": 100605,
+        "Type": "Dragon",
+        "Available": 1
+    },
+    {
+        "Name": "Shadow Tree",
+        "Id": 102305,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Smithy",
+        "Id": 101401,
+        "Type": "General",
+        "Available": 1
+    },
+    {
+        "Name": "Snowdrake",
+        "Id": 101602,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Staff Dojo",
+        "Id": 100508,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Statue of Ilia",
+        "Id": 102601,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Sweet Retreat",
+        "Id": 101501,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Sword Dojo",
+        "Id": 100501,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "The Hungerdome",
+        "Id": 102401,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Twinkling Slime Statue",
+        "Id": 101904,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Wand Dojo",
+        "Id": 100507,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Water Altar",
+        "Id": 100402,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Water Dracolith",
+        "Id": 100602,
+        "Type": "Dragon",
+        "Available": 1
+    },
+    {
+        "Name": "Water Tree",
+        "Id": 102302,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Wind Altar",
+        "Id": 100403,
+        "Type": "Adventurer",
+        "Available": 2
+    },
+    {
+        "Name": "Wind Dracolith",
+        "Id": 100603,
+        "Type": "Dragon",
+        "Available": 1
+    },
+    {
+        "Name": "Wind Shrine",
+        "Id": 101101,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Wind Tree",
+        "Id": 102303,
+        "Type": "Adventurer",
+        "Available": 1
+    },
+    {
+        "Name": "Wishmill",
+        "Id": 101102,
+        "Type": "Decorative",
+        "Available": 4
+    },
+    {
+        "Name": "Yuletree",
+        "Id": 101601,
+        "Type": "Adventurer",
+        "Available": 1
+    }
+]

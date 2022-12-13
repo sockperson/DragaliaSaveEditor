@@ -1,4 +1,4 @@
-import java.io.File;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.file.Paths;
 import java.util.List;
@@ -8,11 +8,20 @@ import java.util.function.Consumer;
 public class SaveEditor {
 
     private static final Scanner input = new Scanner(System.in);
+    private static boolean inJar = false;
 
-    private static String getFilePath() throws URISyntaxException {
-        String programPath = new File(SaveEditor.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getPath();
+    private static String getFilePath() {
+        String programPath = null;
+        try {
+            programPath = new File(SaveEditor.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getPath();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        inJar = programPath.contains(".jar"); //eh
         return programPath;
     }
+
+    //private static String get
 
     private static void yesNoQuestion(String question, String response, Runnable func){
         System.out.print(question + " (y/n): ");        //print the question
@@ -69,33 +78,35 @@ public class SaveEditor {
     }
 
     public static void main(String[] args){
-        System.out.print("Enter path for save file: (Default: DragaliaSaveEditor directory): ");
+        System.out.print("Enter path for save file: (Default: this directory): ");
         String path = input.nextLine();
-        String programPath = null;
-        try { //jank filepath stuff...should fix this sometime
-            programPath = getFilePath();
-            int indexOfDir = programPath.indexOf("DragaliaSaveEditor");
-            if(indexOfDir == -1){
-                System.out.println("Directory 'DragaliaSaveEditor' not found!");
-                System.exit(98);
+        String programPath = getFilePath();
+        String savePath;
+
+        if(path.equals("")){
+            if(inJar){
+                savePath = Paths.get(new File(programPath).getParent(), "savedata.txt").toString();
+            } else {
+                int indexOfDir = programPath.indexOf("DragaliaSaveEditor");
+                if(indexOfDir == -1){
+                    System.out.println("Directory 'DragaliaSaveEditor' not found!");
+                    System.exit(98);
+                }
+                String editorPath = Paths.get(programPath.substring(0, indexOfDir), "DragaliaSaveEditor").toString();
+                savePath = Paths.get(editorPath, "savedata.txt").toString();
             }
-            programPath = programPath.substring(0, indexOfDir);
-            programPath = Paths.get(programPath, "DragaliaSaveEditor").toString();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-        if(path.equals("")){ //default
-            path = Paths.get(programPath, "savedata.txt").toString();
+        } else {
+            savePath = path;
         }
         System.out.println();
-        JsonUtils util = new JsonUtils(path, programPath);
+        JsonUtils util = new JsonUtils(savePath, programPath, inJar);
         System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
         yesNoQuestion(
                 "Uncap mana? (Sets mana to 10m)",
                 "Mana uncapped!",
                 () -> util.uncapMana());
         yesNoQuestion(
-                "Rob Donkay? (Sets wyrmites to 1m)",
+                "Rob Donkay? (Sets wyrmites to 710k, singles to 2.6k, tenfolds to 170)",
                 "Thanks Donkay!",
                 () -> util.plunderDonkay());
         yesNoQuestion(
@@ -104,16 +115,8 @@ public class SaveEditor {
                 () -> util.battleOnTheByroad());
         //check for invisible adventurers (skipped raid welfares)
         List<String> skippedTempAdventurers = util.checkSkippedTempAdventurers();
-        int skippedTempAdventurersCount = skippedTempAdventurers.size();
         if(skippedTempAdventurers.size() > 0){
-            System.out.print("Skipped raid welfare adventurers: ");
-            for(int i = 0; i < skippedTempAdventurersCount; i++){
-                System.out.print(skippedTempAdventurers.get(i));
-                if(i != skippedTempAdventurersCount - 1){
-                    System.out.print(", ");
-                }
-            }
-            System.out.println(" found.");
+            System.out.println("Skipped raid welfare adventurers: " + JsonUtils.listPrettify(skippedTempAdventurers) + " found.");
             yesNoQuestion("\tWould you like to max out their friendship level and add them to your roster?",
                     "Done!",
                     () -> util.setAdventurerVisibleFlags());
@@ -166,9 +169,9 @@ public class SaveEditor {
                         "\tThis will completely replace portrait prints that you own. Is this ok?",
                         "Done!",
                         () -> util.backToTheMines()));
-        yesNoQuestion(
-                "Add missing weapon skins?",
+        yesNoQuestion("Add missing weapon skins?",
                 () -> System.out.println("Added " + util.addMissingWeaponSkins() + " missing weapon skins."));
+        yesNoQuestion("Max Halidom facilities?", () -> util.maxFacilities());
         yesNoQuestion(
                 "Do additional hacked options?",
                 () -> {
@@ -183,6 +186,8 @@ public class SaveEditor {
                     () -> util.setOverwrite(true));
         }
         util.writeToFile();
+        System.out.println();
+        yesNoQuestion("View logs?", () -> util.printLogs());
     }
 
 }
