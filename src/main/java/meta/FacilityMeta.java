@@ -20,4 +20,6 @@ public class FacilityMeta {
     public int getMaxLevel(){ return maxLevel; }
     public boolean isResourceFacility(){ return isResourceFacility; }
     public int getMaxBuildCount(){ return maxBuildCount; }
+
+    public String getDetailId(){ return id + "" + (maxLevel > 9 ? maxLevel : "0" + maxLevel); } //AAAAAABB
 }

@@ -1,6 +1,7 @@
 import java.io.File;
 import java.net.URISyntaxException;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Scanner;
 import java.util.function.Consumer;
 
@@ -9,7 +10,8 @@ public class SaveEditor {
     private static final Scanner input = new Scanner(System.in);
 
     private static String getFilePath() throws URISyntaxException {
-        return new File(SaveEditor.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getPath();
+        String programPath = new File(SaveEditor.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getPath();
+        return programPath;
     }
 
     private static void yesNoQuestion(String question, String response, Runnable func){
@@ -70,15 +72,20 @@ public class SaveEditor {
         System.out.print("Enter path for save file: (Default: DragaliaSaveEditor directory): ");
         String path = input.nextLine();
         String programPath = null;
-        try {
+        try { //jank filepath stuff...should fix this sometime
             programPath = getFilePath();
-            programPath = programPath.substring(0, programPath.indexOf("DragaliaSaveEditor"));
+            int indexOfDir = programPath.indexOf("DragaliaSaveEditor");
+            if(indexOfDir == -1){
+                System.out.println("Directory 'DragaliaSaveEditor' not found!");
+                System.exit(98);
+            }
+            programPath = programPath.substring(0, indexOfDir);
             programPath = Paths.get(programPath, "DragaliaSaveEditor").toString();
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
         if(path.equals("")){ //default
-            path = Paths.get(programPath.substring(0, programPath.indexOf("DragaliaSaveEditor")), "DragaliaSaveEditor", "savedata.txt").toString();
+            path = Paths.get(programPath, "savedata.txt").toString();
         }
         System.out.println();
         JsonUtils util = new JsonUtils(path, programPath);
@@ -95,6 +102,22 @@ public class SaveEditor {
                 "Play Ch13 Ex1-2 Battle On The Byroad? (Sets eldwater to 10m)",
                 "Set eldwater to 10m.",
                 () -> util.battleOnTheByroad());
+        //check for invisible adventurers (skipped raid welfares)
+        List<String> skippedTempAdventurers = util.checkSkippedTempAdventurers();
+        int skippedTempAdventurersCount = skippedTempAdventurers.size();
+        if(skippedTempAdventurers.size() > 0){
+            System.out.print("Skipped raid welfare adventurers: ");
+            for(int i = 0; i < skippedTempAdventurersCount; i++){
+                System.out.print(skippedTempAdventurers.get(i));
+                if(i != skippedTempAdventurersCount - 1){
+                    System.out.print(", ");
+                }
+            }
+            System.out.println(" found.");
+            yesNoQuestion("\tWould you like to max out their friendship level and add them to your roster?",
+                    "Done!",
+                    () -> util.setAdventurerVisibleFlags());
+        }
         yesNoQuestion(
                 "Max out existing adventurers/dragon/weapons/wyrmprints?",
                 () -> {

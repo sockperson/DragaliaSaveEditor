@@ -56,11 +56,19 @@ public class JsonUtils {
         try {
             basePath = savePath.substring(0, savePath.indexOf("savedata"));
         } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("savedata.txt not found in directory: '" + savePath + "'!");
+            System.out.println("savedata not found in directory: '" + savePath + "'!");
             System.exit(99);
         }
         rsrcPath = Paths.get(jarPath, "src", "resources").toString();
         try {
+            //further checks for filepath
+            String srcPath = Paths.get(basePath, "src").toString();
+            if(!new File(srcPath).exists()){
+                System.out.println("'src' directory not found in " + basePath + "!");
+            }
+            if(!new File(rsrcPath).exists()){
+                System.out.println("'resources' directory not found in " + srcPath + "!");
+            }
             this.jsonData = getSaveData().getAsJsonObject();
             readAliasesData();
             readAdventurerData();
@@ -88,6 +96,7 @@ public class JsonUtils {
                 String fileName = "savedata" + count + ".txt";
                 while (new File(Paths.get(basePath, fileName).toString()).exists()) {
                     count++;
+                    fileName = "savedata" + count + ".txt";
                 }
                 newPath = Paths.get(basePath, fileName).toString();
             } else {
@@ -191,11 +200,11 @@ public class JsonUtils {
         BufferedReader br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "adventurerAliases.txt").toFile()));
         String out = br.readLine();
         while (out != null) {
-            String[] split = out.split(" ");
-            String name = split[0].replace("-", " ").toUpperCase();
+            String[] split = out.split(",");
+            String name = split[0].toUpperCase();
             List<String> advAliases = new ArrayList<>();
             for(int i = 1; i < split.length; i++){
-                advAliases.add(split[i].replace("-", " ").toUpperCase());
+                advAliases.add(split[i].toUpperCase());
             }
             adventurerAliases.put(name, advAliases);
             out = br.readLine();
@@ -203,11 +212,11 @@ public class JsonUtils {
         br = new BufferedReader(new FileReader(Paths.get(rsrcPath, "dragonAliases.txt").toFile()));
         out = br.readLine();
         while (out != null) {
-            String[] split = out.split(" "); //use underscore instead of '-' for space replacement since some
-            String name = split[0].replace("_", " ").toUpperCase(); //dragons have '-' in their name
+            String[] split = out.split(",");
+            String name = split[0].toUpperCase();
             List<String> drgAliases = new ArrayList<>();
             for(int i = 1; i < split.length; i++){
-                drgAliases.add(split[i].replace("_", " ").toUpperCase());
+                drgAliases.add(split[i].toUpperCase());
             }
             dragonAliases.put(name, drgAliases);
             out = br.readLine();
@@ -683,21 +692,16 @@ public class JsonUtils {
         return out;
     }
 
-    private JsonObject buildFacility(FacilityMeta fac, int keyIdMin, int keyIdOffset, int x, int y){
+    //build facility from existing facility
+    private JsonObject buildFacility(FacilityMeta fac, int keyId, int x, int y){
         JsonObject out = new JsonObject();
 
-        boolean isResourceFacility = false;
+        boolean isResourceFacility = fac.isResourceFacility();
         int level = fac.getMaxLevel();
         int id = fac.getId();
-        switch(id){
-            case 100101: //Halidom
-            case 100201: //Rupie Mine
-            case 100301: //Dragontree
-                isResourceFacility = true;
-        }
-        String detailId = id + "" + (level > 9 ? level : "0" + level); //AAAAAABB
+        String detailId = fac.getDetailId();
 
-        out.addProperty("build_id", keyIdMin + keyIdOffset * 200);  //key ID
+        out.addProperty("build_id", keyId);  //key ID
         out.addProperty("fort_plant_detail_id", detailId); //ID + level
         out.addProperty("position_x", x);
         out.addProperty("position_z", y);
@@ -712,6 +716,9 @@ public class JsonUtils {
         out.addProperty("last_income_time", isResourceFacility ? 200000 : -1);  //resource facility
         return out;
     }
+
+    //build a new facility
+
 
     private JsonObject buildWeapon(WeaponMeta weaponData, int getTime) {
         JsonObject out = new JsonObject();
@@ -1190,7 +1197,7 @@ public class JsonUtils {
             } else {
                 idToBuildCount.put(id, 1);
             }
-            newFacilities.add(buildFacility(idToFacility.get(id), keyIdMax, count + 1, x, y));
+            //newFacilities.add(buildFacility(idToFacility.get(id), keyIdMax, count + 1, x, y));
         }
 
         //second pass... add appropriate amount of each facility missing
@@ -1331,6 +1338,30 @@ public class JsonUtils {
         getFieldAsJsonObject("data").add("ability_crest_list", updatedWyrmprints);
     }
 
+    //check for temporary adventurers who've been skipped
+    //their list_view_flag will be == 0
+    public List<String> checkSkippedTempAdventurers(){
+        List<String> skippedAdvs = new ArrayList<>();
+        for(JsonElement jsonEle : getFieldAsJsonArray("data", "chara_list")){
+            JsonObject adv = jsonEle.getAsJsonObject();
+            if(adv.get("list_view_flag").getAsInt() == 0){
+                skippedAdvs.add(idToAdventurer.get(adv.get("chara_id").getAsInt()).getName());
+            }
+        }
+        return skippedAdvs;
+    }
+
+    //set list_view_flag of all adventurers to 1
+    public void setAdventurerVisibleFlags(){
+        for(JsonElement jsonEle : getFieldAsJsonArray("data", "chara_list")){
+            JsonObject adv = jsonEle.getAsJsonObject();
+            if(adv.get("list_view_flag").getAsInt() == 0){
+                adv.remove("list_view_flag");
+                adv.addProperty("list_view_flag", 1);
+            }
+        }
+    }
+
     //Hacked options
 
     public void kscapeRandomizer() {
@@ -1368,8 +1399,10 @@ public class JsonUtils {
         addTalisman("syasu", 100100205, 1225, 100100204, 4); //ar20 + hp70 ar10 + ar10
         addTalisman("ranzal", 2172, 2175, 721, 4); //bolk
         addTalisman("alia", 1237, 400000822, 400000821, 1); //dyilia
-        addTalisman("valyx", 2664, 301, 725, 2); //valyx
+        addTalisman("valyx", 2664, 875, 725, 2); //valyx
         addTalisman("emile", 2579, 2578, 806, 2); //emile
         addTalisman("klaus", 2735, 42960, 725, 1); //ned
+        addTalisman("ilia", 1352, 2477, 400000823, 1);
     }
+
 }
