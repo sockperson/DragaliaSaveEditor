@@ -25,7 +25,7 @@ Gala-Audric gaudric
 Gala-Chelle gchelle
 Gala-Cleo gleo gcleo
 Gala-Elisanne gelisanne gelly
-Gala-Emile gemile
+Gala-Emile gemile emile
 Gala-Gatov gatov
 Gala-Laxi glaxi
 Gala-Leif gleif
@@ -59,6 +59,7 @@ Humanoid-Zodiark hzod huzod hzodiark
 Hunter-Berserker hberserker hzerker
 Hunter-Sarisse hsari hsarisse
 Hunter-Vanessa hvanessa
+Ieyasu yasu
 Incognito-Nefaria inefaria inef
 Jiang-Ziya jz
 Kimono-Elisanne kelisanne kelly

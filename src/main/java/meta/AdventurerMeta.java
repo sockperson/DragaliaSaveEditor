@@ -2,13 +2,14 @@ package meta;
 
 public class AdventurerMeta {
 
-    private String name;
+    private String name, title;
     private int id, elementId, maxHp, maxStr, baseRarity;
     private boolean hasSkillShare, hasManaSpiral;
 
-    public AdventurerMeta(String name, int id, int elementId, int maxHp, int maxStr,
+    public AdventurerMeta(String name, String title, int id, int elementId, int maxHp, int maxStr,
                           int baseRarity, boolean hasSkillShare, boolean hasManaSpiral){
         this.name = name;
+        this.title = title;
         this.id = id;
         this.elementId = elementId;
         this.maxHp = maxHp;
@@ -19,6 +20,7 @@ public class AdventurerMeta {
     }
 
     public String getName(){ return name; }
+    public String getTitle(){ return title; }
     public int getId(){ return id; }
     public int getElementId(){ return elementId; }
     public int getMaxHp(){ return maxHp; }

@@ -233,7 +233,7 @@ public class JsonUtils {
                 hp = getSum(adv, "MaxHp", "PlusHp0", "PlusHp1", "PlusHp2", "PlusHp3", "PlusHp4", "McFullBonusHp5");
                 str = getSum(adv, "MaxAtk", "PlusAtk0", "PlusAtk1", "PlusAtk2", "PlusAtk3", "PlusAtk4", "McFullBonusAtk5");
             }
-            AdventurerMeta unit = new AdventurerMeta(name, id,
+            AdventurerMeta unit = new AdventurerMeta(name, adv.get("Title").getAsString(), id,
                     adv.get("ElementalTypeId").getAsInt(), hp, str,adv.get("MaxLimitBreakCount").getAsInt(),
                     adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral);
             idToAdventurer.put(id, unit);
@@ -491,31 +491,41 @@ public class JsonUtils {
         }
     }
 
-    private void addTalisman(String label, int id1, int id2, int id3) {
-        JsonObject out = new JsonObject();
+    private void addTalisman(String advName, int id1, int id2, int id3, int count) {
+        for(int i = 0; i < count; i++){
+            JsonObject out = new JsonObject();
 
-        int keyIdMax = 0;   //need to keep track of keyId
-        //Obtain keyIdMax
-        JsonArray ownedTalismans = getFieldAsJsonArray("data", "talisman_list");
-        for (JsonElement jsonEle : ownedTalismans) {
-            JsonObject ownedTalisman = jsonEle.getAsJsonObject();
-            keyIdMax = Math.max(keyIdMax, ownedTalisman.get("talisman_key_id").getAsInt());
+            int keyIdMax = 0;   //need to keep track of keyId
+            //Obtain keyIdMax
+            JsonArray ownedTalismans = getFieldAsJsonArray("data", "talisman_list");
+            for (JsonElement jsonEle : ownedTalismans) {
+                JsonObject ownedTalisman = jsonEle.getAsJsonObject();
+                keyIdMax = Math.max(keyIdMax, ownedTalisman.get("talisman_key_id").getAsInt());
+            }
+            String name = advName.toUpperCase();
+            if(!nameToAdventurer.containsKey(name)){
+                System.out.println("No adventurer found for name: " + advName + "!");
+                return;
+            }
+            String label = nameToAdventurer.get(name).getTitle();
+            if(!kscapeLabelsMap.containsKey(label)){
+                System.out.println("No ID found for label:" + label + "!");
+            }
+            int portraitID = kscapeLabelsMap.get(label);
+
+            out.addProperty("talisman_key_id", keyIdMax + 200);
+            out.addProperty("talisman_id", portraitID);
+            out.addProperty("is_lock", 0);
+            out.addProperty("is_new", 1);
+            out.addProperty("talisman_ability_id_1", id1);
+            out.addProperty("talisman_ability_id_2", id2);
+            out.addProperty("talisman_ability_id_3", id3);
+            out.addProperty("additional_hp", 0);
+            out.addProperty("additional_attack", 0);
+            out.addProperty("gettime", Instant.now().getEpochSecond());
+
+            getFieldAsJsonArray("data", "talisman_list").add(out);
         }
-
-        int portraitID = kscapeLabelsMap.get(label);
-
-        out.addProperty("talisman_key_id", keyIdMax + 200);
-        out.addProperty("talisman_id", portraitID);
-        out.addProperty("is_lock", 0);
-        out.addProperty("is_new", 1);
-        out.addProperty("talisman_ability_id_1", id1);
-        out.addProperty("talisman_ability_id_2", id2);
-        out.addProperty("talisman_ability_id_3", id3);
-        out.addProperty("additional_hp", 0);
-        out.addProperty("additional_attack", 0);
-        out.addProperty("gettime", Instant.now().getEpochSecond());
-
-        getFieldAsJsonArray("data", "talisman_list").add(out);
     }
 
     private JsonObject buildTalisman(String label, String[] combo, int keyIdOffset) {
@@ -1353,13 +1363,13 @@ public class JsonUtils {
     }
 
     public void addGoofyKscapes() {
-        for(int i = 0; i < 4; i++){
-            addTalisman("Born Ruler", 805, 806, 721); //(Water) Skill Recharge +65%, Skill Prep +100%
-            addTalisman("The Blazewolf", 100100205, 1237, 100100204); //ar20 + flame ar20 + ar10
-            addTalisman("Summertime Boar", 100100205, 1225, 100100204); //ar20 + hp70 ar10 + ar10
-            addTalisman("Arc in the Storm", 2172, 2175, 721); //bolk
-        }
-        addTalisman("Blessed Alchemist", 1237, 400000822, 400000821); //dyilia
-        addTalisman("Unwavering Auspex", 2677, 3004, 3003); //gzena
+        addTalisman("xander", 806, 805, 721, 4); //(Water) Skill Recharge +65%, Skill Prep +100%
+        addTalisman("gatov", 100100205, 1237, 100100204, 4); //ar20 + flame ar20 + ar10
+        addTalisman("syasu", 100100205, 1225, 100100204, 4); //ar20 + hp70 ar10 + ar10
+        addTalisman("ranzal", 2172, 2175, 721, 4); //bolk
+        addTalisman("alia", 1237, 400000822, 400000821, 1); //dyilia
+        addTalisman("valyx", 2664, 301, 725, 2); //valyx
+        addTalisman("emile", 2579, 2578, 806, 2); //emile
+        addTalisman("klaus", 2735, 42960, 725, 1); //ned
     }
 }
