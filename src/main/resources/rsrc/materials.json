@@ -1,0 +1,2562 @@
+[
+    {
+        "Name": "Abaddon Orb",
+        "Id": 104001054,
+        "Category": 104
+    },
+    {
+        "Name": "Abyss Stone",
+        "Id": 202004002,
+        "Category": 201
+    },
+    {
+        "Name": "Abyssal Lantern",
+        "Id": 204025002,
+        "Category": 201
+    },
+    {
+        "Name": "Abyssal Soul",
+        "Id": 204030001,
+        "Category": 201
+    },
+    {
+        "Name": "Abyssal Standard",
+        "Id": 204013002,
+        "Category": 201
+    },
+    {
+        "Name": "AC-011 Garland's Essence",
+        "Id": 206003008,
+        "Category": 206
+    },
+    {
+        "Name": "Acclaim",
+        "Id": 2083701
+    },
+    {
+        "Name": "Acoustic Wood",
+        "Id": 204016002,
+        "Category": 201
+    },
+    {
+        "Name": "Adamantite Ingot",
+        "Id": 112003001,
+        "Category": 112
+    },
+    {
+        "Name": "Agni's Essence",
+        "Id": 206001001,
+        "Category": 206
+    },
+    {
+        "Name": "Akasha's Conviction",
+        "Id": 208030021,
+        "Category": 201
+    },
+    {
+        "Name": "Akasha's Devotion",
+        "Id": 208030022,
+        "Category": 201
+    },
+    {
+        "Name": "Alex (Skin)",
+        "Id": 10340502,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Almighty One's Mask Fragment",
+        "Id": 201017041,
+        "Category": 201
+    },
+    {
+        "Name": "Amber Insignia",
+        "Id": 201010041,
+        "Category": 201
+    },
+    {
+        "Name": "Amber Slab",
+        "Id": 204011001,
+        "Category": 201
+    },
+    {
+        "Name": "Amplifying Crystal",
+        "Id": 117001001,
+        "Category": 117
+    },
+    {
+        "Name": "Amplifying Dragonscale",
+        "Id": 119001001,
+        "Category": 119
+    },
+    {
+        "Name": "Amplifying Gemstone",
+        "Id": 123001001,
+        "Category": 123
+    },
+    {
+        "Name": "Amplifying Jewel",
+        "Id": 121001001,
+        "Category": 121
+    },
+    {
+        "Name": "Ancient Bird's Feather",
+        "Id": 202003002,
+        "Category": 201
+    },
+    {
+        "Name": "Andromeda's Essence",
+        "Id": 206005006,
+        "Category": 206
+    },
+    {
+        "Name": "Annelie's Conviction",
+        "Id": 208040041,
+        "Category": 201
+    },
+    {
+        "Name": "Annelie's Devotion",
+        "Id": 208040042,
+        "Category": 201
+    },
+    {
+        "Name": "Anointed Lance's Memory",
+        "Id": 207001007,
+        "Category": 201
+    },
+    {
+        "Name": "Apollo's Essence",
+        "Id": 206001006,
+        "Category": 206
+    },
+    {
+        "Name": "Apostle's Report",
+        "Id": 2082503,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Appearance Ticket",
+        "Id": 201020001,
+        "Category": 201
+    },
+    {
+        "Name": "Arc in the Storm's Memory",
+        "Id": 207001013,
+        "Category": 201
+    },
+    {
+        "Name": "Arcane Tome",
+        "Id": 203005001,
+        "Category": 201
+    },
+    {
+        "Name": "Arctos's Essence",
+        "Id": 206001005,
+        "Category": 206
+    },
+    {
+        "Name": "Aromatic Wood",
+        "Id": 204002002,
+        "Category": 201
+    },
+    {
+        "Name": "Astral Ornament",
+        "Id": 203003001,
+        "Category": 201
+    },
+    {
+        "Name": "Astral Shard",
+        "Id": 201016001,
+        "Category": 201
+    },
+    {
+        "Name": "Audric (Skin)",
+        "Id": 10140503,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Axe Tablet",
+        "Id": 202005041,
+        "Category": 201
+    },
+    {
+        "Name": "Azazel's Essence",
+        "Id": 206005007,
+        "Category": 206
+    },
+    {
+        "Name": "Azure Heart",
+        "Id": 202010021,
+        "Category": 201
+    },
+    {
+        "Name": "Azure Insignia",
+        "Id": 201010021,
+        "Category": 201
+    },
+    {
+        "Name": "Badge",
+        "Id": 2140101,
+        "Category": "Defensive, Collab"
+    },
+    {
+        "Name": "Bat's Wing",
+        "Id": 202003001,
+        "Category": 201
+    },
+    {
+        "Name": "Battle Chart",
+        "Id": 2220104,
+        "Category": "Onslaught, Defensive"
+    },
+    {
+        "Name": "Battle Points",
+        "Id": 223010101,
+        "Category": "BattleRoyale"
+    },
+    {
+        "Name": "Belle Healer's Memory",
+        "Id": 207001019,
+        "Category": 201
+    },
+    {
+        "Name": "Bewitching Wings",
+        "Id": 202003003,
+        "Category": 201
+    },
+    {
+        "Name": "Big Top Balloons",
+        "Id": 2080402,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Blade Tablet",
+        "Id": 202005021,
+        "Category": 201
+    },
+    {
+        "Name": "Blaze Orb",
+        "Id": 104001012,
+        "Category": 104
+    },
+    {
+        "Name": "Blazing Ember",
+        "Id": 204008002,
+        "Category": 201
+    },
+    {
+        "Name": "Blazing Horn",
+        "Id": 204008001,
+        "Category": 201
+    },
+    {
+        "Name": "Blessed Water",
+        "Id": 113001002,
+        "Category": 113
+    },
+    {
+        "Name": "Blinding Citrine",
+        "Id": 201022043,
+        "Category": 201
+    },
+    {
+        "Name": "Blinding Prism",
+        "Id": 201022042,
+        "Category": 201
+    },
+    {
+        "Name": "Blinding Shard",
+        "Id": 201022041,
+        "Category": 201
+    },
+    {
+        "Name": "Blue Rose",
+        "Id": 2082802,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Bolt",
+        "Id": 2180101,
+        "Category": "Collab"
+    },
+    {
+        "Name": "Born Ruler's Memory",
+        "Id": 207001022,
+        "Category": 201
+    },
+    {
+        "Name": "Bow Tablet",
+        "Id": 202005061,
+        "Category": 201
+    },
+    {
+        "Name": "Bronze Crystal",
+        "Id": 101001001,
+        "Category": 101
+    },
+    {
+        "Name": "Bronze Emblem",
+        "Id": 2040102,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Bronze Whetstone",
+        "Id": 103001001,
+        "Category": 103
+    },
+    {
+        "Name": "Burning Heart",
+        "Id": 202010011,
+        "Category": 201
+    },
+    {
+        "Name": "Burning Spore",
+        "Id": 204015002,
+        "Category": 201
+    },
+    {
+        "Name": "Candy Basket",
+        "Id": 2080103,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Catherine's Conviction",
+        "Id": 208020041,
+        "Category": 201
+    },
+    {
+        "Name": "Catherine's Devotion",
+        "Id": 208020042,
+        "Category": 201
+    },
+    {
+        "Name": "Catoblepas's Heateye",
+        "Id": 204026001,
+        "Category": 201
+    },
+    {
+        "Name": "Catoblepas's Hoof",
+        "Id": 204017001,
+        "Category": 201
+    },
+    {
+        "Name": "Catoblepas's Shadoweye",
+        "Id": 204029001,
+        "Category": 201
+    },
+    {
+        "Name": "Catoblepas's Stormeye",
+        "Id": 204017002,
+        "Category": 201
+    },
+    {
+        "Name": "Cerberus's Essence",
+        "Id": 206001003,
+        "Category": 206
+    },
+    {
+        "Name": "Champion's Testament",
+        "Id": 104003002,
+        "Category": 104
+    },
+    {
+        "Name": "Chef's Special",
+        "Id": 203010001,
+        "Category": 201
+    },
+    {
+        "Name": "Chthonius's Essence",
+        "Id": 206005001,
+        "Category": 206
+    },
+    {
+        "Name": "Cleo (Skin)",
+        "Id": 10840501,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Coliseum Crystal",
+        "Id": 2220801
+    },
+    {
+        "Name": "Coliseum Map",
+        "Id": 2220804
+    },
+    {
+        "Name": "Colorful Bouquet",
+        "Id": 2080403,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Conductive Bolt",
+        "Id": 203016001,
+        "Category": 201
+    },
+    {
+        "Name": "Consecrated Water",
+        "Id": 113001003,
+        "Category": 113
+    },
+    {
+        "Name": "Coronal Heart",
+        "Id": 202010041,
+        "Category": 201
+    },
+    {
+        "Name": "Corsaint Phoenix's Essence",
+        "Id": 206004007,
+        "Category": 206
+    },
+    {
+        "Name": "Crimson Core",
+        "Id": 202004003,
+        "Category": 201
+    },
+    {
+        "Name": "Crimson Fungus",
+        "Id": 204015001,
+        "Category": 201
+    },
+    {
+        "Name": "Crown of Light's Memory",
+        "Id": 207001001,
+        "Category": 201
+    },
+    {
+        "Name": "Crunchy Nougat",
+        "Id": 2082302,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Crystalian Hope's Memory",
+        "Id": 207001023,
+        "Category": 201
+    },
+    {
+        "Name": "Crystalian Princess's Memory",
+        "Id": 207001021,
+        "Category": 201
+    },
+    {
+        "Name": "Cupid's Essence",
+        "Id": 206004001,
+        "Category": 206
+    },
+    {
+        "Name": "Cyclone Bindings",
+        "Id": 2043306,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Cyclone Emerald",
+        "Id": 201022033,
+        "Category": 201
+    },
+    {
+        "Name": "Cyclone Prism",
+        "Id": 201022032,
+        "Category": 201
+    },
+    {
+        "Name": "Cyclone Shard",
+        "Id": 201022031,
+        "Category": 201
+    },
+    {
+        "Name": "Dagger Tablet",
+        "Id": 202005031,
+        "Category": 201
+    },
+    {
+        "Name": "Damascus Crystal",
+        "Id": 201007001,
+        "Category": 201
+    },
+    {
+        "Name": "Damascus Ingot",
+        "Id": 112002001,
+        "Category": 112
+    },
+    {
+        "Name": "Dark Core",
+        "Id": 204007002,
+        "Category": 201
+    },
+    {
+        "Name": "Deep-Sea Coral",
+        "Id": 2083402
+    },
+    {
+        "Name": "Deluge Orb",
+        "Id": 104001023,
+        "Category": 104
+    },
+    {
+        "Name": "Despairing One's Mask Fragment",
+        "Id": 201017022,
+        "Category": 201
+    },
+    {
+        "Name": "Destitute One's Mask Fragment",
+        "Id": 201017031,
+        "Category": 201
+    },
+    {
+        "Name": "Determined Auspex's Memory",
+        "Id": 207001006,
+        "Category": 201
+    },
+    {
+        "Name": "Devout Oracle's Memory",
+        "Id": 207001016,
+        "Category": 201
+    },
+    {
+        "Name": "Divine Gales",
+        "Id": 2080201,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Divulgent Lens",
+        "Id": 2080603,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Doting Sister's Memory",
+        "Id": 207001008,
+        "Category": 201
+    },
+    {
+        "Name": "Dragonfruit",
+        "Id": 102001001,
+        "Category": 102
+    },
+    {
+        "Name": "Dragonyule Present",
+        "Id": 203009001,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Dragonyule Wreath",
+        "Id": 2080303,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Dreaming Vegetable's Memory",
+        "Id": 207001011,
+        "Category": 201
+    },
+    {
+        "Name": "Dyrenell Aes",
+        "Id": 201009001,
+        "Category": 201
+    },
+    {
+        "Name": "Dyrenell Argenteus",
+        "Id": 201009002,
+        "Category": 201
+    },
+    {
+        "Name": "Dyrenell Aureus",
+        "Id": 201009003,
+        "Category": 201
+    },
+    {
+        "Name": "Dyrenell's Desires",
+        "Id": 2042909,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Ebon Claw",
+        "Id": 204024002,
+        "Category": 201
+    },
+    {
+        "Name": "Ebon Horn",
+        "Id": 204024003,
+        "Category": 201
+    },
+    {
+        "Name": "Ebon Mane",
+        "Id": 204024001,
+        "Category": 201
+    },
+    {
+        "Name": "Ebony Heart",
+        "Id": 202010051,
+        "Category": 201
+    },
+    {
+        "Name": "Eggsploration Points",
+        "Id": 2080701,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Eliminating One's Mask Fragment",
+        "Id": 201017021,
+        "Category": 201
+    },
+    {
+        "Name": "Elisanne (Skin)",
+        "Id": 10540201,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Enchanted Axe Tablet",
+        "Id": 223010204,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Enchanted Blade Tablet",
+        "Id": 223010202,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Enchanted Bow Tablet",
+        "Id": 223010206,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Enchanted Dagger Tablet",
+        "Id": 223010203,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Enchanted Lance Tablet",
+        "Id": 223010205,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Enchanted Manacaster Tablet",
+        "Id": 223010209,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Enchanted Staff Tablet",
+        "Id": 223010208,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Enchanted Sword Tablet",
+        "Id": 223010201,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Enchanted Wand Tablet",
+        "Id": 223010207,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Energizing Fan",
+        "Id": 2082303,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Enigmatic Voucher",
+        "Id": 2290102
+    },
+    {
+        "Name": "Eolian Soul",
+        "Id": 204020002,
+        "Category": 201
+    },
+    {
+        "Name": "Epimetheus's Essence",
+        "Id": 206005005,
+        "Category": 206
+    },
+    {
+        "Name": "Fatalis Hardhorn",
+        "Id": 2200152,
+        "Category": "Raid, Collab"
+    },
+    {
+        "Name": "Felicia (Skin)",
+        "Id": 10840403,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Festival Spirit",
+        "Id": 2082301,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Fiend's Claw",
+        "Id": 202002001,
+        "Category": 201
+    },
+    {
+        "Name": "Fiend's Eye",
+        "Id": 202002003,
+        "Category": 201
+    },
+    {
+        "Name": "Fiend's Horn",
+        "Id": 202002002,
+        "Category": 201
+    },
+    {
+        "Name": "Firestorm Prism",
+        "Id": 201022012,
+        "Category": 201
+    },
+    {
+        "Name": "Firestorm Ruby",
+        "Id": 201022013,
+        "Category": 201
+    },
+    {
+        "Name": "Firestorm Shard",
+        "Id": 201022011,
+        "Category": 201
+    },
+    {
+        "Name": "Flame Orb",
+        "Id": 104001011,
+        "Category": 104
+    },
+    {
+        "Name": "Flame Tome",
+        "Id": 201019011,
+        "Category": 201
+    },
+    {
+        "Name": "Flamewyrm's Greatsphere",
+        "Id": 201002012,
+        "Category": 201
+    },
+    {
+        "Name": "Flamewyrm's Scaldscale",
+        "Id": 104002012,
+        "Category": 104
+    },
+    {
+        "Name": "Flamewyrm's Scale",
+        "Id": 104002011,
+        "Category": 104
+    },
+    {
+        "Name": "Flamewyrm's Sphere",
+        "Id": 201002011,
+        "Category": 201
+    },
+    {
+        "Name": "Floating Blue Cloth",
+        "Id": 204025001,
+        "Category": 201
+    },
+    {
+        "Name": "Floating Purple Cloth",
+        "Id": 204010001,
+        "Category": 201
+    },
+    {
+        "Name": "Floating Red Cloth",
+        "Id": 204006002,
+        "Category": 201
+    },
+    {
+        "Name": "Floating Yellow Cloth",
+        "Id": 204019001,
+        "Category": 201
+    },
+    {
+        "Name": "Forager Cleo's Conviction",
+        "Id": 205001004,
+        "Category": 201
+    },
+    {
+        "Name": "Forbidden Knowledge",
+        "Id": 2080601,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Fortifying Crystal",
+        "Id": 116001001,
+        "Category": 116
+    },
+    {
+        "Name": "Fortifying Dragonscale",
+        "Id": 118001001,
+        "Category": 118
+    },
+    {
+        "Name": "Fortifying Gemstone",
+        "Id": 122001001,
+        "Category": 122
+    },
+    {
+        "Name": "Fortifying Jewel",
+        "Id": 120001001,
+        "Category": 120
+    },
+    {
+        "Name": "Free-Spirited Pirate's Memory",
+        "Id": 207001020,
+        "Category": 201
+    },
+    {
+        "Name": "Freyja's Essence",
+        "Id": 206003005,
+        "Category": 206
+    },
+    {
+        "Name": "Fried Tofu",
+        "Id": 2042506,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Friendship Bracelet",
+        "Id": 2080202,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Gaibhne &amp; Creidhne's Essence",
+        "Id": 206002007,
+        "Category": 206
+    },
+    {
+        "Name": "Gala Alex's Conviction",
+        "Id": 208050011,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Alex's Devotion",
+        "Id": 208050012,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Cleo's Conviction",
+        "Id": 208050031,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Cleo's Devotion",
+        "Id": 208050032,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Elisanne's Conviction",
+        "Id": 208020011,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Elisanne's Devotion",
+        "Id": 208020012,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Laxi's Conviction",
+        "Id": 208010021,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Laxi's Devotion",
+        "Id": 208010022,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Leif's Conviction",
+        "Id": 208030051,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Leif's Devotion",
+        "Id": 208030052,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Luca's Conviction",
+        "Id": 208040021,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Luca's Devotion",
+        "Id": 208040022,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Mym (Skin)",
+        "Id": 10550101,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Gala Mym's Conviction",
+        "Id": 208010051,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Mym's Devotion",
+        "Id": 208010052,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Prince's Conviction",
+        "Id": 208040011,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Prince's Devotion",
+        "Id": 208040012,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Ranzal's Conviction",
+        "Id": 208030011,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Ranzal's Devotion",
+        "Id": 208030012,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Sarisse's Conviction",
+        "Id": 208010041,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Sarisse's Devotion",
+        "Id": 208010042,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Zena's Conviction",
+        "Id": 208040051,
+        "Category": 201
+    },
+    {
+        "Name": "Gala Zena's Devotion",
+        "Id": 208040052,
+        "Category": 201
+    },
+    {
+        "Name": "Garuda's Essence",
+        "Id": 206003002,
+        "Category": 206
+    },
+    {
+        "Name": "Genius of the Ages' Memory",
+        "Id": 207001030,
+        "Category": 201
+    },
+    {
+        "Name": "Genius of the Century's Memory",
+        "Id": 207001028,
+        "Category": 201
+    },
+    {
+        "Name": "Gilgamesh's Essence",
+        "Id": 206004003,
+        "Category": 206
+    },
+    {
+        "Name": "Gingerbread Man",
+        "Id": 2080302,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Glam Shell",
+        "Id": 203008001,
+        "Category": 201
+    },
+    {
+        "Name": "Glass Dolphin",
+        "Id": 2081003,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Glory",
+        "Id": 2220102,
+        "Category": "Onslaught, Defensive"
+    },
+    {
+        "Name": "Goblin Thread",
+        "Id": 204002001,
+        "Category": 201
+    },
+    {
+        "Name": "Gold Crystal",
+        "Id": 101001003,
+        "Category": 101
+    },
+    {
+        "Name": "Gold Emblem",
+        "Id": 2040104,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Gold Whetstone",
+        "Id": 103001003,
+        "Category": 103
+    },
+    {
+        "Name": "Golden Fragment",
+        "Id": 201012001,
+        "Category": 201
+    },
+    {
+        "Name": "Golden Key",
+        "Id": 114002001,
+        "Category": 114
+    },
+    {
+        "Name": "Golem Core",
+        "Id": 204003002,
+        "Category": 201
+    },
+    {
+        "Name": "Gourmet Spices",
+        "Id": 2081502,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Granite",
+        "Id": 202001002,
+        "Category": 201
+    },
+    {
+        "Name": "Great Badge",
+        "Id": 2140102,
+        "Category": "Defensive, Collab"
+    },
+    {
+        "Name": "Great Feather",
+        "Id": 204004001,
+        "Category": 201
+    },
+    {
+        "Name": "Greedy Tail",
+        "Id": 204014001,
+        "Category": 201
+    },
+    {
+        "Name": "Guardian's Shield",
+        "Id": 2290103
+    },
+    {
+        "Name": "Guardian's Sword",
+        "Id": 2290104
+    },
+    {
+        "Name": "Half-Eaten Bread",
+        "Id": 201018001,
+        "Category": 201
+    },
+    {
+        "Name": "Harle's Conviction",
+        "Id": 205001009,
+        "Category": 201
+    },
+    {
+        "Name": "Hastur's Essence",
+        "Id": 206003007,
+        "Category": 206
+    },
+    {
+        "Name": "Healing Aromatic",
+        "Id": 2083703
+    },
+    {
+        "Name": "Heaven's Avatar's Memory",
+        "Id": 207001029,
+        "Category": 201
+    },
+    {
+        "Name": "Heroism",
+        "Id": 2290101
+    },
+    {
+        "Name": "High Flamewyrm's Horn",
+        "Id": 202009011,
+        "Category": 201
+    },
+    {
+        "Name": "High Flamewyrm's Tail",
+        "Id": 202008011,
+        "Category": 201
+    },
+    {
+        "Name": "High Lightwyrm's Horn",
+        "Id": 202009041,
+        "Category": 201
+    },
+    {
+        "Name": "High Lightwyrm's Tail",
+        "Id": 202008041,
+        "Category": 201
+    },
+    {
+        "Name": "High Shadowwyrm's Horn",
+        "Id": 202009051,
+        "Category": 201
+    },
+    {
+        "Name": "High Shadowwyrm's Tail",
+        "Id": 202008051,
+        "Category": 201
+    },
+    {
+        "Name": "High Waterwyrm's Horn",
+        "Id": 202009021,
+        "Category": 201
+    },
+    {
+        "Name": "High Waterwyrm's Tail",
+        "Id": 202008021,
+        "Category": 201
+    },
+    {
+        "Name": "High Windwyrm's Horn",
+        "Id": 202009031,
+        "Category": 201
+    },
+    {
+        "Name": "High Windwyrm's Tail",
+        "Id": 202008031,
+        "Category": 201
+    },
+    {
+        "Name": "Holiday Cheer",
+        "Id": 2080301,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Holy Ore",
+        "Id": 203012001,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Holy Water",
+        "Id": 113001001,
+        "Category": 113
+    },
+    {
+        "Name": "Horus's Essence",
+        "Id": 206001008,
+        "Category": 206
+    },
+    {
+        "Name": "Humanoid Midgardsormr's Conviction",
+        "Id": 205001007,
+        "Category": 201
+    },
+    {
+        "Name": "Hype",
+        "Id": 2081001,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Hyper Bolt",
+        "Id": 2180102,
+        "Category": "Collab"
+    },
+    {
+        "Name": "Ilia (Skin)",
+        "Id": 10950401,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Imitation Squish",
+        "Id": 201014004,
+        "Category": 201
+    },
+    {
+        "Name": "Incandescence Orb",
+        "Id": 104001014,
+        "Category": 104
+    },
+    {
+        "Name": "Infernal Soul",
+        "Id": 204027001,
+        "Category": 201
+    },
+    {
+        "Name": "Inferno Orb",
+        "Id": 104001013,
+        "Category": 104
+    },
+    {
+        "Name": "Intelligence",
+        "Id": 2083301
+    },
+    {
+        "Name": "Iron Ore",
+        "Id": 202001001,
+        "Category": 201
+    },
+    {
+        "Name": "Izumo's Conviction",
+        "Id": 205001010,
+        "Category": 201
+    },
+    {
+        "Name": "Jack Chocolates",
+        "Id": 2080102,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Jade Insignia",
+        "Id": 201010031,
+        "Category": 201
+    },
+    {
+        "Name": "Jeanne d'Arc's Essence",
+        "Id": 206004002,
+        "Category": 206
+    },
+    {
+        "Name": "Kagutsuchi's Essence",
+        "Id": 206001007,
+        "Category": 206
+    },
+    {
+        "Name": "Kamuy's Essence",
+        "Id": 206002005,
+        "Category": 206
+    },
+    {
+        "Name": "Kirsty's Conviction",
+        "Id": 208030031,
+        "Category": 201
+    },
+    {
+        "Name": "Kirsty's Devotion",
+        "Id": 208030032,
+        "Category": 201
+    },
+    {
+        "Name": "Knight's Testament",
+        "Id": 104003001,
+        "Category": 104
+    },
+    {
+        "Name": "Konohana Sakuya's Essence",
+        "Id": 206001004,
+        "Category": 206
+    },
+    {
+        "Name": "Kuzunoha's Conviction",
+        "Id": 205001005,
+        "Category": 201
+    },
+    {
+        "Name": "Lance Tablet",
+        "Id": 202005051,
+        "Category": 201
+    },
+    {
+        "Name": "Laxi (Skin)",
+        "Id": 10240101,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Lazry's Conviction",
+        "Id": 208020031,
+        "Category": 201
+    },
+    {
+        "Name": "Lazry's Devotion",
+        "Id": 208020032,
+        "Category": 201
+    },
+    {
+        "Name": "Lea's Conviction",
+        "Id": 208010031,
+        "Category": 201
+    },
+    {
+        "Name": "Lea's Devotion",
+        "Id": 208010032,
+        "Category": 201
+    },
+    {
+        "Name": "Leviathan's Essence",
+        "Id": 206002001,
+        "Category": 206
+    },
+    {
+        "Name": "Leviathan's Scale",
+        "Id": 2083403
+    },
+    {
+        "Name": "Liberated One's Mask Fragment",
+        "Id": 201017012,
+        "Category": 201
+    },
+    {
+        "Name": "Libretto",
+        "Id": 203013001,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Liger's Essence",
+        "Id": 206004004,
+        "Category": 206
+    },
+    {
+        "Name": "Light Core",
+        "Id": 204011002,
+        "Category": 201
+    },
+    {
+        "Name": "Light Metal",
+        "Id": 202004001,
+        "Category": 201
+    },
+    {
+        "Name": "Light Orb",
+        "Id": 104001041,
+        "Category": 104
+    },
+    {
+        "Name": "Light Tome",
+        "Id": 201019041,
+        "Category": 201
+    },
+    {
+        "Name": "Lightwyrm's Glowscale",
+        "Id": 104002042,
+        "Category": 104
+    },
+    {
+        "Name": "Lightwyrm's Greatsphere",
+        "Id": 201002042,
+        "Category": 201
+    },
+    {
+        "Name": "Lightwyrm's Scale",
+        "Id": 104002041,
+        "Category": 104
+    },
+    {
+        "Name": "Lightwyrm's Sphere",
+        "Id": 201002041,
+        "Category": 201
+    },
+    {
+        "Name": "Long Long's Essence",
+        "Id": 206003003,
+        "Category": 206
+    },
+    {
+        "Name": "Longing Heart",
+        "Id": 202010061,
+        "Category": 201
+    },
+    {
+        "Name": "Looking Glass",
+        "Id": 201008001,
+        "Category": 201
+    },
+    {
+        "Name": "Luca (Skin)",
+        "Id": 10640401,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Luminous Claw",
+        "Id": 204032002,
+        "Category": 201
+    },
+    {
+        "Name": "Luminous Horn",
+        "Id": 204032003,
+        "Category": 201
+    },
+    {
+        "Name": "Luminous Mane",
+        "Id": 204032001,
+        "Category": 201
+    },
+    {
+        "Name": "Maelstrom Orb",
+        "Id": 104001033,
+        "Category": 104
+    },
+    {
+        "Name": "Majestic Ruler's Memory",
+        "Id": 207001024,
+        "Category": 201
+    },
+    {
+        "Name": "Manacaster Tablet",
+        "Id": 202005091,
+        "Category": 201
+    },
+    {
+        "Name": "Meene (Skin)",
+        "Id": 10650303,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Megaton Dumbbell",
+        "Id": 2080803,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Melsa (Skin)",
+        "Id": 10340101,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Metaverse Junk",
+        "Id": 2042908,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Meteorite",
+        "Id": 202001003,
+        "Category": 201
+    },
+    {
+        "Name": "Mettle",
+        "Id": 2080801,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Miasmal Mass",
+        "Id": 2082502,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Moonlight Stone",
+        "Id": 111001001,
+        "Category": 111
+    },
+    {
+        "Name": "Mordecai (Skin)",
+        "Id": 10250403,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Mordecai's Conviction",
+        "Id": 205001003,
+        "Category": 201
+    },
+    {
+        "Name": "Motivational Log",
+        "Id": 203007001,
+        "Category": 201
+    },
+    {
+        "Name": "Mushroom Medley",
+        "Id": 2080703,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Nature's Avatar's Memory",
+        "Id": 207001027,
+        "Category": 201
+    },
+    {
+        "Name": "Nature's Blessing",
+        "Id": 201021001,
+        "Category": 201
+    },
+    {
+        "Name": "Necroblossom",
+        "Id": 204013001,
+        "Category": 201
+    },
+    {
+        "Name": "Nether Orb",
+        "Id": 104001053,
+        "Category": 104
+    },
+    {
+        "Name": "Nidhogg's Essence",
+        "Id": 206005002,
+        "Category": 206
+    },
+    {
+        "Name": "Nightfall Orb",
+        "Id": 104001052,
+        "Category": 104
+    },
+    {
+        "Name": "Nimis's Essence",
+        "Id": 206002006,
+        "Category": 206
+    },
+    {
+        "Name": "Nurse Aeleen's Conviction",
+        "Id": 208020021,
+        "Category": 201
+    },
+    {
+        "Name": "Nurse Aeleen's Devotion",
+        "Id": 208020022,
+        "Category": 201
+    },
+    {
+        "Name": "Nyarlathotep's Essence",
+        "Id": 206005003,
+        "Category": 206
+    },
+    {
+        "Name": "Obsidian Slab",
+        "Id": 204007001,
+        "Category": 201
+    },
+    {
+        "Name": "Occult Vestment",
+        "Id": 2130301,
+        "Category": "Story"
+    },
+    {
+        "Name": "Oceanic Crown",
+        "Id": 204012002,
+        "Category": 201
+    },
+    {
+        "Name": "Oceanic Fin",
+        "Id": 204012001,
+        "Category": 201
+    },
+    {
+        "Name": "Oceanic Resonance",
+        "Id": 2083401
+    },
+    {
+        "Name": "Old Cloth",
+        "Id": 204006001,
+        "Category": 201
+    },
+    {
+        "Name": "Omega Key",
+        "Id": 2041307,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Omnicite",
+        "Id": 125001001,
+        "Category": 125
+    },
+    {
+        "Name": "Orichalcum",
+        "Id": 202004005,
+        "Category": 201
+    },
+    {
+        "Name": "Origa's Conviction",
+        "Id": 205001011,
+        "Category": 201
+    },
+    {
+        "Name": "Ornate Lantern",
+        "Id": 203011001,
+        "Category": 201
+    },
+    {
+        "Name": "Otherworld Auspex's Memory",
+        "Id": 207001004,
+        "Category": 201
+    },
+    {
+        "Name": "Otherworld Fragment",
+        "Id": 2040105,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Otherworld Gem",
+        "Id": 2041306,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Otherworldly Lantern",
+        "Id": 204006003,
+        "Category": 201
+    },
+    {
+        "Name": "Papier-m\u00e2ch\u00e9",
+        "Id": 203006001,
+        "Category": 201
+    },
+    {
+        "Name": "Paradise Grain",
+        "Id": 2083302
+    },
+    {
+        "Name": "Pazuzu's Essence",
+        "Id": 206003004,
+        "Category": 206
+    },
+    {
+        "Name": "Peregrine Blazon",
+        "Id": 2040101,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Plagued One's Mask Fragment",
+        "Id": 201017032,
+        "Category": 201
+    },
+    {
+        "Name": "Pop-Star Siren's Essence",
+        "Id": 206004006,
+        "Category": 206
+    },
+    {
+        "Name": "Poseidon's Essence",
+        "Id": 206002002,
+        "Category": 206
+    },
+    {
+        "Name": "Praying Oracle's Memory",
+        "Id": 207001018,
+        "Category": 201
+    },
+    {
+        "Name": "Prestige",
+        "Id": 2220802
+    },
+    {
+        "Name": "Primal Crystal",
+        "Id": 2220101,
+        "Category": "Onslaught, Defensive"
+    },
+    {
+        "Name": "Primal Flamewyrm's Greatsphere",
+        "Id": 201023012,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Flamewyrm's Ruby",
+        "Id": 201023013,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Flamewyrm's Sphere",
+        "Id": 201023011,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Lightwyrm's Citrine",
+        "Id": 201023043,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Lightwyrm's Greatsphere",
+        "Id": 201023042,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Lightwyrm's Sphere",
+        "Id": 201023041,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Shadowwyrm's Amethyst",
+        "Id": 201023053,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Shadowwyrm's Greatsphere",
+        "Id": 201023052,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Shadowwyrm's Sphere",
+        "Id": 201023051,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Waterwyrm's Azurite",
+        "Id": 201023023,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Waterwyrm's Greatsphere",
+        "Id": 201023022,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Waterwyrm's Sphere",
+        "Id": 201023021,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Windwyrm's Emerald",
+        "Id": 201023033,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Windwyrm's Greatsphere",
+        "Id": 201023032,
+        "Category": 201
+    },
+    {
+        "Name": "Primal Windwyrm's Sphere",
+        "Id": 201023031,
+        "Category": 201
+    },
+    {
+        "Name": "Prometheus's Essence",
+        "Id": 206001002,
+        "Category": 206
+    },
+    {
+        "Name": "Prosciutto",
+        "Id": 2081503,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Proud Tail",
+        "Id": 204023001,
+        "Category": 201
+    },
+    {
+        "Name": "Prudent Bookmark",
+        "Id": 2080602,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Purple Thread",
+        "Id": 204016001,
+        "Category": 201
+    },
+    {
+        "Name": "Quantum Cog",
+        "Id": 2041308,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Queen of the Sands' Memory",
+        "Id": 207001003,
+        "Category": 201
+    },
+    {
+        "Name": "Quill &amp; Ink Set",
+        "Id": 2083702
+    },
+    {
+        "Name": "Radiance Orb",
+        "Id": 104001042,
+        "Category": 104
+    },
+    {
+        "Name": "Raging Fang",
+        "Id": 204005001,
+        "Category": 201
+    },
+    {
+        "Name": "Raging Tail",
+        "Id": 204005002,
+        "Category": 201
+    },
+    {
+        "Name": "Rainbow Orb",
+        "Id": 104001001,
+        "Category": 104
+    },
+    {
+        "Name": "Ramiel's Essence",
+        "Id": 206005008,
+        "Category": 206
+    },
+    {
+        "Name": "Ranzal (Skin)",
+        "Id": 10440301,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Rathalos Scale",
+        "Id": 2200151,
+        "Category": "Raid, Collab"
+    },
+    {
+        "Name": "Ravishing Rose",
+        "Id": 2130101,
+        "Category": "Story"
+    },
+    {
+        "Name": "Rebellious Bird's Tide",
+        "Id": 201017024,
+        "Category": 201
+    },
+    {
+        "Name": "Rebellious Butterflies' Searing Fire",
+        "Id": 201017014,
+        "Category": 201
+    },
+    {
+        "Name": "Rebellious Lion's Twilight",
+        "Id": 201017054,
+        "Category": 201
+    },
+    {
+        "Name": "Rebellious One's Arrogance",
+        "Id": 201017043,
+        "Category": 201
+    },
+    {
+        "Name": "Rebellious One's Cruelty",
+        "Id": 201017013,
+        "Category": 201
+    },
+    {
+        "Name": "Rebellious One's Desperation",
+        "Id": 201017023,
+        "Category": 201
+    },
+    {
+        "Name": "Rebellious One's Insanity",
+        "Id": 201017033,
+        "Category": 201
+    },
+    {
+        "Name": "Rebellious One's Loyalty",
+        "Id": 201017053,
+        "Category": 201
+    },
+    {
+        "Name": "Rebellious Ox's Lightning",
+        "Id": 201017044,
+        "Category": 201
+    },
+    {
+        "Name": "Rebellious Wolf's Gale",
+        "Id": 201017034,
+        "Category": 201
+    },
+    {
+        "Name": "Refulgence Orb",
+        "Id": 104001043,
+        "Category": 104
+    },
+    {
+        "Name": "Remaining One's Mask Fragment",
+        "Id": 201017051,
+        "Category": 201
+    },
+    {
+        "Name": "Renown",
+        "Id": 2080401,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Resolve",
+        "Id": 2140303,
+        "Category": "Defensive, Collab"
+    },
+    {
+        "Name": "Resplendence Orb",
+        "Id": 104001044,
+        "Category": 104
+    },
+    {
+        "Name": "Ripe Dragonfruit",
+        "Id": 102001002,
+        "Category": 102
+    },
+    {
+        "Name": "Royal Amber Insignia",
+        "Id": 201010042,
+        "Category": 201
+    },
+    {
+        "Name": "Royal Azure Insignia",
+        "Id": 201010022,
+        "Category": 201
+    },
+    {
+        "Name": "Royal Jade Insignia",
+        "Id": 201010032,
+        "Category": 201
+    },
+    {
+        "Name": "Royal Vermilion Insignia",
+        "Id": 201010012,
+        "Category": 201
+    },
+    {
+        "Name": "Royal Violet Insignia",
+        "Id": 201010052,
+        "Category": 201
+    },
+    {
+        "Name": "Ruinous Horn",
+        "Id": 204018001,
+        "Category": 201
+    },
+    {
+        "Name": "Ruinous Wing",
+        "Id": 204018002,
+        "Category": 201
+    },
+    {
+        "Name": "Sacred Stone",
+        "Id": 203014001,
+        "Category": 201
+    },
+    {
+        "Name": "Sanctified Water",
+        "Id": 2083303
+    },
+    {
+        "Name": "Sanctity",
+        "Id": 2082501
+    },
+    {
+        "Name": "Sazanka's Conviction",
+        "Id": 208050051,
+        "Category": 201
+    },
+    {
+        "Name": "Sazanka's Devotion",
+        "Id": 208050052,
+        "Category": 201
+    },
+    {
+        "Name": "Sentient Vegetable's Memory",
+        "Id": 207001009,
+        "Category": 201
+    },
+    {
+        "Name": "Shadow Orb",
+        "Id": 104001051,
+        "Category": 104
+    },
+    {
+        "Name": "Shadow Tome",
+        "Id": 201019051,
+        "Category": 201
+    },
+    {
+        "Name": "Shadowwyrm's Darkscale",
+        "Id": 104002052,
+        "Category": 104
+    },
+    {
+        "Name": "Shadowwyrm's Greatsphere",
+        "Id": 201002052,
+        "Category": 201
+    },
+    {
+        "Name": "Shadowwyrm's Scale",
+        "Id": 104002051,
+        "Category": 104
+    },
+    {
+        "Name": "Shadowwyrm's Sphere",
+        "Id": 201002051,
+        "Category": 201
+    },
+    {
+        "Name": "Shadowy Lantern",
+        "Id": 204010002,
+        "Category": 201
+    },
+    {
+        "Name": "Shinobi's Essence",
+        "Id": 206005004,
+        "Category": 206
+    },
+    {
+        "Name": "Shiny Spore",
+        "Id": 204001002,
+        "Category": 201
+    },
+    {
+        "Name": "Silver Crystal",
+        "Id": 101001002,
+        "Category": 101
+    },
+    {
+        "Name": "Silver Emblem",
+        "Id": 2040103,
+        "Category": "Raid"
+    },
+    {
+        "Name": "Silver Key",
+        "Id": 114001001,
+        "Category": 114
+    },
+    {
+        "Name": "Silver Whetstone",
+        "Id": 103001002,
+        "Category": 103
+    },
+    {
+        "Name": "Simurgh's Essence",
+        "Id": 206002004,
+        "Category": 206
+    },
+    {
+        "Name": "Siren's Essence",
+        "Id": 206002003,
+        "Category": 206
+    },
+    {
+        "Name": "Smoldering Tail",
+        "Id": 204021001,
+        "Category": 201
+    },
+    {
+        "Name": "Snack-o'-Lantern",
+        "Id": 203001001,
+        "Category": 201
+    },
+    {
+        "Name": "Soaring Ones' Mask Fragment",
+        "Id": 201017011,
+        "Category": 201
+    },
+    {
+        "Name": "Solid Fungus",
+        "Id": 204001001,
+        "Category": 201
+    },
+    {
+        "Name": "Songstress of the Century's Memory",
+        "Id": 207001014,
+        "Category": 201
+    },
+    {
+        "Name": "Sophie's Conviction",
+        "Id": 205001006,
+        "Category": 201
+    },
+    {
+        "Name": "Soul Vestiges",
+        "Id": 204020001,
+        "Category": 201
+    },
+    {
+        "Name": "Special Invitation",
+        "Id": 2220803
+    },
+    {
+        "Name": "Spongy Spore",
+        "Id": 204009002,
+        "Category": 201
+    },
+    {
+        "Name": "Squishums",
+        "Id": 201014003,
+        "Category": 201
+    },
+    {
+        "Name": "Staff Tablet",
+        "Id": 202005081,
+        "Category": 201
+    },
+    {
+        "Name": "Steel Brick",
+        "Id": 112001001,
+        "Category": 112
+    },
+    {
+        "Name": "Steel Slab",
+        "Id": 204003001,
+        "Category": 201
+    },
+    {
+        "Name": "Storm Fungus",
+        "Id": 204009001,
+        "Category": 201
+    },
+    {
+        "Name": "Storm Orb",
+        "Id": 104001032,
+        "Category": 104
+    },
+    {
+        "Name": "Stratagem",
+        "Id": 2220103,
+        "Category": "Onslaught, Defensive"
+    },
+    {
+        "Name": "Stream Orb",
+        "Id": 104001022,
+        "Category": 104
+    },
+    {
+        "Name": "Styx's Essence",
+        "Id": 206002008,
+        "Category": 206
+    },
+    {
+        "Name": "Suave Lithomancer's Memory",
+        "Id": 207001026,
+        "Category": 201
+    },
+    {
+        "Name": "Succulent Dragonfruit",
+        "Id": 102001003,
+        "Category": 102
+    },
+    {
+        "Name": "Summer Amane (Skin)",
+        "Id": 10450303,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Summer Amane's Conviction",
+        "Id": 205001002,
+        "Category": 201
+    },
+    {
+        "Name": "Summer Estelle (Skin)",
+        "Id": 10740202,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Summer Prince's Conviction",
+        "Id": 205001008,
+        "Category": 201
+    },
+    {
+        "Name": "Summer Verica's Conviction",
+        "Id": 208050021,
+        "Category": 201
+    },
+    {
+        "Name": "Summer Verica's Devotion",
+        "Id": 208050022,
+        "Category": 201
+    },
+    {
+        "Name": "Sunlight Ore",
+        "Id": 201011001,
+        "Category": 201
+    },
+    {
+        "Name": "Sunlight Stone",
+        "Id": 111002001,
+        "Category": 111
+    },
+    {
+        "Name": "Sword Tablet",
+        "Id": 202005011,
+        "Category": 201
+    },
+    {
+        "Name": "Takemikazuchi's Essence",
+        "Id": 206004005,
+        "Category": 206
+    },
+    {
+        "Name": "Talonstone",
+        "Id": 201005001,
+        "Category": 201
+    },
+    {
+        "Name": "Tempest Claw",
+        "Id": 204028002,
+        "Category": 201
+    },
+    {
+        "Name": "Tempest Horn",
+        "Id": 204028003,
+        "Category": 201
+    },
+    {
+        "Name": "Tempest Mane",
+        "Id": 204028001,
+        "Category": 201
+    },
+    {
+        "Name": "Tempest Orb",
+        "Id": 104001034,
+        "Category": 104
+    },
+    {
+        "Name": "Tent Canvas",
+        "Id": 203004001,
+        "Category": 201
+    },
+    {
+        "Name": "Thief's Calling Card",
+        "Id": 2082803,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Thunderswift Lord's Memory",
+        "Id": 207001015,
+        "Category": 201
+    },
+    {
+        "Name": "Thunderswift Savior's Memory",
+        "Id": 207001017,
+        "Category": 201
+    },
+    {
+        "Name": "Tidal Claw",
+        "Id": 204031002,
+        "Category": 201
+    },
+    {
+        "Name": "Tidal Horn",
+        "Id": 204031003,
+        "Category": 201
+    },
+    {
+        "Name": "Tidal Mane",
+        "Id": 204031001,
+        "Category": 201
+    },
+    {
+        "Name": "Tidal Tears",
+        "Id": 203015001,
+        "Category": 201
+    },
+    {
+        "Name": "Tie Shan Gongzhu's Essence",
+        "Id": 206004008,
+        "Category": 206
+    },
+    {
+        "Name": "Tournament Chronicle",
+        "Id": 2220805
+    },
+    {
+        "Name": "Tricker Treats",
+        "Id": 2080101,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Tropical Hibiscus",
+        "Id": 2081002,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Tsunami Orb",
+        "Id": 104001024,
+        "Category": 104
+    },
+    {
+        "Name": "Turbo-Twist Jump Rope",
+        "Id": 2080802,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Tutelary Successor's Memory",
+        "Id": 207001002,
+        "Category": 201
+    },
+    {
+        "Name": "Twilight Amethyst",
+        "Id": 201022053,
+        "Category": 201
+    },
+    {
+        "Name": "Twilight Hawk's Memory",
+        "Id": 207001012,
+        "Category": 201
+    },
+    {
+        "Name": "Twilight Hunter's Memory",
+        "Id": 207001010,
+        "Category": 201
+    },
+    {
+        "Name": "Twilight Prism",
+        "Id": 201022052,
+        "Category": 201
+    },
+    {
+        "Name": "Twilight Queen's Memory",
+        "Id": 207001005,
+        "Category": 201
+    },
+    {
+        "Name": "Twilight Shard",
+        "Id": 201022051,
+        "Category": 201
+    },
+    {
+        "Name": "Twinkling Grains",
+        "Id": 201015001,
+        "Category": 201
+    },
+    {
+        "Name": "Twinkling Sand",
+        "Id": 202004004,
+        "Category": 201
+    },
+    {
+        "Name": "Unearthly Lantern",
+        "Id": 204019002,
+        "Category": 201
+    },
+    {
+        "Name": "Universal Crystal",
+        "Id": 2140302,
+        "Category": "Defensive, Collab"
+    },
+    {
+        "Name": "Universal Shard",
+        "Id": 2140301,
+        "Category": "Defensive, Collab"
+    },
+    {
+        "Name": "Uprooting One's Mask Fragment",
+        "Id": 201017042,
+        "Category": 201
+    },
+    {
+        "Name": "Valentine's Gift",
+        "Id": 2130402,
+        "Category": "Story"
+    },
+    {
+        "Name": "Valerio's Conviction",
+        "Id": 208020051,
+        "Category": 201
+    },
+    {
+        "Name": "Valerio's Devotion",
+        "Id": 208020052,
+        "Category": 201
+    },
+    {
+        "Name": "Valor",
+        "Id": 2140103,
+        "Category": "Defensive, Collab"
+    },
+    {
+        "Name": "Vayu's Essence",
+        "Id": 206003006,
+        "Category": 206
+    },
+    {
+        "Name": "Vengeful One's Mask Fragment",
+        "Id": 201017052,
+        "Category": 201
+    },
+    {
+        "Name": "Verdant Heart",
+        "Id": 202010031,
+        "Category": 201
+    },
+    {
+        "Name": "Vermilion Insignia",
+        "Id": 201010011,
+        "Category": 201
+    },
+    {
+        "Name": "Vibrato",
+        "Id": 2082801
+    },
+    {
+        "Name": "Victor's Conviction",
+        "Id": 208030061,
+        "Category": 201
+    },
+    {
+        "Name": "Victor's Devotion",
+        "Id": 208030062,
+        "Category": 201
+    },
+    {
+        "Name": "Violet Insignia",
+        "Id": 201010051,
+        "Category": 201
+    },
+    {
+        "Name": "Vixel's Conviction",
+        "Id": 208040031,
+        "Category": 201
+    },
+    {
+        "Name": "Vixel's Devotion",
+        "Id": 208040032,
+        "Category": 201
+    },
+    {
+        "Name": "Void Leaf",
+        "Id": 201014001,
+        "Category": 201
+    },
+    {
+        "Name": "Void Seed",
+        "Id": 201014002,
+        "Category": 201
+    },
+    {
+        "Name": "Volcanic Claw",
+        "Id": 204022002,
+        "Category": 201
+    },
+    {
+        "Name": "Volcanic Horn",
+        "Id": 204022003,
+        "Category": 201
+    },
+    {
+        "Name": "Volcanic Mane",
+        "Id": 204022001,
+        "Category": 201
+    },
+    {
+        "Name": "Wand Tablet",
+        "Id": 202005071,
+        "Category": 201
+    },
+    {
+        "Name": "War Chronicle",
+        "Id": 2220105,
+        "Category": "Onslaught, Defensive"
+    },
+    {
+        "Name": "Water Orb",
+        "Id": 104001021,
+        "Category": 104
+    },
+    {
+        "Name": "Water Tome",
+        "Id": 201019021,
+        "Category": 201
+    },
+    {
+        "Name": "Waterwyrm's Glistscale",
+        "Id": 104002022,
+        "Category": 104
+    },
+    {
+        "Name": "Waterwyrm's Greatsphere",
+        "Id": 201002022,
+        "Category": 201
+    },
+    {
+        "Name": "Waterwyrm's Scale",
+        "Id": 104002021,
+        "Category": 104
+    },
+    {
+        "Name": "Waterwyrm's Sphere",
+        "Id": 201002021,
+        "Category": 201
+    },
+    {
+        "Name": "Wedding Aoi's Conviction",
+        "Id": 208030041,
+        "Category": 201
+    },
+    {
+        "Name": "Wedding Aoi's Devotion",
+        "Id": 208030042,
+        "Category": 201
+    },
+    {
+        "Name": "Whirlpool Azurite",
+        "Id": 201022023,
+        "Category": 201
+    },
+    {
+        "Name": "Whirlpool Prism",
+        "Id": 201022022,
+        "Category": 201
+    },
+    {
+        "Name": "Whirlpool Shard",
+        "Id": 201022021,
+        "Category": 201
+    },
+    {
+        "Name": "Wind Chime",
+        "Id": 2080203,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Wind Orb",
+        "Id": 104001031,
+        "Category": 104
+    },
+    {
+        "Name": "Wind Tome",
+        "Id": 201019031,
+        "Category": 201
+    },
+    {
+        "Name": "Windwhistle Grass",
+        "Id": 203002001,
+        "Category": 201
+    },
+    {
+        "Name": "Windwyrm's Greatsphere",
+        "Id": 201002032,
+        "Category": 201
+    },
+    {
+        "Name": "Windwyrm's Scale",
+        "Id": 104002031,
+        "Category": 104
+    },
+    {
+        "Name": "Windwyrm's Sphere",
+        "Id": 201002031,
+        "Category": 201
+    },
+    {
+        "Name": "Windwyrm's Squallscale",
+        "Id": 104002032,
+        "Category": 104
+    },
+    {
+        "Name": "Woodland Archer's Memory",
+        "Id": 207001025,
+        "Category": 201
+    },
+    {
+        "Name": "Woodland Herbs",
+        "Id": 2080702,
+        "Category": "Facility"
+    },
+    {
+        "Name": "Wu Kong's Conviction",
+        "Id": 205001001,
+        "Category": 201
+    },
+    {
+        "Name": "Wyrmsigil Remnant",
+        "Id": 124001001,
+        "Category": 124
+    },
+    {
+        "Name": "Xander (Skin)",
+        "Id": 10150201,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Yaten's Conviction",
+        "Id": 208050041,
+        "Category": 201
+    },
+    {
+        "Name": "Yaten's Devotion",
+        "Id": 208050042,
+        "Category": 201
+    },
+    {
+        "Name": "Yukata Cassandra's Conviction",
+        "Id": 208010011,
+        "Category": 201
+    },
+    {
+        "Name": "Yukata Cassandra's Devotion",
+        "Id": 208010012,
+        "Category": 201
+    },
+    {
+        "Name": "Zena (Skin)",
+        "Id": 10750504,
+        "Category": "Battle Royale"
+    },
+    {
+        "Name": "Zephyr Rune",
+        "Id": 204004002,
+        "Category": 201
+    },
+    {
+        "Name": "Zephyr's Essence",
+        "Id": 206003001,
+        "Category": 206
+    },
+    {
+        "Name": "Zest",
+        "Id": 2081501,
+        "Category": "Facility"
+    }
+]

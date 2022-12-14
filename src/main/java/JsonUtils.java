@@ -49,10 +49,12 @@ public class JsonUtils {
     private HashMap<Integer, String> idToWeaponSkinName = new HashMap<>();
     private HashMap<Integer, WyrmprintMeta> idToPrint = new HashMap<>();
     private HashMap<Integer, FacilityMeta> idToFacility = new HashMap<>();
+    private HashMap<Integer, MaterialMeta> idToMaterial = new HashMap<>();
 
     //Alias Maps
     private HashMap<String, List<String>> adventurerAliases = new HashMap<>();
     private HashMap<String, List<String>> dragonAliases = new HashMap<>();
+
 
     private JsonObject maxedFacilityBonuses;
 
@@ -75,6 +77,7 @@ public class JsonUtils {
             readPrintsData();
             readAbilitiesData();
             readFacilitiesData();
+            readMaterialsData();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -141,7 +144,6 @@ public class JsonUtils {
         InputStream in;
         in = JsonUtils.class.getResourceAsStream(path);
         if(in == null){
-            System.out.println("i shit my pants");
             System.out.println(path);
             in = JsonUtils.class.getClassLoader().getResourceAsStream(path);
         }
@@ -152,26 +154,15 @@ public class JsonUtils {
         return new InputStreamReader(in, StandardCharsets.UTF_8);
     }
 
-    private JsonArray getJsonArray(String more) throws IOException {
+    private JsonArray getJsonArray(String more) {
         JsonReader reader = new JsonReader(getRsrcReader(more));
         return GSON.fromJson(reader, JsonArray.class);
     }
 
-    private JsonObject getJsonObject(String more) throws IOException {
+    private JsonObject getJsonObject(String more) {
         JsonReader reader = new JsonReader(getRsrcReader(more));
         return GSON.fromJson(reader, JsonObject.class);
     }
-
-    /*
-    private JsonObject getJsonObject(String more) throws IOException {
-        JsonReader reader = new JsonReader(new FileReader(Paths.get(rsrcPath, more).toString()));
-        return GSON.fromJson(reader, JsonObject.class);
-    }
-
-    private JsonArray getJsonArray(String more) throws IOException {
-        JsonReader reader = new JsonReader(new FileReader(Paths.get(rsrcPath, more).toString()));
-        return GSON.fromJson(reader, JsonArray.class);
-    } */
 
     public String getFieldAsString(String... memberNames) {
         return getField(memberNames).getAsString();
@@ -329,6 +320,21 @@ public class JsonUtils {
 
     private void readAbilitiesData() throws IOException {
         abilitiesList = getJsonArray("abilities.json");
+    }
+
+    private void readMaterialsData() throws IOException {
+        getJsonArray("materials.json").forEach(jsonEle -> {
+            JsonObject mat = jsonEle.getAsJsonObject();
+            String name = mat.get("Name").getAsString();
+            int id = mat.get("Id").getAsInt();
+            String category;
+            if(mat.has("Category")){
+                category = mat.get("Category").getAsString();
+            } else {
+               category = "Idk";
+            }
+            idToMaterial.put(id, new MaterialMeta(name, id, category));
+        });
     }
 
     private void readFacilitiesData() throws IOException {
@@ -1170,6 +1176,26 @@ public class JsonUtils {
                 jsonObj.addProperty("quantity", 30000);
             }
         }
+        Set<Integer> ownedIdSet = getSetFromField("material_id", "data", "material_list");
+        for(Map.Entry<Integer, MaterialMeta> entry : idToMaterial.entrySet()){
+            int id = entry.getKey();
+            MaterialMeta mat = entry.getValue();
+            if(!ownedIdSet.contains(id)){
+                switch(mat.getCategory()){ //ignore certain items
+                    case "Raid":
+                    case "Raid, Collab":
+                    case "Battle Royale":
+                    case "Idk":
+                        continue;
+                }
+                JsonObject newItem = new JsonObject();
+                newItem.addProperty("material_id", id);
+                newItem.addProperty("quantity", 30000);
+                items.add(newItem);
+                write(mat.getName());
+            }
+        }
+        flushLog("Added missing items");
     }
 
     public void backToTheMines() {

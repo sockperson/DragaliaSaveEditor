@@ -160,7 +160,7 @@ public class SaveEditor {
                 "Add all missing wyrmprints?",
                 () -> System.out.println("Added " + util.addMissingWyrmprints() + " missing wyrmprints."));
         yesNoQuestion(
-                "Set all owned item count to 30,000?",
+                "Set all material counts to 30,000?",
                 "Done!",
                 () -> util.addItems());
         yesNoQuestion(
@@ -185,6 +185,7 @@ public class SaveEditor {
                     "savedata2.txt already exists in this directory. Would you like to overwrite it?",
                     () -> util.setOverwrite(true));
         }
+        System.out.println();
         util.writeToFile();
         System.out.println();
         yesNoQuestion("View logs?", () -> util.printLogs());
