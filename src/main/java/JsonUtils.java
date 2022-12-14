@@ -212,6 +212,7 @@ public class JsonUtils {
         return jsonEle;
     }
 
+    //List Utils
     private int getSum(JsonObject src, String... memberNames) {
         int sum = 0;
         for (String memberName : memberNames) {
@@ -220,6 +221,25 @@ public class JsonUtils {
         return sum;
     }
 
+    private Set<Integer> getSetFromField(String fieldName, String... memberNames){
+        Set<Integer> out = new HashSet<>();
+        getFieldAsJsonArray(memberNames).forEach(jsonEle ->
+                out.add(jsonEle.getAsJsonObject().get(fieldName).getAsInt()));
+        return out;
+    }
+
+    //mainly used to get max keyId
+    private int getMaxFromObjListField(String fieldName, String... memberNames){
+        int max = -1;
+        JsonArray jsonArray = getFieldAsJsonArray(memberNames);
+        for (JsonElement jsonEle : jsonArray) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            max = Math.max(max, jsonObj.get(fieldName).getAsInt());
+        }
+        return max;
+    }
+
+    //Reads
     private void readAliasesData() throws IOException {
         //Get aliases
         BufferedReader br = getBufferedReader("adventurerAliases.txt");
@@ -421,20 +441,7 @@ public class JsonUtils {
         boolean hasManaSpiral = adv.hasManaSpiral();
         double bonus = hasManaSpiral ? 0.3 : 0.2;
         int elementID = adv.getElementId();
-        JsonArray albumBonuses = getFieldAsJsonArray("data", "fort_bonus_list", "chara_bonus_by_album");
-        for (JsonElement jsonEle : albumBonuses) {
-            JsonObject albumBonus = jsonEle.getAsJsonObject();
-            if (albumBonus.get("elemental_type").getAsInt() == elementID) {
-                double hp = albumBonus.get("hp").getAsDouble();
-                double attack = albumBonus.get("attack").getAsDouble();
-                double resultHp = addDoubles(hp, bonus);
-                double resultStr = addDoubles(attack, bonus);
-                albumBonus.remove("hp");
-                albumBonus.remove("attack");
-                albumBonus.addProperty("hp", resultHp);
-                albumBonus.addProperty("attack", resultStr);
-            }
-        }
+        addAdventurerEncyclopediaBonus(elementID, bonus, bonus);
     }
 
     private void addAdventurerEncyclopediaBonus(int elementId, double hpBonus, double strBonus) {
@@ -459,20 +466,7 @@ public class JsonUtils {
         double hpBonus = has5UB ? 0.3 : 0.2;
         double strBonus = 0.1;
         int elementID = dragon.getElementId();
-        JsonArray albumBonuses = getFieldAsJsonArray("data", "fort_bonus_list", "dragon_bonus_by_album");
-        for (JsonElement jsonEle : albumBonuses) {
-            JsonObject albumBonus = jsonEle.getAsJsonObject();
-            if (albumBonus.get("elemental_type").getAsInt() == elementID) {
-                double hp = albumBonus.get("hp").getAsDouble();
-                double attack = albumBonus.get("attack").getAsDouble();
-                double resultHp = addDoubles(hp, hpBonus);
-                double resultStr = addDoubles(attack, strBonus);
-                albumBonus.remove("hp");
-                albumBonus.remove("attack");
-                albumBonus.addProperty("hp", resultHp);
-                albumBonus.addProperty("attack", resultStr);
-            }
-        }
+        addDragonEncyclopediaBonus(elementID, hpBonus, strBonus);
     }
 
     private void addDragonEncyclopediaBonus(int elementID, double hpBonus, double strBonus) {
@@ -525,6 +519,8 @@ public class JsonUtils {
             }
         }
     }
+
+    //Builders
 
     private void addTalisman(String advName, int id1, int id2, int id3, int count) {
         for(int i = 0; i < count; i++){
@@ -976,19 +972,15 @@ public class JsonUtils {
 
     public int addMissingAdventurers() {
         int count = 0;
+
         //Compile a list of ID's you have
-        List<Integer> ownedIdList = new ArrayList<>();
-        JsonArray ownedAdventurers = getFieldAsJsonArray("data", "chara_list");
-        for (JsonElement jsonEle : ownedAdventurers) {
-            JsonObject adventurer = jsonEle.getAsJsonObject();
-            ownedIdList.add(adventurer.get("chara_id").getAsInt());
-        }
+        Set<Integer> ownedIdSet = getSetFromField("chara_id", "data", "chara_list");
 
         //Go through a list of all the adventurers in the game
         for(Map.Entry<Integer, AdventurerMeta> entry : idToAdventurer.entrySet()){
             int id = entry.getKey();
             AdventurerMeta adventurer = entry.getValue();
-            if (!ownedIdList.contains(id)) { //If you don't own this adventurer
+            if (!ownedIdSet.contains(id)) { //If you don't own this adventurer
                 //Construct new unit (Does this unit have a mana spiral?)
                 JsonObject newUnit = buildUnit(adventurer, -1);
                 //Add it to your roster
@@ -1012,9 +1004,8 @@ public class JsonUtils {
             return;
         }
         //Compile a list of ID's you have
-        Set<Integer> ownedIdSet = new HashSet<>();
-        getFieldAsJsonArray("data", "chara_list").forEach(jsonEle ->
-                ownedIdSet.add(jsonEle.getAsJsonObject().get("chara_id").getAsInt()));
+        Set<Integer> ownedIdSet = getSetFromField("chara_id", "data", "chara_list");
+
         int id = advData.getId();
         String name = advData.getName();
         if (ownedIdSet.contains(id)) {
@@ -1035,9 +1026,7 @@ public class JsonUtils {
     public int addMissingWyrmprints() {
         int count = 0;
         //Compile a list of ID's you have
-        Set<Integer> ownedIdSet = new HashSet<>();
-        getFieldAsJsonArray("data", "ability_crest_list").forEach(jsonEle ->
-                ownedIdSet.add(jsonEle.getAsJsonObject().get("ability_crest_id").getAsInt()));
+        Set<Integer> ownedIdSet = getSetFromField("ability_crest_id", "data", "ability_crest_list");
 
         //Go through a list of all the wyrmprints in the game
         for (Map.Entry<Integer, WyrmprintMeta> entry : idToPrint.entrySet()) {
@@ -1060,19 +1049,12 @@ public class JsonUtils {
     public String addMissingDragons(boolean toExcludeLowRarityDragons) {
         int count = 0;
         int expandAmount = 0;
-        int keyIdMax = 0;   //need to keep track of keyId so we don't run into dupe keyId issue when adding new dragons...
+        int keyIdMax = getMaxFromObjListField("dragon_key_id", "data", "dragon_list");
+
         //Compile a list of ID's you have
-        Set<Integer> ownedIdSet = new HashSet<>();
-        JsonArray ownedDragons = getFieldAsJsonArray("data", "dragon_list");
-        for (JsonElement jsonEle : ownedDragons) {
-            JsonObject dragon = jsonEle.getAsJsonObject();
-            ownedIdSet.add(dragon.get("dragon_id").getAsInt());
-            keyIdMax = Math.max(keyIdMax, dragon.get("dragon_key_id").getAsInt());
-        }
+        Set<Integer> ownedIdSet = getSetFromField("dragon_id", "data", "dragon_list");
         //Compile a list of ID's from your encyclopedia
-        Set<Integer> albumIDSet = new HashSet<>();
-        getFieldAsJsonArray("data", "album_dragon_list").forEach(jsonEle ->
-                albumIDSet.add(jsonEle.getAsJsonObject().get("dragon_id").getAsInt()));
+        Set<Integer> albumIDSet = getSetFromField("dragon_id", "data", "album_dragon_list");
 
         //Go through a list of all the dragons in the game
         for (Map.Entry<Integer, DragonMeta> entry : idToDragon.entrySet()) {
@@ -1126,18 +1108,10 @@ public class JsonUtils {
 
     public void addDragon(String drgName) {
         int expandAmount = 0;
-        int keyIdMax = 0;   //need to keep track of keyId so we don't run into dupe keyId issue when adding new dragons...
+        int keyIdMax = getMaxFromObjListField("dragon_key_id", "data", "dragon_list");
 
-        //Obtain keyIdMax
-        JsonArray ownedDragons = getFieldAsJsonArray("data", "dragon_list");
-        for (JsonElement jsonEle : ownedDragons) {
-            JsonObject dragon = jsonEle.getAsJsonObject();
-            keyIdMax = Math.max(keyIdMax, dragon.get("dragon_key_id").getAsInt());
-        }
         //Compile a list of ID's from your encyclopedia
-        Set<Integer> albumIDSet = new HashSet<>();
-        getFieldAsJsonArray("data", "album_dragon_list").forEach(jsonEle ->
-                albumIDSet.add(jsonEle.getAsJsonObject().get("dragon_id").getAsInt()));
+        Set<Integer> albumIDSet = getSetFromField("dragon_id", "data", "album_dragon_list");
 
         DragonMeta drgData = nameToDragon.get(drgName);
         if (drgData == null) {
@@ -1234,9 +1208,8 @@ public class JsonUtils {
 
     public int addMissingWeaponSkins() {
         int count = 0;
-        List<Integer> ownedWeaponSkinIDs = new ArrayList<>();
-        getFieldAsJsonArray("data", "weapon_skin_list").forEach(jsonEle ->
-                ownedWeaponSkinIDs.add(jsonEle.getAsJsonObject().get("weapon_skin_id").getAsInt()));
+        Set<Integer> ownedWeaponSkinIDs = getSetFromField("weapon_skin_id", "data", "weapon_skin_list");
+
         for (Map.Entry<Integer, String> entry : idToWeaponSkinName.entrySet()) {
             int weaponSkinId = entry.getKey();
             if (!ownedWeaponSkinIDs.contains(weaponSkinId)) {
@@ -1246,7 +1219,7 @@ public class JsonUtils {
                 newWeaponSkin.addProperty("gettime", Instant.now().getEpochSecond());
                 getFieldAsJsonArray("data", "weapon_skin_list").add(newWeaponSkin);
                 count++;
-                write(entry.getValue());
+                write(entry.getValue().replace(" (Skin)", ""));
             }
         }
         flushLog("Added weapon skins");
@@ -1256,9 +1229,7 @@ public class JsonUtils {
     public int addMissingWeapons() {
         int count = 0;
         //Compile a set of ID's you have
-        Set<Integer> ownedIdSet = new HashSet<>();
-        getFieldAsJsonArray("data", "weapon_body_list").forEach(jsonEle ->
-                ownedIdSet.add(jsonEle.getAsJsonObject().get("weapon_body_id").getAsInt()));
+        Set<Integer> ownedIdSet = getSetFromField("weapon_body_id", "data", "weapon_body_list");
 
         //Go through a list of all the weapons in the game
         for (Map.Entry<Integer, WeaponMeta> entry : idToWeapon.entrySet()) {

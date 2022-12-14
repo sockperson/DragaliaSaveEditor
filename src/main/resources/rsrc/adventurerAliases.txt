@@ -125,4 +125,3 @@ Yukata Cassandra,ycass,ycassandra,qwerb
 Yukata Cleo,ycleo,yleo
 Yukata Curran,ycurran
 Yukata Lathna,ylath,ylathna,alexis
-
