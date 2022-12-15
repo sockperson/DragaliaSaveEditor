@@ -13,6 +13,8 @@ Options:
 - Set all materials count
 - Set portrait print inventory to a set of powerful portrait prints
 
+Requirements: Java installed (https://www.java.com/en/download/manual.jsp)
+
 Usage:
 
 [.exe]
