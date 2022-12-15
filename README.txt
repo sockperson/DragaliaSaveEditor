@@ -5,9 +5,8 @@ Options:
 - Max out facilities
 - Add all missing adventurers or add them individually
 - Add all missing dragons or add them individually
-- Set mana value
+- Set mana, eldwater, rupies value
 - Set wyrmite, summoning tickets value
-- Set eldwater value
 - Add all missing weapons
 - Add all missing weapon skins
 - Add all missing wyrmprints
@@ -16,7 +15,13 @@ Options:
 
 Usage:
 
-1. Put savedata.txt into the same directory that the jarfile is in
+[.exe]
+1. Put savedata.txt into the same folder that the .exe is in
+2. Run the program by double clicking it
+3. Follow instructions listed in the program. New save data file will be outputted to this directory
+
+[.jar]
+1. Put savedata.txt into the same folder that the jarfile is in
 2. Open up command line / terminal
 3. Navigate to this directory with 'cd [folder path]' command
 4. Run the jar with 'java -jar DragaliaSaveEditor.jar'
