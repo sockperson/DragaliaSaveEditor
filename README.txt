@@ -17,8 +17,12 @@ Usage:
 
 [.exe]
 1. Put savedata.txt into the same folder that the .exe is in
-2. Run the program by double clicking it
+2. Run the program by double clicking it. If program is blocked by an antivirus, see step 2b.
 3. Follow instructions listed in the program. New save data file will be outputted to this directory
+
+2b. Open up command line / terminal
+2c. Navigate to this directory with 'cd [folder path]' command
+2d. Type 'DragaliaSaveEditor.exe', press enter.
 
 [.jar]
 1. Put savedata.txt into the same folder that the jarfile is in
