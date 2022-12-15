@@ -11,7 +11,7 @@ Options:
 - Add all missing weapons
 - Add all missing weapon skins
 - Add all missing wyrmprints
-- Increase count of all items owned
+- Set all materials count
 - Set portrait print inventory to a set of powerful portrait prints
 
 Usage:
