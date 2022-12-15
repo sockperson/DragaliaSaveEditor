@@ -25,7 +25,7 @@ Usage:
 2b. On Windows, on the popup that shows up when the progam is blocked, click on 'More Info' --> 'Run Anyway'
 2c. Open up command line / terminal
 2d. Navigate to this directory with 'cd [folder path]' command
-2e. Type 'DragaliaSaveEditor.exe', press enter.
+2e. Type 'DragaliaSaveEditor.exe', press enter. (if it says something about needing a runtime environment, try 'java -jar DragaliaSaveEditor.exe' instead)
 
 [.jar]
 1. Put savedata.txt into the same folder that the jarfile is in
