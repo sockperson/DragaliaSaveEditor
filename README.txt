@@ -20,7 +20,7 @@ Usage:
 2. Run the program by double clicking it. If program is blocked by an antivirus, see step 2b.
 3. Follow instructions listed in the program. New save data file will be outputted to this directory
 
-2b. On Windows, right click exe --> Properties --> check the 'Unblock' box --> OK. For other OS, see 2c.
+2b. On Windows, on the popup that shows up when the progam is blocked, click on 'More Info' --> 'Run Anyway'
 2c. Open up command line / terminal
 2d. Navigate to this directory with 'cd [folder path]' command
 2e. Type 'DragaliaSaveEditor.exe', press enter.
