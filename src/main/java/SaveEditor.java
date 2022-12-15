@@ -17,11 +17,12 @@ public class SaveEditor {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-        inJar = programPath.contains(".jar"); //eh
+        //probably jank
+        int length = programPath.length();
+        String extension = programPath.substring(length - 4, length);
+        inJar = extension.equals(".jar") || extension.equals(".exe");
         return programPath;
     }
-
-    //private static String get
 
     private static void yesNoQuestion(String question, String response, Runnable func){
         System.out.print(question + " (y/n): ");        //print the question
@@ -78,41 +79,48 @@ public class SaveEditor {
     }
 
     public static void main(String[] args){
-        System.out.print("Enter path for save file: (Default: this directory): ");
-        String path = input.nextLine();
+        System.out.println();
         String programPath = getFilePath();
-        String savePath;
 
-        if(path.equals("")){
-            if(inJar){
-                savePath = Paths.get(new File(programPath).getParent(), "savedata.txt").toString();
-            } else {
-                int indexOfDir = programPath.indexOf("DragaliaSaveEditor");
-                if(indexOfDir == -1){
-                    System.out.println("Directory 'DragaliaSaveEditor' not found!");
-                    System.exit(98);
+        System.out.print("Enter path for save file: (Default: same folder that this program is in): ");
+        String path = input.nextLine();
+        String savePath = "";
+        boolean isFilePathInvalid = true;
+        while(isFilePathInvalid){
+            if(path.equals("")){
+                if(inJar){
+                    savePath = Paths.get(new File(programPath).getParent(), "savedata.txt").toString();
+                } else {
+                    int indexOfDir = programPath.indexOf("DragaliaSaveEditor");
+                    if(indexOfDir == -1){
+                        System.out.println("Directory 'DragaliaSaveEditor' not found!");
+                        System.exit(98);
+                    }
+                    String editorPath = Paths.get(programPath.substring(0, indexOfDir), "DragaliaSaveEditor").toString();
+                    savePath = Paths.get(editorPath, "savedata.txt").toString();
                 }
-                String editorPath = Paths.get(programPath.substring(0, indexOfDir), "DragaliaSaveEditor").toString();
-                savePath = Paths.get(editorPath, "savedata.txt").toString();
+            } else {
+                savePath = path;
             }
-        } else {
-            savePath = path;
+            isFilePathInvalid = !new File(savePath).exists(); //basic file path exists check
+            if(isFilePathInvalid){
+                System.out.println("savedata not found at: " + savePath + "!");
+                System.out.println();
+                System.out.print("Enter path for save file: (Default: same folder that this program is in): ");
+                path = input.nextLine();
+            }
         }
+
         System.out.println();
         JsonUtils util = new JsonUtils(savePath, programPath, inJar);
         System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
-        yesNoQuestion(
-                "Uncap mana? (Sets mana to 10m)",
-                "Mana uncapped!",
-                () -> util.uncapMana());
+        yesNoQuestion("Uncap mana? (Sets mana to 10m)", () -> util.uncapMana());
+        yesNoQuestion("Set rupies count to 2b?", () -> util.setRupies());
         yesNoQuestion(
                 "Rob Donkay? (Sets wyrmites to 710k, singles to 2.6k, tenfolds to 170)",
                 "Thanks Donkay!",
                 () -> util.plunderDonkay());
-        yesNoQuestion(
-                "Play Ch13 Ex1-2 Battle On The Byroad? (Sets eldwater to 10m)",
-                "Set eldwater to 10m.",
-                () -> util.battleOnTheByroad());
+        yesNoQuestion("Play Ch13 Ex1-2 Battle On The Byroad? (Sets eldwater to 10m)", () -> util.battleOnTheByroad());
         //check for invisible adventurers (skipped raid welfares)
         List<String> skippedTempAdventurers = util.checkSkippedTempAdventurers();
         if(skippedTempAdventurers.size() > 0){
@@ -189,6 +197,9 @@ public class SaveEditor {
         util.writeToFile();
         System.out.println();
         yesNoQuestion("View logs?", () -> util.printLogs());
+        input.nextLine();
+        System.out.println();
+        System.out.println("Program finished. Enter anything to exit...");
     }
 
 }

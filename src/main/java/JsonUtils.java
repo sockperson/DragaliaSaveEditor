@@ -60,6 +60,7 @@ public class JsonUtils {
 
     public JsonUtils(String savePath, String jarPath, boolean inJar) {
         log("Initializing JsonUtils...");
+
         this.savePath = savePath;
         this.jarPath = jarPath;
         this.inJar = inJar;
@@ -78,7 +79,6 @@ public class JsonUtils {
             readAbilitiesData();
             readFacilitiesData();
             readMaterialsData();
-
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Unable to read JSON data!");
@@ -181,6 +181,19 @@ public class JsonUtils {
     }
 
     private void writeInteger(int value, String... memberNames) {
+        List<String> memberNameList = new ArrayList<>(Arrays.asList(memberNames));
+
+        JsonElement jsonEle = jsonData;
+        for (int i = 0; i < memberNameList.size() - 1; i++) {
+            jsonEle = jsonEle.getAsJsonObject().get(memberNameList.get(i));
+        }
+        String lastMemberName = memberNameList.get(memberNameList.size() - 1);
+        JsonObject jsonObj = jsonEle.getAsJsonObject();
+        jsonObj.remove(lastMemberName);
+        jsonObj.addProperty(lastMemberName, value);
+    }
+
+    private void writeLong(long value, String... memberNames) {
         List<String> memberNameList = new ArrayList<>(Arrays.asList(memberNames));
 
         JsonElement jsonEle = jsonData;
@@ -924,6 +937,9 @@ public class JsonUtils {
     public void uncapMana() {
         writeInteger(10_000_000, "data", "user_data", "mana_point");
     }
+    public void setRupies() {
+        writeLong(2_000_000_000, "data", "user_data", "coin");
+    }
 
     public void plunderDonkay() {
         writeInteger(710_000, "data", "user_data", "crystal");
@@ -1584,7 +1600,7 @@ public class JsonUtils {
         }
         return sb.toString();
     }
-    public List<String> toList(List<String> list){
+    public static List<String> toList(List<String> list){
         int size = list.size();
         List<String> out = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
@@ -1618,6 +1634,10 @@ public class JsonUtils {
         logKindaStream.clear();
     }
 
+    public void clearLogs(){
+        log.clear();
+    }
+
     public void printLogs(){
         for (int i = 0; i < log.size(); i++){
             List<String> messages = log.get(i);
@@ -1630,6 +1650,5 @@ public class JsonUtils {
             }
         }
     }
-
 
 }

@@ -6,6 +6,9 @@ public class AdventurerMeta {
     private int id, elementId, maxHp, maxStr, baseRarity;
     private boolean hasSkillShare, hasManaSpiral;
 
+    public static AdventurerMeta DUMMY = new AdventurerMeta("UNKNOWN", "", 0,
+            0, 0, 0, 0, false, false);
+
     public AdventurerMeta(String name, String title, int id, int elementId, int maxHp, int maxStr,
                           int baseRarity, boolean hasSkillShare, boolean hasManaSpiral){
         this.name = name;
