@@ -24,7 +24,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Aeleen",
@@ -51,7 +53,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Akasha",
@@ -80,6 +84,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 3,
+        "Abilities32": 210002206,
+        "Abilities33": 210002207,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -109,6 +115,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 1,
+        "Abilities32": 110020604,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -136,7 +144,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 1838,
+        "Abilities33": 0
     },
     {
         "FullName": "Albert",
@@ -165,6 +175,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 4,
+        "Abilities32": 22,
+        "Abilities33": 1180,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -192,7 +204,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Alex",
@@ -219,7 +233,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Alfonse",
@@ -248,6 +264,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
         "ElementalTypeId": 4,
+        "Abilities32": 110010406,
+        "Abilities33": 938,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -277,6 +295,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 5,
+        "Abilities32": 110020404,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -306,6 +326,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 4,
+        "Abilities32": 694,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -335,6 +357,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 4,
+        "Abilities32": 210002604,
+        "Abilities33": 210002605,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -364,6 +388,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 1,
+        "Abilities32": 110021004,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -391,7 +417,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 110070006,
+        "Abilities33": 0
     },
     {
         "FullName": "Audric",
@@ -418,7 +446,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Aurien",
@@ -447,10 +477,12 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
         "ElementalTypeId": 1,
+        "Abilities32": 110021004,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
-        "FullName": "Ayaha & Otoha",
+        "FullName": "Ayaha &amp; Otoha",
         "Title": "Twin Wings of Freedom",
         "Id": 110399,
         "IdLong": 10850104,
@@ -474,7 +506,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 2440,
+        "Abilities33": 0
     },
     {
         "FullName": "Basileus",
@@ -501,7 +535,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 2281,
+        "Abilities33": 0
     },
     {
         "FullName": "Beautician Zardin",
@@ -528,7 +564,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 210002006,
+        "Abilities33": 0
     },
     {
         "FullName": "Bellina",
@@ -555,7 +593,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 291,
+        "Abilities33": 0
     },
     {
         "FullName": "Berserker",
@@ -582,7 +622,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Bondforged Prince",
@@ -609,7 +651,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 3401,
+        "Abilities33": 0
     },
     {
         "FullName": "Bondforged Zethia",
@@ -636,7 +680,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 2770,
+        "Abilities33": 0
     },
     {
         "FullName": "Botan",
@@ -665,6 +711,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
         "ElementalTypeId": 5,
+        "Abilities32": 721,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -694,6 +742,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 5,
+        "Abilities32": 442,
+        "Abilities33": 726,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -723,6 +773,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 2,
+        "Abilities32": 110060006,
+        "Abilities33": 717,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -750,7 +802,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 2183,
+        "Abilities33": 0
     },
     {
         "FullName": "Celliera",
@@ -779,6 +833,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
         "ElementalTypeId": 2,
+        "Abilities32": 746,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -806,7 +862,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 210002106,
+        "Abilities33": 0
     },
     {
         "FullName": "Chelsea",
@@ -833,7 +891,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 478,
+        "Abilities33": 0
     },
     {
         "FullName": "Child Ranzal",
@@ -860,7 +920,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 1862,
+        "Abilities33": 0
     },
     {
         "FullName": "Chitose",
@@ -887,7 +949,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Chrom",
@@ -914,7 +978,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Cibella",
@@ -941,7 +1007,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Civilian Leif",
@@ -968,7 +1036,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 956,
+        "Abilities33": 0
     },
     {
         "FullName": "Cleo",
@@ -997,6 +1067,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 5,
+        "Abilities32": 817,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1026,6 +1098,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 5,
+        "Abilities32": 210001306,
+        "Abilities33": 746,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1055,6 +1129,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
         "ElementalTypeId": 5,
+        "Abilities32": 461,
+        "Abilities33": 792,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1084,6 +1160,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 2,
+        "Abilities32": 310001502,
+        "Abilities33": 310001504,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1111,7 +1189,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 2502,
+        "Abilities33": 0
     },
     {
         "FullName": "Dragonyule Lily",
@@ -1138,7 +1218,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 210000307,
+        "Abilities33": 0
     },
     {
         "FullName": "Dragonyule Malora",
@@ -1165,7 +1247,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 621,
+        "Abilities33": 0
     },
     {
         "FullName": "Dragonyule Nefaria",
@@ -1194,6 +1278,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 2,
+        "Abilities32": 1620,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1221,7 +1307,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 2484,
+        "Abilities33": 0
     },
     {
         "FullName": "Dragonyule Victor",
@@ -1248,7 +1336,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 1539,
+        "Abilities33": 0
     },
     {
         "FullName": "Dragonyule Xainfried",
@@ -1277,6 +1367,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 3,
+        "Abilities32": 700,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1304,7 +1396,9 @@
         "PlusAtk5": 62,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Durant",
@@ -1331,7 +1425,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Edward",
@@ -1358,7 +1454,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Eirene",
@@ -1385,7 +1483,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 1745,
+        "Abilities33": 0
     },
     {
         "FullName": "Eleonora",
@@ -1412,7 +1512,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Elias",
@@ -1439,7 +1541,9 @@
         "PlusAtk5": 34,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Elisanne",
@@ -1468,6 +1572,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 2,
+        "Abilities32": 110020606,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1495,7 +1601,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Erik",
@@ -1524,6 +1632,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 5,
+        "Abilities32": 110020504,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1553,6 +1663,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 4,
+        "Abilities32": 110020704,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1580,7 +1692,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 210000206,
+        "Abilities33": 0
     },
     {
         "FullName": "Ezelith",
@@ -1609,6 +1723,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 1,
+        "Abilities32": 110080006,
+        "Abilities33": 694,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1636,7 +1752,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 110350006,
+        "Abilities33": 0
     },
     {
         "FullName": "Faris",
@@ -1663,7 +1781,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 1743,
+        "Abilities33": 0
     },
     {
         "FullName": "Farren",
@@ -1690,7 +1810,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 2198,
+        "Abilities33": 0
     },
     {
         "FullName": "Felicia",
@@ -1717,7 +1839,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Finni",
@@ -1744,7 +1868,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 1820,
+        "Abilities33": 0
     },
     {
         "FullName": "Fjorm",
@@ -1773,6 +1899,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 2,
+        "Abilities32": 110120004,
+        "Abilities33": 721,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -1800,7 +1928,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Forager Cleo",
@@ -1827,7 +1957,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 1534,
+        "Abilities33": 0
     },
     {
         "FullName": "Forager Mitsuba",
@@ -1854,7 +1986,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 1491,
+        "Abilities33": 0
     },
     {
         "FullName": "Formal Joachim",
@@ -1881,7 +2015,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 110160106,
+        "Abilities33": 0
     },
     {
         "FullName": "Formal Noelle",
@@ -1908,7 +2044,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 110160106,
+        "Abilities33": 0
     },
     {
         "FullName": "Forte",
@@ -1935,7 +2073,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 110160106,
+        "Abilities33": 0
     },
     {
         "FullName": "Francesca",
@@ -1962,7 +2102,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Fritz",
@@ -1989,7 +2131,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Gala Alex",
@@ -2018,6 +2162,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
         "ElementalTypeId": 5,
+        "Abilities32": 110160106,
+        "Abilities33": 1965,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2045,7 +2191,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 110370006,
+        "Abilities33": 0
     },
     {
         "FullName": "Gala Chelle",
@@ -2072,7 +2220,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 1614,
+        "Abilities33": 0
     },
     {
         "FullName": "Gala Cleo",
@@ -2101,6 +2251,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 5,
+        "Abilities32": 110120004,
+        "Abilities33": 2162,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2130,6 +2282,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 2,
+        "Abilities32": 310,
+        "Abilities33": 1080,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2157,7 +2311,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 2579,
+        "Abilities33": 0
     },
     {
         "FullName": "Gala Gatov",
@@ -2184,7 +2340,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 2434,
+        "Abilities33": 0
     },
     {
         "FullName": "Gala Laxi",
@@ -2213,6 +2371,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 1,
+        "Abilities32": 1074,
+        "Abilities33": 2041,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2242,6 +2402,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
         "ElementalTypeId": 3,
+        "Abilities32": 210000506,
+        "Abilities33": 2419,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2269,7 +2431,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 1466,
+        "Abilities33": 0
     },
     {
         "FullName": "Gala Luca",
@@ -2298,6 +2462,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 4,
+        "Abilities32": 310000506,
+        "Abilities33": 110090019,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2325,7 +2491,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 1074,
+        "Abilities33": 0
     },
     {
         "FullName": "Gala Mym",
@@ -2354,6 +2522,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
         "ElementalTypeId": 1,
+        "Abilities32": 110010806,
+        "Abilities33": 756,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2381,7 +2551,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 2753,
+        "Abilities33": 0
     },
     {
         "FullName": "Gala Notte",
@@ -2408,7 +2580,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 210000506,
+        "Abilities33": 0
     },
     {
         "FullName": "Gala Prince",
@@ -2437,6 +2611,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 4,
+        "Abilities32": 429,
+        "Abilities33": 42960,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2466,6 +2642,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
         "ElementalTypeId": 3,
+        "Abilities32": 110060006,
+        "Abilities33": 717,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2495,6 +2673,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 1,
+        "Abilities32": 110130006,
+        "Abilities33": 2646,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2524,6 +2704,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 4,
+        "Abilities32": 1248,
+        "Abilities33": 2677,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2551,7 +2733,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 2237,
+        "Abilities33": 0
     },
     {
         "FullName": "Gauld",
@@ -2578,7 +2762,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Grace",
@@ -2605,7 +2791,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 210001104,
+        "Abilities33": 0
     },
     {
         "FullName": "Grimnir",
@@ -2632,7 +2820,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 1922,
+        "Abilities33": 0
     },
     {
         "FullName": "Halloween Akasha",
@@ -2659,7 +2849,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 1254,
+        "Abilities33": 0
     },
     {
         "FullName": "Halloween Althemia",
@@ -2688,6 +2880,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 4,
+        "Abilities32": 210000307,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2717,6 +2911,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 4,
+        "Abilities32": 110020704,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2746,6 +2942,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
         "ElementalTypeId": 4,
+        "Abilities32": 110370006,
+        "Abilities33": 110370007,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2773,7 +2971,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 2356,
+        "Abilities33": 0
     },
     {
         "FullName": "Halloween Lowen",
@@ -2800,7 +3000,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Halloween Melsa",
@@ -2827,7 +3029,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 773,
+        "Abilities33": 0
     },
     {
         "FullName": "Halloween Mym",
@@ -2854,7 +3058,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 455,
+        "Abilities33": 0
     },
     {
         "FullName": "Halloween Odetta",
@@ -2883,6 +3089,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 2,
+        "Abilities32": 759,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -2910,7 +3118,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 2363,
+        "Abilities33": 0
     },
     {
         "FullName": "Hanabusa",
@@ -2937,7 +3147,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Harle",
@@ -2964,7 +3176,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 2330,
+        "Abilities33": 0
     },
     {
         "FullName": "Hawk",
@@ -2993,6 +3207,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 3,
+        "Abilities32": 110160606,
+        "Abilities33": 853,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3022,6 +3238,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
         "ElementalTypeId": 5,
+        "Abilities32": 110120004,
+        "Abilities33": 721,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3051,6 +3269,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 4,
+        "Abilities32": 210002206,
+        "Abilities33": 1183,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3078,7 +3298,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Housekeeper Pia",
@@ -3105,7 +3327,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 2729,
+        "Abilities33": 0
     },
     {
         "FullName": "Humanoid Jupiter",
@@ -3132,7 +3356,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 2405,
+        "Abilities33": 0
     },
     {
         "FullName": "Humanoid Mercury",
@@ -3159,7 +3385,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 1879,
+        "Abilities33": 0
     },
     {
         "FullName": "Humanoid Midgardsormr",
@@ -3186,7 +3414,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 451,
+        "Abilities33": 0
     },
     {
         "FullName": "Humanoid Zodiark",
@@ -3213,7 +3443,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 2686,
+        "Abilities33": 0
     },
     {
         "FullName": "Hunter Berserker",
@@ -3240,7 +3472,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 704,
+        "Abilities33": 0
     },
     {
         "FullName": "Hunter Sarisse",
@@ -3267,7 +3501,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 710,
+        "Abilities33": 0
     },
     {
         "FullName": "Hunter Vanessa",
@@ -3294,7 +3530,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 704,
+        "Abilities33": 0
     },
     {
         "FullName": "Ieyasu",
@@ -3323,6 +3561,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 5,
+        "Abilities32": 110390006,
+        "Abilities33": 720,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3350,7 +3590,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 1343,
+        "Abilities33": 0
     },
     {
         "FullName": "Incognito Nefaria",
@@ -3377,7 +3619,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 110060006,
+        "Abilities33": 0
     },
     {
         "FullName": "Irfan",
@@ -3404,7 +3648,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Isaac",
@@ -3431,7 +3677,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 1972,
+        "Abilities33": 0
     },
     {
         "FullName": "Izumo",
@@ -3458,7 +3706,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 210000206,
+        "Abilities33": 0
     },
     {
         "FullName": "Jakob",
@@ -3485,7 +3735,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Jiang Ziya",
@@ -3512,7 +3764,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 210002206,
+        "Abilities33": 0
     },
     {
         "FullName": "Joachim",
@@ -3539,7 +3793,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Joe",
@@ -3568,6 +3824,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 1,
+        "Abilities32": 110020604,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3595,7 +3853,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Joker",
@@ -3622,7 +3882,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 310001502,
+        "Abilities33": 0
     },
     {
         "FullName": "Julietta",
@@ -3651,6 +3913,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 4,
+        "Abilities32": 210001204,
+        "Abilities33": 210001205,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3678,7 +3942,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Karina",
@@ -3707,6 +3973,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 2,
+        "Abilities32": 721,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3736,6 +4004,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 1,
+        "Abilities32": 719,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3763,7 +4033,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 110120004,
+        "Abilities33": 0
     },
     {
         "FullName": "Kimono Luca",
@@ -3790,7 +4062,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 1605,
+        "Abilities33": 0
     },
     {
         "FullName": "Kimono Notte",
@@ -3817,7 +4091,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 110120004,
+        "Abilities33": 0
     },
     {
         "FullName": "Kirsty",
@@ -3846,6 +4122,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 3,
+        "Abilities32": 110160106,
+        "Abilities33": 2271,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3875,6 +4153,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 5,
+        "Abilities32": 717,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -3902,7 +4182,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Kuzunoha",
@@ -3929,7 +4211,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 210000307,
+        "Abilities33": 0
     },
     {
         "FullName": "Lapis",
@@ -3956,7 +4240,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 1440,
+        "Abilities33": 0
     },
     {
         "FullName": "Laranoa",
@@ -3985,6 +4271,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 2,
+        "Abilities32": 110060006,
+        "Abilities33": 717,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4014,6 +4302,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 5,
+        "Abilities32": 110010806,
+        "Abilities33": 756,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4041,7 +4331,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Lazry",
@@ -4070,6 +4362,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
         "ElementalTypeId": 2,
+        "Abilities32": 210002006,
+        "Abilities33": 2273,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4099,6 +4393,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 1,
+        "Abilities32": 411,
+        "Abilities33": 2192,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4128,6 +4424,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 2,
+        "Abilities32": 110120004,
+        "Abilities33": 721,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4157,6 +4455,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
         "ElementalTypeId": 3,
+        "Abilities32": 110010406,
+        "Abilities33": 851,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4184,7 +4484,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 110070006,
+        "Abilities33": 0
     },
     {
         "FullName": "Linus",
@@ -4211,7 +4513,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Louise",
@@ -4240,6 +4544,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 3,
+        "Abilities32": 210000606,
+        "Abilities33": 210000607,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4269,6 +4575,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 3,
+        "Abilities32": 110100007,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4298,6 +4606,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 4,
+        "Abilities32": 110020106,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4327,6 +4637,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 4,
+        "Abilities32": 110080006,
+        "Abilities33": 694,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4356,6 +4668,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 2,
+        "Abilities32": 1101,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4383,7 +4697,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Malora",
@@ -4410,7 +4726,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Maribelle",
@@ -4439,6 +4757,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 3,
+        "Abilities32": 110120004,
+        "Abilities33": 721,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4468,6 +4788,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 1,
+        "Abilities32": 310000506,
+        "Abilities33": 928,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4497,6 +4819,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 1,
+        "Abilities32": 110020604,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4524,7 +4848,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 310000506,
+        "Abilities33": 0
     },
     {
         "FullName": "Mega Man",
@@ -4551,7 +4877,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 110370006,
+        "Abilities33": 0
     },
     {
         "FullName": "Melody",
@@ -4580,6 +4908,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 3,
+        "Abilities32": 110020304,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4607,7 +4937,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Mikoto",
@@ -4636,6 +4968,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 1,
+        "Abilities32": 110090006,
+        "Abilities33": 110090018,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4663,7 +4997,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 771,
+        "Abilities33": 0
     },
     {
         "FullName": "Mitsuhide",
@@ -4690,7 +5026,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 110160406,
+        "Abilities33": 0
     },
     {
         "FullName": "Mona",
@@ -4717,7 +5055,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 110390006,
+        "Abilities33": 0
     },
     {
         "FullName": "Mordecai",
@@ -4744,7 +5084,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 1392,
+        "Abilities33": 0
     },
     {
         "FullName": "Musashi",
@@ -4771,7 +5113,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Myriam",
@@ -4798,7 +5142,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 1857,
+        "Abilities33": 0
     },
     {
         "FullName": "Nadine",
@@ -4825,7 +5171,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 210002604,
+        "Abilities33": 0
     },
     {
         "FullName": "Natalie",
@@ -4852,7 +5200,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 291,
+        "Abilities33": 0
     },
     {
         "FullName": "Naveed",
@@ -4881,6 +5231,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 1,
+        "Abilities32": 110120004,
+        "Abilities33": 695,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4910,6 +5262,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 5,
+        "Abilities32": 110160506,
+        "Abilities33": 819,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -4937,7 +5291,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 110390006,
+        "Abilities33": 0
     },
     {
         "FullName": "Nicolas",
@@ -4964,7 +5320,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Nina",
@@ -4991,7 +5349,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 2583,
+        "Abilities33": 0
     },
     {
         "FullName": "Nino",
@@ -5018,7 +5378,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 310000506,
+        "Abilities33": 0
     },
     {
         "FullName": "Nobunaga",
@@ -5045,7 +5407,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 672,
+        "Abilities33": 0
     },
     {
         "FullName": "Noelle",
@@ -5072,7 +5436,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Norwin",
@@ -5099,7 +5465,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Nurse Aeleen",
@@ -5128,6 +5496,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 2,
+        "Abilities32": 1960,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5155,7 +5525,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Opera Karina",
@@ -5182,7 +5554,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 1270,
+        "Abilities33": 0
     },
     {
         "FullName": "Origa",
@@ -5209,7 +5583,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 2239,
+        "Abilities33": 0
     },
     {
         "FullName": "Orion",
@@ -5236,7 +5612,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Orsem",
@@ -5263,7 +5641,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Panther",
@@ -5290,7 +5670,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 1724,
+        "Abilities33": 0
     },
     {
         "FullName": "Patia",
@@ -5319,6 +5701,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 5,
+        "Abilities32": 758,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5346,7 +5730,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 1508,
+        "Abilities33": 0
     },
     {
         "FullName": "Peony",
@@ -5373,7 +5759,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 110160406,
+        "Abilities33": 0
     },
     {
         "FullName": "Phares",
@@ -5400,7 +5788,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 2608,
+        "Abilities33": 0
     },
     {
         "FullName": "Philia",
@@ -5427,7 +5817,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Pia",
@@ -5454,7 +5846,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Pietro",
@@ -5481,7 +5875,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Pinon",
@@ -5508,7 +5904,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 1225,
+        "Abilities33": 0
     },
     {
         "FullName": "Pipple",
@@ -5535,7 +5933,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Puppy",
@@ -5561,7 +5961,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "Abilities32": 110150003,
+        "Abilities33": 0
     },
     {
         "FullName": "Radiant Xuan Zang",
@@ -5588,7 +5990,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 956,
+        "Abilities33": 0
     },
     {
         "FullName": "Raemond",
@@ -5615,7 +6019,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Ramona",
@@ -5642,7 +6048,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 210000606,
+        "Abilities33": 0
     },
     {
         "FullName": "Ranzal",
@@ -5671,6 +6079,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 3,
+        "Abilities32": 972,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5698,7 +6108,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Regina",
@@ -5725,7 +6137,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 2239,
+        "Abilities33": 0
     },
     {
         "FullName": "Rena",
@@ -5752,7 +6166,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 210001104,
+        "Abilities33": 0
     },
     {
         "FullName": "Renee",
@@ -5781,6 +6197,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 2,
+        "Abilities32": 375,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5810,6 +6228,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 1,
+        "Abilities32": 110020604,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5837,7 +6257,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Ricardt",
@@ -5866,6 +6288,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
         "ElementalTypeId": 2,
+        "Abilities32": 110020604,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5895,6 +6319,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 5,
+        "Abilities32": 110020404,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -5922,7 +6348,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Ryszarda",
@@ -5949,7 +6377,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 1735,
+        "Abilities33": 0
     },
     {
         "FullName": "Saiga",
@@ -5976,7 +6406,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 210000106,
+        "Abilities33": 0
     },
     {
         "FullName": "Sandalphon",
@@ -6003,7 +6435,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 2290,
+        "Abilities33": 0
     },
     {
         "FullName": "Sazanka",
@@ -6032,6 +6466,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 5,
+        "Abilities32": 2551,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6059,7 +6495,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 1543,
+        "Abilities33": 0
     },
     {
         "FullName": "Serena",
@@ -6088,6 +6526,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 1,
+        "Abilities32": 1586,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6115,7 +6555,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Sharena",
@@ -6142,7 +6584,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 110160406,
+        "Abilities33": 0
     },
     {
         "FullName": "Sharpshooter Joe",
@@ -6169,7 +6613,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Sharpshooter Sarisse",
@@ -6196,7 +6642,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 210001204,
+        "Abilities33": 0
     },
     {
         "FullName": "Sheila",
@@ -6223,7 +6671,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 2645,
+        "Abilities33": 0
     },
     {
         "FullName": "Shingen",
@@ -6250,7 +6700,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 2562,
+        "Abilities33": 0
     },
     {
         "FullName": "Sinoa",
@@ -6277,7 +6729,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Sophie",
@@ -6306,6 +6760,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
         "ElementalTypeId": 3,
+        "Abilities32": 110020304,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6333,7 +6789,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 210001606,
+        "Abilities33": 0
     },
     {
         "FullName": "Student Maribelle",
@@ -6360,7 +6818,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 110080006,
+        "Abilities33": 0
     },
     {
         "FullName": "Su Fang",
@@ -6389,6 +6849,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
         "ElementalTypeId": 3,
+        "Abilities32": 717,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6416,7 +6878,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 2084,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Amane",
@@ -6443,7 +6907,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 110100007,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Celliera",
@@ -6472,6 +6938,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 2,
+        "Abilities32": 110130006,
+        "Abilities33": 759,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6499,7 +6967,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 2109,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Cleo",
@@ -6528,6 +6998,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 4,
+        "Abilities32": 110160406,
+        "Abilities33": 110160407,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6555,7 +7027,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Ieyasu",
@@ -6582,7 +7056,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 110390006,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Julietta",
@@ -6611,6 +7087,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 2,
+        "Abilities32": 310,
+        "Abilities33": 1080,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6638,7 +7116,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 2107,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Luca",
@@ -6665,7 +7145,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Mikoto",
@@ -6692,7 +7174,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 1034,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Mitsuhide",
@@ -6719,7 +7203,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 2068,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Mym",
@@ -6746,7 +7232,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 110120004,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Norwin",
@@ -6773,7 +7261,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 110160106,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Patia",
@@ -6800,7 +7290,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 1036,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Prince",
@@ -6827,7 +7319,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 110150003,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Ranzal",
@@ -6854,7 +7348,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Sinoa",
@@ -6881,7 +7377,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 110060006,
+        "Abilities33": 0
     },
     {
         "FullName": "Summer Verica",
@@ -6910,6 +7408,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 5,
+        "Abilities32": 110100006,
+        "Abilities33": 110100007,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6939,6 +7439,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 3,
+        "Abilities32": 210000106,
+        "Abilities33": 719,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -6966,7 +7468,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Templar Hope",
@@ -6993,7 +7497,9 @@
         "PlusAtk5": 35,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Thaniel",
@@ -7020,7 +7526,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "The Prince",
@@ -7049,6 +7557,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 1,
+        "Abilities32": 110150003,
+        "Abilities33": 688,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7076,7 +7586,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 856,
+        "Abilities33": 0
     },
     {
         "FullName": "Tobias",
@@ -7103,7 +7615,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 110160106,
+        "Abilities33": 0
     },
     {
         "FullName": "Undercover Grace",
@@ -7130,7 +7644,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 2212,
+        "Abilities33": 0
     },
     {
         "FullName": "Valentine's Addis",
@@ -7157,7 +7673,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 291,
+        "Abilities33": 0
     },
     {
         "FullName": "Valentine's Chelsea",
@@ -7184,7 +7702,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 1442,
+        "Abilities33": 0
     },
     {
         "FullName": "Valentine's Ezelith",
@@ -7211,7 +7731,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Valentine's Hildegarde",
@@ -7240,6 +7762,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 1,
+        "Abilities32": 110120004,
+        "Abilities33": 721,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7267,7 +7791,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 110160106,
+        "Abilities33": 0
     },
     {
         "FullName": "Valentine's Orion",
@@ -7296,6 +7822,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 1,
+        "Abilities32": 110021004,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7325,6 +7853,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 0,
         "ElementalTypeId": 2,
+        "Abilities32": 771,
+        "Abilities33": 2780,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7352,7 +7882,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 2673,
+        "Abilities33": 0
     },
     {
         "FullName": "Vanessa",
@@ -7381,6 +7913,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 1,
+        "Abilities32": 746,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7408,7 +7942,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 85,
+        "Abilities33": 0
     },
     {
         "FullName": "Verica",
@@ -7435,7 +7971,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Veronica",
@@ -7464,6 +8002,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 5,
+        "Abilities32": 110120004,
+        "Abilities33": 721,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7493,6 +8033,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 5,
+        "Abilities32": 110020504,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7522,6 +8064,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 7,
         "ElementalTypeId": 3,
+        "Abilities32": 110130006,
+        "Abilities33": 759,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7549,7 +8093,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Vixel",
@@ -7578,6 +8124,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 4,
+        "Abilities32": 721,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7605,7 +8153,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Wedding Aoi",
@@ -7634,6 +8184,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 3,
+        "Abilities32": 155,
+        "Abilities33": 2192,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7661,7 +8213,9 @@
         "PlusAtk5": 38,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 210000606,
+        "Abilities33": 0
     },
     {
         "FullName": "Wedding Xania",
@@ -7688,7 +8242,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Wu Kong",
@@ -7715,7 +8271,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 110160406,
+        "Abilities33": 0
     },
     {
         "FullName": "Xainfried",
@@ -7744,6 +8302,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 2,
+        "Abilities32": 110010806,
+        "Abilities33": 756,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7773,6 +8333,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
         "ElementalTypeId": 2,
+        "Abilities32": 110070006,
+        "Abilities33": 110070007,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7802,6 +8364,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 5,
         "ElementalTypeId": 1,
+        "Abilities32": 110020604,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7829,7 +8393,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Xuan Zang",
@@ -7856,7 +8422,9 @@
         "PlusAtk5": 37,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Yachiyo",
@@ -7883,7 +8451,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Yaten",
@@ -7912,6 +8482,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 5,
+        "Abilities32": 210002604,
+        "Abilities33": 2268,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -7939,7 +8511,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 210000506,
+        "Abilities33": 0
     },
     {
         "FullName": "Yue",
@@ -7966,7 +8540,9 @@
         "PlusAtk5": 36,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Yukata Cassandra",
@@ -7995,6 +8571,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 6,
         "ElementalTypeId": 1,
+        "Abilities32": 1170,
+        "Abilities33": 1966,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -8022,7 +8600,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "Abilities32": 2127,
+        "Abilities33": 0
     },
     {
         "FullName": "Yukata Curran",
@@ -8049,7 +8629,9 @@
         "PlusAtk5": 40,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 4,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 297,
+        "Abilities33": 0
     },
     {
         "FullName": "Yukata Lathna",
@@ -8076,7 +8658,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 7,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "Abilities32": 110060006,
+        "Abilities33": 0
     },
     {
         "FullName": "Yukimura",
@@ -8103,7 +8687,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 210000506,
+        "Abilities33": 0
     },
     {
         "FullName": "Yurius",
@@ -8130,7 +8716,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 0,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "Abilities32": 110120004,
+        "Abilities33": 0
     },
     {
         "FullName": "Yuya",
@@ -8159,6 +8747,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 4,
         "ElementalTypeId": 1,
+        "Abilities32": 758,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -8186,7 +8776,9 @@
         "PlusAtk5": 39,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 0,
+        "Abilities33": 0
     },
     {
         "FullName": "Zardin",
@@ -8215,6 +8807,8 @@
         "MaxLimitBreakCount": 5,
         "EditSkillCost": 3,
         "ElementalTypeId": 2,
+        "Abilities32": 110020204,
+        "Abilities33": 0,
         "ManaSpiralDate__precision": 0
     },
     {
@@ -8242,7 +8836,9 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 3,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "Abilities32": 110120004,
+        "Abilities33": 0
     },
     {
         "FullName": "Zhu Bajie",
@@ -8269,6 +8865,8 @@
         "PlusAtk5": 41,
         "MaxLimitBreakCount": 4,
         "EditSkillCost": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "Abilities32": 442,
+        "Abilities33": 0
     }
 ]

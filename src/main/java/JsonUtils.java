@@ -292,9 +292,16 @@ public class JsonUtils {
                 hp = getSum(adv, "MaxHp", "PlusHp0", "PlusHp1", "PlusHp2", "PlusHp3", "PlusHp4", "McFullBonusHp5");
                 str = getSum(adv, "MaxAtk", "PlusAtk0", "PlusAtk1", "PlusAtk2", "PlusAtk3", "PlusAtk4", "McFullBonusAtk5");
             }
+            int maxA3Level = 1;
+            if(adv.get("Abilities32").getAsInt() != 0){
+                maxA3Level = 2;
+                if(adv.get("Abilities33").getAsInt() != 0){
+                    maxA3Level = 3;
+                }
+            }
             AdventurerMeta unit = new AdventurerMeta(baseName, adv.get("Title").getAsString(), id,
                     adv.get("ElementalTypeId").getAsInt(), hp, str,adv.get("MaxLimitBreakCount").getAsInt(),
-                    adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral);
+                    adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral, maxA3Level);
             idToAdventurer.put(id, unit);
             nameToAdventurer.put(name, unit);
             if(adventurerAliases.containsKey(name)){
@@ -656,7 +663,7 @@ public class JsonUtils {
         out.addProperty("skill_2_level", hasManaSpiral ? 3 : 2);
         out.addProperty("ability_1_level", hasManaSpiral ? 3 : 2);
         out.addProperty("ability_2_level", hasManaSpiral ? 3 : 2);
-        out.addProperty("ability_3_level", 2);
+        out.addProperty("ability_3_level", adventurerData.getMaxA3Level());
         out.addProperty("burst_attack_level", 2);
         out.addProperty("combo_buildup_count", hasManaSpiral ? 1 : 0);
         out.addProperty("hp", adventurerData.getMaxHp());

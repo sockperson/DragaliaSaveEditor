@@ -197,9 +197,9 @@ public class SaveEditor {
         util.writeToFile();
         System.out.println();
         yesNoQuestion("View logs?", () -> util.printLogs());
-        input.nextLine();
         System.out.println();
         System.out.println("Program finished. Enter anything to exit...");
+        input.nextLine();
     }
 
 }
