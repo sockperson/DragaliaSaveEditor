@@ -22,14 +22,21 @@ Usage:
 2. Run the program by double clicking it. If program is blocked by an antivirus, see step 2b.
 3. Follow instructions listed in the program. New save data file will be outputted to this directory
 
-2b. On Windows, on the popup that shows up when the progam is blocked, click on 'More Info' --> 'Run Anyway'
-2c. Open up command line / terminal
-2d. Navigate to this directory with 'cd [folder path]' command
-2e. Type 'DragaliaSaveEditor.exe', press enter. (if it says something about needing a runtime environment, try 'java -jar DragaliaSaveEditor.exe' instead)
-
 [.jar]
 1. Put savedata.txt into the same folder that the jarfile is in
 2. Open up command line / terminal
 3. Navigate to this directory with 'cd [folder path]' command
 4. Run the jar with 'java -jar DragaliaSaveEditor.jar'
 5. Follow instructions listed in the program. New save data file will be outputted to this directory
+
+---Troubleshooting---
+
+1. Windows: .exe Program is blocked
+
+a. Click on 'More Info' --> 'Run Anyway'
+
+2. .exe Program pops up but then immediately closes
+
+a. Open up command line / terminal (On windows, hit Win+R key, type 'cmd' into the text box, then hit Enter)
+b. In the command line, type 'cd [path]' command and press Enter, where [path] is the folder path where the program is stored. For example, if my program is stored in C:\Users\sock\Desktop\test\editor, then the command for me would be 'cd C:\Users\sock\Desktop\test\editor'
+c. Type 'DragaliaSaveEditor.exe', press enter. (if it says something about needing a runtime environment, try 'java -jar DragaliaSaveEditor.exe' instead)
