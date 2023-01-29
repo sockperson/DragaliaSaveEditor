@@ -111,6 +111,21 @@ public class JsonUtils {
         }
     }
 
+    public boolean checkTests(){
+        Tests tests = new Tests(this);
+        log("noDupeCharaIdTest(): " + tests.noDupeCharaIdTest());
+        log("noDupeDragonKeyIdTest(): " + tests.noDupeDragonKeyIdTest());
+        log("noDupeTalismanKeyIdTest(): " + tests.noDupeTalismanKeyIdTest());
+        log("noDupeWeaponSkinIdTest(): " + tests.noDupeWeaponSkinIdTest());
+        log("noDupeCrestIdTest(): " + tests.noDupeCrestIdTest());
+        if(!tests.getIfAllPassed()){
+            System.out.println("One or more tests failed... cannot export savedata. " +
+                    "Contact @sockperson if this message appears.");
+            return false;
+        }
+        return true;
+    }
+
     public boolean isSaveData2Present() {
         return new File(Paths.get(basePath, "savedata2.txt").toString()).exists();
     }
@@ -225,7 +240,7 @@ public class JsonUtils {
         return sum;
     }
 
-    private Set<Integer> getSetFromField(String fieldName, String... memberNames){
+    public Set<Integer> getSetFromField(String fieldName, String... memberNames){
         Set<Integer> out = new HashSet<>();
         getFieldAsJsonArray(memberNames).forEach(jsonEle ->
                 out.add(jsonEle.getAsJsonObject().get(fieldName).getAsInt()));
@@ -940,7 +955,87 @@ public class JsonUtils {
         }
     }
 
-    /// Util Methods \\\
+    // Hacked Utils \\
+
+    private void addHackedUnit(int id){
+        Set<Integer> ownedIdSet = getSetFromField("chara_id", "data", "chara_list");
+        if(ownedIdSet.contains(id)){
+            return; //dont add if u already have it
+        }
+    }
+
+    //Returns a built adventurer in savedata.txt format
+    private JsonObject buildHackedUnit(int id) {
+        //use Euden stats as default
+        int hp = 716, str = 480, hasSS = 1, s1Level = 1;
+
+        switch(id){
+            case 19900001: //Zethia
+                hp = 830;
+                str = 466;
+                s1Level = 3;
+                break;
+            case 19900002: //Leif (Light)
+            case 19900005: //Leif (Wind)
+                hp = 835;
+                str = 456;
+                break;
+        }
+
+        JsonObject out = new JsonObject();
+        JsonArray mc = new JsonArray();
+        for (int i = 1; i <= 40; i++) {
+            mc.add(i);
+        }
+        out.addProperty("chara_id", id);
+        out.addProperty("rarity", 5);
+        out.addProperty("exp", 1191950);
+        out.addProperty("level", 80);
+        out.addProperty("additional_max_level", 0);
+        out.addProperty("hp_plus_count", 100);
+        out.addProperty("attack_plus_count", 100);
+        out.addProperty("limit_break_count", 5);
+        out.addProperty("is_new", 1);
+        out.addProperty("gettime", Instant.now().getEpochSecond());
+        out.addProperty("skill_1_level", s1Level);
+        out.addProperty("skill_2_level", 1);
+        out.addProperty("ability_1_level", 1);
+        out.addProperty("ability_2_level", 1);
+        out.addProperty("ability_3_level", 1);
+        out.addProperty("burst_attack_level", 2);
+        out.addProperty("combo_buildup_count", 0);
+        out.addProperty("hp", hp);
+        out.addProperty("attack", str);
+        out.addProperty("ex_ability_level", 5);
+        out.addProperty("ex_ability_2_level", 5);
+        out.addProperty("is_temporary", 0);
+        out.addProperty("is_unlock_edit_skill", hasSS);
+        out.add("mana_circle_piece_id_list", mc);
+        out.addProperty("list_view_flag", 1);
+        return out;
+    }
+
+    private JsonObject buildHackedDragon(int id) {
+        JsonObject out = new JsonObject();
+        int keyIdMax = getMaxFromObjListField("dragon_key_id", "data", "dragon_list");
+
+        out.addProperty("dragon_key_id", keyIdMax + 10);
+        out.addProperty("dragon_id", id);
+        out.addProperty("level", 100);
+        out.addProperty("hp_plus_count", 50);
+        out.addProperty("attack_plus_count", 50);
+        out.addProperty("exp", 1240020);
+        out.addProperty("is_lock", 0);
+        out.addProperty("is_new", 1);
+        out.addProperty("get_time", Instant.now().getEpochSecond());
+        out.addProperty("skill_1_level", 2);
+        out.addProperty("ability_1_level", 1);
+        out.addProperty("ability_2_level", 1);
+        out.addProperty("limit_break_count", 4);
+        return out;
+    }
+
+    /// Methods \\\
     public void uncapMana() {
         writeInteger(10_000_000, "data", "user_data", "mana_point");
     }
@@ -1402,6 +1497,9 @@ public class JsonUtils {
             int id = ownedAdventurer.get("chara_id").getAsInt();
             int getTime = ownedAdventurer.get("gettime").getAsInt();
             AdventurerMeta adventurer = idToAdventurer.get(id);
+            if(adventurer == null){
+                continue;
+            }
             //Construct new unit
             JsonObject updatedUnit = buildUnit(adventurer, getTime);
             updatedAdventurers.add(updatedUnit);
@@ -1440,7 +1538,9 @@ public class JsonUtils {
             int getTime = ownedDragon.get("get_time").getAsInt();
             int keyId = ownedDragon.get("dragon_key_id").getAsInt();
             DragonMeta dragon = idToDragon.get(id);
-
+            if(dragon == null){
+                continue;
+            }
             //Construct new dragon
             JsonObject updatedUnit = buildDragon2(dragon, keyId, getTime);
             updatedDragons.add(updatedUnit);
@@ -1551,6 +1651,76 @@ public class JsonUtils {
 
     //Hacked options
 
+    public void addTutorialZethia(){
+        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900001));
+    }
+
+    public void addStoryLeifs(){
+        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900002));
+        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900005));
+    }
+
+    public void addOthers(){ //this shouldn't be used tbh
+        addNotteAndDog();
+        addStoryNPCs();
+        addABR3Stars();
+        addUnplayableDragons();
+    }
+
+    public void addNotteAndDog(){
+        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900003)); //Yellow Notte
+        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900004)); //Puppy
+        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900006)); //Blue Notte
+    }
+
+    public void addStoryNPCs(){
+        for(int i = 0; i < 67; i++){
+            getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19100001 + i));
+        }
+    }
+
+    public void addGunnerCleo(){
+        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(99900009)); //Gunner Cleo
+    }
+
+    public void addABR3Stars(){
+        for(int i = 0; i < 9; i++){
+            getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(99130001 + i * 100000));
+        }
+    }
+
+    public void addUniqueShapeshiftDragons(){
+        Arrays.asList(29900006, 29900014, 29900017, 29900018, 29900023).forEach(
+                id -> getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(id)));
+    }
+
+    public void addUnplayableDragons(){
+        for(int i = 0; i < 27; i++){
+            getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29900001 + i));
+        }
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29800001));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29800002));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29800003));
+        for(int i = 0; i < 6; i++){
+            getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(21000001 + i));
+        }
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29940301));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950405));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950116));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950522));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950317));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950523));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950518));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950415));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950524));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950416));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950525));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950121));
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950320));
+    }
+
+
+
     public void kscapeRandomizer() {
         JsonArray talismans = new JsonArray();
 
@@ -1586,10 +1756,24 @@ public class JsonUtils {
         addTalisman("syasu", 100100205, 1225, 100100204, 4); //ar20 + hp70 ar10 + ar10
         addTalisman("ranzal", 2172, 2175, 721, 4); //bolk
         addTalisman("alia", 1237, 400000822, 400000821, 1); //dyilia
-        addTalisman("valyx", 2664, 875, 725, 2); //valyx
+        addTalisman("valyx", 2664, 875, 721, 2); //valyx
         addTalisman("emile", 2579, 2578, 806, 2); //emile
-        addTalisman("klaus", 2735, 42960, 725, 1); //ned
-        addTalisman("ilia", 1352, 2477, 400000823, 1);
+        addTalisman("klaus", 2735, 42960, 721, 1); //ned
+        addTalisman("marth", 927, 929, 935, 1); //triple Last (buffer)
+        addTalisman("sharena", 902, 746, 935, 1); //triple last (dmg)
+        //credit: sinkarth
+        addTalisman("galex", 340000132, 934, 291, 1); //"Galex Mega Fod"
+        addTalisman("grace", 340000070, 340000134, 927, 1); //"Grace Last Boost"
+        addTalisman("xainfried", 2735, 3701, 43160, 1); //"Super Dragon Time"
+        addTalisman("yaten", 2664, 2263, 871, 1); //"Energized Boost"
+        addTalisman("nino", 340000132, 100100205, 924, 1); //"I tried to fix Nino"
+        addTalisman("alia", 2041, 1447, 2045, 1); //"Infinite Critical Damage"
+        addTalisman("ao", 340000030, 340000132, 827, 1); //"Better Mars"
+        addTalisman("dynef", 1620, 2281, 1440, 1); //"Flurry Freezer & other combo effects"
+        addTalisman("grimnir", 1914, 1939, 1966, 1); //"Passive Damage Stacking"
+        //credit: Klaus
+        addTalisman("delphi", 747, 457, 456, 1); //negative str
+
     }
 
     //Logs

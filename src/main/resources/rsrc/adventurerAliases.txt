@@ -9,6 +9,7 @@ Dragonyule Cleo,dycleo,dcleo
 Dragonyule Ilia,dyilia,dilia,alia
 Dragonyule Lily,dylily
 Dragonyule Malora,dymalora
+Dragonyule Nefaria,dynef
 Dragonyule Nevin,dynevin,amp copium
 Dragonyule Victor,dyvictor
 Dragonyule Xainfried,dyxain

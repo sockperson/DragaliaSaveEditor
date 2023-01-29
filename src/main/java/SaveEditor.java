@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 public class SaveEditor {
 
     private static final Scanner input = new Scanner(System.in);
-    private static boolean inJar = false;
+    private static boolean isOutOfIDE = false;
 
     private static String getFilePath() {
         String programPath = null;
@@ -20,9 +20,12 @@ public class SaveEditor {
         //probably jank
         int length = programPath.length();
         String extension = programPath.substring(length - 4, length);
-        inJar = extension.equals(".jar") || extension.equals(".exe");
+        isOutOfIDE = extension.equals(".jar") || extension.equals(".exe");
         return programPath;
     }
+
+
+    //TODO convert these to while loop
 
     private static void yesNoQuestion(String question, String response, Runnable func){
         System.out.print(question + " (y/n): ");        //print the question
@@ -67,6 +70,24 @@ public class SaveEditor {
         }
     }
 
+    private static void maybeQuestion(String question, String response2, Runnable func, Runnable func2){
+        System.out.print(question + " (y/n): ");        //print the question
+        String in = input.nextLine();                   //take in the input
+        in = in.toUpperCase();                          //make the input not case-sensitive
+        if(in.equals("Y") || in.equals("YES")){         //if input is 'Y', print response and run the function
+            func.run();
+        } else if (in.equals("N") || in.equals("NO")){  //if input is 'N', do nothing
+            return;
+        } else if (in.equals("MITSUBAP")){
+            System.out.println(response2);
+            func2.run();
+        }
+        else {                                        //if input invalid, ask the question again
+            System.out.println("Invalid Input. Enter 'y' or 'n'");
+            maybeQuestion(question, response2, func, func2);
+        }
+    }
+
     private static void continuousInput(String val, Consumer<String> func){
         while(true){
             System.out.print(val + " (Enter 'exit' to return): ");
@@ -79,16 +100,16 @@ public class SaveEditor {
     }
 
     public static void main(String[] args){
-        System.out.println();
+        System.out.println("\nDragalia Save Editor (v9)\n");
         String programPath = getFilePath();
-
-        System.out.print("Enter path for save file: (Default: same folder that this program is in): ");
+        System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
+        System.out.print("Enter path for save file: ");
         String path = input.nextLine();
         String savePath = "";
         boolean isFilePathInvalid = true;
         while(isFilePathInvalid){
             if(path.equals("")){
-                if(inJar){
+                if(isOutOfIDE){
                     savePath = Paths.get(new File(programPath).getParent(), "savedata.txt").toString();
                 } else {
                     int indexOfDir = programPath.indexOf("DragaliaSaveEditor");
@@ -106,13 +127,14 @@ public class SaveEditor {
             if(isFilePathInvalid){
                 System.out.println("savedata not found at: " + savePath + "!");
                 System.out.println();
-                System.out.print("Enter path for save file: (Default: same folder that this program is in): ");
+                System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
+                System.out.print("Enter path for save file: ");
                 path = input.nextLine();
             }
         }
 
-        System.out.println();
-        JsonUtils util = new JsonUtils(savePath, programPath, inJar);
+        JsonUtils util = new JsonUtils(savePath, programPath, isOutOfIDE);
+        System.out.println("Save data found!\n");
         System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
         yesNoQuestion("Uncap mana? (Sets mana to 10m)", () -> util.uncapMana());
         yesNoQuestion("Set rupies count to 2b?", () -> util.setRupies());
@@ -151,9 +173,9 @@ public class SaveEditor {
                 "Add all missing dragons to roster?",
                 () -> {
                         yesNoQuestion(
-                            "\tExclude 3-star and 4-star dragons?",
-                            () -> System.out.println(util.addMissingDragons(true)),
-                            () -> System.out.println(util.addMissingDragons(false)));
+                            "\tInclude 3-star and 4-star dragons?",
+                            () -> System.out.println(util.addMissingDragons(false)),
+                            () -> System.out.println(util.addMissingDragons(true)));
                         yesNoQuestion("\tAdd additional dragons to roster?",
                             () -> continuousInput("\t\tEnter dragon name",
                             (dragonName) -> util.addDragon(dragonName)));
@@ -184,17 +206,34 @@ public class SaveEditor {
                 "Do additional hacked options?",
                 () -> {
                     yesNoQuestion("\tGenerate random portrait prints? (This will replace your portrait print inventory)",
-                    () -> util.kscapeRandomizer());
+                        () -> util.kscapeRandomizer());
                     yesNoQuestion("\tAdd some hacked portrait prints?",
-                    () -> util.addGoofyKscapes());
+                        () -> util.addGoofyKscapes());
+                    yesNoQuestion("\tAdd unplayable units? (Note: These units are not fully implemented and may cause softlocks or crashes.)",
+                        () -> {
+                            yesNoQuestion("\tAdd unit: Tutorial Zethia?",
+                                    () -> util.addTutorialZethia());
+                            yesNoQuestion("\tAdd units: Story Leif(s)?",
+                                    () -> util.addStoryLeifs());
+                            yesNoQuestion("\tAdd unit: Sharpshooter Cleo",
+                                    () -> util.addGunnerCleo());
+                            maybeQuestion("\tAdd unique shapeshift dragons?",
+                                    "Added other unplayable units and dragons.",
+                                    () -> util.addUniqueShapeshiftDragons(),
+                                    () -> util.addOthers());
+                        });
                 });
-        if(util.isSaveData2Present()){
-            yesNoQuestion(
-                    "savedata2.txt already exists in this directory. Would you like to overwrite it?",
-                    () -> util.setOverwrite(true));
+        System.out.println("\nFinished editing save...getting ready for exporting.");
+        boolean passedTests = util.checkTests();
+        if(passedTests){
+            if(util.isSaveData2Present()){
+                yesNoQuestion(
+                        "savedata2.txt already exists in this directory. Would you like to overwrite it?",
+                        () -> util.setOverwrite(true));
+            }
+            System.out.println();
+            util.writeToFile();
         }
-        System.out.println();
-        util.writeToFile();
         System.out.println();
         yesNoQuestion("View logs?", () -> util.printLogs());
         System.out.println();

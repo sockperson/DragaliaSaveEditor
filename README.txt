@@ -10,6 +10,9 @@ Options:
 - Add all missing wyrmprints
 - Set all materials count
 - Set portrait print inventory to a set of powerful portrait prints
+Hacked Options:
+- Add a set of custom portrait prints with powerful abilities
+- Add the unused adventurers Tutorial Zethia, Story Leif, and more
 
 Requirements: Java installed (https://www.java.com/en/download/manual.jsp)
 
@@ -18,7 +21,7 @@ Usage:
 [.exe]
 1. Put savedata.txt into the same folder that the .exe is in
 
-2. Run the program by double clicking it. If program is blocked by an antivirus, see step 2b.
+2. Run the program by double clicking it.
 
 3. Follow instructions listed in the program. New save data file will be outputted to this directory
 
