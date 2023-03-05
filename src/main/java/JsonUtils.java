@@ -1,4 +1,5 @@
 import java.io.*;
+import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.time.Instant;
@@ -57,6 +58,8 @@ public class JsonUtils {
 
 
     private JsonObject maxedFacilityBonuses;
+
+    private List<String> testFlags = new ArrayList<>();
 
     public JsonUtils(String savePath, String jarPath, boolean inJar) {
         log("Initializing JsonUtils...");
@@ -118,6 +121,8 @@ public class JsonUtils {
         log("noDupeTalismanKeyIdTest(): " + tests.noDupeTalismanKeyIdTest());
         log("noDupeWeaponSkinIdTest(): " + tests.noDupeWeaponSkinIdTest());
         log("noDupeCrestIdTest(): " + tests.noDupeCrestIdTest());
+        log("weaponPassivesIdTest(): " + tests.weaponPassivesIdTest());
+        log("weaponPassivesIdPerWeaponTest(): " + tests.weaponPassivesIdPerWeaponTest());
         if(!tests.getIfAllPassed()){
             System.out.println("One or more tests failed... cannot export savedata. " +
                     "Contact @sockperson if this message appears.");
@@ -142,6 +147,8 @@ public class JsonUtils {
     public JsonObject getJsonData() {
         return jsonData;
     }
+
+    public List<String> getTestFlags() { return testFlags; }
 
     private JsonObject getSaveData() throws IOException {
         JsonReader reader = new JsonReader(new FileReader(savePath));
@@ -193,6 +200,14 @@ public class JsonUtils {
 
     public JsonObject getFieldAsJsonObject(String... memberNames) {
         return getField(memberNames).getAsJsonObject();
+    }
+
+    public List<Integer> jsonArrayToList(JsonArray value){
+        ArrayList<Integer> out = new ArrayList<>();
+        for (JsonElement jsonEle : value) {
+            out.add(jsonEle.getAsInt());
+        }
+        return out;
     }
 
     private void writeInteger(int value, String... memberNames) {
@@ -415,9 +430,11 @@ public class JsonUtils {
         for(JsonElement jsonEle : getJsonArray("weapons.json")){
             JsonObject weaponData = jsonEle.getAsJsonObject();
             int id = weaponData.get("Id").getAsInt();
+            List<Integer> passiveIds = jsonArrayToList(weaponData.get("PassiveAbilities").getAsJsonArray());
             WeaponMeta weapon = new WeaponMeta(weaponData.get("Name").getAsString(), id,
                     weaponData.get("ElementalTypeId").getAsInt(), weaponData.get("WeaponTypeId").getAsInt(),
-                    weaponData.get("WeaponSeries").getAsString(), weaponData.get("Rarity").getAsInt());
+                    weaponData.get("WeaponSeries").getAsString(), weaponData.get("Rarity").getAsInt(),
+                    passiveIds, weaponData.get("HasWeaponBonus").getAsBoolean());
             idToWeapon.put(id, weapon);
         }
     }
@@ -528,6 +545,9 @@ public class JsonUtils {
     }
 
     private void addWeaponBonus(WeaponMeta weapon) {
+        if(!weapon.hasWeaponBonus()) {
+            return;
+        }
         String weaponSeries = weapon.getWeaponSeries();
         double bonus = 0.0;
         switch (weaponSeries) {
@@ -867,14 +887,29 @@ public class JsonUtils {
                 sindomSlotCount = 2;
                 break;
             case "Other":
+                //hard coded /shrug
+                if (weaponData.getName().contains("Mega")) {
+                    level = 50;
+                    unbinds = 4;
+                }
+                switch (weaponData.getName()) {
+                    case "Soldier's Brand":
+                        level = 10;
+                        unbinds = 4;
+                        break;
+                    case "Lucky Hanetsuki Paddle":
+                        level = 50;
+                        unbinds = 4;
+                        break;
+                }
                 break;
-            //too lazy to find out numbers for these
-
         }
+
+        int passiveAbilityCount = weaponData.getPassiveAbilityIdList().size();
         //too lazy to figure out mapping for these abilities + no one cares honestly
         JsonArray voidWeaponAbilities = new JsonArray();
         for (int i = 0; i < 15; i++) {
-            voidWeaponAbilities.add(0);
+            voidWeaponAbilities.add(i < passiveAbilityCount ? 1 : 0);
         }
 
         out.addProperty("weapon_body_id", weaponData.getId());                      //ID
@@ -887,7 +922,7 @@ public class JsonUtils {
         out.addProperty("additional_crest_slot_type_3_count", sindomSlotCount);     //sindom slot count
         out.addProperty("additional_effect_count", 0);                         //?
         out.add("unlock_weapon_passive_ability_no_list", voidWeaponAbilities);      //void weapon abilities?
-        out.addProperty("fort_passive_chara_weapon_buildup_count", 1);        //weapon bonus
+        out.addProperty("fort_passive_chara_weapon_buildup_count", weaponData.hasWeaponBonus() ? 1 : 0);        //weapon bonus
         out.addProperty("is_new", 1);
         out.addProperty("gettime", getTime == -1 ? Instant.now().getEpochSecond() : getTime);
         return out;
@@ -962,6 +997,7 @@ public class JsonUtils {
         if(ownedIdSet.contains(id)){
             return; //dont add if u already have it
         }
+        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(id));
     }
 
     //Returns a built adventurer in savedata.txt format
@@ -1313,7 +1349,20 @@ public class JsonUtils {
                 write(mat.getName());
             }
         }
-        flushLog("Added missing items");
+        flushLog("Added materials");
+
+        int[] giftIds = new int[]{30001, 30002, 30003, 40001};
+        JsonArray giftList = new JsonArray();
+        for (Integer giftId : giftIds) {
+            JsonObject gift = new JsonObject();
+            gift.addProperty("dragon_gift_id", giftId);
+            gift.addProperty("quantity", 3000);
+            giftList.add(gift);
+        }
+        getFieldAsJsonObject("data").remove("dragon_gift_list");
+        getFieldAsJsonObject("data").add("dragon_gift_list", giftList);
+
+        flushLog("Added dragon gifts");
     }
 
     public void backToTheMines() {
@@ -1386,12 +1435,17 @@ public class JsonUtils {
                 if (newWeapon != null) {
                     getField("data", "weapon_body_list").getAsJsonArray().add(newWeapon);
                     addWeaponBonus(weapon);
+                    //Update weapon passives
+                    updateWeaponPassives(weapon);
+
                     count++;
                     write(weapon.getName() + "(" + weapon.getRarity() + "*, " + weapon.getWeaponSeries() + ")");
                 }
             }
         }
         flushLog("Added weapons");
+
+        testFlags.add("addMissingWeapons");
         return count;
     }
 
@@ -1601,10 +1655,26 @@ public class JsonUtils {
             if(!isWeaponBonusUnlocked){
                 addWeaponBonus(weapon);
             }
+            //Update weapon passives
+            updateWeaponPassives(weapon);
         }
         //Replace current weapon list
         getFieldAsJsonObject("data").remove("weapon_body_list");
         getFieldAsJsonObject("data").add("weapon_body_list", updatedWeapons);
+
+        testFlags.add("maxWeapons");
+    }
+
+    public void updateWeaponPassives(WeaponMeta weapon) {
+        List<Integer> passiveIdList = weapon.getPassiveAbilityIdList();
+        for(Integer id : passiveIdList) {
+            JsonObject passiveId = new JsonObject();
+            passiveId.addProperty("weapon_passive_ability_id", id);
+            JsonArray passiveAbilityList = getFieldAsJsonArray("data", "weapon_passive_ability_list");
+            if(!passiveAbilityList.contains(passiveId)){
+                passiveAbilityList.add(passiveId);
+            }
+        }
     }
 
     public void maxWyrmprints(){
@@ -1652,12 +1722,12 @@ public class JsonUtils {
     //Hacked options
 
     public void addTutorialZethia(){
-        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900001));
+        addHackedUnit(19900001);
     }
 
     public void addStoryLeifs(){
-        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900002));
-        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900005));
+        addHackedUnit(19900002);
+        addHackedUnit(19900005);
     }
 
     public void addOthers(){ //this shouldn't be used tbh
@@ -1668,24 +1738,24 @@ public class JsonUtils {
     }
 
     public void addNotteAndDog(){
-        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900003)); //Yellow Notte
-        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900004)); //Puppy
-        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19900006)); //Blue Notte
+        addHackedUnit(19900003); //Yellow Notte
+        addHackedUnit(19900004); //Puppy
+        addHackedUnit(19900006); //Blue Notte
     }
 
     public void addStoryNPCs(){
         for(int i = 0; i < 67; i++){
-            getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(19100001 + i));
+            addHackedUnit(19100001 + i);
         }
     }
 
     public void addGunnerCleo(){
-        getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(99900009)); //Gunner Cleo
+        addHackedUnit(99900009); //Gunner Cleo
     }
 
     public void addABR3Stars(){
         for(int i = 0; i < 9; i++){
-            getField("data", "chara_list").getAsJsonArray().add(buildHackedUnit(99130001 + i * 100000));
+            addHackedUnit(99130001 + i * 100000);
         }
     }
 
@@ -1759,8 +1829,8 @@ public class JsonUtils {
         addTalisman("valyx", 2664, 875, 721, 2); //valyx
         addTalisman("emile", 2579, 2578, 806, 2); //emile
         addTalisman("klaus", 2735, 42960, 721, 1); //ned
-        addTalisman("marth", 927, 929, 935, 1); //triple Last (buffer)
-        addTalisman("sharena", 902, 746, 935, 1); //triple last (dmg)
+        addTalisman("marth", 927, 929, 934, 1); //triple Last (buffer)
+        addTalisman("sharena", 902, 746, 934, 1); //triple last (dmg)
         //credit: sinkarth
         addTalisman("galex", 340000132, 934, 291, 1); //"Galex Mega Fod"
         addTalisman("grace", 340000070, 340000134, 927, 1); //"Grace Last Boost"
@@ -1772,8 +1842,7 @@ public class JsonUtils {
         addTalisman("dynef", 1620, 2281, 1440, 1); //"Flurry Freezer & other combo effects"
         addTalisman("grimnir", 1914, 1939, 1966, 1); //"Passive Damage Stacking"
         //credit: Klaus
-        addTalisman("delphi", 747, 457, 456, 1); //negative str
-
+        addTalisman("delphi", 747, 457, 456, 3); //negative str
     }
 
     //Logs
@@ -1832,12 +1901,8 @@ public class JsonUtils {
     public void printLogs(){
         for (int i = 0; i < log.size(); i++){
             List<String> messages = log.get(i);
-            if(messages.size() == 1){
-                System.out.println("[" + (i+1) + "] " + messages.get(0));
-            } else {
-                for (String message : messages) {
-                    System.out.println("[" + (i+1) + "...] " + message);
-                }
+            for (String message : messages) {
+                System.out.println("[" + (i+1) + "] " + message);
             }
         }
     }

@@ -6,7 +6,7 @@ Fudo Myo-o,fudo
 Gaibhne & Creidhne,gnc,g&c,gaibhne and creidhne
 Gala Bahamut,baha,bahamut
 Gala Beast Ciella,ciella,bciella,biella
-Gala Beast Volk,gvolk,bolk,bvolk
+Gala Beast Volk,gvolk,bolk,bvolk,volk
 Gala Cat Sìth,cat,gala cat sith,cat sith
 Gala Chronos Nyx,nyx,gnyx,chronos nyx
 Gala Elysium,elysium,gelysium

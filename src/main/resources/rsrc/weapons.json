@@ -5,7 +5,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Absolute Crimson",
@@ -13,7 +15,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Absolute Hex",
@@ -21,7 +25,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Absolute Lightning",
@@ -29,7 +35,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Absolute Tempest",
@@ -37,7 +45,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Abyssbringer",
@@ -45,7 +55,18 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [
+            1010501,
+            1010502,
+            1010503,
+            1010504,
+            1010505,
+            1010506,
+            1010507,
+            1010508
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Aeternal Flame",
@@ -53,7 +74,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ame no Habakiri",
@@ -61,7 +84,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 2,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ame no Hajiyumi",
@@ -69,7 +94,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 6,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ame no Murakumo",
@@ -77,7 +104,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 1,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ame no Nuhoko",
@@ -85,7 +114,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 5,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ame no Torifune",
@@ -93,7 +124,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 9,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ancient Mage's Windcane",
@@ -101,7 +134,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Anemone",
@@ -109,7 +144,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Antique Manacaster",
@@ -117,7 +154,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 9,
         "Rarity": 4,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Aqua Trigger",
@@ -125,7 +164,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Aquamarine Trigger",
@@ -133,7 +174,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 9,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Aquatic Spiral",
@@ -141,7 +184,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Aqueous Prison",
@@ -149,7 +194,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 7,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Areadbhar",
@@ -157,7 +204,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 5,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Aria of Lamentation",
@@ -165,7 +214,18 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [
+            1080501,
+            1080502,
+            1080503,
+            1080504,
+            1080505,
+            1080506,
+            1080507,
+            1080508
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Arondight",
@@ -173,7 +233,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 2,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Astral Echo",
@@ -181,7 +243,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [
+            1060401,
+            1060402,
+            1060403,
+            1060404,
+            1060405,
+            1060406,
+            1060407,
+            1060408,
+            1060409
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Avalon",
@@ -189,7 +263,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 8,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Axe of the Blazing King",
@@ -197,7 +273,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Axe of the Southern Cross",
@@ -205,7 +283,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Azure Mercurius",
@@ -213,7 +293,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Battleworn Axe",
@@ -221,7 +303,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 4,
         "Rarity": 1,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Battleworn Blade",
@@ -229,7 +313,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 2,
         "Rarity": 1,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Battleworn Bow",
@@ -237,7 +323,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 6,
         "Rarity": 1,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Battleworn Dagger",
@@ -245,7 +333,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 3,
         "Rarity": 1,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Battleworn Lance",
@@ -253,7 +343,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 5,
         "Rarity": 1,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Battleworn Manacaster",
@@ -261,7 +353,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 9,
         "Rarity": 1,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Battleworn Staff",
@@ -269,7 +363,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 8,
         "Rarity": 1,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Battleworn Sword",
@@ -277,7 +373,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 1,
         "Rarity": 1,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Battleworn Wand",
@@ -285,7 +383,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 7,
         "Rarity": 1,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Bejeweled Dagger",
@@ -293,7 +393,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 3,
         "Rarity": 3,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Big Bang Trigger",
@@ -301,7 +403,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 9,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Black Dahlia Bow",
@@ -309,7 +413,18 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [
+            1060501,
+            1060502,
+            1060503,
+            1060504,
+            1060505,
+            1060506,
+            1060507,
+            1060508
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Blackwing",
@@ -317,7 +432,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Blazegambol",
@@ -325,7 +442,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Blinding Conflagration",
@@ -333,7 +452,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Blitzfang",
@@ -341,7 +462,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [
+            1040401,
+            1040402,
+            1040403,
+            1040404,
+            1040405,
+            1040406,
+            1040407,
+            1040408,
+            1040409
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Bracing Waters",
@@ -349,7 +482,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Brilliant Flash",
@@ -357,7 +492,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Brilliant Lightflash",
@@ -365,7 +502,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Brionac",
@@ -373,7 +512,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 7,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Br\u00edsingr",
@@ -381,7 +522,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 7,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Caduceus",
@@ -389,7 +532,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Caladbolg",
@@ -397,7 +542,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 1,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Calamitous Torrent",
@@ -405,7 +552,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 2,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Calamity Trigger",
@@ -413,7 +562,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Camelot",
@@ -421,7 +572,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 7,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Cane of Soul's Repose",
@@ -429,7 +582,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Carnwennan",
@@ -437,7 +592,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 3,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chanzelian Caster",
@@ -445,7 +602,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Chanzelian Caster Mk. 21",
@@ -453,7 +612,20 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [
+            1090301,
+            1090302,
+            1090303,
+            1090304,
+            1090305,
+            1090306,
+            1090307,
+            1090308,
+            1090309,
+            1090310
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chanzelian Caster Mk. 62",
@@ -461,7 +633,19 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [
+            1090401,
+            1090402,
+            1090403,
+            1090404,
+            1090405,
+            1090406,
+            1090407,
+            1090408,
+            1090409
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chanzelian Caster Mk. 65",
@@ -469,7 +653,19 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [
+            1090101,
+            1090102,
+            1090103,
+            1090104,
+            1090105,
+            1090106,
+            1090107,
+            1090108,
+            1090109
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chanzelian Caster Mk. 72",
@@ -477,7 +673,21 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [
+            1090201,
+            1090202,
+            1090203,
+            1090204,
+            1090205,
+            1090206,
+            1090207,
+            1090208,
+            1090209,
+            1090210,
+            1090211
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chanzelian Caster Mk. 81",
@@ -485,7 +695,18 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [
+            1090501,
+            1090502,
+            1090503,
+            1090504,
+            1090505,
+            1090506,
+            1090507,
+            1090508
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Ajwain",
@@ -493,7 +714,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Al Nasr",
@@ -501,7 +724,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Anomalocaris",
@@ -509,7 +734,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Archmage",
@@ -517,7 +744,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Arcturus",
@@ -525,7 +754,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Benzoin",
@@ -533,7 +764,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Betelgeuse",
@@ -541,7 +774,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Canopus",
@@ -549,7 +784,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Cantata",
@@ -557,7 +794,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Capella",
@@ -565,7 +804,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Caraway",
@@ -573,7 +814,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Cardinal",
@@ -581,7 +824,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Coda",
@@ -589,7 +834,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Commander",
@@ -597,7 +844,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Concerto",
@@ -605,7 +854,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Cypress",
@@ -613,7 +864,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Elegy",
@@ -621,7 +874,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Elite",
@@ -629,7 +884,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Fennel",
@@ -637,7 +894,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Frankin",
@@ -645,7 +904,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Fugue",
@@ -653,7 +914,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Gunner",
@@ -661,7 +924,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Hadranax",
@@ -669,7 +934,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Hallucigenia",
@@ -677,7 +944,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Helmetia",
@@ -685,7 +954,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Hurdia",
@@ -693,7 +964,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Lancemaster",
@@ -701,7 +974,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Lord",
@@ -709,7 +984,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Marella",
@@ -717,7 +994,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Marjoram",
@@ -725,7 +1004,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Metaldetes",
@@ -733,7 +1014,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Nocturne",
@@ -741,7 +1024,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Oratorio",
@@ -749,7 +1034,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Palmarosa",
@@ -757,7 +1044,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Procyon",
@@ -765,7 +1054,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Requiem",
@@ -773,7 +1064,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Rhapsody",
@@ -781,7 +1074,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Rigel",
@@ -789,7 +1084,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Sirius",
@@ -797,7 +1094,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Sniper",
@@ -805,7 +1104,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Takakkawia",
@@ -813,7 +1114,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Tea Tree",
@@ -821,7 +1124,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Vega",
@@ -829,7 +1134,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Vetulicola",
@@ -837,7 +1144,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Chimeratech Warlord",
@@ -845,7 +1154,9 @@
         "WeaponSeries": "Chimeratech",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Cla\u00edomh Solais",
@@ -853,7 +1164,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 3,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Composite Bow",
@@ -861,7 +1174,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 6,
         "Rarity": 3,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Consuming Darkness",
@@ -869,7 +1184,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 8,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Cosmic Ruler",
@@ -877,7 +1194,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 8,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Crimson Trigger",
@@ -885,7 +1204,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Curse Trigger",
@@ -893,7 +1214,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Cyclone Trigger",
@@ -901,7 +1224,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 9,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "D\u00e1insleif",
@@ -909,7 +1234,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Dane's Favor",
@@ -917,7 +1244,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Dark Hunger",
@@ -925,7 +1254,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Darkbinder",
@@ -933,7 +1264,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Daunting Flash",
@@ -941,7 +1274,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 2,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Death Aeon",
@@ -949,7 +1284,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [
+            1010401,
+            1010402,
+            1010403,
+            1010404,
+            1010405,
+            1010406,
+            1010407,
+            1010408,
+            1010409
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Death Seeker",
@@ -957,7 +1304,18 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [
+            1030501,
+            1030502,
+            1030503,
+            1030504,
+            1030505,
+            1030506,
+            1030507,
+            1030508
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Del Frith",
@@ -965,7 +1323,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 8,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Dirge of Desperation",
@@ -973,7 +1333,18 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [
+            1070501,
+            1070502,
+            1070503,
+            1070504,
+            1070505,
+            1070506,
+            1070507,
+            1070508
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Divine Trigger",
@@ -981,7 +1352,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 9,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Dominus of Ever",
@@ -989,7 +1362,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [
+            1080401,
+            1080402,
+            1080403,
+            1080404,
+            1080405,
+            1080406,
+            1080407,
+            1080408,
+            1080409
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Draupnir",
@@ -997,7 +1382,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 9,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Durandal",
@@ -1005,7 +1392,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Dusk Trigger",
@@ -1013,7 +1402,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 9,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ebon Plague Lance",
@@ -1021,7 +1412,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 5,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ebon Scourge Lance",
@@ -1029,7 +1422,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Electron Burst",
@@ -1037,7 +1432,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 7,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Endless Azure Core",
@@ -1045,7 +1442,21 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [
+            1080201,
+            1080202,
+            1080203,
+            1080204,
+            1080205,
+            1080206,
+            1080207,
+            1080208,
+            1080209,
+            1080210,
+            1080211
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Endless Demise",
@@ -1053,7 +1464,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [
+            1080101,
+            1080102,
+            1080103,
+            1080104,
+            1080105,
+            1080106,
+            1080107,
+            1080108,
+            1080109
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Endless Horizon",
@@ -1061,7 +1484,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Eoantide",
@@ -1069,7 +1494,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Eternal Abyss",
@@ -1077,7 +1504,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 2,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Everfrost Bow",
@@ -1085,7 +1514,21 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [
+            1060201,
+            1060202,
+            1060203,
+            1060204,
+            1060205,
+            1060206,
+            1060207,
+            1060208,
+            1060209,
+            1060210,
+            1060211
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Excalibur",
@@ -1093,7 +1536,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 1,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Executor",
@@ -1101,7 +1546,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 6,
         "Rarity": 4,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Failnaught",
@@ -1109,7 +1556,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 6,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Fangtian Huaji",
@@ -1117,7 +1566,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 4,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Final Eclipse",
@@ -1125,7 +1576,18 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [
+            1050501,
+            1050502,
+            1050503,
+            1050504,
+            1050505,
+            1050506,
+            1050507,
+            1050508
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Firmament Auger",
@@ -1133,7 +1595,20 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [
+            1060301,
+            1060302,
+            1060303,
+            1060304,
+            1060305,
+            1060306,
+            1060307,
+            1060308,
+            1060309,
+            1060310
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Flamedance Lance",
@@ -1141,7 +1616,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [
+            1050101,
+            1050102,
+            1050103,
+            1050104,
+            1050105,
+            1050106,
+            1050107,
+            1050108,
+            1050109
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Flamerollick",
@@ -1149,7 +1636,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 8,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Flameruler's Fang",
@@ -1157,7 +1646,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 3,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Flameruler's Maw",
@@ -1165,7 +1656,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Fragarach",
@@ -1173,7 +1666,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 2,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Frigid Sting",
@@ -1181,7 +1676,21 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [
+            1030201,
+            1030202,
+            1030203,
+            1030204,
+            1030205,
+            1030206,
+            1030207,
+            1030208,
+            1030209,
+            1030210,
+            1030211
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Fulminator's Fang",
@@ -1189,7 +1698,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 3,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Fulminator's Maw",
@@ -1197,7 +1708,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Futsu no Mitama",
@@ -1205,7 +1718,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 3,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Gae Assail",
@@ -1213,7 +1728,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 9,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Gale's Aid",
@@ -1221,7 +1738,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 5,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Gallatin",
@@ -1229,7 +1748,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 9,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Genocide Cleaver",
@@ -1237,7 +1758,18 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [
+            1040501,
+            1040502,
+            1040503,
+            1040504,
+            1040505,
+            1040506,
+            1040507,
+            1040508
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Gjallarhorn",
@@ -1245,7 +1777,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 8,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Glorystorm's Guide",
@@ -1253,7 +1787,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Grand Seadragon",
@@ -1261,7 +1797,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Grand Tempest",
@@ -1269,7 +1807,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Guardian Seal",
@@ -1277,7 +1817,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 2,
         "Rarity": 4,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Guiding Gale",
@@ -1285,7 +1827,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Gungnir",
@@ -1293,7 +1837,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 5,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Hardbreaker",
@@ -1301,7 +1847,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 3,
         "Rarity": 4,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Heaven's Acuity",
@@ -1309,7 +1857,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Heavensneer",
@@ -1317,7 +1867,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Heavenwing",
@@ -1325,7 +1877,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Heavenwrath Gaze",
@@ -1333,7 +1887,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [
+            1040101,
+            1040102,
+            1040103,
+            1040104,
+            1040105,
+            1040106,
+            1040107,
+            1040108,
+            1040109
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Hellblaze",
@@ -1341,7 +1907,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 7,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Hellish Prophecy",
@@ -1349,7 +1917,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Hero's Sword",
@@ -1357,7 +1927,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Highwater Slicer",
@@ -1365,7 +1937,21 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [
+            1020201,
+            1020202,
+            1020203,
+            1020204,
+            1020205,
+            1020206,
+            1020207,
+            1020208,
+            1020209,
+            1020210,
+            1020211
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Hollow Lightning",
@@ -1373,7 +1959,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [
+            1020401,
+            1020402,
+            1020403,
+            1020404,
+            1020405,
+            1020406,
+            1020407,
+            1020408,
+            1020409
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Honor Edge",
@@ -1381,7 +1979,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Hrotti",
@@ -1389,7 +1989,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 3,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Indomitable Thundercrash",
@@ -1397,7 +1999,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 4,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Inferno Apogee",
@@ -1405,7 +2009,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [
+            1010101,
+            1010102,
+            1010103,
+            1010104,
+            1010105,
+            1010106,
+            1010107,
+            1010108,
+            1010109
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Infernoblaze",
@@ -1413,7 +2029,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Jagged Bolt",
@@ -1421,7 +2039,20 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [
+            1040301,
+            1040302,
+            1040303,
+            1040304,
+            1040305,
+            1040306,
+            1040307,
+            1040308,
+            1040309,
+            1040310
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Jiu Ci",
@@ -1429,7 +2060,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 7,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Jormungand's Fury",
@@ -1437,7 +2070,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Jormungand's Wrath",
@@ -1445,7 +2080,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 6,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Judge of Oceans",
@@ -1453,7 +2090,21 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [
+            1010201,
+            1010202,
+            1010203,
+            1010204,
+            1010205,
+            1010206,
+            1010207,
+            1010208,
+            1010209,
+            1010210,
+            1010211
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Jupiter's Shimmer",
@@ -1461,7 +2112,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 6,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Jupiter's Sky",
@@ -1469,7 +2122,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Karlsnautr",
@@ -1477,7 +2132,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Knight's Sword",
@@ -1485,7 +2142,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 1,
         "Rarity": 3,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Knights' Grace",
@@ -1493,7 +2152,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 1,
         "Rarity": 4,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Kris Naga",
@@ -1501,7 +2162,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Kunado",
@@ -1509,7 +2172,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 8,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Latchkey",
@@ -1517,7 +2182,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 7,
         "Rarity": 4,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Levatein",
@@ -1525,7 +2192,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Li Zhang",
@@ -1533,7 +2202,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 8,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Light of Judgment",
@@ -1541,7 +2212,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Limpid Cascade",
@@ -1549,7 +2222,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 5,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Limpid Rush",
@@ -1557,7 +2232,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Longshe Gong",
@@ -1565,7 +2242,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 6,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Lucky Hanetsuki Paddle",
@@ -1573,7 +2252,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Lupis Solis",
@@ -1581,7 +2262,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Lux Lamina",
@@ -1589,7 +2272,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Maar Oasis",
@@ -1597,7 +2282,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Marmyadose",
@@ -1605,7 +2292,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 4,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Mega Axe",
@@ -1613,7 +2302,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Mega Blade",
@@ -1621,7 +2312,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Mega Bow",
@@ -1629,7 +2322,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Mega Dagger",
@@ -1637,7 +2332,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Mega Lance",
@@ -1645,7 +2342,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Mega Staff",
@@ -1653,7 +2352,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Mega Sword",
@@ -1661,7 +2362,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Mega Wand",
@@ -1669,7 +2372,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Merciful Claw",
@@ -1677,7 +2382,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [
+            1030401,
+            1030402,
+            1030403,
+            1030404,
+            1030405,
+            1030406,
+            1030407,
+            1030408,
+            1030409
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Mercy's Azure Tide",
@@ -1685,7 +2402,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Mercy's Jeweled Tide",
@@ -1693,7 +2412,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 4,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Mighty Thundercrash",
@@ -1701,7 +2422,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Mistilteinn",
@@ -1709,7 +2432,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Mj\u00f6lnir",
@@ -1717,7 +2442,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 4,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Necro Arcus",
@@ -1725,7 +2452,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Nightfall's Darkbite Axe",
@@ -1733,7 +2462,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 4,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Nightmare Prophecy",
@@ -1741,7 +2472,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 6,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Nightsky Ripper",
@@ -1749,7 +2482,18 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [
+            1020501,
+            1020502,
+            1020503,
+            1020504,
+            1020505,
+            1020506,
+            1020507,
+            1020508
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Nitralica's Koto",
@@ -1757,7 +2501,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Noble Crimson Heat",
@@ -1765,7 +2511,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 4,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Noble Horizon",
@@ -1773,7 +2521,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 2,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Nothung",
@@ -1781,7 +2531,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 1,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ocean Lord",
@@ -1789,7 +2541,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ocean Monarch",
@@ -1797,7 +2551,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ocean's Embrace",
@@ -1805,7 +2561,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ohohagari",
@@ -1813,7 +2571,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 4,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Omizununo",
@@ -1821,7 +2581,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 7,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Omniflame Lance",
@@ -1829,7 +2591,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 5,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Pactspear",
@@ -1837,7 +2601,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Peacock's Whorl",
@@ -1845,7 +2611,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Permafrost Crash",
@@ -1853,7 +2621,21 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [
+            1040201,
+            1040202,
+            1040203,
+            1040204,
+            1040205,
+            1040206,
+            1040207,
+            1040208,
+            1040209,
+            1040210,
+            1040211
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Phytalmios",
@@ -1861,7 +2643,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Plain Axe",
@@ -1869,7 +2653,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 4,
         "Rarity": 4,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Primal Aqua",
@@ -1877,7 +2663,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 1,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Primal Crimson",
@@ -1885,7 +2673,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 1,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Primal Hex",
@@ -1893,7 +2683,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 1,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Primal Lightning",
@@ -1901,7 +2693,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 1,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Primal Tempest",
@@ -1909,7 +2703,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 1,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Primeval Thunder",
@@ -1917,7 +2713,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Primordial Titan",
@@ -1925,7 +2723,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Pureflame Lance",
@@ -1933,7 +2733,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Qinghong Jian",
@@ -1941,7 +2743,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 3,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Qinglong Yanyuedao",
@@ -1949,7 +2753,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 5,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Qixing Baodao",
@@ -1957,7 +2763,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 2,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Radiant Lightflash",
@@ -1965,7 +2773,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 5,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Radiant Swath",
@@ -1973,7 +2783,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Raging Conflagration",
@@ -1981,7 +2793,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 2,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Rhongomyniad",
@@ -1989,7 +2803,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 5,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Roaring Weald",
@@ -1997,7 +2813,20 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [
+            1010301,
+            1010302,
+            1010303,
+            1010304,
+            1010305,
+            1010306,
+            1010307,
+            1010308,
+            1010309,
+            1010310
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Rog Mol",
@@ -2005,7 +2834,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 4,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Royal Crimson Heat",
@@ -2013,7 +2844,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ruinous Torrent",
@@ -2021,7 +2854,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Ruler of the Jeweled Tide",
@@ -2029,7 +2864,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 8,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Sapphire Mercurius",
@@ -2037,7 +2874,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 6,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Scepter of Infinite Fire",
@@ -2045,7 +2884,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [
+            1070101,
+            1070102,
+            1070103,
+            1070104,
+            1070105,
+            1070106,
+            1070107,
+            1070108,
+            1070109
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Shaderuler's Fang",
@@ -2053,7 +2904,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 3,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Shaderuler's Maw",
@@ -2061,7 +2914,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Shadowy Darkbite Axe",
@@ -2069,7 +2924,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Skypainter Staff",
@@ -2077,7 +2934,20 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [
+            1080301,
+            1080302,
+            1080303,
+            1080304,
+            1080305,
+            1080306,
+            1080307,
+            1080308,
+            1080309,
+            1080310
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Skyrender",
@@ -2085,7 +2955,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [
+            1020101,
+            1020102,
+            1020103,
+            1020104,
+            1020105,
+            1020106,
+            1020107,
+            1020108,
+            1020109
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Soldier's Brand",
@@ -2093,7 +2975,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 1,
         "Rarity": 2,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Spear of the Northern Cross",
@@ -2101,7 +2985,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Spirit Breaker",
@@ -2109,7 +2995,21 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [
+            1070201,
+            1070202,
+            1070203,
+            1070204,
+            1070205,
+            1070206,
+            1070207,
+            1070208,
+            1070209,
+            1070210,
+            1070211
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Squallruler",
@@ -2117,7 +3017,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 8,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Staff of Grace",
@@ -2125,7 +3027,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 8,
         "Rarity": 3,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Staff of Life",
@@ -2133,7 +3037,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 8,
         "Rarity": 4,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Staff of the Red Emperor",
@@ -2141,7 +3047,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Starpiercer",
@@ -2149,7 +3057,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [
+            1050401,
+            1050402,
+            1050403,
+            1050404,
+            1050405,
+            1050406,
+            1050407,
+            1050408,
+            1050409
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Stellar Pegasus",
@@ -2157,7 +3077,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Storm Chaser",
@@ -2165,7 +3087,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 7,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Stormruler",
@@ -2173,7 +3097,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 8,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Stormsquall Crash",
@@ -2181,7 +3107,20 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [
+            1020301,
+            1020302,
+            1020303,
+            1020304,
+            1020305,
+            1020306,
+            1020307,
+            1020308,
+            1020309,
+            1020310
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Strohm Mare",
@@ -2189,7 +3128,21 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [
+            1050201,
+            1050202,
+            1050203,
+            1050204,
+            1050205,
+            1050206,
+            1050207,
+            1050208,
+            1050209,
+            1050210,
+            1050211
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Strong Halberd",
@@ -2197,7 +3150,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 5,
         "Rarity": 4,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Subjugator",
@@ -2205,7 +3160,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 2,
         "Rarity": 3,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Tathlum",
@@ -2213,7 +3170,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 6,
         "Rarity": 6,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Tempest Trigger",
@@ -2221,7 +3180,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Tempest's Guide",
@@ -2229,7 +3190,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 4,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Terranigmus",
@@ -2237,7 +3200,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "The Gale",
@@ -2245,7 +3210,20 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [
+            1030301,
+            1030302,
+            1030303,
+            1030304,
+            1030305,
+            1030306,
+            1030307,
+            1030308,
+            1030309,
+            1030310
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Thunder King's Greatspear",
@@ -2253,7 +3231,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Thunder Trigger",
@@ -2261,7 +3241,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 9,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Thunderblade Sugaar",
@@ -2269,7 +3251,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Thunderbow",
@@ -2277,7 +3261,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Tideruler's Fang",
@@ -2285,7 +3271,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 3,
         "Rarity": 6,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Tideruler's Maw",
@@ -2293,7 +3281,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 2
+        "ElementalTypeId": 2,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Trident",
@@ -2301,7 +3291,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 5,
         "Rarity": 3,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "True Abyss",
@@ -2309,7 +3301,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 2,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Twilight Shimmer",
@@ -2317,7 +3311,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Typhoon's Rule",
@@ -2325,7 +3321,20 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [
+            1070301,
+            1070302,
+            1070303,
+            1070304,
+            1070305,
+            1070306,
+            1070307,
+            1070308,
+            1070309,
+            1070310
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Tyrfing",
@@ -2333,7 +3342,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 2,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Umbral Chaser",
@@ -2341,7 +3352,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 7,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Underworld Despair",
@@ -2349,7 +3362,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Valkyrie's Fire",
@@ -2357,7 +3372,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Valkyrie's Hellfire",
@@ -2365,7 +3382,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 6,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Vermillion Pain",
@@ -2373,7 +3392,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [
+            1030101,
+            1030102,
+            1030103,
+            1030104,
+            1030105,
+            1030106,
+            1030107,
+            1030108,
+            1030109
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Victory Axe",
@@ -2381,7 +3412,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 4,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Vulcanrage",
@@ -2389,7 +3422,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 6,
         "Rarity": 5,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [
+            1060101,
+            1060102,
+            1060103,
+            1060104,
+            1060105,
+            1060106,
+            1060107,
+            1060108,
+            1060109
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Wand of the Torrent",
@@ -2397,7 +3442,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Wanli Qi Yunyan",
@@ -2405,7 +3452,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 9,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Warrior's Axe",
@@ -2413,7 +3462,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 4,
         "Rarity": 3,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Windruler's Fang",
@@ -2421,7 +3472,9 @@
         "WeaponSeries": "Primal Dragon",
         "WeaponTypeId": 3,
         "Rarity": 6,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Windruler's Maw",
@@ -2429,7 +3482,9 @@
         "WeaponSeries": "High Dragon",
         "WeaponTypeId": 3,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Windsovereign Trident",
@@ -2437,7 +3492,20 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 5,
         "Rarity": 5,
-        "ElementalTypeId": 3
+        "ElementalTypeId": 3,
+        "PassiveAbilities": [
+            1050301,
+            1050302,
+            1050303,
+            1050304,
+            1050305,
+            1050306,
+            1050307,
+            1050308,
+            1050309,
+            1050310
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Wizard's Rod",
@@ -2445,7 +3513,9 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 7,
         "Rarity": 3,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Worldshaker",
@@ -2453,7 +3523,19 @@
         "WeaponSeries": "Void",
         "WeaponTypeId": 7,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [
+            1070401,
+            1070402,
+            1070403,
+            1070404,
+            1070405,
+            1070406,
+            1070407,
+            1070408,
+            1070409
+        ],
+        "HasWeaponBonus": true
     },
     {
         "Name": "\u00dddalir",
@@ -2461,7 +3543,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 6,
         "Rarity": 6,
-        "ElementalTypeId": 1
+        "ElementalTypeId": 1,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Yitian Jian",
@@ -2469,7 +3553,9 @@
         "WeaponSeries": "Agito",
         "WeaponTypeId": 1,
         "Rarity": 6,
-        "ElementalTypeId": 5
+        "ElementalTypeId": 5,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     },
     {
         "Name": "Zethia's Staff",
@@ -2477,7 +3563,9 @@
         "WeaponSeries": "Other",
         "WeaponTypeId": 8,
         "Rarity": 1,
-        "ElementalTypeId": 99
+        "ElementalTypeId": 99,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": false
     },
     {
         "Name": "Zex's End",
@@ -2485,6 +3573,8 @@
         "WeaponSeries": "Core",
         "WeaponTypeId": 1,
         "Rarity": 5,
-        "ElementalTypeId": 4
+        "ElementalTypeId": 4,
+        "PassiveAbilities": [],
+        "HasWeaponBonus": true
     }
 ]

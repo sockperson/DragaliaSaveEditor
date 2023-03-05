@@ -100,7 +100,7 @@ public class SaveEditor {
     }
 
     public static void main(String[] args){
-        System.out.println("\nDragalia Save Editor (v9)\n");
+        System.out.println("\nDragalia Save Editor (v10)\n");
         String programPath = getFilePath();
         System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
         System.out.print("Enter path for save file: ");
@@ -180,7 +180,7 @@ public class SaveEditor {
                             () -> continuousInput("\t\tEnter dragon name",
                             (dragonName) -> util.addDragon(dragonName)));
                     },
-                () -> yesNoQuestion("\tWould you like to add specific dragons to roster?",
+                () -> yesNoQuestion("\tWould you like to add additional specific dragons to roster?",
                         () -> continuousInput("\t\tEnter dragon name",
                         (dragonName) -> util.addDragon(dragonName))));
         yesNoQuestion(
@@ -203,7 +203,7 @@ public class SaveEditor {
                 () -> System.out.println("Added " + util.addMissingWeaponSkins() + " missing weapon skins."));
         yesNoQuestion("Max Halidom facilities?", () -> util.maxFacilities());
         yesNoQuestion(
-                "Do additional hacked options?",
+                "Do additional hacked options? (Enter 'n' if you wish to keep your save data \"vanilla\")",
                 () -> {
                     yesNoQuestion("\tGenerate random portrait prints? (This will replace your portrait print inventory)",
                         () -> util.kscapeRandomizer());
