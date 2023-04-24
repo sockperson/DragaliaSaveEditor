@@ -1,4 +1,5 @@
 import java.io.*;
+import java.lang.reflect.Field;
 import java.net.URISyntaxException;
 import java.nio.file.Paths;
 import java.util.List;
@@ -9,6 +10,7 @@ public class SaveEditor {
 
     private static final Scanner input = new Scanner(System.in);
     private static boolean isOutOfIDE = false;
+    private static Options options;
 
     private static String getFilePath() {
         String programPath = null;
@@ -26,6 +28,33 @@ public class SaveEditor {
 
 
     //TODO convert these to while loop
+    //this code sucks who wrote it
+
+    //for writing Options bool values
+    private static void passYesNoArg(String question, String fieldName, Consumer<Boolean> func) {
+        //holy moly this sucks
+        String fieldVal = "?";
+        try {
+            Field field = Options.class.getDeclaredField(fieldName);
+            field.setAccessible(true);
+            fieldVal = Boolean.parseBoolean(field.get(options).toString()) ? "y" : "n";
+        } catch (IllegalAccessException | NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+
+        System.out.print(question + " (y/n) (Current: " + fieldVal + "): ");
+        String in = input.nextLine();
+        in = in.toUpperCase();
+
+        if(in.equals("Y") || in.equals("YES")){
+            func.accept(true);
+        } else if (in.equals("N") || in.equals("NO")){
+            func.accept(false);
+        } else {
+            System.out.println("Invalid Input. Enter 'y' or 'n'");
+            passYesNoArg(question, fieldName, func);
+        }
+    }
 
     private static void yesNoQuestion(String question, String response, Runnable func){
         System.out.print(question + " (y/n): ");        //print the question
@@ -100,14 +129,16 @@ public class SaveEditor {
     }
 
     public static void main(String[] args){
-        System.out.println("\nDragalia Save Editor (v10)\n");
+        System.out.println("\nDragalia Save Editor (v11)\n");
         String programPath = getFilePath();
         System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
         System.out.print("Enter path for save file: ");
         String path = input.nextLine();
         String savePath = "";
+        String optionsPath = ""; //options.txt should be in the same dir as savefile
         boolean isFilePathInvalid = true;
-        while(isFilePathInvalid){
+        boolean isFileJsonObject = false;
+        while(isFilePathInvalid || !isFileJsonObject){
             if(path.equals("")){
                 if(isOutOfIDE){
                     savePath = Paths.get(new File(programPath).getParent(), "savedata.txt").toString();
@@ -124,7 +155,8 @@ public class SaveEditor {
                 savePath = path;
             }
             isFilePathInvalid = !new File(savePath).exists(); //basic file path exists check
-            if(isFilePathInvalid){
+            isFileJsonObject = JsonUtils.checkIfJsonObject(savePath); //check if its a json object
+            if(isFilePathInvalid || !isFileJsonObject){
                 System.out.println("savedata not found at: " + savePath + "!");
                 System.out.println();
                 System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
@@ -133,9 +165,48 @@ public class SaveEditor {
             }
         }
 
-        JsonUtils util = new JsonUtils(savePath, programPath, isOutOfIDE);
-        System.out.println("Save data found!\n");
+        if (isOutOfIDE) {
+            optionsPath = Paths.get(new File(programPath).getParent(), "DLSaveEditor_options.txt").toString();
+        } else {
+            optionsPath = Paths.get(new File(savePath).getParent(), "DLSaveEditor_options.txt").toString();
+        }
+
+        JsonUtils util = new JsonUtils(savePath, optionsPath, programPath, isOutOfIDE);
+        System.out.println("Save data found at: " + savePath + "\n");
         System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
+
+        if (!util.hasOptions()) {
+            yesNoQuestion("No options file found in this directory. Create a new options file?",
+                    () -> util.createNewOptionsFile());
+        }
+        if (util.hasOptions()) {
+            if (util.toPromptEditOptions()) {
+                options = util.getOptions();
+                yesNoQuestion("Edit save editing options?",
+                        () -> {
+                            passYesNoArg("\tMax out added adventurers?", "maxAddedAdventurers", (arg) ->
+                                    util.editOption("maxAddedAdventurers", arg));
+                            passYesNoArg("\tMax out added dragons?", "maxAddedDragons", (arg) ->
+                                    util.editOption("maxAddedDragons", arg));
+                            passYesNoArg("\tMax out added wyrmprints?", "maxAddedWyrmprints", (arg) ->
+                                    util.editOption("maxAddedWyrmprints", arg));
+                            passYesNoArg("\tMax out added weapons?", "maxAddedWeapons", (arg) ->
+                                    util.editOption("maxAddedWeapons", arg));
+                            /*
+                            passYesNoArg("\tMax out added facilities?", (arg) ->
+                                    util.editOption("maxAddedFacilities", arg));
+                             */
+                            passYesNoArg("\tAsk to edit these options next time the program is run?", "promptEditOptions", (arg) ->
+                                    util.editOption("promptEditOptions", arg));
+                            System.out.println("\tFinished editing options.");
+                            util.exportOptions();
+                        });
+            }
+        } else {
+            System.out.println("No options file found, using default save editing options.");
+        }
+
+
         yesNoQuestion("Uncap mana? (Sets mana to 10m)", () -> util.uncapMana());
         yesNoQuestion("Set rupies count to 2b?", () -> util.setRupies());
         yesNoQuestion(

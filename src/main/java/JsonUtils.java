@@ -1,5 +1,4 @@
 import java.io.*;
-import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.time.Instant;
@@ -13,9 +12,11 @@ public class JsonUtils {
 
     private static final int MAX_DRAGON_CAPACITY = 525;
 
+    private static Options options;
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     private final String savePath;
+    private String optionsPath;
     private String jarPath;
 
     private String basePath = "";
@@ -59,12 +60,13 @@ public class JsonUtils {
 
     private JsonObject maxedFacilityBonuses;
 
-    private List<String> testFlags = new ArrayList<>();
+    private final List<String> testFlags = new ArrayList<>();
 
-    public JsonUtils(String savePath, String jarPath, boolean inJar) {
+    public JsonUtils(String savePath, String optionsPath, String jarPath, boolean inJar) {
         log("Initializing JsonUtils...");
 
         this.savePath = savePath;
+        this.optionsPath = optionsPath;
         this.jarPath = jarPath;
         this.inJar = inJar;
         rsrcPath = Paths.get(jarPath, "rsrc").toString();
@@ -82,6 +84,7 @@ public class JsonUtils {
             readAbilitiesData();
             readFacilitiesData();
             readMaterialsData();
+            readOptionsData();
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Unable to read JSON data!");
@@ -93,22 +96,27 @@ public class JsonUtils {
     public void writeToFile() {
         try {
             String newPath;
+            String fileName = "savedata2.txt";
             if (isSaveData2Present() && !toOverwrite) {
                 int count = 3;
-                String fileName = "savedata" + count + ".txt";
+                fileName = "savedata" + count + ".txt";
                 while (new File(Paths.get(basePath, fileName).toString()).exists()) {
                     count++;
                     fileName = "savedata" + count + ".txt";
                 }
                 newPath = Paths.get(basePath, fileName).toString();
             } else {
-                newPath = Paths.get(basePath, "savedata2.txt").toString();
+                newPath = Paths.get(basePath, fileName).toString();
             }
             FileWriter fileWriter = new FileWriter(newPath);
             GSON.toJson(jsonData, fileWriter);
             fileWriter.flush();
             fileWriter.close();
-            System.out.println("Saved output JSON to " + newPath);
+            if(inJar) {
+                System.out.println("Saved output JSON to " + Paths.get(jarPath, fileName));
+            } else {
+                System.out.println("Saved output JSON to " + newPath);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -308,11 +316,10 @@ public class JsonUtils {
             String baseName = adv.get("FullName").getAsString();
             String name = baseName.toUpperCase();
             if (name.equals("PUPPY")) {
-                continue; //dog check
+                continue; //dog check //...i should just remove this
             }
             //fill idToAdventurer map
-            JsonObject out = new JsonObject();
-            boolean hasManaSpiral = adv.get("ManaSpiralDate") != null;
+            boolean hasManaSpiral = !(adv.get("ManaSpiralDate") instanceof JsonNull);
             int hp, str;
             int id = adv.get("IdLong").getAsInt();
             if (hasManaSpiral) {
@@ -329,9 +336,14 @@ public class JsonUtils {
                     maxA3Level = 3;
                 }
             }
+            String manaCircleType = adv.get("ManaCircleName").getAsString();
             AdventurerMeta unit = new AdventurerMeta(baseName, adv.get("Title").getAsString(), id,
                     adv.get("ElementalTypeId").getAsInt(), hp, str,adv.get("MaxLimitBreakCount").getAsInt(),
-                    adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral, maxA3Level);
+                    adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral, maxA3Level,
+                    adv.get("MinHp3").getAsInt(), adv.get("MinHp4").getAsInt(), adv.get("MinHp5").getAsInt(),
+                    adv.get("MinAtk3").getAsInt(), adv.get("MinAtk4").getAsInt(), adv.get("MinAtk5").getAsInt(),
+                    adv.get("Rarity").getAsInt(), manaCircleType
+                    );
             idToAdventurer.put(id, unit);
             nameToAdventurer.put(name, unit);
             if(adventurerAliases.containsKey(name)){
@@ -358,8 +370,9 @@ public class JsonUtils {
             int a2Level = has5UB ?
                     6 : drg.get("Abilities25").getAsInt() != 0 ?
                     5 : 0;
+            boolean hasA2 = drg.get("Abilities21").getAsInt() != 0;
             DragonMeta unit = new DragonMeta(baseName, id, drg.get("ElementalTypeId").getAsInt(),
-                a1Level, a2Level, rarity, has5UB);
+                a1Level, a2Level, rarity, has5UB, hasA2);
             idToDragon.put(id, unit);
             nameToDragon.put(name, unit);
             if(dragonAliases.containsKey(name)){
@@ -469,6 +482,10 @@ public class JsonUtils {
         }
     }
 
+    private void readOptionsData() throws IOException {
+        options = new Options(optionsPath);
+    }
+
     private void readStoryData() throws IOException {
         for(Map.Entry<String, JsonElement> entry : getJsonObject("CharaStories.json").entrySet()){
             int id = Integer.parseInt(entry.getKey());
@@ -499,7 +516,11 @@ public class JsonUtils {
         boolean hasManaSpiral = adv.hasManaSpiral();
         double bonus = hasManaSpiral ? 0.3 : 0.2;
         int elementID = adv.getElementId();
-        addAdventurerEncyclopediaBonus(elementID, bonus, bonus);
+        if (options.get("maxAddedAdventurers")) {
+            addAdventurerEncyclopediaBonus(elementID, bonus, bonus);
+        } else { //bonus from adding new adventurer (no upgrades)
+            addAdventurerEncyclopediaBonus(elementID, 0.1, 0.1);
+        }
     }
 
     private void addAdventurerEncyclopediaBonus(int elementId, double hpBonus, double strBonus) {
@@ -524,7 +545,11 @@ public class JsonUtils {
         double hpBonus = has5UB ? 0.3 : 0.2;
         double strBonus = 0.1;
         int elementID = dragon.getElementId();
-        addDragonEncyclopediaBonus(elementID, hpBonus, strBonus);
+        if (options.get("maxAddedDragons")) {
+            addDragonEncyclopediaBonus(elementID, hpBonus, strBonus);
+        } else {
+            addDragonEncyclopediaBonus(elementID, 0.1, 0.1);
+        }
     }
 
     private void addDragonEncyclopediaBonus(int elementID, double hpBonus, double strBonus) {
@@ -678,37 +703,69 @@ public class JsonUtils {
         if (adventurerData.getName().equals("Puppy")) {
             return null; //no dogs allowed
         }
+
+        //to add new unit as a level 1 un-upgraded unit
+        boolean minUnit = getTime == -1 && !options.get("maxAddedAdventurers");
+
         boolean hasManaSpiral = adventurerData.hasManaSpiral();
         JsonArray mc = new JsonArray();
         int mcLevel = hasManaSpiral ? 70 : 50;
         for (int i = 1; i <= mcLevel; i++) {
             mc.add(i);
         }
-        out.addProperty("chara_id", adventurerData.getId());
-        out.addProperty("rarity", 5);
-        out.addProperty("exp", hasManaSpiral ? 8866950 : 1191950);
-        out.addProperty("level", hasManaSpiral ? 100 : 80);
-        out.addProperty("additional_max_level", hasManaSpiral ? 20 : 0);
-        out.addProperty("hp_plus_count", 100);
-        out.addProperty("attack_plus_count", 100);
-        out.addProperty("limit_break_count", adventurerData.getBaseRarity());
-        out.addProperty("is_new", 1);
-        out.addProperty("gettime", getTime == -1 ? Instant.now().getEpochSecond() : getTime);
-        out.addProperty("skill_1_level", hasManaSpiral ? 4 : 3);
-        out.addProperty("skill_2_level", hasManaSpiral ? 3 : 2);
-        out.addProperty("ability_1_level", hasManaSpiral ? 3 : 2);
-        out.addProperty("ability_2_level", hasManaSpiral ? 3 : 2);
-        out.addProperty("ability_3_level", adventurerData.getMaxA3Level());
-        out.addProperty("burst_attack_level", 2);
-        out.addProperty("combo_buildup_count", hasManaSpiral ? 1 : 0);
-        out.addProperty("hp", adventurerData.getMaxHp());
-        out.addProperty("attack", adventurerData.getMaxStr());
-        out.addProperty("ex_ability_level", 5);
-        out.addProperty("ex_ability_2_level", 5);
-        out.addProperty("is_temporary", 0);
-        out.addProperty("is_unlock_edit_skill", adventurerData.hasSkillShare() ? 1 : 0);
-        out.add("mana_circle_piece_id_list", mc);
-        out.addProperty("list_view_flag", 1);
+        if (!minUnit) { //maxed unit
+            out.addProperty("chara_id", adventurerData.getId());
+            out.addProperty("rarity", 5);
+            out.addProperty("exp", hasManaSpiral ? 8866950 : 1191950);
+            out.addProperty("level", hasManaSpiral ? 100 : 80);
+            out.addProperty("additional_max_level", hasManaSpiral ? 20 : 0);
+            out.addProperty("hp_plus_count", 100);
+            out.addProperty("attack_plus_count", 100);
+            out.addProperty("limit_break_count", adventurerData.getMaxLimitBreakCount());
+            out.addProperty("is_new", 1);
+            out.addProperty("gettime", getTime == -1 ? Instant.now().getEpochSecond() : getTime);
+            out.addProperty("skill_1_level", hasManaSpiral ? 4 : 3);
+            out.addProperty("skill_2_level", hasManaSpiral ? 3 : 2);
+            out.addProperty("ability_1_level", hasManaSpiral ? 3 : 2);
+            out.addProperty("ability_2_level", hasManaSpiral ? 3 : 2);
+            out.addProperty("ability_3_level", adventurerData.getMaxA3Level()); //this varies per adventurer
+            out.addProperty("burst_attack_level", 2);
+            out.addProperty("combo_buildup_count", hasManaSpiral ? 1 : 0);
+            out.addProperty("hp", adventurerData.getMaxHp());
+            out.addProperty("attack", adventurerData.getMaxStr());
+            out.addProperty("ex_ability_level", 5);
+            out.addProperty("ex_ability_2_level", 5);
+            out.addProperty("is_temporary", 0);
+            out.addProperty("is_unlock_edit_skill", adventurerData.hasSkillShare() ? 1 : 0);
+            out.add("mana_circle_piece_id_list", mc);
+            out.addProperty("list_view_flag", 1);
+        } else { //un-upgraded unit
+            out.addProperty("chara_id", adventurerData.getId());
+            out.addProperty("rarity", adventurerData.getBaseRarity());
+            out.addProperty("exp", 0);
+            out.addProperty("level", 1);
+            out.addProperty("additional_max_level", 0);
+            out.addProperty("hp_plus_count", 0);
+            out.addProperty("attack_plus_count", 0);
+            out.addProperty("limit_break_count", 0); //confirm?
+            out.addProperty("is_new", 1);
+            out.addProperty("gettime", Instant.now().getEpochSecond());
+            out.addProperty("skill_1_level", 1); //confirm?
+            out.addProperty("skill_2_level", 0);
+            out.addProperty("ability_1_level", adventurerData.getMinA1Level());
+            out.addProperty("ability_2_level", 0);
+            out.addProperty("ability_3_level", 0);
+            out.addProperty("burst_attack_level", adventurerData.getMinFsLevel());
+            out.addProperty("combo_buildup_count", 0);
+            out.addProperty("hp", adventurerData.getMinHp()); //get min
+            out.addProperty("attack", adventurerData.getMinStr()); //get min
+            out.addProperty("ex_ability_level", 1);
+            out.addProperty("ex_ability_2_level", 1);
+            out.addProperty("is_temporary", 0);
+            out.addProperty("is_unlock_edit_skill", 0);
+            out.add("mana_circle_piece_id_list", new JsonArray());
+            out.addProperty("list_view_flag", 1);
+        }
         return out;
     }
 
@@ -722,23 +779,42 @@ public class JsonUtils {
         int a1Level = dragonData.getA1Max();
         int a2Level = dragonData.getA2Max();
 
-        out.addProperty("dragon_key_id", keyIdMin + 200 * keyIdOffset);
-        out.addProperty("dragon_id", dragonData.getId());
-        out.addProperty("level", level);
-        out.addProperty("hp_plus_count", 50);
-        out.addProperty("attack_plus_count", 50);
-        out.addProperty("exp", xp);
-        out.addProperty("is_lock", 0);
-        out.addProperty("is_new", 1);
-        out.addProperty("get_time", Instant.now().getEpochSecond());
-        out.addProperty("skill_1_level", 2);
-        out.addProperty("ability_1_level", a1Level);
-        out.addProperty("ability_2_level", a2Level);
-        out.addProperty("limit_break_count", has5UB ? 5 : 4);
+        boolean minDragon = !options.get("maxAddedDragons");
+        if (!minDragon) {
+            out.addProperty("dragon_key_id", keyIdMin + 200 * keyIdOffset);
+            out.addProperty("dragon_id", dragonData.getId());
+            out.addProperty("level", level);
+            out.addProperty("hp_plus_count", 50);
+            out.addProperty("attack_plus_count", 50);
+            out.addProperty("exp", xp);
+            out.addProperty("is_lock", 0);
+            out.addProperty("is_new", 1);
+            out.addProperty("get_time", Instant.now().getEpochSecond());
+            out.addProperty("skill_1_level", 2);
+            out.addProperty("ability_1_level", a1Level);
+            out.addProperty("ability_2_level", a2Level);
+            out.addProperty("limit_break_count", has5UB ? 5 : 4);
+        } else {
+            out.addProperty("dragon_key_id", keyIdMin + 200 * keyIdOffset);
+            out.addProperty("dragon_id", dragonData.getId());
+            out.addProperty("level", 1);
+            out.addProperty("hp_plus_count", 0);
+            out.addProperty("attack_plus_count", 0);
+            out.addProperty("exp", 0);
+            out.addProperty("is_lock", 0);
+            out.addProperty("is_new", 1);
+            out.addProperty("get_time", Instant.now().getEpochSecond());
+            out.addProperty("skill_1_level", 1);
+            out.addProperty("ability_1_level", 1);
+            out.addProperty("ability_2_level", dragonData.hasA2() ? 1 : 0);
+            out.addProperty("limit_break_count", 0);
+        }
         return out;
     }
 
     //Returns a built dragon in savedata.txt format
+    //Takes in getTime and keyId info and returns maxed out dragon
+    //Used to upgrade currently owned dragons
     private JsonObject buildDragon2(DragonMeta dragonData, int keyId, int getTime) {
         JsonObject out = new JsonObject();
         boolean has5UB = dragonData.has5UB();
@@ -908,23 +984,44 @@ public class JsonUtils {
         int passiveAbilityCount = weaponData.getPassiveAbilityIdList().size();
         //too lazy to figure out mapping for these abilities + no one cares honestly
         JsonArray voidWeaponAbilities = new JsonArray();
+
+        JsonArray emptyVoidWeaponAbilities = new JsonArray();
         for (int i = 0; i < 15; i++) {
             voidWeaponAbilities.add(i < passiveAbilityCount ? 1 : 0);
+            emptyVoidWeaponAbilities.add(0);
         }
 
-        out.addProperty("weapon_body_id", weaponData.getId());                      //ID
-        out.addProperty("buildup_count", level);                                    //level
-        out.addProperty("limit_break_count", unbinds);                              //unbinds
-        out.addProperty("limit_over_count", refines);                               //refines
-        out.addProperty("equipable_count", copiesCount);                            //equip count
-        out.addProperty("additional_crest_slot_type_1_count", fiveStarSlotCount);   //5* slot count
-        out.addProperty("additional_crest_slot_type_2_count", 0);
-        out.addProperty("additional_crest_slot_type_3_count", sindomSlotCount);     //sindom slot count
-        out.addProperty("additional_effect_count", 0);                         //?
-        out.add("unlock_weapon_passive_ability_no_list", voidWeaponAbilities);      //void weapon abilities?
-        out.addProperty("fort_passive_chara_weapon_buildup_count", weaponData.hasWeaponBonus() ? 1 : 0);        //weapon bonus
-        out.addProperty("is_new", 1);
-        out.addProperty("gettime", getTime == -1 ? Instant.now().getEpochSecond() : getTime);
+        boolean minWeapon = getTime == -1 && !options.get("maxAddedWeapons");
+
+        if (!minWeapon) {
+            out.addProperty("weapon_body_id", weaponData.getId());                      //ID
+            out.addProperty("buildup_count", level);                                    //level
+            out.addProperty("limit_break_count", unbinds);                              //unbinds
+            out.addProperty("limit_over_count", refines);                               //refines
+            out.addProperty("equipable_count", copiesCount);                            //equip count
+            out.addProperty("additional_crest_slot_type_1_count", fiveStarSlotCount);   //5* slot count
+            out.addProperty("additional_crest_slot_type_2_count", 0);
+            out.addProperty("additional_crest_slot_type_3_count", sindomSlotCount);     //sindom slot count
+            out.addProperty("additional_effect_count", 0);                         //?
+            out.add("unlock_weapon_passive_ability_no_list", voidWeaponAbilities);      //void weapon abilities?
+            out.addProperty("fort_passive_chara_weapon_buildup_count", weaponData.hasWeaponBonus() ? 1 : 0);        //weapon bonus
+            out.addProperty("is_new", 1);
+            out.addProperty("gettime", getTime == -1 ? Instant.now().getEpochSecond() : getTime);
+        } else {
+            out.addProperty("weapon_body_id", weaponData.getId());                      //ID
+            out.addProperty("buildup_count", 0);                                    //level
+            out.addProperty("limit_break_count", 0);                              //unbinds
+            out.addProperty("limit_over_count", 0);                               //refines
+            out.addProperty("equipable_count", 1);                            //equip count
+            out.addProperty("additional_crest_slot_type_1_count", 0);   //5* slot count
+            out.addProperty("additional_crest_slot_type_2_count", 0);
+            out.addProperty("additional_crest_slot_type_3_count", 0);     //sindom slot count
+            out.addProperty("additional_effect_count", 0);                         //?
+            out.add("unlock_weapon_passive_ability_no_list", emptyVoidWeaponAbilities);      //void weapon abilities?
+            out.addProperty("fort_passive_chara_weapon_buildup_count", 0);        //weapon bonus
+            out.addProperty("is_new", 1);
+            out.addProperty("gettime", Instant.now().getEpochSecond());
+        }
         return out;
     }
 
@@ -933,6 +1030,10 @@ public class JsonUtils {
         int rarity = printData.getRarity();
         int level = 1;
         int augmentCount = 0;
+
+        //to add new print as a level 1 un-upgraded print
+        boolean minPrint = getTime == -1 && !options.get("maxAddedWyrmprints");
+
         switch (rarity) {
             case 2:
                 level = 10;
@@ -955,16 +1056,27 @@ public class JsonUtils {
                 augmentCount = 40;
                 break;
         }
-
-        out.addProperty("ability_crest_id", printData.getId());
-        out.addProperty("buildup_count", level);
-        out.addProperty("limit_break_count", 4);
-        out.addProperty("equipable_count", 4);
-        out.addProperty("hp_plus_count", augmentCount);
-        out.addProperty("attack_plus_count", augmentCount);
-        out.addProperty("is_new", 1);
-        out.addProperty("is_favorite", 0);
-        out.addProperty("gettime", getTime == -1 ? Instant.now().getEpochSecond() : getTime);
+        if (!minPrint) {
+            out.addProperty("ability_crest_id", printData.getId());
+            out.addProperty("buildup_count", level);
+            out.addProperty("limit_break_count", 4);
+            out.addProperty("equipable_count", 4);
+            out.addProperty("hp_plus_count", augmentCount);
+            out.addProperty("attack_plus_count", augmentCount);
+            out.addProperty("is_new", 1);
+            out.addProperty("is_favorite", 0);
+            out.addProperty("gettime", getTime == -1 ? Instant.now().getEpochSecond() : getTime);
+        } else {
+            out.addProperty("ability_crest_id", printData.getId());
+            out.addProperty("buildup_count", 0);
+            out.addProperty("limit_break_count", 0);
+            out.addProperty("equipable_count", 0);
+            out.addProperty("hp_plus_count", 0);
+            out.addProperty("attack_plus_count", 0);
+            out.addProperty("is_new", 1);
+            out.addProperty("is_favorite", 0);
+            out.addProperty("gettime", Instant.now().getEpochSecond());
+        }
         return out;
     }
 
@@ -1434,10 +1546,12 @@ public class JsonUtils {
                 //Add it to your inventory
                 if (newWeapon != null) {
                     getField("data", "weapon_body_list").getAsJsonArray().add(newWeapon);
-                    addWeaponBonus(weapon);
-                    //Update weapon passives
-                    updateWeaponPassives(weapon);
-
+                    if (options.get("maxAddedWeapons")) {
+                        //Update weapon bonuses
+                        addWeaponBonus(weapon);
+                        //Update weapon passives
+                        updateWeaponPassives(weapon);
+                    }
                     count++;
                     write(weapon.getName() + "(" + weapon.getRarity() + "*, " + weapon.getWeaponSeries() + ")");
                 }
@@ -1905,6 +2019,57 @@ public class JsonUtils {
                 System.out.println("[" + (i+1) + "] " + message);
             }
         }
+    }
+
+    //
+
+    public static boolean checkIfJsonObject(String path) {
+        JsonReader reader = null;
+        try {
+            reader = new JsonReader(new FileReader(path));
+        } catch (FileNotFoundException ignored) {
+            System.out.println("Error occured when checking for JSON object");
+            return false;
+        }
+
+        try {
+            GSON.fromJson(reader, JsonObject.class);
+        } catch (JsonSyntaxException e) {
+            System.out.println("savedata.txt does not appear to be in JSON format!");
+            return false;
+        }
+        return true;
+    }
+
+    // Options //
+
+    public void editOption(String fieldName, boolean fieldValue) {
+        options.editOption(fieldName, fieldValue);
+    }
+
+    public void exportOptions() {
+        options.export();
+    }
+
+    public boolean hasOptions() {
+        return new File(optionsPath).exists();
+    }
+
+    public void createNewOptionsFile () {
+        options.export(); //when no options file found, default options are used --> export those
+    }
+
+    public boolean toPromptEditOptions () {
+        if (options.hasMissingOptions()) {
+            System.out.println("Missing options found... prompting editing save edit options");
+            return true;
+        }
+        return options.toPromptEditOptions();
+
+    }
+
+    public Options getOptions () {
+        return options;
     }
 
 }

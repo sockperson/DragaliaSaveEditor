@@ -9,6 +9,7 @@
         "Abilities16": 330000560,
         "Abilities25": 330000193,
         "Abilities26": 330000573,
+        "Abilities21": 330000192,
         "ElementalTypeId": 3
     },
     {
@@ -21,6 +22,7 @@
         "Abilities16": 1618,
         "Abilities25": 0,
         "Abilities26": 2216,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -33,6 +35,7 @@
         "Abilities16": 330000558,
         "Abilities25": 330000198,
         "Abilities26": 330000198,
+        "Abilities21": 330000197,
         "ElementalTypeId": 5
     },
     {
@@ -45,6 +48,7 @@
         "Abilities16": 330000560,
         "Abilities25": 330000175,
         "Abilities26": 330000175,
+        "Abilities21": 330000174,
         "ElementalTypeId": 1
     },
     {
@@ -57,6 +61,7 @@
         "Abilities16": 330000555,
         "Abilities25": 0,
         "Abilities26": 330000557,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -69,6 +74,7 @@
         "Abilities16": 0,
         "Abilities25": 330000390,
         "Abilities26": 0,
+        "Abilities21": 330000388,
         "ElementalTypeId": 3
     },
     {
@@ -81,6 +87,7 @@
         "Abilities16": 0,
         "Abilities25": 330000539,
         "Abilities26": 0,
+        "Abilities21": 330000535,
         "ElementalTypeId": 5
     },
     {
@@ -93,6 +100,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -105,6 +113,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -117,6 +126,7 @@
         "Abilities16": 330000564,
         "Abilities25": 330000525,
         "Abilities26": 330000566,
+        "Abilities21": 330000524,
         "ElementalTypeId": 5
     },
     {
@@ -129,6 +139,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -141,6 +152,7 @@
         "Abilities16": 0,
         "Abilities25": 2256,
         "Abilities26": 0,
+        "Abilities21": 2254,
         "ElementalTypeId": 5
     },
     {
@@ -153,6 +165,7 @@
         "Abilities16": 0,
         "Abilities25": 330000464,
         "Abilities26": 0,
+        "Abilities21": 330000464,
         "ElementalTypeId": 5
     },
     {
@@ -165,6 +178,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -177,6 +191,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -189,6 +204,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -201,6 +217,7 @@
         "Abilities16": "",
         "Abilities25": "",
         "Abilities26": "",
+        "Abilities21": "",
         "ElementalTypeId": 1
     },
     {
@@ -213,6 +230,7 @@
         "Abilities16": "",
         "Abilities25": "",
         "Abilities26": "",
+        "Abilities21": "",
         "ElementalTypeId": 1
     },
     {
@@ -225,6 +243,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -237,6 +256,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -249,6 +269,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -261,6 +282,7 @@
         "Abilities16": 1618,
         "Abilities25": 0,
         "Abilities26": 2216,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -273,6 +295,7 @@
         "Abilities16": 330009149,
         "Abilities25": 0,
         "Abilities26": 2216,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -285,6 +308,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -297,6 +321,7 @@
         "Abilities16": 330000560,
         "Abilities25": 330000191,
         "Abilities26": 330000191,
+        "Abilities21": 330000190,
         "ElementalTypeId": 4
     },
     {
@@ -309,6 +334,7 @@
         "Abilities16": 1760,
         "Abilities25": 0,
         "Abilities26": 2216,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -321,6 +347,7 @@
         "Abilities16": 0,
         "Abilities25": 330000196,
         "Abilities26": 0,
+        "Abilities21": 330000195,
         "ElementalTypeId": 4
     },
     {
@@ -333,6 +360,7 @@
         "Abilities16": "",
         "Abilities25": "",
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -345,6 +373,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -357,6 +386,7 @@
         "Abilities16": 0,
         "Abilities25": 330000110,
         "Abilities26": 0,
+        "Abilities21": 330000109,
         "ElementalTypeId": 1
     },
     {
@@ -369,6 +399,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -381,6 +412,7 @@
         "Abilities16": 330000560,
         "Abilities25": 330000523,
         "Abilities26": 330000523,
+        "Abilities21": 330000522,
         "ElementalTypeId": 5
     },
     {
@@ -393,6 +425,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -405,6 +438,7 @@
         "Abilities16": 0,
         "Abilities25": 330000466,
         "Abilities26": 0,
+        "Abilities21": 330000465,
         "ElementalTypeId": 5
     },
     {
@@ -417,6 +451,7 @@
         "Abilities16": 330000564,
         "Abilities25": 330000391,
         "Abilities26": 330000566,
+        "Abilities21": 330000389,
         "ElementalTypeId": 3
     },
     {
@@ -429,6 +464,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -441,6 +477,7 @@
         "Abilities16": 0,
         "Abilities25": 2531,
         "Abilities26": 0,
+        "Abilities21": 2530,
         "ElementalTypeId": 3
     },
     {
@@ -453,6 +490,7 @@
         "Abilities16": 0,
         "Abilities25": 1833,
         "Abilities26": 0,
+        "Abilities21": 1832,
         "ElementalTypeId": 2
     },
     {
@@ -465,6 +503,7 @@
         "Abilities16": 0,
         "Abilities25": 330000187,
         "Abilities26": 0,
+        "Abilities21": 330000186,
         "ElementalTypeId": 2
     },
     {
@@ -477,6 +516,7 @@
         "Abilities16": 0,
         "Abilities25": 2256,
         "Abilities26": 0,
+        "Abilities21": 2254,
         "ElementalTypeId": 5
     },
     {
@@ -489,6 +529,7 @@
         "Abilities16": 0,
         "Abilities25": 2569,
         "Abilities26": 0,
+        "Abilities21": 2568,
         "ElementalTypeId": 2
     },
     {
@@ -501,6 +542,7 @@
         "Abilities16": 0,
         "Abilities25": 2175,
         "Abilities26": 0,
+        "Abilities21": 2174,
         "ElementalTypeId": 3
     },
     {
@@ -513,6 +555,7 @@
         "Abilities16": 0,
         "Abilities25": 330000258,
         "Abilities26": 0,
+        "Abilities21": 330000214,
         "ElementalTypeId": 5
     },
     {
@@ -525,6 +568,7 @@
         "Abilities16": 0,
         "Abilities25": 2379,
         "Abilities26": 0,
+        "Abilities21": 2377,
         "ElementalTypeId": 4
     },
     {
@@ -537,6 +581,7 @@
         "Abilities16": 0,
         "Abilities25": 3101,
         "Abilities26": 0,
+        "Abilities21": 3100,
         "ElementalTypeId": 4
     },
     {
@@ -549,6 +594,7 @@
         "Abilities16": 0,
         "Abilities25": 330000117,
         "Abilities26": 0,
+        "Abilities21": 330000116,
         "ElementalTypeId": 1
     },
     {
@@ -561,6 +607,7 @@
         "Abilities16": 0,
         "Abilities25": 1927,
         "Abilities26": 0,
+        "Abilities21": 1926,
         "ElementalTypeId": 1
     },
     {
@@ -573,6 +620,7 @@
         "Abilities16": 0,
         "Abilities25": 1763,
         "Abilities26": 0,
+        "Abilities21": 1762,
         "ElementalTypeId": 4
     },
     {
@@ -585,6 +633,7 @@
         "Abilities16": 0,
         "Abilities25": 2027,
         "Abilities26": 0,
+        "Abilities21": 2026,
         "ElementalTypeId": 5
     },
     {
@@ -597,6 +646,7 @@
         "Abilities16": 0,
         "Abilities25": 1450,
         "Abilities26": 0,
+        "Abilities21": 1449,
         "ElementalTypeId": 2
     },
     {
@@ -609,6 +659,7 @@
         "Abilities16": 0,
         "Abilities25": 1593,
         "Abilities26": 0,
+        "Abilities21": 1592,
         "ElementalTypeId": 3
     },
     {
@@ -621,6 +672,7 @@
         "Abilities16": 0,
         "Abilities25": 1231,
         "Abilities26": 0,
+        "Abilities21": 1230,
         "ElementalTypeId": 4
     },
     {
@@ -633,6 +685,7 @@
         "Abilities16": 2301,
         "Abilities25": 0,
         "Abilities26": 2219,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -645,6 +698,7 @@
         "Abilities16": 330000561,
         "Abilities25": 0,
         "Abilities26": 2216,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -657,6 +711,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -669,6 +724,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -681,6 +737,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -693,6 +750,7 @@
         "Abilities16": 0,
         "Abilities25": 1549,
         "Abilities26": 0,
+        "Abilities21": 1548,
         "ElementalTypeId": 1
     },
     {
@@ -705,6 +763,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -717,6 +776,7 @@
         "Abilities16": 0,
         "Abilities25": 330000325,
         "Abilities26": 0,
+        "Abilities21": 330000324,
         "ElementalTypeId": 2
     },
     {
@@ -729,6 +789,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -741,6 +802,7 @@
         "Abilities16": 330000562,
         "Abilities25": 330000177,
         "Abilities26": 330000177,
+        "Abilities21": 330000176,
         "ElementalTypeId": 3
     },
     {
@@ -753,6 +815,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -765,6 +828,7 @@
         "Abilities16": 2220,
         "Abilities25": 330000171,
         "Abilities26": 2300,
+        "Abilities21": 330000170,
         "ElementalTypeId": 1
     },
     {
@@ -777,6 +841,7 @@
         "Abilities16": 0,
         "Abilities25": 1843,
         "Abilities26": 0,
+        "Abilities21": 1841,
         "ElementalTypeId": 5
     },
     {
@@ -789,6 +854,7 @@
         "Abilities16": 2220,
         "Abilities25": 330000171,
         "Abilities26": 2300,
+        "Abilities21": 330000170,
         "ElementalTypeId": 4
     },
     {
@@ -801,6 +867,7 @@
         "Abilities16": 2220,
         "Abilities25": 330000171,
         "Abilities26": 2300,
+        "Abilities21": 330000170,
         "ElementalTypeId": 2
     },
     {
@@ -813,6 +880,7 @@
         "Abilities16": 2220,
         "Abilities25": 330000171,
         "Abilities26": 2300,
+        "Abilities21": 330000170,
         "ElementalTypeId": 3
     },
     {
@@ -825,6 +893,7 @@
         "Abilities16": 2220,
         "Abilities25": 330000171,
         "Abilities26": 2300,
+        "Abilities21": 330000170,
         "ElementalTypeId": 5
     },
     {
@@ -837,6 +906,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -849,6 +919,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -861,6 +932,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -873,6 +945,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -885,6 +958,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -897,6 +971,7 @@
         "Abilities16": 2301,
         "Abilities25": 0,
         "Abilities26": 2219,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -909,6 +984,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -921,6 +997,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -933,6 +1010,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -945,6 +1023,7 @@
         "Abilities16": 330000562,
         "Abilities25": 330000217,
         "Abilities26": 330000217,
+        "Abilities21": 330000216,
         "ElementalTypeId": 1
     },
     {
@@ -957,6 +1036,7 @@
         "Abilities16": 330000562,
         "Abilities25": 330000219,
         "Abilities26": 330000219,
+        "Abilities21": 330000218,
         "ElementalTypeId": 2
     },
     {
@@ -969,6 +1049,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -981,6 +1062,7 @@
         "Abilities16": 330000072,
         "Abilities25": 330000173,
         "Abilities26": 330000569,
+        "Abilities21": 330000172,
         "ElementalTypeId": 1
     },
     {
@@ -993,6 +1075,7 @@
         "Abilities16": 1513,
         "Abilities25": 0,
         "Abilities26": 2216,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1005,6 +1088,7 @@
         "Abilities16": 2220,
         "Abilities25": 0,
         "Abilities26": 2217,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1017,6 +1101,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1029,6 +1114,7 @@
         "Abilities16": 330000555,
         "Abilities25": 0,
         "Abilities26": 330000557,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1041,6 +1127,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1053,6 +1140,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1065,6 +1153,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1077,6 +1166,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -1089,6 +1179,7 @@
         "Abilities16": 0,
         "Abilities25": 1624,
         "Abilities26": 0,
+        "Abilities21": 1623,
         "ElementalTypeId": 3
     },
     {
@@ -1101,6 +1192,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1113,6 +1205,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1125,6 +1218,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1137,6 +1231,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1149,6 +1244,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1161,6 +1257,7 @@
         "Abilities16": 0,
         "Abilities25": 2587,
         "Abilities26": 0,
+        "Abilities21": 2586,
         "ElementalTypeId": 3
     },
     {
@@ -1173,6 +1270,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1185,6 +1283,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1197,6 +1296,7 @@
         "Abilities16": 0,
         "Abilities25": 1201,
         "Abilities26": 0,
+        "Abilities21": 1174,
         "ElementalTypeId": 3
     },
     {
@@ -1209,6 +1309,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -1221,6 +1322,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1233,6 +1335,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1245,6 +1348,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1257,6 +1361,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1269,6 +1374,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1281,6 +1387,7 @@
         "Abilities16": 2220,
         "Abilities25": 0,
         "Abilities26": 2217,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1293,6 +1400,7 @@
         "Abilities16": 330000555,
         "Abilities25": 0,
         "Abilities26": 330000557,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1305,6 +1413,7 @@
         "Abilities16": 330000556,
         "Abilities25": 330000144,
         "Abilities26": 330000144,
+        "Abilities21": 330000143,
         "ElementalTypeId": 5
     },
     {
@@ -1317,6 +1426,7 @@
         "Abilities16": "",
         "Abilities25": "",
         "Abilities26": "",
+        "Abilities21": "",
         "ElementalTypeId": 5
     },
     {
@@ -1329,6 +1439,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1341,6 +1452,7 @@
         "Abilities16": 0,
         "Abilities25": 330000465,
         "Abilities26": 0,
+        "Abilities21": 330000455,
         "ElementalTypeId": 5
     },
     {
@@ -1353,6 +1465,7 @@
         "Abilities16": 330000560,
         "Abilities25": 330000189,
         "Abilities26": 330000189,
+        "Abilities21": 330000188,
         "ElementalTypeId": 3
     },
     {
@@ -1365,6 +1478,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -1377,6 +1491,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1389,6 +1504,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1401,6 +1517,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -1413,6 +1530,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1425,6 +1543,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1437,6 +1556,7 @@
         "Abilities16": 0,
         "Abilities25": 330000194,
         "Abilities26": 0,
+        "Abilities21": 330000194,
         "ElementalTypeId": 4
     },
     {
@@ -1449,6 +1569,7 @@
         "Abilities16": 2220,
         "Abilities25": 0,
         "Abilities26": 2217,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1461,6 +1582,7 @@
         "Abilities16": 0,
         "Abilities25": 3701,
         "Abilities26": 0,
+        "Abilities21": 3700,
         "ElementalTypeId": 1
     },
     {
@@ -1473,6 +1595,7 @@
         "Abilities16": 0,
         "Abilities25": 1201,
         "Abilities26": 0,
+        "Abilities21": 1174,
         "ElementalTypeId": 3
     },
     {
@@ -1485,6 +1608,7 @@
         "Abilities16": 330000567,
         "Abilities25": 0,
         "Abilities26": 2216,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -1497,6 +1621,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1509,6 +1634,7 @@
         "Abilities16": 330000572,
         "Abilities25": 0,
         "Abilities26": 330000493,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1521,6 +1647,7 @@
         "Abilities16": 0,
         "Abilities25": 1974,
         "Abilities26": 0,
+        "Abilities21": 1973,
         "ElementalTypeId": 4
     },
     {
@@ -1533,6 +1660,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -1545,6 +1673,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1557,6 +1686,7 @@
         "Abilities16": 0,
         "Abilities25": 1957,
         "Abilities26": 0,
+        "Abilities21": 1956,
         "ElementalTypeId": 3
     },
     {
@@ -1569,6 +1699,7 @@
         "Abilities16": "",
         "Abilities25": "",
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 1
     },
     {
@@ -1581,6 +1712,7 @@
         "Abilities16": 330000514,
         "Abilities25": 330000521,
         "Abilities26": 330000569,
+        "Abilities21": 330000520,
         "ElementalTypeId": 5
     },
     {
@@ -1593,6 +1725,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1605,6 +1738,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1617,6 +1751,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1629,6 +1764,7 @@
         "Abilities16": 330000563,
         "Abilities25": 330000323,
         "Abilities26": 330000565,
+        "Abilities21": 330000322,
         "ElementalTypeId": 2
     },
     {
@@ -1641,6 +1777,7 @@
         "Abilities16": 330000309,
         "Abilities25": 330000321,
         "Abilities26": 330000569,
+        "Abilities21": 330000320,
         "ElementalTypeId": 2
     },
     {
@@ -1653,6 +1790,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1665,6 +1803,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1677,6 +1816,7 @@
         "Abilities16": 330000568,
         "Abilities25": 0,
         "Abilities26": 2216,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1689,6 +1829,7 @@
         "Abilities16": 0,
         "Abilities25": 2140,
         "Abilities26": 0,
+        "Abilities21": 2139,
         "ElementalTypeId": 4
     },
     {
@@ -1701,6 +1842,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1713,6 +1855,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1725,6 +1868,7 @@
         "Abilities16": 0,
         "Abilities25": 2072,
         "Abilities26": 0,
+        "Abilities21": 2071,
         "ElementalTypeId": 2
     },
     {
@@ -1737,6 +1881,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1749,6 +1894,7 @@
         "Abilities16": 330000562,
         "Abilities25": 330000452,
         "Abilities26": 330000571,
+        "Abilities21": 330000451,
         "ElementalTypeId": 4
     },
     {
@@ -1761,6 +1907,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1773,6 +1920,7 @@
         "Abilities16": 330000564,
         "Abilities25": 330000454,
         "Abilities26": 330000566,
+        "Abilities21": 330000453,
         "ElementalTypeId": 4
     },
     {
@@ -1785,6 +1933,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1797,6 +1946,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 4
     },
     {
@@ -1809,6 +1959,7 @@
         "Abilities16": 0,
         "Abilities25": 2400,
         "Abilities26": 0,
+        "Abilities21": 2398,
         "ElementalTypeId": 1
     },
     {
@@ -1821,6 +1972,7 @@
         "Abilities16": 330000378,
         "Abilities25": 330000393,
         "Abilities26": 330000569,
+        "Abilities21": 330000392,
         "ElementalTypeId": 3
     },
     {
@@ -1833,6 +1985,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1845,6 +1998,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 2
     },
     {
@@ -1857,6 +2011,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1869,6 +2024,7 @@
         "Abilities16": 1590,
         "Abilities25": 0,
         "Abilities26": 2216,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1881,6 +2037,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 3
     },
     {
@@ -1893,6 +2050,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1905,6 +2063,7 @@
         "Abilities16": 0,
         "Abilities25": 0,
         "Abilities26": 0,
+        "Abilities21": 0,
         "ElementalTypeId": 5
     },
     {
@@ -1917,6 +2076,7 @@
         "Abilities16": "",
         "Abilities25": 0,
         "Abilities26": "",
+        "Abilities21": 0,
         "ElementalTypeId": 3
     }
 ]

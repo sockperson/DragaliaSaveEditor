@@ -4,10 +4,10 @@ public class DragonMeta {
 
     private String name;
     private int id, elementId, a1Max, a2Max, rarity;
-    private boolean has5UB;
+    private boolean has5UB, hasA2;
 
     public DragonMeta(String name, int id, int elementId, int a1Max, int a2Max,
-                          int rarity, boolean has5UB){
+                          int rarity, boolean has5UB, boolean hasA2){
         this.name = name;
         this.id = id;
         this.elementId = elementId;
@@ -15,6 +15,7 @@ public class DragonMeta {
         this.a2Max = a2Max;
         this.rarity = rarity;
         this.has5UB = has5UB;
+        this.hasA2 = hasA2;
     }
 
     public String getName(){ return name; }
@@ -24,6 +25,7 @@ public class DragonMeta {
     public int getA2Max(){ return a2Max; }
     public int getRarity(){ return rarity; }
     public boolean has5UB(){ return has5UB; }
+    public boolean hasA2(){ return hasA2; }
 
     public int getMaxLevel(){
         switch(rarity){
