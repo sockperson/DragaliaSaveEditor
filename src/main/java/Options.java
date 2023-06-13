@@ -14,7 +14,7 @@ public class Options {
     private boolean maxAddedWeapons = true;
     //private boolean maxAddedFacilities = true;
 
-    private boolean showOptionsValues = false;
+    private boolean showOptionsValues = false; // mainly for debug, not prompted to user
     private boolean promptEditOptions = true;
 
     private String optionsPath = "";
@@ -24,6 +24,7 @@ public class Options {
     public Options () {}
 
     public Options (String optionsPath) throws IOException {
+        boolean toResetAndExportOptions = false; // set to true when there's an error with the options file
         List<String> fieldList = new ArrayList<>();
         if (new File(optionsPath).exists()) {
             //compile list of bool fields
@@ -39,18 +40,48 @@ public class Options {
             String out = br.readLine();
             while (out != null) {
                 String[] split = out.split(":");
+                // validate the line in the options file
+                if (split.length != 2) {
+                    System.out.println("Error when importing options file- could not parse" +
+                            " string '" + out + "'");
+                    toResetAndExportOptions = true;
+                    out = br.readLine();
+                    continue;
+                }
                 String fieldName = split[0];
                 boolean fieldValue = Boolean.parseBoolean(split[1]);
-                editOption(fieldName, fieldValue);
+                // validate the boolean string
+                if (!(split[1].equals("true") || split[1].equals("false"))) {
+                    System.out.println("Error when importing options file- could not parse" +
+                            " boolean string '" +  fieldName + "'.");
+                    toResetAndExportOptions = true;
+                    out = br.readLine();
+                    continue;
+                }
+                // edit the field corresponding to fieldName, validate that fieldName is a field
+                if (!editOption(fieldName, fieldValue)) {
+                    System.out.println("Error when importing options file- no field '" + fieldName + "' found.");
+                    toResetAndExportOptions = true;
+                    out = br.readLine();
+                    continue;
+                }
                 fieldList.remove(fieldName); //rm from field list if found
                 out = br.readLine();
-            }
-            if (showOptionsValues) {
-                System.out.println(this);
             }
         }
         this.missingOptions = fieldList;
         this.optionsPath = optionsPath;
+        // if there's an issue with the options file, set to default and force export
+        if (toResetAndExportOptions) {
+            System.out.println("There was an error with the options file... loading default options and exporting...");
+            missingOptions.clear();
+            setFieldsToDefault();
+            export();
+        } else {
+            if (showOptionsValues) {
+                System.out.println(this);
+            }
+        }
     }
 
     public boolean toMaxAddedAdventurers () { return maxAddedAdventurers; }
@@ -60,15 +91,16 @@ public class Options {
     //public boolean toMaxAddedFacilities () { return maxAddedFacilities; }
 
     //reflection is really cool!
-    public void editOption (String fieldName, boolean value) {
+    public boolean editOption (String fieldName, boolean value) {
         Field field = null;
         try {
             field = this.getClass().getDeclaredField(fieldName);
             field.setAccessible(true);
             field.setBoolean(this, value);
         } catch (NoSuchFieldException | IllegalAccessException e) {
-            e.printStackTrace();
+            return false;
         }
+        return true;
     }
 
     public void export() {
@@ -83,7 +115,7 @@ public class Options {
                 }
             }
             writer.close();
-            System.out.println("Successfully wrote to the file: " + optionsPath);
+            System.out.println("Successfully wrote options to the file: " + optionsPath);
         } catch (IOException | IllegalAccessException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
@@ -91,7 +123,7 @@ public class Options {
 
     }
 
-    public boolean get (String fieldName) {
+    public boolean getFieldValue (String fieldName) {
         try {
             return Boolean.parseBoolean(this.getClass().getDeclaredField(fieldName).get(this).toString());
         } catch (IllegalAccessException | NoSuchFieldException e) {
@@ -103,6 +135,15 @@ public class Options {
     public boolean toPromptEditOptions () { return promptEditOptions; }
 
     public boolean hasMissingOptions () { return missingOptions.size() != 0; }
+
+    public void setFieldsToDefault () {
+        maxAddedAdventurers = true;
+        maxAddedWyrmprints = true;
+        maxAddedDragons = true;
+        maxAddedWeapons = true;
+        showOptionsValues = false;
+        promptEditOptions = true;
+    }
 
     public String toString () {
         return

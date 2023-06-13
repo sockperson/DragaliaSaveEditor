@@ -516,7 +516,7 @@ public class JsonUtils {
         boolean hasManaSpiral = adv.hasManaSpiral();
         double bonus = hasManaSpiral ? 0.3 : 0.2;
         int elementID = adv.getElementId();
-        if (options.get("maxAddedAdventurers")) {
+        if (options.getFieldValue("maxAddedAdventurers")) {
             addAdventurerEncyclopediaBonus(elementID, bonus, bonus);
         } else { //bonus from adding new adventurer (no upgrades)
             addAdventurerEncyclopediaBonus(elementID, 0.1, 0.1);
@@ -545,7 +545,7 @@ public class JsonUtils {
         double hpBonus = has5UB ? 0.3 : 0.2;
         double strBonus = 0.1;
         int elementID = dragon.getElementId();
-        if (options.get("maxAddedDragons")) {
+        if (options.getFieldValue("maxAddedDragons")) {
             addDragonEncyclopediaBonus(elementID, hpBonus, strBonus);
         } else {
             addDragonEncyclopediaBonus(elementID, 0.1, 0.1);
@@ -705,7 +705,7 @@ public class JsonUtils {
         }
 
         //to add new unit as a level 1 un-upgraded unit
-        boolean minUnit = getTime == -1 && !options.get("maxAddedAdventurers");
+        boolean minUnit = getTime == -1 && !options.getFieldValue("maxAddedAdventurers");
 
         boolean hasManaSpiral = adventurerData.hasManaSpiral();
         JsonArray mc = new JsonArray();
@@ -779,7 +779,7 @@ public class JsonUtils {
         int a1Level = dragonData.getA1Max();
         int a2Level = dragonData.getA2Max();
 
-        boolean minDragon = !options.get("maxAddedDragons");
+        boolean minDragon = !options.getFieldValue("maxAddedDragons");
         if (!minDragon) {
             out.addProperty("dragon_key_id", keyIdMin + 200 * keyIdOffset);
             out.addProperty("dragon_id", dragonData.getId());
@@ -991,7 +991,7 @@ public class JsonUtils {
             emptyVoidWeaponAbilities.add(0);
         }
 
-        boolean minWeapon = getTime == -1 && !options.get("maxAddedWeapons");
+        boolean minWeapon = getTime == -1 && !options.getFieldValue("maxAddedWeapons");
 
         if (!minWeapon) {
             out.addProperty("weapon_body_id", weaponData.getId());                      //ID
@@ -1032,7 +1032,7 @@ public class JsonUtils {
         int augmentCount = 0;
 
         //to add new print as a level 1 un-upgraded print
-        boolean minPrint = getTime == -1 && !options.get("maxAddedWyrmprints");
+        boolean minPrint = getTime == -1 && !options.getFieldValue("maxAddedWyrmprints");
 
         switch (rarity) {
             case 2:
@@ -1546,7 +1546,7 @@ public class JsonUtils {
                 //Add it to your inventory
                 if (newWeapon != null) {
                     getField("data", "weapon_body_list").getAsJsonArray().add(newWeapon);
-                    if (options.get("maxAddedWeapons")) {
+                    if (options.getFieldValue("maxAddedWeapons")) {
                         //Update weapon bonuses
                         addWeaponBonus(weapon);
                         //Update weapon passives
@@ -1903,7 +1903,66 @@ public class JsonUtils {
         getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950320));
     }
 
+    //ehh......
+    public void deleteDupeIds () {
+        // soem guy downloaded save data from orchis and found out that
+        // they had a lot of dupe weapon skin ids. probably cause they
+        // used this program to edit them in, and then made some weapons in the server
+        // so lets just delete the dupe ids
+        int dupeDragonKeyIdCount = 0;
+        int dupeWeaponSkinIdCount = 0;
 
+        // happened with dragon key ids and weapon skin ids...
+        List<Integer> keyIds = new ArrayList<>();
+        List<JsonElement> toRemove = new ArrayList<>();
+        JsonArray dragons = getFieldAsJsonArray("data", "dragon_list");
+        for (JsonElement jsonEle : dragons) {
+            JsonObject dragon = jsonEle.getAsJsonObject();
+            int id = dragon.get("dragon_key_id").getAsInt();
+            if (keyIds.contains(id)) {
+                dupeDragonKeyIdCount++;
+                toRemove.add(dragon);
+            } else {
+                keyIds.add(id);
+            }
+        }
+        for (JsonElement badDragon : toRemove) {
+            dragons.remove(badDragon);
+        }
+
+        keyIds.clear();
+        toRemove.clear();
+        JsonArray weaponSkins = getFieldAsJsonArray("data", "weapon_skin_list");
+        for (JsonElement jsonEle : weaponSkins) {
+            JsonObject weaponSkin = jsonEle.getAsJsonObject();
+            int id = weaponSkin.get("weapon_skin_id").getAsInt();
+            if (keyIds.contains(id)) {
+                dupeWeaponSkinIdCount++;
+                toRemove.add(weaponSkin);
+            } else {
+                keyIds.add(id);
+            }
+        }
+        for (JsonElement badWeaponSkin : toRemove) {
+            weaponSkins.remove(badWeaponSkin);
+        }
+        
+        if(dupeDragonKeyIdCount != 0 || dupeWeaponSkinIdCount != 0) {
+            System.out.println("Found dupe ID issues with the save file when importing... this should not happen."
+                    + " The save editor will remove these dupe ID's for editing.");
+            if (dupeDragonKeyIdCount != 0) {
+                System.out.println("Error: Duplicate dragon key ID count: " +  dupeDragonKeyIdCount);
+            }
+            if (dupeWeaponSkinIdCount != 0) {
+                System.out.println("Error: Duplicate weapon skin key ID count: " + dupeWeaponSkinIdCount);
+                System.out.println("(This one was most likely caused by downloading save data " +
+                        "from a private server that you crafted weapons on");
+                System.out.println("after editing in weapon skins" +
+                        " using this save editor.)");
+            }
+            System.out.println();
+        }
+    }
 
     public void kscapeRandomizer() {
         JsonArray talismans = new JsonArray();
@@ -2028,7 +2087,7 @@ public class JsonUtils {
         try {
             reader = new JsonReader(new FileReader(path));
         } catch (FileNotFoundException ignored) {
-            System.out.println("Error occured when checking for JSON object");
+            System.out.println("JSON data not found at this filepath");
             return false;
         }
 

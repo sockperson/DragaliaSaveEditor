@@ -49,6 +49,7 @@ public class Tests {
             int id = chara.get("dragon_key_id").getAsInt();
             if(ids.contains(id)){
                 out[0] = false;
+                oopsID[0] = Integer.toString(id);
             }
             ids.add(id);
         });
@@ -66,6 +67,7 @@ public class Tests {
             int id = chara.get("talisman_key_id").getAsInt();
             if(ids.contains(id)){
                 out[0] = false;
+                oopsID[0] = Integer.toString(id);
             }
             ids.add(id);
         });
@@ -83,6 +85,7 @@ public class Tests {
             int id = chara.get("weapon_skin_id").getAsInt();
             if(ids.contains(id)){
                 out[0] = false;
+                oopsID[0] = Integer.toString(id);
             }
             ids.add(id);
         });
@@ -100,6 +103,7 @@ public class Tests {
             int id = chara.get("ability_crest_id").getAsInt();
             if(ids.contains(id)){
                 out[0] = false;
+                oopsID[0] = Integer.toString(id);
             }
             ids.add(id);
         });

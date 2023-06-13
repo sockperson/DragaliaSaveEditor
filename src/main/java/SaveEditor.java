@@ -157,7 +157,7 @@ public class SaveEditor {
             isFilePathInvalid = !new File(savePath).exists(); //basic file path exists check
             isFileJsonObject = JsonUtils.checkIfJsonObject(savePath); //check if its a json object
             if(isFilePathInvalid || !isFileJsonObject){
-                System.out.println("savedata not found at: " + savePath + "!");
+                System.out.println("savedata not found at path: '" + savePath + "'! Did you forget to include the file extension? (.txt or .json)");
                 System.out.println();
                 System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
                 System.out.print("Enter path for save file: ");
@@ -175,13 +175,14 @@ public class SaveEditor {
         System.out.println("Save data found at: " + savePath + "\n");
         System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
 
+        util.deleteDupeIds(); // idk
         if (!util.hasOptions()) {
             yesNoQuestion("No options file found in this directory. Create a new options file?",
                     () -> util.createNewOptionsFile());
         }
         if (util.hasOptions()) {
+            options = util.getOptions();
             if (util.toPromptEditOptions()) {
-                options = util.getOptions();
                 yesNoQuestion("Edit save editing options?",
                         () -> {
                             passYesNoArg("\tMax out added adventurers?", "maxAddedAdventurers", (arg) ->
