@@ -1185,11 +1185,9 @@ public class TeamsUtil {
         exportTeams();
 
         if (SaveEditor.passYesNo("Generate new talismans?")) {
-            boolean toExit = false;
-            while (!toExit) {
+            while (true) {
                 String talismanName = SaveEditor.input("\tEnter talisman name (Enter 'exit' to return)");
                 if (talismanName.toLowerCase(Locale.ROOT).equals("exit")) {
-                    toExit = true;
                     break;
                 }
 
@@ -1226,6 +1224,8 @@ public class TeamsUtil {
                 teamsData.get("talismans").getAsJsonArray().add(newTalisman);
                 System.out.println("\tAdded new talisman.");
             }
+            System.out.println("Exporting added talismans...");
+            exportTeams();
         }
 
         System.out.println("Initializing talisman data...");
