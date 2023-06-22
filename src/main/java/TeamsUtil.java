@@ -312,14 +312,15 @@ public class TeamsUtil {
 
             outMember.addProperty("teamSlot", j);
             outMember.addProperty("unitId", (j == 1) ? "euden" : "0");
-            outMember.addProperty("dragon", 0);
-            outMember.addProperty("weapon", 0);
+            outMember.addProperty("dragon", "0");
+            outMember.addProperty("weapon", "0");
             outMember.addProperty("weaponSkin", 0);
             outMember.addProperty("slot1Wyrmprints", "0, 0, 0");
             outMember.addProperty("slot2Wyrmprints", "0, 0");
             outMember.addProperty("slot3Wyrmprints", "0, 0");
             outMember.addProperty("talisman", "0");
-            outMember.addProperty("sharedSkillIds", "cleo, ranzal");
+            outMember.addProperty("sharedSkill1", (j == 1) ? ("cleo") : ("0"));
+            outMember.addProperty("sharedSkill2", (j == 1) ? ("ranzal") : ("0"));
             outMembers.add(outMember);
         }
         return outMembers;

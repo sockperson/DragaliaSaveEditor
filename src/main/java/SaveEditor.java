@@ -160,7 +160,7 @@ public class SaveEditor {
     }
 
     public static void main(String[] args){
-        System.out.println("\nDragalia Save Editor (v11)\n");
+        System.out.println("\nDragalia Save Editor (v11.2)\n");
         String programPath = getFilePath();
         System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
         System.out.print("Enter path for save file: ");

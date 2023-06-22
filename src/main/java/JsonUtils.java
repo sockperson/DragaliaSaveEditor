@@ -6,7 +6,6 @@ import java.util.*;
 
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
-import javafx.util.Pair;
 import meta.*;
 
 public class JsonUtils {
@@ -700,7 +699,7 @@ public class JsonUtils {
     public List<Integer> getKeyIdListSortedByAttr (String keyIdName, String sortFieldName, String conditionalField,
                                                    int conditionalValue, String... fields) {
         JsonArray jsonArray = getFieldAsJsonArray(fields);
-        List<Pair<Integer, Integer>> valAndKeyIdPairs = new ArrayList<>();
+        List<int[]> valAndKeyIdPairs = new ArrayList<>();
 
         // initial loop, add all matching obj key IDs to output
         for (JsonElement jsonEle : jsonArray) {
@@ -708,7 +707,7 @@ public class JsonUtils {
             if (jsonObj.get(conditionalField).getAsInt() == conditionalValue) {
                 int sortFieldValue = jsonObj.get(sortFieldName).getAsInt();
                 int keyId = jsonObj.get(keyIdName).getAsInt();
-                Pair<Integer, Integer> valAndKeyIdPair = new Pair<>(sortFieldValue, keyId);
+                int[] valAndKeyIdPair = new int[]{sortFieldValue, keyId};
                 valAndKeyIdPairs.add(valAndKeyIdPair);
             }
         }
@@ -719,21 +718,21 @@ public class JsonUtils {
         }
         // 1 entry
         if (valAndKeyIdPairs.size() == 1) {
-            return Collections.singletonList(valAndKeyIdPairs.get(0).getValue());
+            return Collections.singletonList(valAndKeyIdPairs.get(0)[1]);
         }
         // sort the output
         for (int i = 0; i < valAndKeyIdPairs.size() - 1; i++) {
-            Pair<Integer, Integer> pair1 = valAndKeyIdPairs.get(i);
-            Pair<Integer, Integer> pair2 = valAndKeyIdPairs.get(i + 1);
-            if (pair1.getKey() < pair2.getKey()) { // bubble sort...
+            int[] pair1 = valAndKeyIdPairs.get(i);
+            int[] pair2 = valAndKeyIdPairs.get(i + 1);
+            if (pair1[0] < pair2[0]) { // bubble sort...
                 valAndKeyIdPairs.set(i, pair2);
                 valAndKeyIdPairs.set(i + 1, pair1);
             }
         }
         // get key IDs
         List<Integer> out = new ArrayList<>();
-        for (Pair<Integer, Integer> valAndKeyIdPair : valAndKeyIdPairs) {
-            out.add(valAndKeyIdPair.getValue());
+        for (int[] valAndKeyIdPair : valAndKeyIdPairs) {
+            out.add(valAndKeyIdPair[1]);
         }
         return out;
     }
