@@ -1,0 +1,94 @@
+### offense (slot 1, 5*) ###
+fs, fsdmg, fs(lance): 40050091
+cr: auto_cr
+(sword)cr, auto_cr_sword: 40050145
+(axe)cr, auto_cr_axe: 40050038
+(bow)cr, auto_cr_bow: 40050076
+(wand)cr, auto_cr_wand: 40050133
+cd: 40050067
+break, break(axe): 40050004
+accel, accel(dragon): 40050136
+str, hp70str, hp70str(dragon): 40050122
+hp100str: 40050093
+flurrystr, flurrystr(wolf): 40050142
+flurrystr(lance): 40050002
+strdeb: 40050119
+od: 40050150
+bleed: 40050124
+hp70cr, auto_cr_else: 40050009
+flurrycr: auto_flurrycr
+(water)flurrycr, auto_flurrycr_water: 40050029
+(wind)flurrycr, auto_flurrycr_wind: 40050083
+(shadow)flurrycr, auto_flurrycr_shadow: 40050083
+cddb: 40050088
+strdb: 40050098
+dclaws: 40050073
+poison: 40050121
+burn: 40050107
+para: 40050084
+frost, frostbite: 40050148
+flash, flashburn: 40050130
+storm, stormlash: 40050128
+shadow, shadowblight: 40050120
+scorch, scorchrend: 40050125
+### defense (slot 1, 5*)###
+hp70def, def: 40050028
+ddef: 40050117
+lightres: 40050032
+shadowres: 40050017
+res: 40050154
+### skill (slot 1, 5*) ###
+skd, sd: auto_skd
+(sword)skd, auto_skd_sword: 40050042
+(blade)skd, auto_skd_blade: 40050140
+(dagger)skd, auto_skd_dagger: 40050069
+(axe)skd, auto_skd_axe: 40050066
+(lance)skd, auto_skd_lance: 40050034
+(bow)skd, auto_skd_bow: 40050053
+(wand)skd, auto_skd_bow: 40050019
+(staff)skd, auto_skd_staff: 40050132
+(gun)skd, auto_skd_gun: 40050129
+dskill, tri: 40050101
+shaste, haste: auto_shaste, 40050020
+(flame)shaste, auto_shaste_flame: 40050052
+(water)shaste, auto_shaste_water: 40050109
+(wind)shaste, auto_shaste_wind: 40050086
+(light)shaste, auto_shaste_light: 40050147
+(shadow)shaste, auto_shaste_shadow: 40050144
+recpot: auto_recpot
+(staff)recpot, auto_recpot_staff: 40050151
+hp70recpot, auto_recpot_else: 40050008
+hp100recpot: 40050005
+energyprep: 40050041
+forcecharge, ccc: 40050070
+prep, sprep: 40050039, 40050021
+bufftime: auto_bufftime
+(wind)bufftime, auto_bufftime_wind: 40050036
+bufftime, auto_bufftime_else: 40050100
+debufftime: 40050149
+### dragon (slot 1, 5*) ###
+ddmg: 40050061
+dtime: 40050006
+dhaste: auto_dhaste
+(flame)dhaste, auto_dhaste_flame: 40050155
+(water)dhaste, auto_dhaste_water: 40050156
+(wind)dhaste, auto_dhaste_wind: 40050153
+(light)dhaste, auto_dhaste_light: 40050157
+(shadow)dhaste, auto_dhaste_shadow: 40050158
+elysium: 40050131
+### recovery (slot 1, 5*) ###
+regendb: 40050064
+### affliction prevention (slot 1, 5*) ###
+parares: 40050114
+curseres: 40050027
+bogres: 40050044
+afflictionguard: auto_afflictionguard
+(flame)afflictionguard, auto_afflictionguard_flame: 40050040
+(water)afflictionguard, auto_afflictionguard_water: 40050062
+(wind)afflictionguard, auto_afflictionguard_wind: 40050096
+(light)afflictionguard, auto_afflictionguard_light: 40050043
+(shadow)afflictionguard, auto_afflictionguard_shadow: 40050092
+### other (slot 1, 5*) ###
+hp: 40050060
+playerxp, pexp, pxp: 40050074
+combotime: 40050152

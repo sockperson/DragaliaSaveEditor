@@ -17,6 +17,9 @@ public class Options {
     private boolean showOptionsValues = false; // mainly for debug, not prompted to user
     private boolean promptEditOptions = true;
 
+    // hidden options
+    private boolean openTeamEditor = false;
+
     private String optionsPath = "";
 
     private List<String> missingOptions = new ArrayList<>();
@@ -143,6 +146,7 @@ public class Options {
         maxAddedWeapons = true;
         showOptionsValues = false;
         promptEditOptions = true;
+        openTeamEditor = false;
     }
 
     public String toString () {

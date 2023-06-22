@@ -1,0 +1,4976 @@
+[
+    {
+        "Id": 30119901,
+        "Name": "Battleworn Sword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 0
+    },
+    {
+        "Id": 30129901,
+        "Name": "Soldier's Brand (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30130102,
+        "Name": "Blazing Edge (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30130201,
+        "Name": "Rainbreaker (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30130302,
+        "Name": "Grassrunner (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30130401,
+        "Name": "Featherblade (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30130501,
+        "Name": "Blood Price (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30139901,
+        "Name": "Knight's Sword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30139902,
+        "Name": "Ensorcelled Sword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30139903,
+        "Name": "Broadedge (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140104,
+        "Name": "Crimson Cry (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140105,
+        "Name": "Molten Ingot (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140109,
+        "Name": "Crimson Pyre (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140201,
+        "Name": "Mercurius (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140202,
+        "Name": "Fervent Frost (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140203,
+        "Name": "Blizzard Ingot (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140301,
+        "Name": "Wingblade (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140302,
+        "Name": "Tempest Ravager (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140304,
+        "Name": "Tornado Ingot (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140401,
+        "Name": "Astral Edge (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140403,
+        "Name": "Plasma Ingot (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140404,
+        "Name": "Abandoned Roar (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140501,
+        "Name": "Dark Dementia (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140502,
+        "Name": "Doomfang (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30140503,
+        "Name": "Darkness Ingot (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30149901,
+        "Name": "Knights' Grace (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30149902,
+        "Name": "Blade of Glory (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30149903,
+        "Name": "Gilda Sword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150101,
+        "Name": "Levatein (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150102,
+        "Name": "Inferno Apogee (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150103,
+        "Name": "Blazing Judgment (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150107,
+        "Name": "Absolute Crimson (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150109,
+        "Name": "Flaming Savagetail (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150110,
+        "Name": "Sword of Surging Flame (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150111,
+        "Name": "Chimeratech Commander (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150113,
+        "Name": "Rathalos Firesword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150114,
+        "Name": "Falchion (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150115,
+        "Name": "Sword of Raging Souls (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150116,
+        "Name": "Ascendant Edge (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150119,
+        "Name": "Zealous Armament (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150202,
+        "Name": "Eoantide (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150203,
+        "Name": "Judge of Oceans (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150204,
+        "Name": "Icy Absolution (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150208,
+        "Name": "Absolute Aqua (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150210,
+        "Name": "Raging Aquatail (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150211,
+        "Name": "Eternal Metempsychosis (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150212,
+        "Name": "Chimeratech Anomalocaris (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150214,
+        "Name": "Fearfrost Soulsword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150216,
+        "Name": "Rhyse Sword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150219,
+        "Name": "Wise Defender (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150301,
+        "Name": "Durandal (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150302,
+        "Name": "Hurricane Apogee (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150303,
+        "Name": "Roaring Weald (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150307,
+        "Name": "Absolute Tempest (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150309,
+        "Name": "Slaughtering Stormtail (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150310,
+        "Name": "Chimeratech Cypress (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150312,
+        "Name": "Cholergale (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150313,
+        "Name": "Twistwind Soulsword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150316,
+        "Name": "Valor's Edge (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150401,
+        "Name": "Zex's End (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150402,
+        "Name": "Aureole Apogee (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150403,
+        "Name": "F\u00f3lkvangr (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150404,
+        "Name": "Glintbringer (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150407,
+        "Name": "Radiant Dominion (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150408,
+        "Name": "Death Aeon (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150410,
+        "Name": "Absolute Lightning (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150412,
+        "Name": "Radiant Lighttail (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150413,
+        "Name": "Heavenshaker Soulsword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150414,
+        "Name": "Chimeratech Sirius (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150416,
+        "Name": "Dragalia (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150501,
+        "Name": "D\u00e1insleif (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150502,
+        "Name": "Abyssbringer (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150503,
+        "Name": "Absolute Hex (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150508,
+        "Name": "Prevailing Evil (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150509,
+        "Name": "Virulent Shadowtail (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150510,
+        "Name": "Chimeratech Nocturne (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30150512,
+        "Name": "Stained Soulsword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159901,
+        "Name": "Hero's Sword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159902,
+        "Name": "Hauteclaire (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159903,
+        "Name": "Gram (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159904,
+        "Name": "Lucky Hanetsuki Paddle (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159905,
+        "Name": "Mega Sword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159906,
+        "Name": "Triumphal Breamblade (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159907,
+        "Name": "Fatalis Sword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159917,
+        "Name": "Princess Sword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159918,
+        "Name": "Bandit Sword (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159921,
+        "Name": "Burning Shamshir (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159922,
+        "Name": "Vio Rhyse Alberia (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30159950,
+        "Name": "Bondforged Edge (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160101,
+        "Name": "Nothung (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160103,
+        "Name": "Nothung (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160104,
+        "Name": "Primal Crimson (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160201,
+        "Name": "Ame no Murakumo (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160203,
+        "Name": "Ame no Murakumo (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160204,
+        "Name": "Primal Aqua (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160301,
+        "Name": "Excalibur (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160303,
+        "Name": "Excalibur (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160304,
+        "Name": "Primal Tempest (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160401,
+        "Name": "Caladbolg (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160403,
+        "Name": "Caladbolg (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160404,
+        "Name": "Primal Lightning (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160501,
+        "Name": "Yitian Jian (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160503,
+        "Name": "Yitian Jian (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30160504,
+        "Name": "Primal Hex (Skin)",
+        "WeaponTypeId": 1,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30219901,
+        "Name": "Battleworn Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 0
+    },
+    {
+        "Id": 30230101,
+        "Name": "Valkaheim Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30230201,
+        "Name": "Alighting Butterfly (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30230302,
+        "Name": "Dragon Commander (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30230401,
+        "Name": "Chanzelian Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30230501,
+        "Name": "Sanguine Rain (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30239901,
+        "Name": "Subjugator (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30239902,
+        "Name": "High Shamshir (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30239903,
+        "Name": "Fusion Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240101,
+        "Name": "Flametongue (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240102,
+        "Name": "Blazing Steel (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240106,
+        "Name": "Balefire Votive (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240107,
+        "Name": "Starcutter (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240202,
+        "Name": "Sousui (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240203,
+        "Name": "Obsidian Waterfall (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240206,
+        "Name": "Spumecutter (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240208,
+        "Name": "Crystalline Quietude (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240301,
+        "Name": "Tempest Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240303,
+        "Name": "Verdurewind Cutter (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240304,
+        "Name": "Skycutter (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240305,
+        "Name": "Ignorant Bite (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240402,
+        "Name": "Thunderfang (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240404,
+        "Name": "Obsidian Scintillation (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240405,
+        "Name": "Glorycutter (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240411,
+        "Name": "Faerielight Flash (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240501,
+        "Name": "Ghizlam's Darkblade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240502,
+        "Name": "Unwelcome Meeting (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240503,
+        "Name": "Gloomcutter (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30240504,
+        "Name": "Dreadthirst (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30249901,
+        "Name": "Guardian Seal (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30249902,
+        "Name": "Iron Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30249903,
+        "Name": "Masamura's Pride (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250101,
+        "Name": "Heaven's Acuity (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250102,
+        "Name": "Skyrender (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250103,
+        "Name": "Ogreslayer Judgment (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250104,
+        "Name": "Blinding Conflagration (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250106,
+        "Name": "Great Direblade Kagachi (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250107,
+        "Name": "Liquefaction Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250108,
+        "Name": "Chimeratech Lord (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250110,
+        "Name": "Wyvern Blade &quot;Maple&quot; (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250111,
+        "Name": "Furyblister (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250116,
+        "Name": "Sohaya no Tsurugi (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250201,
+        "Name": "Maar Oasis (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250202,
+        "Name": "Highwater Slicer (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250203,
+        "Name": "Seaspout Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250204,
+        "Name": "Ruinous Torrent (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250206,
+        "Name": "Dark Direblade Mizuha (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250207,
+        "Name": "Shadeflood Waveblade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250208,
+        "Name": "Gush Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250209,
+        "Name": "Chimeratech Hadranax (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250216,
+        "Name": "Azure Resolve (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250301,
+        "Name": "Anemone (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250302,
+        "Name": "Heavenrend (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250303,
+        "Name": "Stormsquall Crash (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250304,
+        "Name": "Endless Horizon (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250306,
+        "Name": "Swift Direblade Hayate (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250307,
+        "Name": "Chimeratech Benzoin (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250309,
+        "Name": "Gustnado Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250310,
+        "Name": "Galeshade Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250316,
+        "Name": "Final Resistance (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250401,
+        "Name": "Heavenwing (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250402,
+        "Name": "Primal Thunder (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250403,
+        "Name": "Brightsheen (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250404,
+        "Name": "Brilliant Flash (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250406,
+        "Name": "Radiant Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250407,
+        "Name": "Hollow Lightning (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250408,
+        "Name": "Shining Direblade Nozuchi (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250409,
+        "Name": "Shadegleam Flashblade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250410,
+        "Name": "Chimeratech Canopus (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250416,
+        "Name": "Harmonic Resolve (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250501,
+        "Name": "Blackwing (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250502,
+        "Name": "Nightsky Ripper (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250503,
+        "Name": "True Abyss (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250505,
+        "Name": "Hollow Nightmare (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250506,
+        "Name": "Grim Direblade Yomotsu (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250507,
+        "Name": "Chimeratech Requiem (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30250509,
+        "Name": "Blade of Fell Visions (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30259901,
+        "Name": "Dane's Favor (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30259902,
+        "Name": "Crimson Shade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30259903,
+        "Name": "Souleater (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30259904,
+        "Name": "Villagelight (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30259905,
+        "Name": "Mega Blade (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30259906,
+        "Name": "Evilsbane Kadomatsu (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30259907,
+        "Name": "Fatalis Xiphos (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30259921,
+        "Name": "Sword of Perseverance (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30259922,
+        "Name": "Rain of Sorrow (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260101,
+        "Name": "Tyrfing (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260103,
+        "Name": "Tyrfing (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260104,
+        "Name": "Raging Conflagration (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260201,
+        "Name": "Ame no Habakiri (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260203,
+        "Name": "Ame no Habakiri (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260204,
+        "Name": "Calamitous Torrent (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260301,
+        "Name": "Arondight (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260303,
+        "Name": "Arondight (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260304,
+        "Name": "Noble Horizon (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260401,
+        "Name": "Fragarach (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260403,
+        "Name": "Fragarach (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260404,
+        "Name": "Daunting Flash (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260501,
+        "Name": "Qixing Baodao (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260503,
+        "Name": "Qixing Baodao (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30260504,
+        "Name": "Eternal Abyss (Skin)",
+        "WeaponTypeId": 2,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30319901,
+        "Name": "Battleworn Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 0
+    },
+    {
+        "Id": 30330101,
+        "Name": "Cruel Kukri (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30330201,
+        "Name": "Water Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30330301,
+        "Name": "Stormspawn (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30330401,
+        "Name": "Conscience (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30330501,
+        "Name": "Assassin's Knife (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30339901,
+        "Name": "Bejeweled Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30339902,
+        "Name": "Gear Knife (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30339903,
+        "Name": "Lover's Ally (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340101,
+        "Name": "Scarlet Talon (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340102,
+        "Name": "Sizzling Enoki Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340103,
+        "Name": "Big Boy of Justice (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340106,
+        "Name": "Conflagrant Ruby Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340201,
+        "Name": "Ultramarine Knife (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340202,
+        "Name": "Chilly Chanterelle Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340204,
+        "Name": "Big Boy of Prudence (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340206,
+        "Name": "Aqueous Sapphire Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340208,
+        "Name": "Wishing Knife (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340301,
+        "Name": "Queensflight (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340302,
+        "Name": "Stormy Shiitake Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340303,
+        "Name": "Big Boy of Fortitude (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340305,
+        "Name": "Zephyric Emerald Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340401,
+        "Name": "Nightbreaker (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340402,
+        "Name": "Big Boy of Temperance (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340404,
+        "Name": "Luminous Morel Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340405,
+        "Name": "Lucent Opal Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340502,
+        "Name": "Dark Sacrifice (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340504,
+        "Name": "Tenebrous Jet Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340505,
+        "Name": "Big Boy of Requiem (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30340507,
+        "Name": "Sinister Skullcap Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30349901,
+        "Name": "Hardbreaker (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30349902,
+        "Name": "Wyrmfang (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30349903,
+        "Name": "The Dreamer's Greatsword (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350102,
+        "Name": "Aeternal Flame (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350103,
+        "Name": "Vermillion Pain (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350104,
+        "Name": "Searing Stinger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350105,
+        "Name": "Flameruler's Maw (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350107,
+        "Name": "Blazesin (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350108,
+        "Name": "Chimeratech Elite (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350110,
+        "Name": "Blazing Falchion (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350111,
+        "Name": "Blazing Necrom (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350112,
+        "Name": "Lavarush Edge (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350116,
+        "Name": "Faerie's Wish (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350201,
+        "Name": "Lux Lamina (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350202,
+        "Name": "Gorelust (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350203,
+        "Name": "Frigid Sting (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350204,
+        "Name": "The Surge (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350205,
+        "Name": "Tideruler's Maw (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350207,
+        "Name": "Hydroflow Necrom (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350208,
+        "Name": "Chimeratech Vetulicola (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350210,
+        "Name": "Chillgasp (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350216,
+        "Name": "Silent Sting (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350301,
+        "Name": "Karlsnautr (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350302,
+        "Name": "Turbulent Agony (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350303,
+        "Name": "The Gale (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350304,
+        "Name": "Mutterfang (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350305,
+        "Name": "Windruler's Maw (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350307,
+        "Name": "Chimeratech Tea Tree (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350309,
+        "Name": "Stormgale Necrom (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350310,
+        "Name": "Stormbode (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350401,
+        "Name": "Thunderblade Sugaar (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350403,
+        "Name": "Salvation Seeker (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350404,
+        "Name": "Fulminator's Maw (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350406,
+        "Name": "Merciful Claw (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350407,
+        "Name": "Fatetaker (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350408,
+        "Name": "Luminospark Necrom (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350409,
+        "Name": "Chimeratech Capella (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350411,
+        "Name": "Whiteout (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350501,
+        "Name": "Honor Edge (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350503,
+        "Name": "Death Seeker (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350504,
+        "Name": "Shaderuler's Maw (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350506,
+        "Name": "Terrifying Claw (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350507,
+        "Name": "Soulstealer (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350508,
+        "Name": "Chimeratech Rhapsody (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30350510,
+        "Name": "Damnation Necrom (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30359901,
+        "Name": "Kris Naga (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30359902,
+        "Name": "Treasure of the Iron Rose (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30359903,
+        "Name": "Hedgehog (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30359904,
+        "Name": "Mega Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30359905,
+        "Name": "The Big Cheese (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30359906,
+        "Name": "Black Dragon Blade (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30359918,
+        "Name": "Silver Dagger (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30359921,
+        "Name": "Dazzling Star (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30359922,
+        "Name": "Capriccio (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360101,
+        "Name": "Hrotti (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360103,
+        "Name": "Hrotti (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360104,
+        "Name": "Flameruler's Fang (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360201,
+        "Name": "Futsu no Mitama (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360203,
+        "Name": "Futsu no Mitama (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360204,
+        "Name": "Tideruler's Fang (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360301,
+        "Name": "Carnwennan (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360303,
+        "Name": "Carnwennan (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360304,
+        "Name": "Windruler's Fang (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360401,
+        "Name": "Cla\u00edomh Solais (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360403,
+        "Name": "Cla\u00edomh Solais (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360404,
+        "Name": "Fulminator's Fang (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360501,
+        "Name": "Qinghong Jian (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360503,
+        "Name": "Qinghong Jian (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30360504,
+        "Name": "Shaderuler's Fang (Skin)",
+        "WeaponTypeId": 3,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30419901,
+        "Name": "Battleworn Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 0
+    },
+    {
+        "Id": 30430101,
+        "Name": "Argent Battle-Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30430201,
+        "Name": "Axe of the Waves (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30430301,
+        "Name": "Singing Cyclone (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30430401,
+        "Name": "Flash Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30430501,
+        "Name": "Soulreaver (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30439901,
+        "Name": "Warrior's Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30439902,
+        "Name": "Ennobled Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30439903,
+        "Name": "Juggernaut (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440102,
+        "Name": "Crimsonclaw (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440105,
+        "Name": "Inferno Arms (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440107,
+        "Name": "Immolation Relic (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440201,
+        "Name": "Aqua Labrys (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440203,
+        "Name": "Blizzard Relic (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440207,
+        "Name": "Frozen Arms (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440301,
+        "Name": "Winged Destruction (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440302,
+        "Name": "Tempest's Relic (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440306,
+        "Name": "Pulsing Arms (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440401,
+        "Name": "Shining Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440403,
+        "Name": "Banished Relic (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440404,
+        "Name": "Crackling Arms (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440501,
+        "Name": "Traitor's Despair (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440502,
+        "Name": "Regretful Relic (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30440505,
+        "Name": "Punishing Arms (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30449901,
+        "Name": "Plain Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30449902,
+        "Name": "The Tyrant (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30449903,
+        "Name": "Souvenir Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450101,
+        "Name": "Axe of the Blazing King (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450102,
+        "Name": "Heavenwrath Gaze (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450103,
+        "Name": "Blaze Crash (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450104,
+        "Name": "Royal Crimson Heat (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450106,
+        "Name": "Atrocity Crux (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450107,
+        "Name": "Sun Flare Destroyer (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450108,
+        "Name": "Chimeratech Warlord (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450110,
+        "Name": "Rath Blaze Splitter (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450111,
+        "Name": "Hellfire Crash (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450116,
+        "Name": "Divine Force (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450119,
+        "Name": "Conviction Striker (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450201,
+        "Name": "Grand Seadragon (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450202,
+        "Name": "Maelstrom Crux (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450203,
+        "Name": "Permafrost Crash (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450204,
+        "Name": "Jagged Rainstorm (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450205,
+        "Name": "Mercy's Azure Tide (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450207,
+        "Name": "Crusher of the Depths (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450208,
+        "Name": "Icicle Destroyer (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450209,
+        "Name": "Chimeratech Helmetia (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450216,
+        "Name": "Rainbow Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450301,
+        "Name": "Axe of the Southern Cross (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450302,
+        "Name": "Stormwrath Gaze (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450303,
+        "Name": "Jagged Bolt (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450304,
+        "Name": "Squall Crux (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450305,
+        "Name": "Glorystorm's Guide (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450307,
+        "Name": "Chimeratech Palmarosa (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450309,
+        "Name": "Cyclonic Destroyer (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450310,
+        "Name": "Stella Wind Crash (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450316,
+        "Name": "Victor's Harmony (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450401,
+        "Name": "Radiant Swath (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450402,
+        "Name": "Starwrath Gaze (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450403,
+        "Name": "Cleaver of Despair (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450404,
+        "Name": "Mighty Thundercrash (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450406,
+        "Name": "Plasmareaver (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450407,
+        "Name": "Blitzfang (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450408,
+        "Name": "Arrogance Crux (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450409,
+        "Name": "Crushdazzle (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450410,
+        "Name": "Chimeratech Rigel (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450416,
+        "Name": "Ol' Reliable (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450501,
+        "Name": "Primordial Titan (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450503,
+        "Name": "Genocide Cleaver (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450504,
+        "Name": "Shadowy Darkbite Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450506,
+        "Name": "Shadowfang (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450507,
+        "Name": "Indignation Crux (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450508,
+        "Name": "Chimeratech Fugue (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30450510,
+        "Name": "Perdition's Crusher (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30459901,
+        "Name": "Victory Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30459902,
+        "Name": "Executioner Axe Strafe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30459903,
+        "Name": "Halfling's Broadaxe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30459904,
+        "Name": "Mega Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30459905,
+        "Name": "Black Dragon Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30459921,
+        "Name": "Inquisitor's Mercy (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30459922,
+        "Name": "Nine-Toothed Rake (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460101,
+        "Name": "Mj\u00f6lnir (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460103,
+        "Name": "Mj\u00f6lnir (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460104,
+        "Name": "Noble Crimson Heat (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460201,
+        "Name": "Ohohagari (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460203,
+        "Name": "Ohohagari (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460204,
+        "Name": "Mercy's Jeweled Tide (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460301,
+        "Name": "Marmyadose (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460303,
+        "Name": "Marmyadose (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460304,
+        "Name": "Tempest's Guide (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460401,
+        "Name": "Rog Mol (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460403,
+        "Name": "Rog Mol (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460404,
+        "Name": "Indomitable Thundercrash (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460501,
+        "Name": "Fangtian Huaji (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460503,
+        "Name": "Fangtian Huaji (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30460504,
+        "Name": "Nightfall's Darkbite Axe (Skin)",
+        "WeaponTypeId": 4,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30519901,
+        "Name": "Battleworn Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 0
+    },
+    {
+        "Id": 30530101,
+        "Name": "Unsung Hero's Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30530201,
+        "Name": "Azure Jewel (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30530301,
+        "Name": "Gale Spear (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30530401,
+        "Name": "Moonpiercer (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30530402,
+        "Name": "Jack-o'-Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30530501,
+        "Name": "Lance of the Dark (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30539901,
+        "Name": "Trident (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30539902,
+        "Name": "Mailbreaker (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30539903,
+        "Name": "Drill Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540101,
+        "Name": "Flameserpent (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540102,
+        "Name": "Triggerspore Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540106,
+        "Name": "Spiritflame Spear (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540107,
+        "Name": "Burning Fury Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540201,
+        "Name": "Abyssal Prize (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540202,
+        "Name": "Shatterspore Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540204,
+        "Name": "Callous Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540207,
+        "Name": "Gelid Grace (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540302,
+        "Name": "Tempest Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540303,
+        "Name": "Melancholy Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540304,
+        "Name": "Tornadospore Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540306,
+        "Name": "Immortal Wind (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540402,
+        "Name": "Thunderbolt (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540403,
+        "Name": "Lonesome Wish (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540405,
+        "Name": "Shinespore Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540411,
+        "Name": "Highbright Grimspear (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540501,
+        "Name": "Hellish Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540502,
+        "Name": "Lance of Nightmares (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540504,
+        "Name": "Spear of Tragedy (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30540506,
+        "Name": "Sablespore Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30549901,
+        "Name": "Strong Halberd (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30549902,
+        "Name": "Lance of the Innocent (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30549903,
+        "Name": "Ironside Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550101,
+        "Name": "Calamity Trigger (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550102,
+        "Name": "Flamedance Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550103,
+        "Name": "Reiselfeld, the Solar Spray (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550104,
+        "Name": "Pureflame Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550106,
+        "Name": "Ashen Beast (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550107,
+        "Name": "Combustion Flamelance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550108,
+        "Name": "Chimeratech Lancemaster (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550110,
+        "Name": "Spear of Prominence (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550111,
+        "Name": "Underworld Sinner (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550116,
+        "Name": "Last Storm Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550201,
+        "Name": "Ocean Lord (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550202,
+        "Name": "Vortex Beast (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550203,
+        "Name": "Strohm Mare (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550204,
+        "Name": "Icesovereign Trident (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550205,
+        "Name": "Limpid Rush (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550207,
+        "Name": "Lance of Frozen Depths (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550208,
+        "Name": "Raging Tidelance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550209,
+        "Name": "Chimeratech Takakkawia (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550216,
+        "Name": "Howl of the Hungry Beast (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550301,
+        "Name": "Spear of the Northern Cross (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550302,
+        "Name": "Stormpiercer Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550303,
+        "Name": "Windsovereign Trident (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550304,
+        "Name": "Flying Beast (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550305,
+        "Name": "Guiding Gale (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550307,
+        "Name": "Chimeratech Caraway (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550309,
+        "Name": "Supercell (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550310,
+        "Name": "Axiom Piercer (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550316,
+        "Name": "Passion Piercer (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550402,
+        "Name": "Thunder King's Greatspear (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550404,
+        "Name": "Twilight Lost (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550405,
+        "Name": "Brilliant Lightflash (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550407,
+        "Name": "Biting Brightlance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550408,
+        "Name": "Starpiercer (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550409,
+        "Name": "Fulmination Beast (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550410,
+        "Name": "Lance of Bright Skies (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550411,
+        "Name": "Fensalir (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550412,
+        "Name": "Chimeratech Arcturus (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550501,
+        "Name": "Mistilteinn (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550503,
+        "Name": "Final Eclipse (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550504,
+        "Name": "Ebon Scourge Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550506,
+        "Name": "Plaguepiercer (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550507,
+        "Name": "Horrifying Beast (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550508,
+        "Name": "Chimeratech Elegy (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30550510,
+        "Name": "Rakshasan Gloomlance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30559901,
+        "Name": "Pactspear (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30559902,
+        "Name": "Compass Needle (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30559903,
+        "Name": "Gae Bolg (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30559904,
+        "Name": "Mega Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30559905,
+        "Name": "Black Dragon Spear (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30559921,
+        "Name": "Khakkhara Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30559922,
+        "Name": "Gemini (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560101,
+        "Name": "Gungnir (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560103,
+        "Name": "Gungnir (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560104,
+        "Name": "Omniflame Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560201,
+        "Name": "Ame no Nuhoko (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560203,
+        "Name": "Ame no Nuhoko (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560204,
+        "Name": "Limpid Cascade (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560301,
+        "Name": "Rhongomyniad (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560303,
+        "Name": "Rhongomyniad (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560304,
+        "Name": "Gale's Aid (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560401,
+        "Name": "Areadbhar (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560403,
+        "Name": "Areadbhar (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560404,
+        "Name": "Radiant Lightflash (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560501,
+        "Name": "Qinglong Yanyuedao (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560503,
+        "Name": "Qinglong Yanyuedao (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30560504,
+        "Name": "Ebon Plague Lance (Skin)",
+        "WeaponTypeId": 5,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30619901,
+        "Name": "Battleworn Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 0
+    },
+    {
+        "Id": 30630101,
+        "Name": "Flightfyre (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30630201,
+        "Name": "Tidal Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30630302,
+        "Name": "Proof of the Wind (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30630401,
+        "Name": "Galvanic Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30630501,
+        "Name": "Cimmerian Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30639901,
+        "Name": "Composite Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30639902,
+        "Name": "Machine Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30639903,
+        "Name": "Hunter's Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640102,
+        "Name": "Armored Inferno (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640103,
+        "Name": "Blazefungus (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640106,
+        "Name": "Wispfire Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640108,
+        "Name": "Scorchflame Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640201,
+        "Name": "Frostslinger Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640202,
+        "Name": "Freezefungus (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640203,
+        "Name": "Frostbillow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640206,
+        "Name": "Wavefury Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640302,
+        "Name": "Epidemic (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640303,
+        "Name": "Windpiercer (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640304,
+        "Name": "Stormfungus (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640306,
+        "Name": "Ill Wind (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640403,
+        "Name": "Holy Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640404,
+        "Name": "Heaven's Bouquet (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640406,
+        "Name": "Glowfungus (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640411,
+        "Name": "Lightshear Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640501,
+        "Name": "Macabre Malediction (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640502,
+        "Name": "Seductive Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640503,
+        "Name": "Howlshadow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30640505,
+        "Name": "Duskfungus (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30649901,
+        "Name": "Executor (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30649902,
+        "Name": "Faerie Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30649903,
+        "Name": "Duskhawk (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650101,
+        "Name": "Lupis Solis (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650102,
+        "Name": "Vulcanrage (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650103,
+        "Name": "Hellfire Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650104,
+        "Name": "Valkyrie's Fire (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650106,
+        "Name": "Detonation Dreadbow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650107,
+        "Name": "Chimeratech Sniper (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650109,
+        "Name": "Dark Filament (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650110,
+        "Name": "Soul Corrupter (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650111,
+        "Name": "Strifeblazer (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650116,
+        "Name": "Eternal Bloom (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650119,
+        "Name": "Devotion Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650201,
+        "Name": "Peacock's Whorl (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650202,
+        "Name": "Everfrost Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650203,
+        "Name": "Peakbreaker Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650204,
+        "Name": "Azure Mercurius (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650206,
+        "Name": "Streamgorger Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650207,
+        "Name": "Despair Spiral (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650208,
+        "Name": "Chimeratech Hallucigenia (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650210,
+        "Name": "Vortex Tide (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650216,
+        "Name": "Crimson Piercer (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650302,
+        "Name": "Stellar Pegasus (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650303,
+        "Name": "Windhoze, the Dustblaster (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650304,
+        "Name": "Firmament Auger (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650305,
+        "Name": "Jormungand's Fury (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650307,
+        "Name": "Deathwind Caller (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650308,
+        "Name": "Chimeratech Ajwain (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650310,
+        "Name": "Windcut (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650311,
+        "Name": "Vortex Fury (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650402,
+        "Name": "Thunderbow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650404,
+        "Name": "Tiger Lily Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650405,
+        "Name": "Jupiter's Sky (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650407,
+        "Name": "Astral Echo (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650408,
+        "Name": "Heavenbreaker Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650409,
+        "Name": "Soulshine Splitter (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650410,
+        "Name": "Chimeratech Vega (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650412,
+        "Name": "Lighttorrent Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650501,
+        "Name": "Necro Arcus (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650502,
+        "Name": "Black Dahlia Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650503,
+        "Name": "Hellish Prophecy (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650505,
+        "Name": "Astral Cruelty (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650506,
+        "Name": "Deathbinder Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650507,
+        "Name": "Chimeratech Concerto (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30650509,
+        "Name": "Dreadbringer Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30659901,
+        "Name": "Nitralica's Koto (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30659902,
+        "Name": "Accelerator (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30659903,
+        "Name": "Starchaser (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30659904,
+        "Name": "Chimera's Guilt (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30659905,
+        "Name": "Mega Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30659906,
+        "Name": "Black Dragon Bow (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30659921,
+        "Name": "Raptor's Beak (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30659922,
+        "Name": "Tempest (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660101,
+        "Name": "\u00dddalir (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660103,
+        "Name": "\u00dddalir (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660104,
+        "Name": "Valkyrie's Hellfire (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660201,
+        "Name": "Ame no Hajiyumi (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660203,
+        "Name": "Ame no Hajiyumi (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660204,
+        "Name": "Sapphire Mercurius (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660301,
+        "Name": "Failnaught (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660303,
+        "Name": "Failnaught (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660304,
+        "Name": "Jormungand's Wrath (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660401,
+        "Name": "Tathlum (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660403,
+        "Name": "Tathlum (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660404,
+        "Name": "Jupiter's Shimmer (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660501,
+        "Name": "Longshe Gong (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660503,
+        "Name": "Longshe Gong (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30660504,
+        "Name": "Nightmare Prophecy (Skin)",
+        "WeaponTypeId": 6,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30719901,
+        "Name": "Battleworn Wand (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 0
+    },
+    {
+        "Id": 30730101,
+        "Name": "Sunrise Scepter (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30730201,
+        "Name": "Oceandweller (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30730301,
+        "Name": "Menace of the Storm (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30730401,
+        "Name": "Thunder Wand (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30730501,
+        "Name": "Meggidoth Ruiner (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30739901,
+        "Name": "Wizard's Rod (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30739902,
+        "Name": "Sorcerer's Cudgel (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30739903,
+        "Name": "Conchoidal Rod (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740101,
+        "Name": "Firefiend's Howl (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740102,
+        "Name": "The Second Wail (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740103,
+        "Name": "Volcano Cane (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740105,
+        "Name": "Brightshimmer Wand (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740201,
+        "Name": "Rod of Tears (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740202,
+        "Name": "The Second Scream (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740205,
+        "Name": "Frost Cane (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740207,
+        "Name": "Lonesome Echodrip (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740208,
+        "Name": "Ringing Wand (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740301,
+        "Name": "Tempest Wand (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740302,
+        "Name": "The Fury (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740304,
+        "Name": "Stormsurge Wand (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740306,
+        "Name": "Storm Cane (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740402,
+        "Name": "Conductor Rod (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740404,
+        "Name": "The Madness (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740405,
+        "Name": "Rainbow Cane (Wand) (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740409,
+        "Name": "Dazzling Ray of Hope (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740501,
+        "Name": "Accursed Vare (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740503,
+        "Name": "Darkheart (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740504,
+        "Name": "Abyssal Cane (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30740506,
+        "Name": "The Lamentation (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30749901,
+        "Name": "Latchkey (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30749902,
+        "Name": "Rod of Alchemy (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30749903,
+        "Name": "Moonlight Rod (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750101,
+        "Name": "Terranigmus (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750102,
+        "Name": "Scepter of Infinite Fire (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750103,
+        "Name": "Infernal Conduit (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750104,
+        "Name": "Infernoblaze (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750106,
+        "Name": "Hellwing (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750107,
+        "Name": "Chimeratech Archmage (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750109,
+        "Name": "Plage Rod (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750110,
+        "Name": "Revenant of Annihilation (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750111,
+        "Name": "Undying Flame (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750116,
+        "Name": "Memento Futurum (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750202,
+        "Name": "Ocean Monarch (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750203,
+        "Name": "Tsunamiwing (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750204,
+        "Name": "Spirit Breaker (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750205,
+        "Name": "Seasovereign's Rule (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750206,
+        "Name": "Aquatic Spiral (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750208,
+        "Name": "Chimeratech Hurdia (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750210,
+        "Name": "Revenant of Calamity (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750211,
+        "Name": "Cascading Cataract (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750216,
+        "Name": "Crystalian Protector (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750301,
+        "Name": "Phytalmios (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750302,
+        "Name": "Scepter of the Maelstrom (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750303,
+        "Name": "Typhoon's Rule (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750304,
+        "Name": "Tempestwing (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750305,
+        "Name": "Grand Tempest (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750307,
+        "Name": "Chimeratech Frankin (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750309,
+        "Name": "Revenant of Pollution (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750310,
+        "Name": "The Inevitable Squall (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750316,
+        "Name": "Bondforged Resistance (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750401,
+        "Name": "Twilight Shimmer (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750403,
+        "Name": "Sacred Requiem (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750404,
+        "Name": "Primeval Thunder (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750406,
+        "Name": "Worldshaker (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750407,
+        "Name": "Shinewing (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750408,
+        "Name": "Revenant of Sol (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750409,
+        "Name": "Chimeratech Betelgeuse (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750411,
+        "Name": "Ray of Perpetuity (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750501,
+        "Name": "Underworld Despair (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750503,
+        "Name": "Dirge of Desperation (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750504,
+        "Name": "Darkbinder (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750506,
+        "Name": "Fateshaker (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750507,
+        "Name": "Chaoswing (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750508,
+        "Name": "Chimeratech Oratorio (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30750510,
+        "Name": "Revenant of Corruption (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30759901,
+        "Name": "Wand of the Torrent (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30759902,
+        "Name": "Welkin Wand (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30759903,
+        "Name": "Chaotic Horizon (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30759904,
+        "Name": "Mega Wand (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30759905,
+        "Name": "Catspaw Rod (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30759906,
+        "Name": "Fatalis Rhabdos (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30759921,
+        "Name": "Grim Apparatus (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30759922,
+        "Name": "Heavenly Light (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760101,
+        "Name": "Br\u00edsingr (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760103,
+        "Name": "Br\u00edsingr (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760104,
+        "Name": "Hellblaze (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760201,
+        "Name": "Omizununo (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760203,
+        "Name": "Omizununo (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760204,
+        "Name": "Aqueous Prison (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760301,
+        "Name": "Camelot (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760303,
+        "Name": "Camelot (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760304,
+        "Name": "Storm Chaser (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760401,
+        "Name": "Brionac (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760403,
+        "Name": "Brionac (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760404,
+        "Name": "Electron Burst (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760501,
+        "Name": "Jiu Ci (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760503,
+        "Name": "Jiu Ci (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30760504,
+        "Name": "Umbral Chaser (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30819901,
+        "Name": "Battleworn Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 0
+    },
+    {
+        "Id": 30830101,
+        "Name": "Staff of Punishing Flame (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30830201,
+        "Name": "Scendecipher (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30830301,
+        "Name": "Windreader (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30830401,
+        "Name": "Astrolabe (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30830402,
+        "Name": "Vampire's Lantern (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30830501,
+        "Name": "Meggidoth Wisp (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30839901,
+        "Name": "Staff of Grace (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30839902,
+        "Name": "Long Ankh (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30839903,
+        "Name": "Staff of the Horned Snake (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30840101,
+        "Name": "Ark Voyager (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30840102,
+        "Name": "Ashchant (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30840201,
+        "Name": "Marine Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30840203,
+        "Name": "Seachant (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30840301,
+        "Name": "Windeater Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30840303,
+        "Name": "Stormchant (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30840401,
+        "Name": "Tonitrus (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30840403,
+        "Name": "Luminchant (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30840501,
+        "Name": "Sanity's Bane (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30840502,
+        "Name": "Ebonchant (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30849901,
+        "Name": "Staff of Life (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30849902,
+        "Name": "Staff of Fortune (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30849903,
+        "Name": "Beauty's Balm (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850101,
+        "Name": "Staff of the Red Emperor (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850102,
+        "Name": "Endless Demise (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850103,
+        "Name": "Igniflare Core (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850104,
+        "Name": "Blazegambol (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850106,
+        "Name": "Fangflame Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850107,
+        "Name": "Chimeratech Cardinal (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850109,
+        "Name": "Wyvern Staff &quot;Elsewhere&quot; (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850110,
+        "Name": "Ruinous Eruption (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850111,
+        "Name": "Flamma Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850116,
+        "Name": "Eternal Breeze (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850201,
+        "Name": "Bracing Waters (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850202,
+        "Name": "Endless Azure Core (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850203,
+        "Name": "Drenching Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850204,
+        "Name": "Ocean's Embrace (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850206,
+        "Name": "Riptide Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850207,
+        "Name": "Breath Snuffer (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850208,
+        "Name": "Chimeratech Metaldetes (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850210,
+        "Name": "Flumen Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850301,
+        "Name": "Ancient Mage's Windcane (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850302,
+        "Name": "Rise and Fall (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850303,
+        "Name": "Skypainter Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850304,
+        "Name": "Stormruler (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850306,
+        "Name": "Whirlwind Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850307,
+        "Name": "Chimeratech Marjoram (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850309,
+        "Name": "Blastphantom (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850310,
+        "Name": "Staff of Ventus (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850401,
+        "Name": "Light of Judgment (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850402,
+        "Name": "Genesis Bringer (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850403,
+        "Name": "Aria of Valor (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850404,
+        "Name": "Heavensneer (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850406,
+        "Name": "Dominus of Ever (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850407,
+        "Name": "Beastblast Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850408,
+        "Name": "Glintshine Grudge (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850409,
+        "Name": "Chimeratech Procyon (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850411,
+        "Name": "Everfulgor (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850501,
+        "Name": "Caduceus (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850502,
+        "Name": "Aria of Lamentation (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850503,
+        "Name": "Dark Hunger (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850505,
+        "Name": "Dominus of the Truedark (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850506,
+        "Name": "Malevolence Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850507,
+        "Name": "Chimeratech Coda (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30850509,
+        "Name": "Creeping Rancor (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30859901,
+        "Name": "Cane of Soul's Repose (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30859902,
+        "Name": "Rainbow Cane (Staff) (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30859903,
+        "Name": "Otherworldly Bough (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30859904,
+        "Name": "Mega Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30859905,
+        "Name": "Black Dragon Staff (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30859921,
+        "Name": "Fate's Fulcrum (Skin)",
+        "WeaponTypeId": 7,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30859922,
+        "Name": "Drifting Future (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30859923,
+        "Name": "Elegant Waltz (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860101,
+        "Name": "Gjallarhorn (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860103,
+        "Name": "Gjallarhorn (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860104,
+        "Name": "Flamerollick (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860201,
+        "Name": "Kunado (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860203,
+        "Name": "Kunado (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860204,
+        "Name": "Ruler of the Jeweled Tide (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860301,
+        "Name": "Avalon (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860303,
+        "Name": "Avalon (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860304,
+        "Name": "Squallruler (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860401,
+        "Name": "Del Frith (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860403,
+        "Name": "Del Frith (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860404,
+        "Name": "Cosmic Ruler (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860501,
+        "Name": "Li Zhang (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860503,
+        "Name": "Li Zhang (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30860504,
+        "Name": "Consuming Darkness (Skin)",
+        "WeaponTypeId": 8,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30919901,
+        "Name": "Battleworn Manacaster (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 0
+    },
+    {
+        "Id": 30940102,
+        "Name": "Antique Ray (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30940202,
+        "Name": "Antique Flow (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30940302,
+        "Name": "Antique Gale (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30940402,
+        "Name": "Antique Blaze (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30940502,
+        "Name": "Antique Darkness (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30949901,
+        "Name": "Antique Manacaster (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30949902,
+        "Name": "Antique Manacaster Mk. 2 (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950102,
+        "Name": "Chanzelian Caster Mk. 65 (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950103,
+        "Name": "Crimson Trigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950110,
+        "Name": "Chimeratech Gunner (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950116,
+        "Name": "Royal Dominator (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950119,
+        "Name": "Alliance Trigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950202,
+        "Name": "Chanzelian Caster Mk. 72 (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950203,
+        "Name": "Aqua Trigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950210,
+        "Name": "Chimeratech Marella (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950219,
+        "Name": "Worthless Shot (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950302,
+        "Name": "Chanzelian Caster Mk. 21 (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950303,
+        "Name": "Tempest Trigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950310,
+        "Name": "Chimeratech Fennel (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950402,
+        "Name": "Chanzelian Caster Mk. 62 (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950403,
+        "Name": "Thundertrigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950410,
+        "Name": "Chimeratech Al Nasr (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950502,
+        "Name": "Chanzelian Caster Mk. 81 (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950503,
+        "Name": "Curse Trigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30950510,
+        "Name": "Chimeratech Cantata (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30959901,
+        "Name": "Chanzelian Caster (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30959902,
+        "Name": "Chanzelian Caster Mk. 73 (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30959918,
+        "Name": "Replica Machine Gun (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30959921,
+        "Name": "Magnum Opus (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30959922,
+        "Name": "ExMM109 &quot;Orestes&quot; (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960101,
+        "Name": "Draupnir (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960103,
+        "Name": "Draupnir (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960104,
+        "Name": "Big Bang Trigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960201,
+        "Name": "Ame no Torifune (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960203,
+        "Name": "Ame no Torifune (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960204,
+        "Name": "Aquamarine Trigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960301,
+        "Name": "Gallatin (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960303,
+        "Name": "Gallatin (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960304,
+        "Name": "Cyclone Trigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960401,
+        "Name": "Gae Assail",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960403,
+        "Name": "Gae Assail (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960404,
+        "Name": "Divine Trigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960501,
+        "Name": "Wanli Qi Yunyan (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960503,
+        "Name": "Wanli Qi Yunyan (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    },
+    {
+        "Id": 30960504,
+        "Name": "Dusk Trigger (Skin)",
+        "WeaponTypeId": 9,
+        "IsPlayable": 1
+    }
+]

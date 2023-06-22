@@ -1,0 +1,25 @@
+### offense (slot 3, sindom) ###
+cr(lance): 40090004
+storm, stormlash, storm(bow), stormlash(bow): 40090010
+### defense (slot 3, sindom) ###
+fortress, fort, fortress(staff): 40090022
+evasion, reflexive_evasion: 40090028
+### skill (slot 3, sindom) ###
+shaste: 40090008
+skd, sd: 40090002, 40090001
+skd(butterfly): 40090025
+skd(deer): 40090021
+skd(eagle): 40090013
+skd(axe): 40090007
+skd(wolf): 40090002
+skd(serpent): 40090001
+recpot: 40090016
+fod: 40090017
+### other (slot 3, sindom) ###
+corrosion, corro: 40090003
+staffpsalm: 40090029
+bowpsalm: 40090018
+lancepsalm: 40090023
+swordpsalm, swordpsalm(lance): 40090012
+swordpsalm(bow): 40090006
+revive: 40090011

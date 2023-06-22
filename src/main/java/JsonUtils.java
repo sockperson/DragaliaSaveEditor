@@ -6,6 +6,7 @@ import java.util.*;
 
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
+import javafx.util.Pair;
 import meta.*;
 
 public class JsonUtils {
@@ -13,7 +14,7 @@ public class JsonUtils {
     private static final int MAX_DRAGON_CAPACITY = 525;
 
     private static Options options;
-    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+    public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     private final String savePath;
     private String optionsPath;
@@ -27,29 +28,31 @@ public class JsonUtils {
     private Random rng = new Random();
 
     //savefile
-    private JsonObject jsonData;
+    public JsonObject jsonData;
 
     //pulled from datamine
-    private JsonArray abilitiesList;
+    public JsonArray abilitiesList;
 
     //Ability Name --> Ability ID
     private HashMap<String, Integer> kscapeAbilityMap = new HashMap<>();
     //Adventurer Title --> Portrait Print ID
-    private HashMap<String, Integer> kscapeLabelsMap = new HashMap<>();
+    public HashMap<String, Integer> kscapeLabelsMap = new HashMap<>();
     private List<Integer> kscapePortraitIDs = new ArrayList<>();
     //Adventurer ID --> Adventurer Story IDs
     private HashMap<Integer, List<Integer>> adventurerStoryMap = new HashMap<>();
 
     //Maps
-    private HashMap<Integer, AdventurerMeta> idToAdventurer = new HashMap<>();
-    private HashMap<String, AdventurerMeta> nameToAdventurer = new HashMap<>();
+    public HashMap<Integer, AdventurerMeta> idToAdventurer = new HashMap<>();
+    public HashMap<String, AdventurerMeta> nameToAdventurer = new HashMap<>();
 
-    private HashMap<Integer, DragonMeta> idToDragon = new HashMap<>();
-    private HashMap<String, DragonMeta> nameToDragon = new HashMap<>();
+    public HashMap<Integer, DragonMeta> idToDragon = new HashMap<>();
+    public HashMap<String, DragonMeta> nameToDragon = new HashMap<>();
 
-    private HashMap<Integer, WeaponMeta> idToWeapon = new HashMap<>();
-    private HashMap<Integer, String> idToWeaponSkinName = new HashMap<>();
-    private HashMap<Integer, WyrmprintMeta> idToPrint = new HashMap<>();
+    public HashMap<Integer, WeaponMeta> idToWeapon = new HashMap<>();
+    public HashMap<String, WeaponMeta> weaponFunctionalNameToWeapon = new HashMap<>();
+    //public HashMap<Integer, String> idToWeaponSkinName = new HashMap<>();
+    public HashMap<Integer, WeaponSkinMeta> idToWeaponSkin = new HashMap<>();
+    public HashMap<Integer, WyrmprintMeta> idToPrint = new HashMap<>();
     private HashMap<Integer, FacilityMeta> idToFacility = new HashMap<>();
     private HashMap<Integer, MaterialMeta> idToMaterial = new HashMap<>();
 
@@ -64,7 +67,6 @@ public class JsonUtils {
 
     public JsonUtils(String savePath, String optionsPath, String jarPath, boolean inJar) {
         log("Initializing JsonUtils...");
-
         this.savePath = savePath;
         this.optionsPath = optionsPath;
         this.jarPath = jarPath;
@@ -163,7 +165,17 @@ public class JsonUtils {
         return GSON.fromJson(reader, JsonObject.class);
     }
 
-    private BufferedReader getBufferedReader(String... more){
+    public JsonObject getJsonObject (String path) {
+        try {
+            JsonReader reader = new JsonReader(new FileReader(path));
+            return GSON.fromJson(reader, JsonObject.class);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    BufferedReader getBufferedReader(String... more){
         return new BufferedReader(getRsrcReader(more));
     }
 
@@ -184,12 +196,12 @@ public class JsonUtils {
         return new InputStreamReader(in, StandardCharsets.UTF_8);
     }
 
-    private JsonArray getJsonArray(String more) {
+    public JsonArray getJsonArrayFromRsrc(String more) {
         JsonReader reader = new JsonReader(getRsrcReader(more));
         return GSON.fromJson(reader, JsonArray.class);
     }
 
-    private JsonObject getJsonObject(String more) {
+    public JsonObject getJsonObjectFromRsrc(String more) {
         JsonReader reader = new JsonReader(getRsrcReader(more));
         return GSON.fromJson(reader, JsonObject.class);
     }
@@ -244,6 +256,7 @@ public class JsonUtils {
         jsonObj.addProperty(lastMemberName, value);
     }
 
+    // no validation
     private JsonElement getField(String... memberNames) {
         JsonElement jsonEle = jsonData;
         for (String memberName : memberNames) {
@@ -281,6 +294,18 @@ public class JsonUtils {
         return max;
     }
 
+    // badly named function idk what else to name it
+    private int getIdFromKeyId(String returnIdFieldName, String keyIdFieldName, int targetKeyId, String... memberNames){
+        JsonArray jsonArray = getFieldAsJsonArray(memberNames);
+        for (JsonElement jsonEle : jsonArray) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            if (jsonObj.get(keyIdFieldName).getAsInt() == targetKeyId) {
+                return jsonObj.get(returnIdFieldName).getAsInt();
+            }
+        }
+        return -1;
+    }
+
     //Reads
     private void readAliasesData() throws IOException {
         //Get aliases
@@ -311,7 +336,7 @@ public class JsonUtils {
     }
 
     private void readAdventurerData() throws IOException {
-        for (JsonElement jsonEle : getJsonArray("adventurers.json")) {
+        for (JsonElement jsonEle : getJsonArrayFromRsrc("adventurers.json")) {
             JsonObject adv = jsonEle.getAsJsonObject();
             String baseName = adv.get("FullName").getAsString();
             String name = baseName.toUpperCase();
@@ -342,7 +367,8 @@ public class JsonUtils {
                     adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral, maxA3Level,
                     adv.get("MinHp3").getAsInt(), adv.get("MinHp4").getAsInt(), adv.get("MinHp5").getAsInt(),
                     adv.get("MinAtk3").getAsInt(), adv.get("MinAtk4").getAsInt(), adv.get("MinAtk5").getAsInt(),
-                    adv.get("Rarity").getAsInt(), manaCircleType
+                    adv.get("Rarity").getAsInt(), manaCircleType, adv.get("ElementalType").getAsString(),
+                    adv.get("WeaponType").getAsString()
                     );
             idToAdventurer.put(id, unit);
             nameToAdventurer.put(name, unit);
@@ -353,7 +379,7 @@ public class JsonUtils {
     }
 
     private void readDragonsData() throws IOException {
-        for (JsonElement jsonEle : getJsonArray("dragons.json")) {
+        for (JsonElement jsonEle : getJsonArrayFromRsrc("dragons.json")) {
             JsonObject drg = jsonEle.getAsJsonObject();
             String baseName = drg.get("FullName").getAsString();
             String name = baseName.toUpperCase();
@@ -382,11 +408,11 @@ public class JsonUtils {
     }
 
     private void readAbilitiesData() throws IOException {
-        abilitiesList = getJsonArray("abilities.json");
+        abilitiesList = getJsonArrayFromRsrc("abilities.json");
     }
 
     private void readMaterialsData() throws IOException {
-        getJsonArray("materials.json").forEach(jsonEle -> {
+        getJsonArrayFromRsrc("materials.json").forEach(jsonEle -> {
             JsonObject mat = jsonEle.getAsJsonObject();
             String name = mat.get("Name").getAsString();
             int id = mat.get("Id").getAsInt();
@@ -403,7 +429,7 @@ public class JsonUtils {
     private void readFacilitiesData() throws IOException {
         HashMap<Integer, JsonObject> facilitiesMap = new HashMap<>();
         //pull wiki facilities data
-        getJsonArray("facilities.json").forEach(jsonEle -> {
+        getJsonArrayFromRsrc("facilities.json").forEach(jsonEle -> {
             JsonObject facility = jsonEle.getAsJsonObject();
             int id = facility.get("Id").getAsInt();
             facilitiesMap.put(id, facility);
@@ -436,11 +462,11 @@ public class JsonUtils {
         }
 
         //get max facility bonus data
-        maxedFacilityBonuses = getJsonObject("maxedFacilityBonuses.json");
+        maxedFacilityBonuses = getJsonObjectFromRsrc("maxedFacilityBonuses.json");
     }
 
     private void readWeaponsData() throws IOException {
-        for(JsonElement jsonEle : getJsonArray("weapons.json")){
+        for(JsonElement jsonEle : getJsonArrayFromRsrc("weapons.json")){
             JsonObject weaponData = jsonEle.getAsJsonObject();
             int id = weaponData.get("Id").getAsInt();
             List<Integer> passiveIds = jsonArrayToList(weaponData.get("PassiveAbilities").getAsJsonArray());
@@ -449,11 +475,12 @@ public class JsonUtils {
                     weaponData.get("WeaponSeries").getAsString(), weaponData.get("Rarity").getAsInt(),
                     passiveIds, weaponData.get("HasWeaponBonus").getAsBoolean());
             idToWeapon.put(id, weapon);
+            weaponFunctionalNameToWeapon.put(weapon.getFunctionalName().toUpperCase(Locale.ROOT), weapon);
         }
     }
 
     private void readPrintsData() throws IOException {
-        for(JsonElement jsonEle : getJsonArray("prints.json")){
+        for(JsonElement jsonEle : getJsonArrayFromRsrc("prints.json")){
             JsonObject printData = jsonEle.getAsJsonObject();
             int id = printData.get("Id").getAsInt();
             WyrmprintMeta print = new WyrmprintMeta(printData.get("Name").getAsString(),
@@ -463,7 +490,7 @@ public class JsonUtils {
     }
 
     private void readKscapeData() throws IOException {
-        JsonObject kscapeJson = getJsonObject("kscape.json");
+        JsonObject kscapeJson = getJsonObjectFromRsrc("kscape.json");
         for (Map.Entry<String, JsonElement> entry : kscapeJson.entrySet()) {
             kscapeAbilityMap.put(entry.getKey(), entry.getValue().getAsInt());
         }
@@ -487,7 +514,7 @@ public class JsonUtils {
     }
 
     private void readStoryData() throws IOException {
-        for(Map.Entry<String, JsonElement> entry : getJsonObject("CharaStories.json").entrySet()){
+        for(Map.Entry<String, JsonElement> entry : getJsonObjectFromRsrc("CharaStories.json").entrySet()){
             int id = Integer.parseInt(entry.getKey());
             JsonObject stories = entry.getValue().getAsJsonObject();
             List<Integer> storyIDs = new ArrayList<>();
@@ -501,14 +528,14 @@ public class JsonUtils {
     }
 
     private void readWeaponSkinData() throws IOException {
-        BufferedReader br = getBufferedReader("weaponSkins.txt");
-        String out = br.readLine();
-        while (out != null) {
-            String[] fields = out.split("\t");
-            int skinID = Integer.parseInt(fields[0].split("_")[3]);
-            String name = fields[2];
-            out = br.readLine();
-            idToWeaponSkinName.put(skinID, name);
+        for(JsonElement jsonEle : getJsonArrayFromRsrc("weaponSkins.json")){
+            JsonObject weaponSkin = jsonEle.getAsJsonObject();
+            int id = weaponSkin.get("Id").getAsInt();
+            String name = weaponSkin.get("Name").getAsString();
+            int weaponTypeId = weaponSkin.get("WeaponTypeId").getAsInt();
+            boolean isPlayable = weaponSkin.get("IsPlayable").getAsInt() == 1;
+            WeaponSkinMeta weaponSkinMeta = new WeaponSkinMeta(name, id, weaponTypeId, isPlayable);
+            idToWeaponSkin.put(id, weaponSkinMeta);
         }
     }
 
@@ -608,17 +635,12 @@ public class JsonUtils {
 
     //Builders
 
-    private void addTalisman(String advName, int id1, int id2, int id3, int count) {
+    public void addTalisman(String advName, int id1, int id2, int id3, int count) {
+        int assignedKeyId = 0;
         for(int i = 0; i < count; i++){
             JsonObject out = new JsonObject();
-
-            int keyIdMax = 0;   //need to keep track of keyId
-            //Obtain keyIdMax
-            JsonArray ownedTalismans = getFieldAsJsonArray("data", "talisman_list");
-            for (JsonElement jsonEle : ownedTalismans) {
-                JsonObject ownedTalisman = jsonEle.getAsJsonObject();
-                keyIdMax = Math.max(keyIdMax, ownedTalisman.get("talisman_key_id").getAsInt());
-            }
+            int keyIdMax = getMaxFromObjListField("talisman_key_id", "data", "talisman_list");
+            assignedKeyId = keyIdMax + 200;
             String name = advName.toUpperCase();
             if(!nameToAdventurer.containsKey(name)){
                 System.out.println("No adventurer found for name: " + advName + "!");
@@ -630,7 +652,7 @@ public class JsonUtils {
             }
             int portraitID = kscapeLabelsMap.get(label);
 
-            out.addProperty("talisman_key_id", keyIdMax + 200);
+            out.addProperty("talisman_key_id", assignedKeyId);
             out.addProperty("talisman_id", portraitID);
             out.addProperty("is_lock", 0);
             out.addProperty("is_new", 1);
@@ -643,6 +665,112 @@ public class JsonUtils {
 
             getFieldAsJsonArray("data", "talisman_list").add(out);
         }
+    }
+
+    // return keyId of added talisman
+    // no validation on labelId
+    public int addTalisman(int portraitID, int id1, int id2, int id3) {
+        JsonObject out = new JsonObject();
+        int keyIdMax = getMaxFromObjListField("talisman_key_id", "data", "talisman_list");
+        int assignedKeyId = keyIdMax + 200;
+
+        out.addProperty("talisman_key_id", assignedKeyId);
+        out.addProperty("talisman_id", portraitID);
+        out.addProperty("is_lock", 0);
+        out.addProperty("is_new", 1);
+        out.addProperty("talisman_ability_id_1", id1);
+        out.addProperty("talisman_ability_id_2", id2);
+        out.addProperty("talisman_ability_id_3", id3);
+        out.addProperty("additional_hp", 0);
+        out.addProperty("additional_attack", 0);
+        out.addProperty("gettime", Instant.now().getEpochSecond());
+
+        getFieldAsJsonArray("data", "talisman_list").add(out);
+        return assignedKeyId;
+    }
+
+    // returns list of a key ID, sorted by the highest of a certain attr of the object
+    // String keyIdName: name of the key ID field
+    // String sortFieldName: name of the field to sort by
+    // String conditionalField: name of the integer field to check for
+    // int conditionalValue: value of the integer field ^ to check for
+    // String... fields: field traverse path
+    // ex: "dragon_key_id", "level", "dragon_id", 20050522, "data", "dragon_list":
+    // returns key ID of dragons with dragon_id == 2005052, sorted by highest level
+    public List<Integer> getKeyIdListSortedByAttr (String keyIdName, String sortFieldName, String conditionalField,
+                                                   int conditionalValue, String... fields) {
+        JsonArray jsonArray = getFieldAsJsonArray(fields);
+        List<Pair<Integer, Integer>> valAndKeyIdPairs = new ArrayList<>();
+
+        // initial loop, add all matching obj key IDs to output
+        for (JsonElement jsonEle : jsonArray) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            if (jsonObj.get(conditionalField).getAsInt() == conditionalValue) {
+                int sortFieldValue = jsonObj.get(sortFieldName).getAsInt();
+                int keyId = jsonObj.get(keyIdName).getAsInt();
+                Pair<Integer, Integer> valAndKeyIdPair = new Pair<>(sortFieldValue, keyId);
+                valAndKeyIdPairs.add(valAndKeyIdPair);
+            }
+        }
+
+        // 0 entries
+        if (valAndKeyIdPairs.size() == 0) {
+            return new ArrayList<>();
+        }
+        // 1 entry
+        if (valAndKeyIdPairs.size() == 1) {
+            return Collections.singletonList(valAndKeyIdPairs.get(0).getValue());
+        }
+        // sort the output
+        for (int i = 0; i < valAndKeyIdPairs.size() - 1; i++) {
+            Pair<Integer, Integer> pair1 = valAndKeyIdPairs.get(i);
+            Pair<Integer, Integer> pair2 = valAndKeyIdPairs.get(i + 1);
+            if (pair1.getKey() < pair2.getKey()) { // bubble sort...
+                valAndKeyIdPairs.set(i, pair2);
+                valAndKeyIdPairs.set(i + 1, pair1);
+            }
+        }
+        // get key IDs
+        List<Integer> out = new ArrayList<>();
+        for (Pair<Integer, Integer> valAndKeyIdPair : valAndKeyIdPairs) {
+            out.add(valAndKeyIdPair.getValue());
+        }
+        return out;
+    }
+
+    // Returns whether the array at 'fields' contains a 'fieldName' value
+    // String fieldName: the field to check for 'value'
+    // int value: the value to check for
+    // String... fields: field traverse path
+    // ex: "dragon_key_id", 1000, "data", "dragon_list": checks whether the dragon list contains dragon with keyID 1000
+    public boolean arrayHasValue (String fieldName, int value, String... fields) {
+        JsonArray jsonArray = getFieldAsJsonArray(fields);
+        for (JsonElement jsonEle : jsonArray) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            if (jsonObj.get(fieldName).getAsInt() == value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Returns value of a field for the object in array corresponding to 'fields',
+    // with a value matching the value in 'checkFieldName'
+    // String valueFieldName: the field to return value for
+    // String checkFieldName: the field to check 'checkFieldValue' for
+    // int checkFieldValue: the value to check 'checkFieldName' for
+    // String... fields: field traverse path
+    // ex: "equipable_count", "ability_crest_id", 100, "data", "ability_crest_list":
+    // searches for a wyrmprint of ID == 100, and returns its equipable count
+    public int getValueFromObjInArray (String valueFieldName, String checkFieldName, int checkFieldValue, String... fields) {
+        JsonArray jsonArray = getFieldAsJsonArray(fields);
+        for (JsonElement jsonEle : jsonArray) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            if (jsonObj.get(checkFieldName).getAsInt() == checkFieldValue) {
+                return jsonObj.get(valueFieldName).getAsInt();
+            }
+        }
+        return -1;
     }
 
     private JsonObject buildTalisman(String label, String[] combo, int keyIdOffset) {
@@ -815,7 +943,7 @@ public class JsonUtils {
     //Returns a built dragon in savedata.txt format
     //Takes in getTime and keyId info and returns maxed out dragon
     //Used to upgrade currently owned dragons
-    private JsonObject buildDragon2(DragonMeta dragonData, int keyId, int getTime) {
+    private JsonObject buildDragonFromExisting(DragonMeta dragonData, int keyId, int getTime, boolean isLocked) {
         JsonObject out = new JsonObject();
         boolean has5UB = dragonData.has5UB();
         int xp = dragonData.getMaxXp();
@@ -830,7 +958,7 @@ public class JsonUtils {
         out.addProperty("hp_plus_count", 50);
         out.addProperty("attack_plus_count", 50);
         out.addProperty("exp", xp);
-        out.addProperty("is_lock", 0);
+        out.addProperty("is_lock", isLocked ? 1 : 0);
         out.addProperty("is_new", 1);
         out.addProperty("get_time", getTime);
         out.addProperty("skill_1_level", 2);
@@ -1025,7 +1153,7 @@ public class JsonUtils {
         return out;
     }
 
-    private JsonObject buildWyrmprint(WyrmprintMeta printData, int getTime) {
+    private JsonObject buildWyrmprintFromExisting(WyrmprintMeta printData, int getTime, boolean isFavorite) {
         JsonObject out = new JsonObject();
         int rarity = printData.getRarity();
         int level = 1;
@@ -1064,7 +1192,7 @@ public class JsonUtils {
             out.addProperty("hp_plus_count", augmentCount);
             out.addProperty("attack_plus_count", augmentCount);
             out.addProperty("is_new", 1);
-            out.addProperty("is_favorite", 0);
+            out.addProperty("is_favorite", isFavorite ? 1 : 0);
             out.addProperty("gettime", getTime == -1 ? Instant.now().getEpochSecond() : getTime);
         } else {
             out.addProperty("ability_crest_id", printData.getId());
@@ -1074,7 +1202,7 @@ public class JsonUtils {
             out.addProperty("hp_plus_count", 0);
             out.addProperty("attack_plus_count", 0);
             out.addProperty("is_new", 1);
-            out.addProperty("is_favorite", 0);
+            out.addProperty("is_favorite", isFavorite ? 1 : 0);
             out.addProperty("gettime", Instant.now().getEpochSecond());
         }
         return out;
@@ -1181,6 +1309,16 @@ public class JsonUtils {
         out.addProperty("ability_2_level", 1);
         out.addProperty("limit_break_count", 4);
         return out;
+    }
+
+    public DragonMeta getDragonFromKeyId (int keyId) {
+        int id = getIdFromKeyId("dragon_id", "dragon_key_id", keyId,
+                "data", "dragon_list");
+        if (id == -1) {
+            return null;
+        } else {
+            return idToDragon.get(id);
+        }
     }
 
     /// Methods \\\
@@ -1306,7 +1444,7 @@ public class JsonUtils {
             int id = entry.getKey();
             if (!ownedIdSet.contains(id)) { //If you don't own this print
                 //Construct new print
-                JsonObject newPrint = buildWyrmprint(wyrmprint, -1);
+                JsonObject newPrint = buildWyrmprintFromExisting(wyrmprint, -1, false);
                 //Add it to your inventory
                 getField("data", "ability_crest_list").getAsJsonArray().add(newPrint);
                 count++;
@@ -1515,16 +1653,19 @@ public class JsonUtils {
         int count = 0;
         Set<Integer> ownedWeaponSkinIDs = getSetFromField("weapon_skin_id", "data", "weapon_skin_list");
 
-        for (Map.Entry<Integer, String> entry : idToWeaponSkinName.entrySet()) {
+        for (Map.Entry<Integer, WeaponSkinMeta> entry : idToWeaponSkin.entrySet()) {
             int weaponSkinId = entry.getKey();
+            WeaponSkinMeta weaponSkinMeta = entry.getValue();
             if (!ownedWeaponSkinIDs.contains(weaponSkinId)) {
-                JsonObject newWeaponSkin = new JsonObject();
-                newWeaponSkin.addProperty("weapon_skin_id", weaponSkinId);
-                newWeaponSkin.addProperty("is_new", 1);
-                newWeaponSkin.addProperty("gettime", Instant.now().getEpochSecond());
-                getFieldAsJsonArray("data", "weapon_skin_list").add(newWeaponSkin);
-                count++;
-                write(entry.getValue().replace(" (Skin)", ""));
+                if (weaponSkinMeta.isPlayable()) {
+                    JsonObject newWeaponSkin = new JsonObject();
+                    newWeaponSkin.addProperty("weapon_skin_id", weaponSkinId);
+                    newWeaponSkin.addProperty("is_new", 1);
+                    newWeaponSkin.addProperty("gettime", Instant.now().getEpochSecond());
+                    getFieldAsJsonArray("data", "weapon_skin_list").add(newWeaponSkin);
+                    count++;
+                    write(weaponSkinMeta.getName().replace(" (Skin)", ""));
+                }
             }
         }
         flushLog("Added weapon skins");
@@ -1705,12 +1846,13 @@ public class JsonUtils {
             int id = ownedDragon.get("dragon_id").getAsInt();
             int getTime = ownedDragon.get("get_time").getAsInt();
             int keyId = ownedDragon.get("dragon_key_id").getAsInt();
+            boolean isLocked = ownedDragon.get("is_lock").getAsInt() == 1;
             DragonMeta dragon = idToDragon.get(id);
             if(dragon == null){
                 continue;
             }
             //Construct new dragon
-            JsonObject updatedUnit = buildDragon2(dragon, keyId, getTime);
+            JsonObject updatedUnit = buildDragonFromExisting(dragon, keyId, getTime, isLocked);
             updatedDragons.add(updatedUnit);
             boolean has5UB = dragon.has5UB();
 
@@ -1799,9 +1941,10 @@ public class JsonUtils {
             JsonObject ownedWyrmprint = jsonEle.getAsJsonObject();
             int id = ownedWyrmprint.get("ability_crest_id").getAsInt();
             int getTime = ownedWyrmprint.get("gettime").getAsInt();
+            boolean isFavorite = ownedWyrmprint.get("is_favorite").getAsInt() == 1;
             WyrmprintMeta wyrmprint = idToPrint.get(id);
             //Construct new print
-            JsonObject updatedPrint = buildWyrmprint(wyrmprint, getTime);
+            JsonObject updatedPrint = buildWyrmprintFromExisting(wyrmprint, getTime, isFavorite);
             updatedWyrmprints.add(updatedPrint);
         }
         //Replace current adventurer list
@@ -1844,20 +1987,16 @@ public class JsonUtils {
         addHackedUnit(19900005);
     }
 
-    public void addOthers(){ //this shouldn't be used tbh
-        addNotteAndDog();
-        addStoryNPCs();
-        addABR3Stars();
-        addUnplayableDragons();
+    public void addDog() { // Hidden Option
+        addHackedUnit(19900004); //Puppy
     }
 
-    public void addNotteAndDog(){
+    public void addNottes() { // Hidden Option
         addHackedUnit(19900003); //Yellow Notte
-        addHackedUnit(19900004); //Puppy
         addHackedUnit(19900006); //Blue Notte
     }
 
-    public void addStoryNPCs(){
+    public void addStoryNPCs(){ // Hidden Option
         for(int i = 0; i < 67; i++){
             addHackedUnit(19100001 + i);
         }
@@ -1867,7 +2006,7 @@ public class JsonUtils {
         addHackedUnit(99900009); //Gunner Cleo
     }
 
-    public void addABR3Stars(){
+    public void addABR3Stars(){ // Hidden Option
         for(int i = 0; i < 9; i++){
             addHackedUnit(99130001 + i * 100000);
         }
@@ -1878,29 +2017,30 @@ public class JsonUtils {
                 id -> getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(id)));
     }
 
-    public void addUnplayableDragons(){
+    public void addUnplayableDragons(){ // Hidden Option
+        JsonArray dragons = getField("data", "dragon_list").getAsJsonArray();
         for(int i = 0; i < 27; i++){
-            getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29900001 + i));
+            dragons.add(buildHackedDragon(29900001 + i));
         }
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29800001));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29800002));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29800003));
+        dragons.add(buildHackedDragon(29800001));
+        dragons.add(buildHackedDragon(29800002));
+        dragons.add(buildHackedDragon(29800003));
         for(int i = 0; i < 6; i++){
-            getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(21000001 + i));
+            dragons.getAsJsonArray().add(buildHackedDragon(21000001 + i));
         }
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29940301));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950405));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950116));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950522));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950317));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950523));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950518));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950415));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950524));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950416));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950525));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950121));
-        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(29950320));
+        dragons.add(buildHackedDragon(29940301));
+        dragons.add(buildHackedDragon(29950405));
+        dragons.add(buildHackedDragon(29950116));
+        dragons.add(buildHackedDragon(29950522));
+        dragons.add(buildHackedDragon(29950317));
+        dragons.add(buildHackedDragon(29950523));
+        dragons.add(buildHackedDragon(29950518));
+        dragons.add(buildHackedDragon(29950415));
+        dragons.add(buildHackedDragon(29950524));
+        dragons.add(buildHackedDragon(29950416));
+        dragons.add(buildHackedDragon(29950525));
+        dragons.add(buildHackedDragon(29950121));
+        dragons.add(buildHackedDragon(29950320));
     }
 
     //ehh......
@@ -1999,7 +2139,7 @@ public class JsonUtils {
         addTalisman("syasu", 100100205, 1225, 100100204, 4); //ar20 + hp70 ar10 + ar10
         addTalisman("ranzal", 2172, 2175, 721, 4); //bolk
         addTalisman("alia", 1237, 400000822, 400000821, 1); //dyilia
-        addTalisman("valyx", 2664, 875, 721, 2); //valyx
+        addTalisman("valyx", 2664, 871, 721, 2); //valyx
         addTalisman("emile", 2579, 2578, 806, 2); //emile
         addTalisman("klaus", 2735, 42960, 721, 1); //ned
         addTalisman("marth", 927, 929, 934, 1); //triple Last (buffer)
@@ -2087,14 +2227,13 @@ public class JsonUtils {
         try {
             reader = new JsonReader(new FileReader(path));
         } catch (FileNotFoundException ignored) {
-            System.out.println("JSON data not found at this filepath");
             return false;
         }
 
         try {
             GSON.fromJson(reader, JsonObject.class);
         } catch (JsonSyntaxException e) {
-            System.out.println("savedata.txt does not appear to be in JSON format!");
+            System.out.println("File: " + path + " does not appear to be in JSON format!");
             return false;
         }
         return true;
@@ -2120,7 +2259,10 @@ public class JsonUtils {
 
     public boolean toPromptEditOptions () {
         if (options.hasMissingOptions()) {
-            System.out.println("Missing options found... prompting editing save edit options");
+            System.out.println("Missing options found in the options file...");
+            System.out.println("Using default for missing options, and exporting options file.");
+            options.export();
+            System.out.println("Prompting edit options.");
             return true;
         }
         return options.toPromptEditOptions();
@@ -2129,6 +2271,12 @@ public class JsonUtils {
 
     public Options getOptions () {
         return options;
+    }
+
+    // Team Editing?
+    public void enterTeamEditor(String teamsPath) {
+        TeamsUtil teamsUtil = new TeamsUtil(this, teamsPath);
+        teamsUtil.run();
     }
 
 }

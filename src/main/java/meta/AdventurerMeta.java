@@ -1,21 +1,19 @@
 package meta;
 
+import java.util.Locale;
+
 public class AdventurerMeta {
 
-    private String name, title, manaCircleType;
+    private String name, title, manaCircleType, elementType, weaponType;
     private int id, elementId, maxHp, maxStr, maxLimitBreakCount, maxA3Level;
     private int minHp3, minHp4, minHp5, minStr3, minStr4, minStr5, baseRarity;
 
     private boolean hasSkillShare, hasManaSpiral;
 
-    public static AdventurerMeta DUMMY = new AdventurerMeta("UNKNOWN", "", 0,
-            0, 0, 0, 0, false, false, 0,
-            0, 0, 0, 0, 0, 0, 0, "IDK");
-
     public AdventurerMeta(String name, String title, int id, int elementId, int maxHp, int maxStr,
                           int maxLimitBreakCount, boolean hasSkillShare, boolean hasManaSpiral, int maxA3Level,
                           int minHp3, int minHp4, int minHp5, int minStr3, int minStr4, int minStr5, int baseRarity,
-                          String manaCircleType
+                          String manaCircleType, String elementType, String weaponType
                           ){
         this.name = name;
         this.title = title;
@@ -35,10 +33,14 @@ public class AdventurerMeta {
         this.minStr5 = minStr5;
         this.baseRarity = baseRarity;
         this.manaCircleType = manaCircleType;
+        this.elementType = elementType;
+        this.weaponType = weaponType;
     }
 
     public String getName(){ return name; }
     public String getTitle(){ return title; }
+    public String getElementType(){ return elementType.toLowerCase(Locale.ROOT); }
+    public String getWeaponType(){ return weaponType.toLowerCase(Locale.ROOT); }
     public int getId(){ return id; }
     public int getElementId(){ return elementId; }
     public int getMaxHp(){ return maxHp; }

@@ -1,0 +1,73 @@
+### offense (slot 2, 3-4*) ###
+fs, fs(lance): 40040028
+fs(fish): 40040033
+fs(axe): 40040095
+cr: auto_cr
+(blade)cr, auto_cr_blade: 40040100
+(dagger)cr, auto_cr_dagger: 40040083
+(lance)cr, auto_cr_lance: 40040102
+(gun)cr, auto_cr_gun: 40040090
+(wind)cr: 40040098
+(light)cr: 40040034
+(shadow)cr: 40040101
+break: 40040003
+accel: 40040096
+hp70str: 40040058, 40040030
+od: 40040008
+flurrycr: auto_flurrycr
+flurrycr(dragon), auto_cr_else, auto_flurrycr_else: 40040018
+(flame)flurrycr, auto_flurrycr_flame: 40040053
+strdb: 40040017
+poison: 40040068
+frost, frostbite: 40040048
+flash, flashburn: 40040104
+scorch, scorchrend: 40040105
+cd: auto_cd
+(dagger)cd, auto_cd_dagger: 40040097
+(gun)cd, auto_cd_gun: 40040091
+auto_cd_else: 40040063
+### defense (slot 2, 3-4*) ###
+def, hp70def: 40040047
+hp100def: 40040015
+lifeshield: 40040077
+res: auto_res
+flameres, auto_res_water: 40040065
+waterres, auto_res_wind: 40040081
+windres, auto_res_flame: 40040050
+lightres, auto_res_shadow: 40040061
+shadowres, auto_res_light: 40040060
+### skill (slot 2, 3-4*) ###
+skd, sd: 40040072, 40030019
+shaste, haste: auto_shaste
+(water)shaste, auto_shaste_water: 40040054
+(wind)shaste, auto_shaste_wind: 40040106
+(light)shaste, auto_shaste_light: 40040056
+shaste(bow), auto_shaste_else: 40040082
+recpot: auto_recpot
+(wand)recpot, auto_recpot_wand: 40040094
+auto_recpot_else: 40040070
+energydb: 40040051
+comboenergy: 40040052
+prep: 40040089
+prep25: 40040088
+bufftime: 40040062, 40030004
+(flame)bufftime: 40040092
+(water)bufftime: 40040107
+(light)bufftime: 40040067
+(shadow)bufftime: 40040038
+debufftime: 40040087
+### shapeshift (slot 2, 3-4*) ###
+dprep: 40030011
+ddmg: 40040042
+dtime: 40040080
+### recovery (slot 2, 3-4*) ###
+regendb: 40040059
+### affliction prevention (slot 2, 3-4*) ###
+poisonres: 40040039, 40040010
+burnres: 40040005
+freezeres: 40040064
+parares: 40040007
+stunres: 40040036
+curseres: 40040009
+bogres: 40040041
+sleepres: 40040031

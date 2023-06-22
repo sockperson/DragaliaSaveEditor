@@ -27,11 +27,16 @@ public class SaveEditor {
     }
 
 
-    //TODO convert these to while loop
+    //TODO convert these to while loop (this impl can cause a stack overflow lol)
     //this code sucks who wrote it
 
+    public static String input(String question) {
+        System.out.print(question + ": ");
+        return input.nextLine();
+    }
+
     //for writing Options bool values
-    private static void passYesNoArg(String question, String fieldName, Consumer<Boolean> func) {
+    public static void passYesNoArg(String question, String fieldName, Consumer<Boolean> func) {
         //holy moly this sucks
         String fieldVal = "?";
         try {
@@ -56,7 +61,22 @@ public class SaveEditor {
         }
     }
 
-    private static void yesNoQuestion(String question, String response, Runnable func){
+    public static boolean passYesNo(String question) {
+        System.out.print(question + " (y/n): ");
+        String in = input.nextLine();
+        in = in.toUpperCase();
+
+        if(in.equals("Y") || in.equals("YES")){
+            return true;
+        } else if (in.equals("N") || in.equals("NO")){
+            return false;
+        } else {
+            System.out.println("Invalid Input. Enter 'y' or 'n'");
+            return passYesNo(question);
+        }
+    }
+
+    public static void yesNoQuestion(String question, String response, Runnable func){
         System.out.print(question + " (y/n): ");        //print the question
         String in = input.nextLine();                   //take in the input
         in = in.toUpperCase();                          //make the input not case-sensitive
@@ -71,7 +91,7 @@ public class SaveEditor {
         }
     }
 
-    private static void yesNoQuestion(String question, Runnable func){
+    public static void yesNoQuestion(String question, Runnable func){
         System.out.print(question + " (y/n): ");        //print the question
         String in = input.nextLine();                   //take in the input
         in = in.toUpperCase();                          //make the input not case-sensitive
@@ -107,11 +127,11 @@ public class SaveEditor {
             func.run();
         } else if (in.equals("N") || in.equals("NO")){  //if input is 'N', do nothing
             return;
-        } else if (in.equals("MITSUBAP")){
+        } else if (in.equals("MITSUBAP")){              //do both of the funcs if secret input
             System.out.println(response2);
+            func.run();
             func2.run();
-        }
-        else {                                        //if input invalid, ask the question again
+        } else {                                        //if input invalid, ask the question again
             System.out.println("Invalid Input. Enter 'y' or 'n'");
             maybeQuestion(question, response2, func, func2);
         }
@@ -128,6 +148,17 @@ public class SaveEditor {
         }
     }
 
+    private static String getPathInIDE(String programPath, String more) {
+        int indexOfDir = programPath.indexOf("DragaliaSaveEditor");
+        if(indexOfDir == -1){
+            System.out.println("Directory 'DragaliaSaveEditor' not found!");
+            System.exit(98);
+        }
+        String editorPath = Paths.get(programPath.substring(0, indexOfDir), "DragaliaSaveEditor").toString();
+        String savePath = Paths.get(editorPath, more).toString();
+        return savePath;
+    }
+
     public static void main(String[] args){
         System.out.println("\nDragalia Save Editor (v11)\n");
         String programPath = getFilePath();
@@ -135,7 +166,6 @@ public class SaveEditor {
         System.out.print("Enter path for save file: ");
         String path = input.nextLine();
         String savePath = "";
-        String optionsPath = ""; //options.txt should be in the same dir as savefile
         boolean isFilePathInvalid = true;
         boolean isFileJsonObject = false;
         while(isFilePathInvalid || !isFileJsonObject){
@@ -143,16 +173,18 @@ public class SaveEditor {
                 if(isOutOfIDE){
                     savePath = Paths.get(new File(programPath).getParent(), "savedata.txt").toString();
                 } else {
-                    int indexOfDir = programPath.indexOf("DragaliaSaveEditor");
-                    if(indexOfDir == -1){
-                        System.out.println("Directory 'DragaliaSaveEditor' not found!");
-                        System.exit(98);
-                    }
-                    String editorPath = Paths.get(programPath.substring(0, indexOfDir), "DragaliaSaveEditor").toString();
-                    savePath = Paths.get(editorPath, "savedata.txt").toString();
+                    savePath = getPathInIDE(programPath, "savedata.txt");
                 }
             } else {
                 savePath = path;
+                if (!path.contains("/")) {
+                    System.out.println("Using this directory for filepath.");
+                    if(isOutOfIDE){
+                        savePath = Paths.get(new File(programPath).getParent(), "savedata.txt").toString();
+                    } else {
+                        savePath = getPathInIDE(programPath, path);
+                    }
+                }
             }
             isFilePathInvalid = !new File(savePath).exists(); //basic file path exists check
             isFileJsonObject = JsonUtils.checkIfJsonObject(savePath); //check if its a json object
@@ -165,48 +197,48 @@ public class SaveEditor {
             }
         }
 
-        if (isOutOfIDE) {
-            optionsPath = Paths.get(new File(programPath).getParent(), "DLSaveEditor_options.txt").toString();
-        } else {
-            optionsPath = Paths.get(new File(savePath).getParent(), "DLSaveEditor_options.txt").toString();
-        }
+        String optionsPath = Paths.get(new File(savePath).getParent(), "DLSaveEditor_options.txt").toString();
+        String teamDataPath = Paths.get(new File(savePath).getParent(), "teams.json").toString();
 
         JsonUtils util = new JsonUtils(savePath, optionsPath, programPath, isOutOfIDE);
         System.out.println("Save data found at: " + savePath + "\n");
         System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
 
-        util.deleteDupeIds(); // idk
+        util.deleteDupeIds(); // sanity check for dupe IDs. shouldn't happen
         if (!util.hasOptions()) {
-            yesNoQuestion("No options file found in this directory. Create a new options file?",
-                    () -> util.createNewOptionsFile());
+            System.out.println("No options file found in this directory... creating one");
+            util.createNewOptionsFile();
         }
-        if (util.hasOptions()) {
-            options = util.getOptions();
-            if (util.toPromptEditOptions()) {
-                yesNoQuestion("Edit save editing options?",
-                        () -> {
-                            passYesNoArg("\tMax out added adventurers?", "maxAddedAdventurers", (arg) ->
-                                    util.editOption("maxAddedAdventurers", arg));
-                            passYesNoArg("\tMax out added dragons?", "maxAddedDragons", (arg) ->
-                                    util.editOption("maxAddedDragons", arg));
-                            passYesNoArg("\tMax out added wyrmprints?", "maxAddedWyrmprints", (arg) ->
-                                    util.editOption("maxAddedWyrmprints", arg));
-                            passYesNoArg("\tMax out added weapons?", "maxAddedWeapons", (arg) ->
-                                    util.editOption("maxAddedWeapons", arg));
+
+        options = util.getOptions();
+        if (util.toPromptEditOptions()) {
+            yesNoQuestion("Edit save editing options?",
+                    () -> {
+                        passYesNoArg("\tMax out added adventurers?", "maxAddedAdventurers", (arg) ->
+                                util.editOption("maxAddedAdventurers", arg));
+                        passYesNoArg("\tMax out added dragons?", "maxAddedDragons", (arg) ->
+                                util.editOption("maxAddedDragons", arg));
+                        passYesNoArg("\tMax out added wyrmprints?", "maxAddedWyrmprints", (arg) ->
+                                util.editOption("maxAddedWyrmprints", arg));
+                        passYesNoArg("\tMax out added weapons?", "maxAddedWeapons", (arg) ->
+                                util.editOption("maxAddedWeapons", arg));
                             /*
                             passYesNoArg("\tMax out added facilities?", (arg) ->
                                     util.editOption("maxAddedFacilities", arg));
                              */
-                            passYesNoArg("\tAsk to edit these options next time the program is run?", "promptEditOptions", (arg) ->
-                                    util.editOption("promptEditOptions", arg));
-                            System.out.println("\tFinished editing options.");
-                            util.exportOptions();
-                        });
-            }
-        } else {
-            System.out.println("No options file found, using default save editing options.");
+                        passYesNoArg("\tAsk to edit these options next time the program is run?", "promptEditOptions", (arg) ->
+                                util.editOption("promptEditOptions", arg));
+                        System.out.println("\tFinished editing options.");
+                        util.exportOptions();
+                    });
         }
 
+        if(options.getFieldValue("openTeamEditor")) {
+            yesNoQuestion("Enter teams manager?",
+                    () -> {
+                        util.enterTeamEditor(teamDataPath);
+                    });
+        }
 
         yesNoQuestion("Uncap mana? (Sets mana to 10m)", () -> util.uncapMana());
         yesNoQuestion("Set rupies count to 2b?", () -> util.setRupies());
@@ -277,33 +309,40 @@ public class SaveEditor {
         yesNoQuestion(
                 "Do additional hacked options? (Enter 'n' if you wish to keep your save data \"vanilla\")",
                 () -> {
-                    yesNoQuestion("\tGenerate random portrait prints? (This will replace your portrait print inventory)",
-                        () -> util.kscapeRandomizer());
-                    yesNoQuestion("\tAdd some hacked portrait prints?",
-                        () -> util.addGoofyKscapes());
-                    yesNoQuestion("\tAdd unplayable units? (Note: These units are not fully implemented and may cause softlocks or crashes.)",
-                        () -> {
-                            yesNoQuestion("\tAdd unit: Tutorial Zethia?",
-                                    () -> util.addTutorialZethia());
-                            yesNoQuestion("\tAdd units: Story Leif(s)?",
-                                    () -> util.addStoryLeifs());
-                            yesNoQuestion("\tAdd unit: Sharpshooter Cleo",
-                                    () -> util.addGunnerCleo());
-                            maybeQuestion("\tAdd unique shapeshift dragons?",
-                                    "Added other unplayable units and dragons.",
-                                    () -> util.addUniqueShapeshiftDragons(),
-                                    () -> util.addOthers());
-                        });
-                });
+                        yesNoQuestion("\tGenerate random portrait prints? (This will replace your portrait print inventory)",
+                            () -> util.kscapeRandomizer());
+                        yesNoQuestion("\tAdd some hacked portrait prints?",
+                            () -> util.addGoofyKscapes());
+                        maybeQuestion(
+                                "\tAdd unplayable units? (Note: These units are not fully implemented and may cause softlocks or crashes.)",
+                                "\tHidden Option: Extra options for adding unplayable units",
+                            () -> {
+                                yesNoQuestion("\tAdd unit: Tutorial Zethia?",
+                                        () -> util.addTutorialZethia());
+                                yesNoQuestion("\tAdd units: Story Leif(s)?",
+                                        () -> util.addStoryLeifs());
+                                yesNoQuestion("\tAdd unit: Sharpshooter Cleo",
+                                        () -> util.addGunnerCleo());
+                                yesNoQuestion("\tAdd unique shapeshift dragons?",
+                                        () -> util.addUniqueShapeshiftDragons());
+                            },
+                            () -> {
+                                yesNoQuestion("\tAdd unit: Dog?",
+                                        () -> util.addDog());
+                                yesNoQuestion("\tAdd units: Anniversary Notte(s)?",
+                                        () -> util.addNottes());
+                                yesNoQuestion("\tAdd units: Story NPCs (a lot)?",
+                                        () -> util.addStoryNPCs());
+                                yesNoQuestion("\tAdd units: ABR 3-star units?",
+                                        () -> util.addABR3Stars());
+                                yesNoQuestion("\tAdd other dragons (a lot)?",
+                                        () -> util.addUnplayableDragons());
+                            });
+                        }
+                );
         System.out.println("\nFinished editing save...getting ready for exporting.");
         boolean passedTests = util.checkTests();
         if(passedTests){
-            if(util.isSaveData2Present()){
-                yesNoQuestion(
-                        "savedata2.txt already exists in this directory. Would you like to overwrite it?",
-                        () -> util.setOverwrite(true));
-            }
-            System.out.println();
             util.writeToFile();
         }
         System.out.println();
