@@ -160,7 +160,7 @@ public class SaveEditor {
     }
 
     public static void main(String[] args){
-        System.out.println("\nDragalia Save Editor (v11.2)\n");
+        System.out.println("\nDragalia Save Editor (v11.2.??)\n");
         String programPath = getFilePath();
         System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
         System.out.print("Enter path for save file: ");
@@ -180,7 +180,7 @@ public class SaveEditor {
                 if (!path.contains("/")) {
                     System.out.println("Using this directory for filepath.");
                     if(isOutOfIDE){
-                        savePath = Paths.get(new File(programPath).getParent(), "savedata.txt").toString();
+                        savePath = Paths.get(new File(programPath).getParent(), path).toString();
                     } else {
                         savePath = getPathInIDE(programPath, path);
                     }
@@ -222,10 +222,6 @@ public class SaveEditor {
                                 util.editOption("maxAddedWyrmprints", arg));
                         passYesNoArg("\tMax out added weapons?", "maxAddedWeapons", (arg) ->
                                 util.editOption("maxAddedWeapons", arg));
-                            /*
-                            passYesNoArg("\tMax out added facilities?", (arg) ->
-                                    util.editOption("maxAddedFacilities", arg));
-                             */
                         passYesNoArg("\tAsk to edit these options next time the program is run?", "promptEditOptions", (arg) ->
                                 util.editOption("promptEditOptions", arg));
                         System.out.println("\tFinished editing options.");
@@ -343,6 +339,8 @@ public class SaveEditor {
         System.out.println("\nFinished editing save...getting ready for exporting.");
         boolean passedTests = util.checkTests();
         if(passedTests){
+            util.writeToFile();
+        } else {
             util.writeToFile();
         }
         System.out.println();

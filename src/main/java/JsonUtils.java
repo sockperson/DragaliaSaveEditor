@@ -36,6 +36,7 @@ public class JsonUtils {
     private HashMap<String, Integer> kscapeAbilityMap = new HashMap<>();
     //Adventurer Title --> Portrait Print ID
     public HashMap<String, Integer> kscapeLabelsMap = new HashMap<>();
+    public HashMap<Integer, AdventurerMeta> kscapeLabelIdToAdventurer = new HashMap<>();
     private List<Integer> kscapePortraitIDs = new ArrayList<>();
     //Adventurer ID --> Adventurer Story IDs
     private HashMap<Integer, List<Integer>> adventurerStoryMap = new HashMap<>();
@@ -49,11 +50,12 @@ public class JsonUtils {
 
     public HashMap<Integer, WeaponMeta> idToWeapon = new HashMap<>();
     public HashMap<String, WeaponMeta> weaponFunctionalNameToWeapon = new HashMap<>();
-    //public HashMap<Integer, String> idToWeaponSkinName = new HashMap<>();
     public HashMap<Integer, WeaponSkinMeta> idToWeaponSkin = new HashMap<>();
     public HashMap<Integer, WyrmprintMeta> idToPrint = new HashMap<>();
+    public HashMap<String, WyrmprintMeta> nameToPrint = new HashMap<>(); // no spaces in key! also uppercased
     private HashMap<Integer, FacilityMeta> idToFacility = new HashMap<>();
     private HashMap<Integer, MaterialMeta> idToMaterial = new HashMap<>();
+    public HashMap<Integer, String> idToAbilityName = new HashMap<>();
 
     //Alias Maps
     private HashMap<String, List<String>> adventurerAliases = new HashMap<>();
@@ -74,10 +76,10 @@ public class JsonUtils {
         try {
             this.jsonData = getSaveData().getAsJsonObject();
             readAliasesData();
+            readKscapeLabels();
             readAdventurerData();
             readDragonsData();
             readKscapeData();
-            readKscapeLabels();
             readStoryData();
             readWeaponSkinData();
             readWeaponsData();
@@ -86,6 +88,7 @@ public class JsonUtils {
             readFacilitiesData();
             readMaterialsData();
             readOptionsData();
+            readAbilityData();
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Unable to read JSON data!");
@@ -361,16 +364,19 @@ public class JsonUtils {
                 }
             }
             String manaCircleType = adv.get("ManaCircleName").getAsString();
-            AdventurerMeta unit = new AdventurerMeta(baseName, adv.get("Title").getAsString(), id,
+            String title = adv.get("Title").getAsString();
+            int kscapeLabelId = kscapeLabelsMap.get(title);
+            AdventurerMeta unit = new AdventurerMeta(baseName, title, id,
                     adv.get("ElementalTypeId").getAsInt(), hp, str,adv.get("MaxLimitBreakCount").getAsInt(),
                     adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral, maxA3Level,
                     adv.get("MinHp3").getAsInt(), adv.get("MinHp4").getAsInt(), adv.get("MinHp5").getAsInt(),
                     adv.get("MinAtk3").getAsInt(), adv.get("MinAtk4").getAsInt(), adv.get("MinAtk5").getAsInt(),
                     adv.get("Rarity").getAsInt(), manaCircleType, adv.get("ElementalType").getAsString(),
-                    adv.get("WeaponType").getAsString()
+                    adv.get("WeaponType").getAsString(), kscapeLabelId
                     );
             idToAdventurer.put(id, unit);
             nameToAdventurer.put(name, unit);
+            kscapeLabelIdToAdventurer.put(kscapeLabelId, unit);
             if(adventurerAliases.containsKey(name)){
                 adventurerAliases.get(name).forEach(alias -> nameToAdventurer.put(alias.toUpperCase(), unit));
             }
@@ -482,9 +488,12 @@ public class JsonUtils {
         for(JsonElement jsonEle : getJsonArrayFromRsrc("prints.json")){
             JsonObject printData = jsonEle.getAsJsonObject();
             int id = printData.get("Id").getAsInt();
-            WyrmprintMeta print = new WyrmprintMeta(printData.get("Name").getAsString(),
+            String name = printData.get("Name").getAsString();
+            WyrmprintMeta print = new WyrmprintMeta(name,
                     id, printData.get("Rarity").getAsInt());
             idToPrint.put(id, print);
+            name = name.replace(" ", "").replace("&amp;", "&").toUpperCase(Locale.ROOT);
+            nameToPrint.put(name, print);
         }
     }
 
@@ -505,6 +514,21 @@ public class JsonUtils {
             kscapeLabelsMap.put(label, id);
             kscapePortraitIDs.add(id);
             out = br.readLine();
+        }
+    }
+
+    private void readAbilityData() throws IOException {
+        for(JsonElement jsonEle : getJsonArrayFromRsrc("abilities.json")){
+            JsonObject abilityData = jsonEle.getAsJsonObject();
+            int id = abilityData.get("Id").getAsInt();
+            String nameRaw = abilityData.get("Name").getAsString();
+            int val0 = (int) abilityData.get("Val0").getAsDouble();
+            int val1 = (int) abilityData.get("Val1").getAsDouble();
+            int val2 = (int) abilityData.get("Val2").getAsDouble();
+            nameRaw = nameRaw.replace("{ability_val0}", String.valueOf(val0));
+            nameRaw = nameRaw.replace("{ability_val1}", String.valueOf(val1));
+            String name = nameRaw.replace("{ability_val2}", String.valueOf(val2));
+            idToAbilityName.put(id, name);
         }
     }
 

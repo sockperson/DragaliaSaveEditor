@@ -6,14 +6,14 @@ public class AdventurerMeta {
 
     private String name, title, manaCircleType, elementType, weaponType;
     private int id, elementId, maxHp, maxStr, maxLimitBreakCount, maxA3Level;
-    private int minHp3, minHp4, minHp5, minStr3, minStr4, minStr5, baseRarity;
+    private int minHp3, minHp4, minHp5, minStr3, minStr4, minStr5, baseRarity, kscapeLabelId;
 
     private boolean hasSkillShare, hasManaSpiral;
 
     public AdventurerMeta(String name, String title, int id, int elementId, int maxHp, int maxStr,
                           int maxLimitBreakCount, boolean hasSkillShare, boolean hasManaSpiral, int maxA3Level,
                           int minHp3, int minHp4, int minHp5, int minStr3, int minStr4, int minStr5, int baseRarity,
-                          String manaCircleType, String elementType, String weaponType
+                          String manaCircleType, String elementType, String weaponType, int kscapeLabelId
                           ){
         this.name = name;
         this.title = title;
@@ -35,6 +35,7 @@ public class AdventurerMeta {
         this.manaCircleType = manaCircleType;
         this.elementType = elementType;
         this.weaponType = weaponType;
+        this.kscapeLabelId = kscapeLabelId;
     }
 
     public String getName(){ return name; }
@@ -50,6 +51,7 @@ public class AdventurerMeta {
     public boolean hasManaSpiral(){ return hasManaSpiral; }
     public int getMaxA3Level(){ return maxA3Level; }
     public int getBaseRarity() {return baseRarity; }
+    public int getKscapeLabelId() { return kscapeLabelId; }
 
 
     public int getMinHp () {

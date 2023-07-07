@@ -7,8 +7,11 @@ import meta.WeaponMeta;
 import meta.WeaponSkinMeta;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class TeamsUtil {
@@ -194,7 +197,7 @@ public class TeamsUtil {
 
        int returningId = 0;
        String maybeId = shorthandToId.get(shorthandOrId);
-       if (maybeId.contains("auto")) {
+       if (maybeId.contains("AUTO")) {
            String autoWeaponShorthand = (maybeId + "_" + weaponString).toUpperCase(Locale.ROOT);
            if (shorthandToId.containsKey(autoWeaponShorthand)) {
                returningId = Integer.parseInt(shorthandToId.get(autoWeaponShorthand));
@@ -637,14 +640,21 @@ public class TeamsUtil {
                         }
                     } catch (NumberFormatException ignored) { // shorthand
                         String wyrmprintStringUpper = wyrmprintString.toUpperCase(Locale.ROOT);
-                        int wyrmprintId = shorthandToId(wyrmprintStringUpper, unitIdString, wpSlot, slotHistory);
-                        if (wyrmprintId == 0) {
-                            Logging.print("Failed to import wyrmprint with shorthand: '{0}'; could not find " +
-                                    "wyrmprint with this shorthand for slot {1}", wyrmprintString, String.valueOf(wpSlot));
-                        } else {
+                        String wyrmprintStringUpperUnspaced = wyrmprintStringUpper.replace(" ", "");
+                        if (jsonUtils.nameToPrint.containsKey(wyrmprintStringUpperUnspaced)) {
+                            int wyrmprintId = jsonUtils.nameToPrint.get(wyrmprintStringUpperUnspaced).getId();
+                            wyrmprintsOut[wpNum] = wyrmprintId;
                             slotHistory.add(wyrmprintId);
+                        } else {
+                            int wyrmprintId = shorthandToId(wyrmprintStringUpper, unitIdString, wpSlot, slotHistory);
+                            if (wyrmprintId == 0) {
+                                Logging.print("Failed to import wyrmprint with shorthand: '{0}'; could not find " +
+                                        "wyrmprint with this shorthand for slot {1}", wyrmprintString, String.valueOf(wpSlot));
+                            } else {
+                                slotHistory.add(wyrmprintId);
+                            }
+                            wyrmprintsOut[wpNum] = wyrmprintId;
                         }
-                        wyrmprintsOut[wpNum] = wyrmprintId;
                     }
                 }
             }
@@ -706,7 +716,14 @@ public class TeamsUtil {
                         sharedSkillsOut[sharedSkillsOutIndex] = sharedSkillId;
                     }
                 } else { // empty shared skill
-                    sharedSkillsOut[sharedSkillsOutIndex] = 0;
+                    // QoL check...
+                    // if unit ID is non-empty, weapon ID is empty, and shared skill ID is empty,
+                    // then implicitly use default shared skills IDs of cleo/ranzal
+                    if (chara_id != 0 && equip_weapon_body_id == 0) {
+                        sharedSkillsOut[sharedSkillsOutIndex] = (i == 1) ? (10840501) : (10440301); // cleo/ranzal
+                    } else {
+                        sharedSkillsOut[sharedSkillsOutIndex] = 0;
+                    }
                 }
             } catch (NumberFormatException ignored) { // name/alias
                 String sharedSkillStringUpper = sharedSkillString.toUpperCase(Locale.ROOT);
@@ -777,6 +794,39 @@ public class TeamsUtil {
         return outPartyList;
     }
 
+    private void exportTalismans() {
+        JsonArray talismans = new JsonArray();
+
+        for (JsonElement jsonEle : jsonUtils.getFieldAsJsonArray("data", "talisman_list")) {
+            JsonObject talisman = jsonEle.getAsJsonObject();
+            int keyId = talisman.get("talisman_key_id").getAsInt();
+            int labelId = talisman.get("talisman_id").getAsInt();
+            String a1 = jsonUtils.idToAbilityName.get(talisman.get("talisman_ability_id_1").getAsInt());
+            String a2 = jsonUtils.idToAbilityName.get(talisman.get("talisman_ability_id_2").getAsInt());
+            String a3 = jsonUtils.idToAbilityName.get(talisman.get("talisman_ability_id_3").getAsInt());
+
+            JsonObject outTalisman = new JsonObject();
+            outTalisman.addProperty("adventurer", jsonUtils.kscapeLabelIdToAdventurer.get(labelId).getName());
+            outTalisman.addProperty("keyId", keyId);
+            outTalisman.addProperty("ability1", a1);
+            outTalisman.addProperty("ability2", a2);
+            outTalisman.addProperty("ability3", a3);
+            talismans.add(outTalisman);
+        }
+
+        FileWriter fileWriter;
+        try {
+            String thisPath = new File(teamDataPath).getParent();
+            String outPath = Paths.get(thisPath, "talismanList.json").toString();
+            fileWriter = new FileWriter(outPath);
+            JsonUtils.GSON.toJson(talismans, fileWriter);
+            fileWriter.flush();
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     // 1: there are 54 teams, and each team is numbered from 1-54
     // 2: each team has 4 members, and each team member is numbered from 1-4
     // 3: any adventurer, dragon, talisman, weapon, weapon skin in the list must be owned
@@ -793,6 +843,7 @@ public class TeamsUtil {
     // 13: edit_skill_2_chara_id must not be empty
     // 14: equipped weapon type must match weapon type of unit
     // 15: equipped weapon skin must match weapon type of unit
+    // 16: team name must be <= 20 characters
 
     public boolean validatePartyList (JsonArray partyList) {
         boolean returnVal = true;
@@ -819,6 +870,16 @@ public class TeamsUtil {
             List<Integer> cond2_partyMemberNums = new ArrayList<>();
             for (int i = 1; i <= 4; i++) {
                 cond2_partyMemberNums.add(i);
+            }
+
+            // Condition 16
+            String partyName = party.get("party_name").getAsString();
+            int cond16_teamNameLength = partyName.length();
+            if (cond16_teamNameLength > 20) {
+                Logging.print("Could not validate party_list: " +
+                        "team name {0} is too long of a team name ({1} > 20 chars)",
+                        partyName, String.valueOf(cond16_teamNameLength));
+                return false;
             }
 
             // Condition 5
@@ -1170,6 +1231,8 @@ public class TeamsUtil {
             boolean toGenerateFromGameData =
                     SaveEditor.passYesNo("Generate new teams data from savefile (y) or generate blank team data? (n)");
             teamsData.add("teams", generateNewTeams(toGenerateFromGameData));
+            System.out.println("Exporting teams data...");
+            exportTeams();
         } else {
             System.out.println("Importing teams data...");
             teamsData = jsonUtils.getJsonObject(teamDataPath);
@@ -1178,11 +1241,15 @@ public class TeamsUtil {
                         SaveEditor.passYesNo("\tGenerate new teams data from savefile (y) or generate blank team data? (n)");
                 teamsData.remove("teams");
                 teamsData.add("teams", generateNewTeams(toGenerateFromGameData));
+                System.out.println("Exporting teams data...");
+                exportTeams();
             }
         }
 
-        System.out.println("Exporting teams data...");
-        exportTeams();
+        if (SaveEditor.passYesNo("Export talisman list from savedata?")) {
+            exportTalismans();
+            System.out.println("Exported talisman data to talismanList.json.");
+        }
 
         if (SaveEditor.passYesNo("Generate new talismans?")) {
             while (true) {
@@ -1237,6 +1304,16 @@ public class TeamsUtil {
             if (!validatePartyList(partyList)) {
                 System.out.println("There were 1 or more issues with the exported party data; " +
                         "could not export to the savedata.");
+                // eh
+                System.out.print("Exporting savedata anyway lol");
+                if(jsonUtils.isSaveData2Present()){
+                    SaveEditor.yesNoQuestion(
+                            "savedata2.txt already exists in this directory. Would you like to overwrite it?",
+                            () -> jsonUtils.setOverwrite(true));
+                }
+                System.out.println();
+                jsonUtils.writeToFile();
+                // eh
             } else {
                 System.out.println("Pasting teams data into savedata...");
                 jsonUtils.jsonData.get("data").getAsJsonObject().remove("party_list");
