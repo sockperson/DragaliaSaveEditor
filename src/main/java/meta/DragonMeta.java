@@ -1,14 +1,18 @@
 package meta;
 
+import java.util.HashMap;
+import java.util.Random;
+
 public class DragonMeta {
 
     private String name;
-    private int id, elementId, a1Max, a2Max, rarity;
+    private int baseId, id, elementId, a1Max, a2Max, rarity;
     private boolean has5UB, hasA2;
 
-    public DragonMeta(String name, int id, int elementId, int a1Max, int a2Max,
+    public DragonMeta(String name, int baseId, int id, int elementId, int a1Max, int a2Max,
                           int rarity, boolean has5UB, boolean hasA2){
         this.name = name;
+        this.baseId = baseId;
         this.id = id;
         this.elementId = elementId;
         this.a1Max = a1Max;
@@ -51,6 +55,42 @@ public class DragonMeta {
                 return 1240020;
         }
         return -1;
+    }
+
+    // [baseId][01][1/2]
+    public int getDragonStoryId(int num) {
+        return (baseId * 1000) + (10) + (num);
+    }
+
+    private static final int TALONSTONE = 201005001;
+    private static final int SUCCULENT_DRAGONFRUIT = 102001003;
+    private static final int SUNLIGHT_ORE = 201011001;
+
+    // if youre upgrading dragon bond to max...
+    // should add materials from dragons roost
+    // values from: https://dragalialost.wiki/w/Dragon%27s_Roost
+    public static HashMap<Integer, Integer> getDragonsRoostGifts(int initialLevel) {
+        HashMap<Integer, Integer> matIdToValue = new HashMap<>();
+        Random rng = new Random();
+        int talonstones = 0;
+        if (initialLevel < 10) {
+            talonstones += 3 + rng.nextInt(3); // 3 - 5
+        }
+        if (initialLevel < 20) {
+            matIdToValue.put(SUCCULENT_DRAGONFRUIT, 2 + rng.nextInt(3)); // 2 - 4
+        }
+        if (initialLevel < 25) {
+             switch(rng.nextInt(3)) { // 5, 7, or 10
+                 case 0: talonstones += 5; break;
+                 case 1: talonstones += 7; break;
+                 case 2: talonstones += 10; break;
+             }
+        }
+        if (initialLevel < 30) {
+            matIdToValue.put(SUNLIGHT_ORE, 1); // 1
+        }
+        matIdToValue.put(TALONSTONE, talonstones);
+        return matIdToValue;
     }
 
 }

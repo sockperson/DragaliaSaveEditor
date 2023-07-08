@@ -22,7 +22,7 @@ flurrycr: auto_flurrycr
 (shadow)flurrycr, auto_flurrycr_shadow: 40050083
 cddb: 40050088
 strdb: 40050098
-dclaws: 40050073
+dclaws, dstr: 40050073
 poison: 40050121
 burn: 40050107
 para: 40050084
@@ -33,7 +33,7 @@ shadow, shadowblight: 40050120
 scorch, scorchrend: 40050125
 ### defense (slot 1, 5*)###
 hp70def, def: 40050028
-ddef: 40050117
+dscales, ddef: 40050117
 lightres: 40050032
 shadowres: 40050017
 res: 40050154
@@ -48,7 +48,7 @@ skd, sd: auto_skd
 (wand)skd, auto_skd_bow: 40050019
 (staff)skd, auto_skd_staff: 40050132
 (gun)skd, auto_skd_gun: 40050129
-dskill, tri: 40050101
+dskill, dskd, tri: 40050101
 shaste, haste: auto_shaste, 40050020
 (flame)shaste, auto_shaste_flame: 40050052
 (water)shaste, auto_shaste_water: 40050109

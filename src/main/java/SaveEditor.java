@@ -305,7 +305,7 @@ public class SaveEditor {
         yesNoQuestion(
                 "Set all material counts to 30,000?",
                 "Done!",
-                () -> util.addItems());
+                () -> util.addMaterials());
         yesNoQuestion(
                 "Enter the Kaleidoscape? (Replaces portrait print inventory to a strong set of prints)",
                 () -> yesNoQuestion(
@@ -350,10 +350,13 @@ public class SaveEditor {
                         }
                 );
         System.out.println("\nFinished editing save...getting ready for exporting.");
-        boolean passedTests = util.checkTests();
+        boolean passedTests = util.checkIfTestsPassed();
         if(passedTests){
-            util.writeToFile();
-        } else {
+            if(util.isSaveData2Present()){
+                SaveEditor.yesNoQuestion(
+                        "savedata2.txt already exists in this directory. Would you like to overwrite it?",
+                        () -> util.setOverwrite(true));
+            }
             util.writeToFile();
         }
         System.out.println();

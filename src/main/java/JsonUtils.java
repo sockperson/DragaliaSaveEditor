@@ -124,7 +124,7 @@ public class JsonUtils {
         }
     }
 
-    public boolean checkTests(){
+    public boolean checkIfTestsPassed(){
         Tests tests = new Tests(this);
         Logging.log("noDupeCharaIdTest(): " + tests.noDupeCharaIdTest());
         Logging.log("noDupeDragonKeyIdTest(): " + tests.noDupeDragonKeyIdTest());
@@ -392,6 +392,7 @@ public class JsonUtils {
             //fill idToDragon
             boolean has5UB = drg.get("MaxLimitBreakCount").getAsInt() == 5;
             int id = drg.get("Id").getAsInt();
+            int baseId = drg.get("BaseId").getAsInt();
             int rarity = drg.get("Rarity").getAsInt();
             int a1Level = has5UB ?
                     6 : drg.get("Abilities15").getAsInt() != 0 ?
@@ -400,7 +401,7 @@ public class JsonUtils {
                     6 : drg.get("Abilities25").getAsInt() != 0 ?
                     5 : 0;
             boolean hasA2 = drg.get("Abilities21").getAsInt() != 0;
-            DragonMeta unit = new DragonMeta(baseName, id, drg.get("ElementalTypeId").getAsInt(),
+            DragonMeta unit = new DragonMeta(baseName, baseId, id, drg.get("ElementalTypeId").getAsInt(),
                 a1Level, a2Level, rarity, has5UB, hasA2);
             idToDragon.put(id, unit);
             nameToDragon.put(name, unit);
@@ -1517,8 +1518,19 @@ public class JsonUtils {
                         JsonObject dragonBond = new JsonObject();
                         dragonBond.addProperty("dragon_id", id);
                         dragonBond.addProperty("gettime", Instant.now().getEpochSecond());
-                        dragonBond.addProperty("reliability_level", 1);
-                        dragonBond.addProperty("reliability_total_exp", 0);
+                        if (options.getFieldAsBoolean("maxDragonBonds")) {
+                            dragonBond.addProperty("reliability_level", 30);
+                            dragonBond.addProperty("reliability_total_exp", 36300);
+                            // add dragon's roost materials
+                            HashMap<Integer, Integer> dragonsRoostGifts = DragonMeta.getDragonsRoostGifts(1);
+                            addMaterialsFromMap(dragonsRoostGifts);
+                            // add dragon stories
+                            addDragonStory(dragon.getDragonStoryId(1));
+                            addDragonStory(dragon.getDragonStoryId(2));
+                        } else {
+                            dragonBond.addProperty("reliability_level", 1);
+                            dragonBond.addProperty("reliability_total_exp", 0);
+                        }
                         dragonBond.addProperty("last_contact_time", Instant.now().getEpochSecond());
                         getField("data", "dragon_reliability_list").getAsJsonArray().add(dragonBond);
                     }
@@ -1531,6 +1543,16 @@ public class JsonUtils {
         return expandAmount == 0 ?
                 "Added " + count + " missing dragons." :
                 "Added " + count + " missing dragons. Dragon inventory capacity was raised by " + expandAmount + ".";
+    }
+
+    public void addDragonStory(int id) {
+        if (arrayHasValue("unit_story_id", id, "data", "unit_story_list")) {
+            return; // dont add anything if story already exists
+        }
+        JsonObject dragonStory = new JsonObject();
+        dragonStory.addProperty("unit_story_id", id);
+        dragonStory.addProperty("is_read", 0);
+        getFieldAsJsonArray("data", "unit_story_list").add(dragonStory);
     }
 
     public void addDragon(String drgName) {
@@ -1587,7 +1609,34 @@ public class JsonUtils {
         System.out.println(out);
     }
 
-    public void addItems() {
+    public void addMaterialsFromMap(HashMap<Integer, Integer> matIdToCount) {
+        for (Map.Entry<Integer, Integer> entry : matIdToCount.entrySet()) {
+            int id = entry.getKey();
+            int count = entry.getValue();
+            addMaterial(id, count);
+        }
+    }
+
+    public void addMaterial(int id, int addCount) {
+        JsonArray items = getFieldAsJsonArray("data", "material_list");
+        for (JsonElement jsonEle : items) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            int matId = jsonObj.get("material_id").getAsInt();
+            if (matId == id) {
+                int matCount = jsonObj.get("quantity").getAsInt();
+                jsonObj.remove("quantity");
+                jsonObj.addProperty("quantity", matCount + addCount);
+                return;
+            }
+        }
+        // couldnt find item in material list, make a new obj for it
+        JsonObject newItem = new JsonObject();
+        newItem.addProperty("material_id", id);
+        newItem.addProperty("quantity", addCount);
+        items.add(newItem);
+    }
+
+    public void addMaterials() {
         JsonArray items = getFieldAsJsonArray("data", "material_list");
         for (JsonElement jsonEle : items) {
             JsonObject jsonObj = jsonEle.getAsJsonObject();

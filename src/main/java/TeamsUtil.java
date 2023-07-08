@@ -1305,7 +1305,7 @@ public class TeamsUtil {
                 System.out.println("There were 1 or more issues with the exported party data; " +
                         "could not export to the savedata.");
                 // eh
-                System.out.print("Exporting savedata anyway lol");
+                System.out.println("Exporting savedata anyway lol");
                 if(jsonUtils.isSaveData2Present()){
                     SaveEditor.yesNoQuestion(
                             "savedata2.txt already exists in this directory. Would you like to overwrite it?",
