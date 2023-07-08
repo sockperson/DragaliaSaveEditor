@@ -169,6 +169,7 @@ public class SaveEditor {
         String teamDataPath = getPath(programPath, "teams.json");
         // options file stuff
         options = new Options(optionsPath);
+        System.out.println();
         if (options.getFieldAsBoolean("promptEditOptions")) {
             yesNoQuestion("Edit save editing options?",
                     () -> {
