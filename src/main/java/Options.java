@@ -94,7 +94,7 @@ public class Options {
         }
         // if there's an issue with the options file, set to default and force export
         if (toResetAndExportOptions) {
-            System.out.println("There was an error with the options file... loading default options and exporting...");
+            System.out.println("There was either an error in the options file or it needed to be updated. Exporting default options to file.");
             missingOptions.clear();
             initializeOptionDefaultMap();
             export();

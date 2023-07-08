@@ -1309,6 +1309,16 @@ public class JsonUtils {
         return out;
     }
 
+    private void addHackedDragon(int id) {
+        // add dragon to dragon inventory
+        getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(id));
+        // add bond obj
+        if (arrayHasValue("dragon_id", id, "data", "dragon_reliability_list")) {
+            return; // dont add anything if bond obj already exists
+        }
+        getFieldAsJsonArray("data", "dragon_reliability_list").add(buildDragonBondObj(id));
+    }
+
     private JsonObject buildHackedDragon(int id) {
         JsonObject out = new JsonObject();
         int keyIdMax = getMaxFromObjListField("dragon_key_id", "data", "dragon_list");
@@ -1515,24 +1525,15 @@ public class JsonUtils {
                     addDragonEncyclopediaBonus(dragon);
                     //Add dragon bond obj
                     if (id != 20050522) { //Arsene check
-                        JsonObject dragonBond = new JsonObject();
-                        dragonBond.addProperty("dragon_id", id);
-                        dragonBond.addProperty("gettime", Instant.now().getEpochSecond());
                         if (options.getFieldAsBoolean("maxDragonBonds")) {
-                            dragonBond.addProperty("reliability_level", 30);
-                            dragonBond.addProperty("reliability_total_exp", 36300);
                             // add dragon's roost materials
                             HashMap<Integer, Integer> dragonsRoostGifts = DragonMeta.getDragonsRoostGifts(1);
                             addMaterialsFromMap(dragonsRoostGifts);
                             // add dragon stories
                             addDragonStory(dragon.getDragonStoryId(1));
                             addDragonStory(dragon.getDragonStoryId(2));
-                        } else {
-                            dragonBond.addProperty("reliability_level", 1);
-                            dragonBond.addProperty("reliability_total_exp", 0);
                         }
-                        dragonBond.addProperty("last_contact_time", Instant.now().getEpochSecond());
-                        getField("data", "dragon_reliability_list").getAsJsonArray().add(dragonBond);
+                        getField("data", "dragon_reliability_list").getAsJsonArray().add(buildDragonBondObj(id));
                     }
                 }
                 count++;
@@ -1543,6 +1544,21 @@ public class JsonUtils {
         return expandAmount == 0 ?
                 "Added " + count + " missing dragons." :
                 "Added " + count + " missing dragons. Dragon inventory capacity was raised by " + expandAmount + ".";
+    }
+
+    public JsonObject buildDragonBondObj(int id) {
+        JsonObject out = new JsonObject();
+        out.addProperty("dragon_id", id);
+        out.addProperty("gettime", Instant.now().getEpochSecond());
+        out.addProperty("last_contact_time", Instant.now().getEpochSecond());
+        if (options.getFieldAsBoolean("maxDragonBonds")) {
+            out.addProperty("reliability_level", 30);
+            out.addProperty("reliability_total_exp", 36300);
+        } else {
+            out.addProperty("reliability_level", 1);
+            out.addProperty("reliability_total_exp", 0);
+        }
+        return out;
     }
 
     public void addDragonStory(int id) {
@@ -2080,33 +2096,32 @@ public class JsonUtils {
 
     public void addUniqueShapeshiftDragons(){
         Arrays.asList(29900006, 29900014, 29900017, 29900018, 29900023).forEach(
-                id -> getField("data", "dragon_list").getAsJsonArray().add(buildHackedDragon(id)));
+                id -> addHackedDragon(id));
     }
 
     public void addUnplayableDragons(){ // Hidden Option
-        JsonArray dragons = getField("data", "dragon_list").getAsJsonArray();
         for(int i = 0; i < 27; i++){
-            dragons.add(buildHackedDragon(29900001 + i));
+            addHackedDragon(29900001 + i);
         }
-        dragons.add(buildHackedDragon(29800001));
-        dragons.add(buildHackedDragon(29800002));
-        dragons.add(buildHackedDragon(29800003));
+        addHackedDragon(29800001);
+        addHackedDragon(29800002);
+        addHackedDragon(29800003);
         for(int i = 0; i < 6; i++){
-            dragons.getAsJsonArray().add(buildHackedDragon(21000001 + i));
+            addHackedDragon(21000001 + i);
         }
-        dragons.add(buildHackedDragon(29940301));
-        dragons.add(buildHackedDragon(29950405));
-        dragons.add(buildHackedDragon(29950116));
-        dragons.add(buildHackedDragon(29950522));
-        dragons.add(buildHackedDragon(29950317));
-        dragons.add(buildHackedDragon(29950523));
-        dragons.add(buildHackedDragon(29950518));
-        dragons.add(buildHackedDragon(29950415));
-        dragons.add(buildHackedDragon(29950524));
-        dragons.add(buildHackedDragon(29950416));
-        dragons.add(buildHackedDragon(29950525));
-        dragons.add(buildHackedDragon(29950121));
-        dragons.add(buildHackedDragon(29950320));
+        addHackedDragon(29940301);
+        addHackedDragon(29950405);
+        addHackedDragon(29950116);
+        addHackedDragon(29950522);
+        addHackedDragon(29950317);
+        addHackedDragon(29950523);
+        addHackedDragon(29950518);
+        addHackedDragon(29950415);
+        addHackedDragon(29950524);
+        addHackedDragon(29950416);
+        addHackedDragon(29950525);
+        addHackedDragon(29950121);
+        addHackedDragon(29950320);
     }
 
     //ehh......
