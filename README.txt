@@ -3,8 +3,8 @@ Options:
 - Max out facilities
 - Add all missing adventurers or add them individually
 - Add all missing dragons or add them individually
-- Set mana, eldwater, rupies value
-- Set wyrmite, summoning tickets value
+- Set mana, eldwater, rupies amount
+- Set wyrmite, summoning tickets amount
 - Add all missing weapons
 - Add all missing weapon skins
 - Add all missing wyrmprints
@@ -14,34 +14,26 @@ Hacked Options:
 - Add a set of custom portrait prints with powerful abilities
 - Add the unused adventurers Tutorial Zethia, Story Leif, and more
 
+Settings:
+- There is now an option to configure the save editor settings, so that new adventurers / dragons / wyrmprints / weapons are added at base (level 1, 0 mc, etc.) rather than maxed out
+
 Requirements: Java installed (https://www.java.com/en/download/manual.jsp)
 
 Usage:
 
-[.exe]
-1. Put savedata.txt into the same folder that the .exe is in
+1. From the releases page (linked below), download DragaliaSaveEditor_[##].zip
 
-2. Run the program by double clicking it.
+2. Extract the downloaded zip file
 
-3. Follow instructions listed in the program. New save data file will be outputted to this directory
+3. Open the extracted folder- there should be 3 files, an options.txt file, DragaliaSaveEditor.jar, and run.bat.
 
-[.jar]
-1. Put savedata.txt into the same folder that the jarfile is in
+4. Place your savedata.txt into the folder with these 3 files.
 
-2. Open up command line / terminal (On windows, hit Win+R key, type 'cmd' into the text box, then hit Enter)
+5. Double click run.bat, and the program should open.
 
-3. In the command line, type 'cd [path]' command and press Enter, where [path] is the folder path where the program is stored. For example, if my program is stored in C:\Users\sock\Desktop\test\editor, then the command for me would be 'cd C:\Users\sock\Desktop\test\editor'
+6. Follow instructions listed in the program. New save data file will be outputted to this directory
 
-4. Run the jar with 'java -jar DragaliaSaveEditor.jar'
+TROUBLESHOOTING:
 
-5. Follow instructions listed in the program. New save data file will be outputted to this directory
-
----Troubleshooting---
-
-1. Windows: .exe Program is blocked
-
--> Click on 'More Info' --> 'Run Anyway'
-
-2. .exe Program pops up but then immediately closes
-
--> Follow the [.jar] instructions instead
+1. "Windows cannot find 'java'" error: u probably dont have java installed lol
+2. ...
