@@ -33,6 +33,7 @@ Gala Laxi,glaxi
 Gala Leif,gleif,hanha
 Gala Leonidas,gleon
 Gala Luca,gluca
+Gala Mascula,mascula,gmascula,masc,rice cooker
 Gala Mym,gmym,mym
 Gala Nedrick,gnedrick,nedrick,klaus,the crock,crock
 Gala Notte,gnotte,notte
