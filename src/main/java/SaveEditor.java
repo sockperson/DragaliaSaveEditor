@@ -35,7 +35,7 @@ public class SaveEditor {
     }
 
     //for writing Options values
-    public static void passYesNoArg(String question, String fieldName, Consumer<Boolean> func) {
+    public static void writeOptionsValue(String question, String fieldName) {
         String fieldVal = options.getFieldAsString(fieldName);
         if (fieldVal.equals("true")) {
             fieldVal = "y";
@@ -48,12 +48,12 @@ public class SaveEditor {
         in = in.toUpperCase();
 
         if(in.equals("Y") || in.equals("YES")){
-            func.accept(true);
+            options.editBooleanOption(fieldName, true);
         } else if (in.equals("N") || in.equals("NO")){
-            func.accept(false);
+            options.editBooleanOption(fieldName, false);
         } else {
             System.out.println("Invalid Input. Enter 'y' or 'n'");
-            passYesNoArg(question, fieldName, func);
+            writeOptionsValue(question, fieldName);
         }
     }
 
@@ -173,19 +173,16 @@ public class SaveEditor {
         if (options.getFieldAsBoolean("promptEditOptions")) {
             yesNoQuestion("Edit save editing options?",
                     () -> {
-                        passYesNoArg("\tMax out added adventurers?", "maxAddedAdventurers", (arg) ->
-                                options.editBooleanOption("maxAddedAdventurers", arg));
-                        passYesNoArg("\tMax out added dragons?", "maxAddedDragons", (arg) ->
-                                options.editBooleanOption("maxAddedDragons", arg));
-                        passYesNoArg("\tMax out added wyrmprints?", "maxAddedWyrmprints", (arg) ->
-                                options.editBooleanOption("maxAddedWyrmprints", arg));
-                        passYesNoArg("\tMax out added weapons?", "maxAddedWeapons", (arg) ->
-                                options.editBooleanOption("maxAddedWeapons", arg));
-                        passYesNoArg("\tAsk to edit these options next time the program is run?", "promptEditOptions", (arg) ->
-                                options.editBooleanOption("promptEditOptions", arg));
+                        writeOptionsValue("\tMax out added adventurers?", "maxAddedAdventurers");
+                        writeOptionsValue("\tMax out added dragons?", "maxAddedDragons");
+                        writeOptionsValue("\tMax out added wyrmprints?", "maxAddedWyrmprints");
+                        writeOptionsValue("\tMax out added weapons?", "maxAddedWeapons");
+                        writeOptionsValue("\tMax out dragon bond levels?", "maxDragonBonds");
+                        writeOptionsValue("\tAsk to edit these options next time the program is run?", "promptEditOptions");
                         System.out.println("\tFinished editing options.");
                         options.export();
                     });
+            System.out.println();
         }
         //
         String savePath = "";

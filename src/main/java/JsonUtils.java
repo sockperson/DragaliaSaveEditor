@@ -791,6 +791,25 @@ public class JsonUtils {
         return -1;
     }
 
+    // Updates value of a field for the object in array corresponding to 'fields',
+    // with a value matching the value in 'checkFieldName'
+    // String valueFieldName: the field to update value for
+    // String checkFieldName: the field to check 'checkFieldValue' for
+    // int checkFieldValue: the value to check 'checkFieldName' for
+    // String... fields: field traverse path
+    // ex: 30, "reliability_level", "dragon_id", 100, "data", "dragon_reliability_list":
+    // searches for a dragon bond object of dragon ID == 100, and updates the bond level to 30
+    public void updateValueOfObjInArray (int updatedValue, String valueFieldName, String checkFieldName, int checkFieldValue, String... fields) {
+        JsonArray jsonArray = getFieldAsJsonArray(fields);
+        for (JsonElement jsonEle : jsonArray) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            if (jsonObj.get(checkFieldName).getAsInt() == checkFieldValue) {
+                jsonObj.remove(valueFieldName);
+                jsonObj.addProperty(valueFieldName, updatedValue);
+            }
+        }
+    }
+
     private JsonObject buildTalisman(String label, String[] combo, int keyIdOffset) {
         JsonObject out = new JsonObject();
         int abilityId1 = 0;
@@ -1535,6 +1554,9 @@ public class JsonUtils {
                         }
                         getField("data", "dragon_reliability_list").getAsJsonArray().add(buildDragonBondObj(id));
                     }
+                } else { // if you've owned this dragon before, then update dragon bonds
+                    // Update dragon bond obj
+                    updateDragonBond(id);
                 }
                 count++;
                 Logging.write(dragon.getName() + "(" + dragon.getRarity() + "*)");
@@ -1544,6 +1566,20 @@ public class JsonUtils {
         return expandAmount == 0 ?
                 "Added " + count + " missing dragons." :
                 "Added " + count + " missing dragons. Dragon inventory capacity was raised by " + expandAmount + ".";
+    }
+
+    public void updateDragonBond(int id) {
+        // Update dragon bond obj
+        if (options.getFieldAsBoolean("maxDragonBonds")) {
+            int bondLevel = getValueFromObjInArray("reliability_level", "dragon_id",
+                    id, "data", "dragon_reliability_list");
+            // add dragon's roost materials
+            HashMap<Integer, Integer> dragonsRoostGifts = DragonMeta.getDragonsRoostGifts(bondLevel);
+            addMaterialsFromMap(dragonsRoostGifts);
+            // set bond level to 30
+            updateValueOfObjInArray(30, "reliability_level", "dragon_id",
+                    id, "data", "dragon_reliability_list");
+        }
     }
 
     public JsonObject buildDragonBondObj(int id) {
@@ -1609,13 +1645,7 @@ public class JsonUtils {
             addDragonEncyclopediaBonus(drgData);
             //Add dragon bond obj
             if (id != 20050522) { //Arsene check
-                JsonObject dragonBond = new JsonObject();
-                dragonBond.addProperty("dragon_id", id);
-                dragonBond.addProperty("gettime", Instant.now().getEpochSecond());
-                dragonBond.addProperty("reliability_level", 1);
-                dragonBond.addProperty("reliability_total_exp", 0);
-                dragonBond.addProperty("last_contact_time", Instant.now().getEpochSecond());
-                getField("data", "dragon_reliability_list").getAsJsonArray().add(dragonBond);
+                getField("data", "dragon_reliability_list").getAsJsonArray().add(buildDragonBondObj(id));
             }
         }
 
@@ -1933,16 +1963,19 @@ public class JsonUtils {
             if(dragon == null){
                 continue;
             }
-            //Construct new dragon
+            // Construct new dragon
             JsonObject updatedUnit = buildDragonFromExisting(dragon, keyId, getTime, isLocked);
             updatedDragons.add(updatedUnit);
             boolean has5UB = dragon.has5UB();
 
-            //Update encyclopedia max level/unbound obj
+            // Update dragon bond obj
+            updateDragonBond(id);
+
+            // Update encyclopedia max level/unbound obj
             for (JsonElement jsonEle2 : getFieldAsJsonArray("data", "album_dragon_list")){
                 JsonObject encycloData = jsonEle2.getAsJsonObject();
                 if(encycloData.get("dragon_id").getAsInt() != id){
-                    continue; //ignore if this isnt the dragon
+                    continue; // ignore if this isnt the dragon
                 }
                 int maxLevel = encycloData.get("max_level").getAsInt();
                 int maxUnbinds = encycloData.get("max_limit_break_count").getAsInt();
@@ -1955,7 +1988,7 @@ public class JsonUtils {
                     encycloData.addProperty("max_level", dragon.getMaxLevel());
                     encycloData.addProperty("max_limit_break_count", has5UB ? 5 : 4);
                     if(toUpdateBonuses){
-                        //Update encyclopedia bonus
+                        // Update encyclopedia bonus
                         int unbinds = ownedDragon.get("limit_break_count").getAsInt();
                         int elementId = dragon.getElementId();
                         double hpBonus = 0.0;
