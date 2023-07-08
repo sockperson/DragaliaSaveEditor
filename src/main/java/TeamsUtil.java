@@ -1225,7 +1225,7 @@ public class TeamsUtil {
     }
 
     public void run () {
-        if (!JsonUtils.checkIfJsonObject(teamDataPath)) {
+        if (!(JsonUtils.checkIfJsonObject(teamDataPath) == 0)) {
             System.out.println("Teams data not found... generating new teams data.");
             teamsData.add("talismans", getDefaultTalismans());
             boolean toGenerateFromGameData =
@@ -1278,7 +1278,7 @@ public class TeamsUtil {
 
                 if (count == -1 || id1 == -1 || id2 == -1 || id3 == -1) {
                     System.out.println("Error: Could not parse one of the count or ability ID values as an integer");
-                    return;
+                    continue;
                 }
 
                 JsonObject newTalisman = new JsonObject();

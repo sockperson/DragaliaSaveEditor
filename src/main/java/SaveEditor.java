@@ -1,5 +1,4 @@
 import java.io.*;
-import java.lang.reflect.Field;
 import java.net.URISyntaxException;
 import java.nio.file.Paths;
 import java.util.List;
@@ -35,16 +34,13 @@ public class SaveEditor {
         return input.nextLine();
     }
 
-    //for writing Options bool values
+    //for writing Options values
     public static void passYesNoArg(String question, String fieldName, Consumer<Boolean> func) {
-        //holy moly this sucks
-        String fieldVal = "?";
-        try {
-            Field field = Options.class.getDeclaredField(fieldName);
-            field.setAccessible(true);
-            fieldVal = Boolean.parseBoolean(field.get(options).toString()) ? "y" : "n";
-        } catch (IllegalAccessException | NoSuchFieldException e) {
-            e.printStackTrace();
+        String fieldVal = options.getFieldAsString(fieldName);
+        if (fieldVal.equals("true")) {
+            fieldVal = "y";
+        } else if (fieldVal.equals("false")) {
+            fieldVal = "n";
         }
 
         System.out.print(question + " (y/n) (Current: " + fieldVal + "): ");
@@ -148,6 +144,14 @@ public class SaveEditor {
         }
     }
 
+    private static String getPath(String path, String more) {
+        if(isOutOfIDE){
+            return Paths.get(new File(path).getParent(), more).toString();
+        } else {
+            return getPathInIDE(path, more);
+        }
+    }
+
     private static String getPathInIDE(String programPath, String more) {
         int indexOfDir = programPath.indexOf("DragaliaSaveEditor");
         if(indexOfDir == -1){
@@ -155,81 +159,90 @@ public class SaveEditor {
             System.exit(98);
         }
         String editorPath = Paths.get(programPath.substring(0, indexOfDir), "DragaliaSaveEditor").toString();
-        String savePath = Paths.get(editorPath, more).toString();
-        return savePath;
+        return Paths.get(editorPath, more).toString();
     }
 
     public static void main(String[] args){
         System.out.println("\nDragalia Save Editor (v11.2.??)\n");
         String programPath = getFilePath();
-        System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
-        System.out.print("Enter path for save file: ");
-        String path = input.nextLine();
+        String optionsPath = getPath(programPath, "DLSaveEditor_options.txt");
+        String teamDataPath = getPath(programPath, "teams.json");
+        // options file stuff
+        options = new Options(optionsPath);
+        if (options.getFieldAsBoolean("promptEditOptions")) {
+            yesNoQuestion("Edit save editing options?",
+                    () -> {
+                        passYesNoArg("\tMax out added adventurers?", "maxAddedAdventurers", (arg) ->
+                                options.editBooleanOption("maxAddedAdventurers", arg));
+                        passYesNoArg("\tMax out added dragons?", "maxAddedDragons", (arg) ->
+                                options.editBooleanOption("maxAddedDragons", arg));
+                        passYesNoArg("\tMax out added wyrmprints?", "maxAddedWyrmprints", (arg) ->
+                                options.editBooleanOption("maxAddedWyrmprints", arg));
+                        passYesNoArg("\tMax out added weapons?", "maxAddedWeapons", (arg) ->
+                                options.editBooleanOption("maxAddedWeapons", arg));
+                        passYesNoArg("\tAsk to edit these options next time the program is run?", "promptEditOptions", (arg) ->
+                                options.editBooleanOption("promptEditOptions", arg));
+                        System.out.println("\tFinished editing options.");
+                        options.export();
+                    });
+        }
+        //
         String savePath = "";
-        boolean isFilePathInvalid = true;
-        boolean isFileJsonObject = false;
-        while(isFilePathInvalid || !isFileJsonObject){
-            if(path.equals("")){
-                if(isOutOfIDE){
-                    savePath = Paths.get(new File(programPath).getParent(), "savedata.txt").toString();
+        boolean validDefaultSavePath = false;
+        if (!options.getFieldAsString("defaultSaveName").equals("?")) {
+            // default save path input
+            System.out.println("Using this directory for default filepath.");
+            String defaultSaveName = options.getFieldAsString("defaultSaveName");
+            savePath = getPath(programPath, defaultSaveName);
+            int fileCheckCode = JsonUtils.checkIfJsonObject(savePath);
+            if (fileCheckCode == 1) {
+                Logging.print("savedata not found at path: '{0}'! Did you forget to include the file extension? (.txt or .json)\n", savePath);
+            }
+            if (fileCheckCode == 2) {
+                Logging.print("savedata at path: '{0}' does not appear to be in JSON format!\n", savePath);
+            }
+            validDefaultSavePath = fileCheckCode == 0;
+        }
+        if (!validDefaultSavePath) {
+            // normal save path input
+            System.out.println("(Leave this input empty and press 'Enter' key if the save file (savedata.txt) is in the same folder as this program.)");
+            System.out.print("Enter path for save file: ");
+            String path = input.nextLine();
+            boolean isFilePathInvalid = true;
+            while(isFilePathInvalid){
+                if(path.equals("")){
+                    savePath = getPath(programPath, "savedata.txt");
                 } else {
-                    savePath = getPathInIDE(programPath, "savedata.txt");
-                }
-            } else {
-                savePath = path;
-                if (!path.contains("/")) {
-                    System.out.println("Using this directory for filepath.");
-                    if(isOutOfIDE){
-                        savePath = Paths.get(new File(programPath).getParent(), path).toString();
-                    } else {
-                        savePath = getPathInIDE(programPath, path);
+                    if (!path.contains("/")) {
+                        System.out.println("Using this directory for filepath.");
+                        savePath = getPath(programPath, path);
                     }
                 }
-            }
-            isFilePathInvalid = !new File(savePath).exists(); //basic file path exists check
-            isFileJsonObject = JsonUtils.checkIfJsonObject(savePath); //check if its a json object
-            if(isFilePathInvalid || !isFileJsonObject){
-                System.out.println("savedata not found at path: '" + savePath + "'! Did you forget to include the file extension? (.txt or .json)");
-                System.out.println();
-                System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
-                System.out.print("Enter path for save file: ");
-                path = input.nextLine();
+                int fileCheckCode = JsonUtils.checkIfJsonObject(savePath);
+                isFilePathInvalid = fileCheckCode != 0;
+                if(isFilePathInvalid){
+                    if (fileCheckCode == 1) {
+                        Logging.print("savedata not found at path: '{0}'! Did you forget to include the file extension? (.txt or .json)\n", savePath);
+                    }
+                    if (fileCheckCode == 2) {
+                        Logging.print("savedata at path: '{0}' does not appear to be in JSON format!\n", savePath);
+                    }
+                    System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
+                    System.out.print("Enter path for save file: ");
+                    path = input.nextLine();
+                }
             }
         }
 
-        String optionsPath = Paths.get(new File(savePath).getParent(), "DLSaveEditor_options.txt").toString();
-        String teamDataPath = Paths.get(new File(savePath).getParent(), "teams.json").toString();
-
-        JsonUtils util = new JsonUtils(savePath, optionsPath, programPath, isOutOfIDE);
+        JsonUtils util = new JsonUtils(savePath, programPath, isOutOfIDE);
         System.out.println("Save data found at: " + savePath + "\n");
         System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
 
         util.deleteDupeIds(); // sanity check for dupe IDs. shouldn't happen
-        if (!util.hasOptions()) {
-            System.out.println("No options file found in this directory... creating one");
-            util.createNewOptionsFile();
-        }
 
-        options = util.getOptions();
-        if (util.toPromptEditOptions()) {
-            yesNoQuestion("Edit save editing options?",
-                    () -> {
-                        passYesNoArg("\tMax out added adventurers?", "maxAddedAdventurers", (arg) ->
-                                util.editOption("maxAddedAdventurers", arg));
-                        passYesNoArg("\tMax out added dragons?", "maxAddedDragons", (arg) ->
-                                util.editOption("maxAddedDragons", arg));
-                        passYesNoArg("\tMax out added wyrmprints?", "maxAddedWyrmprints", (arg) ->
-                                util.editOption("maxAddedWyrmprints", arg));
-                        passYesNoArg("\tMax out added weapons?", "maxAddedWeapons", (arg) ->
-                                util.editOption("maxAddedWeapons", arg));
-                        passYesNoArg("\tAsk to edit these options next time the program is run?", "promptEditOptions", (arg) ->
-                                util.editOption("promptEditOptions", arg));
-                        System.out.println("\tFinished editing options.");
-                        util.exportOptions();
-                    });
-        }
+        util.setOptions(options);
 
-        if(options.getFieldValue("openTeamEditor")) {
+        if(options.getFieldAsBoolean("openTeamEditor")) {
             yesNoQuestion("Enter teams manager?",
                     () -> {
                         util.enterTeamEditor(teamDataPath);
@@ -246,7 +259,7 @@ public class SaveEditor {
         //check for invisible adventurers (skipped raid welfares)
         List<String> skippedTempAdventurers = util.checkSkippedTempAdventurers();
         if(skippedTempAdventurers.size() > 0){
-            System.out.println("Skipped raid welfare adventurers: " + JsonUtils.listPrettify(skippedTempAdventurers) + " found.");
+            System.out.println("Skipped raid welfare adventurers: " + Logging.listPrettify(skippedTempAdventurers) + " found.");
             yesNoQuestion("\tWould you like to max out their friendship level and add them to your roster?",
                     "Done!",
                     () -> util.setAdventurerVisibleFlags());
@@ -344,7 +357,7 @@ public class SaveEditor {
             util.writeToFile();
         }
         System.out.println();
-        yesNoQuestion("View logs?", () -> util.printLogs());
+        yesNoQuestion("View logs?", () -> Logging.printLogs());
         System.out.println();
         System.out.println("Program finished. Enter anything to exit...");
         input.nextLine();

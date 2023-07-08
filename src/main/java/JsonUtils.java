@@ -12,7 +12,7 @@ public class JsonUtils {
 
     private static final int MAX_DRAGON_CAPACITY = 525;
 
-    private static Options options;
+    private Options options;
     public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     private final String savePath;
@@ -66,10 +66,9 @@ public class JsonUtils {
 
     private final List<String> testFlags = new ArrayList<>();
 
-    public JsonUtils(String savePath, String optionsPath, String jarPath, boolean inJar) {
-        log("Initializing JsonUtils...");
+    public JsonUtils(String savePath, String jarPath, boolean inJar) {
+        Logging.log("Initializing JsonUtils...");
         this.savePath = savePath;
-        this.optionsPath = optionsPath;
         this.jarPath = jarPath;
         this.inJar = inJar;
         rsrcPath = Paths.get(jarPath, "rsrc").toString();
@@ -87,7 +86,6 @@ public class JsonUtils {
             readAbilitiesData();
             readFacilitiesData();
             readMaterialsData();
-            readOptionsData();
             readAbilityData();
         } catch (IOException e) {
             e.printStackTrace();
@@ -128,13 +126,13 @@ public class JsonUtils {
 
     public boolean checkTests(){
         Tests tests = new Tests(this);
-        log("noDupeCharaIdTest(): " + tests.noDupeCharaIdTest());
-        log("noDupeDragonKeyIdTest(): " + tests.noDupeDragonKeyIdTest());
-        log("noDupeTalismanKeyIdTest(): " + tests.noDupeTalismanKeyIdTest());
-        log("noDupeWeaponSkinIdTest(): " + tests.noDupeWeaponSkinIdTest());
-        log("noDupeCrestIdTest(): " + tests.noDupeCrestIdTest());
-        log("weaponPassivesIdTest(): " + tests.weaponPassivesIdTest());
-        log("weaponPassivesIdPerWeaponTest(): " + tests.weaponPassivesIdPerWeaponTest());
+        Logging.log("noDupeCharaIdTest(): " + tests.noDupeCharaIdTest());
+        Logging.log("noDupeDragonKeyIdTest(): " + tests.noDupeDragonKeyIdTest());
+        Logging.log("noDupeTalismanKeyIdTest(): " + tests.noDupeTalismanKeyIdTest());
+        Logging.log("noDupeWeaponSkinIdTest(): " + tests.noDupeWeaponSkinIdTest());
+        Logging.log("noDupeCrestIdTest(): " + tests.noDupeCrestIdTest());
+        Logging.log("weaponPassivesIdTest(): " + tests.weaponPassivesIdTest());
+        Logging.log("weaponPassivesIdPerWeaponTest(): " + tests.weaponPassivesIdPerWeaponTest());
         if(!tests.getIfAllPassed()){
             System.out.println("One or more tests failed... cannot export savedata. " +
                     "Contact @sockperson if this message appears.");
@@ -532,10 +530,6 @@ public class JsonUtils {
         }
     }
 
-    private void readOptionsData() throws IOException {
-        options = new Options(optionsPath);
-    }
-
     private void readStoryData() throws IOException {
         for(Map.Entry<String, JsonElement> entry : getJsonObjectFromRsrc("CharaStories.json").entrySet()){
             int id = Integer.parseInt(entry.getKey());
@@ -566,7 +560,7 @@ public class JsonUtils {
         boolean hasManaSpiral = adv.hasManaSpiral();
         double bonus = hasManaSpiral ? 0.3 : 0.2;
         int elementID = adv.getElementId();
-        if (options.getFieldValue("maxAddedAdventurers")) {
+        if (options.getFieldAsBoolean("maxAddedAdventurers")) {
             addAdventurerEncyclopediaBonus(elementID, bonus, bonus);
         } else { //bonus from adding new adventurer (no upgrades)
             addAdventurerEncyclopediaBonus(elementID, 0.1, 0.1);
@@ -595,7 +589,7 @@ public class JsonUtils {
         double hpBonus = has5UB ? 0.3 : 0.2;
         double strBonus = 0.1;
         int elementID = dragon.getElementId();
-        if (options.getFieldValue("maxAddedDragons")) {
+        if (options.getFieldAsBoolean("maxAddedDragons")) {
             addDragonEncyclopediaBonus(elementID, hpBonus, strBonus);
         } else {
             addDragonEncyclopediaBonus(elementID, 0.1, 0.1);
@@ -856,7 +850,7 @@ public class JsonUtils {
         }
 
         //to add new unit as a level 1 un-upgraded unit
-        boolean minUnit = getTime == -1 && !options.getFieldValue("maxAddedAdventurers");
+        boolean minUnit = getTime == -1 && !options.getFieldAsBoolean("maxAddedAdventurers");
 
         boolean hasManaSpiral = adventurerData.hasManaSpiral();
         JsonArray mc = new JsonArray();
@@ -930,7 +924,7 @@ public class JsonUtils {
         int a1Level = dragonData.getA1Max();
         int a2Level = dragonData.getA2Max();
 
-        boolean minDragon = !options.getFieldValue("maxAddedDragons");
+        boolean minDragon = !options.getFieldAsBoolean("maxAddedDragons");
         if (!minDragon) {
             out.addProperty("dragon_key_id", keyIdMin + 200 * keyIdOffset);
             out.addProperty("dragon_id", dragonData.getId());
@@ -1142,7 +1136,7 @@ public class JsonUtils {
             emptyVoidWeaponAbilities.add(0);
         }
 
-        boolean minWeapon = getTime == -1 && !options.getFieldValue("maxAddedWeapons");
+        boolean minWeapon = getTime == -1 && !options.getFieldAsBoolean("maxAddedWeapons");
 
         if (!minWeapon) {
             out.addProperty("weapon_body_id", weaponData.getId());                      //ID
@@ -1183,7 +1177,7 @@ public class JsonUtils {
         int augmentCount = 0;
 
         //to add new print as a level 1 un-upgraded print
-        boolean minPrint = getTime == -1 && !options.getFieldValue("maxAddedWyrmprints");
+        boolean minPrint = getTime == -1 && !options.getFieldAsBoolean("maxAddedWyrmprints");
 
         switch (rarity) {
             case 2:
@@ -1422,11 +1416,11 @@ public class JsonUtils {
                     unlockAdventurerStory(id);
                     addAdventurerEncyclopediaBonus(adventurer);
                     count++;
-                    write(adventurer.getName());
+                    Logging.write(adventurer.getName());
                 }
             }
         }
-        flushLog("Added adventurers");
+        Logging.flushLog("Added adventurers");
         return count;
     }
 
@@ -1471,10 +1465,10 @@ public class JsonUtils {
                 //Add it to your inventory
                 getField("data", "ability_crest_list").getAsJsonArray().add(newPrint);
                 count++;
-                write(wyrmprint.getName() + "(" + wyrmprint.getRarity() + "*)");
+                Logging.write(wyrmprint.getName() + "(" + wyrmprint.getRarity() + "*)");
             }
         }
-        flushLog("Added wyrmprints");
+        Logging.flushLog("Added wyrmprints");
         return count;
     }
 
@@ -1530,10 +1524,10 @@ public class JsonUtils {
                     }
                 }
                 count++;
-                write(dragon.getName() + "(" + dragon.getRarity() + "*)");
+                Logging.write(dragon.getName() + "(" + dragon.getRarity() + "*)");
             }
         }
-        flushLog("Added dragons");
+        Logging.flushLog("Added dragons");
         return expandAmount == 0 ?
                 "Added " + count + " missing dragons." :
                 "Added " + count + " missing dragons. Dragon inventory capacity was raised by " + expandAmount + ".";
@@ -1619,10 +1613,10 @@ public class JsonUtils {
                 newItem.addProperty("material_id", id);
                 newItem.addProperty("quantity", 30000);
                 items.add(newItem);
-                write(mat.getName());
+                Logging.write(mat.getName());
             }
         }
-        flushLog("Added materials");
+        Logging.flushLog("Added materials");
 
         int[] giftIds = new int[]{30001, 30002, 30003, 40001};
         JsonArray giftList = new JsonArray();
@@ -1635,7 +1629,7 @@ public class JsonUtils {
         getFieldAsJsonObject("data").remove("dragon_gift_list");
         getFieldAsJsonObject("data").add("dragon_gift_list", giftList);
 
-        flushLog("Added dragon gifts");
+        Logging.flushLog("Added dragon gifts");
     }
 
     public void backToTheMines() {
@@ -1687,11 +1681,11 @@ public class JsonUtils {
                     newWeaponSkin.addProperty("gettime", Instant.now().getEpochSecond());
                     getFieldAsJsonArray("data", "weapon_skin_list").add(newWeaponSkin);
                     count++;
-                    write(weaponSkinMeta.getName().replace(" (Skin)", ""));
+                    Logging.write(weaponSkinMeta.getName().replace(" (Skin)", ""));
                 }
             }
         }
-        flushLog("Added weapon skins");
+        Logging.flushLog("Added weapon skins");
         return count;
     }
 
@@ -1710,18 +1704,18 @@ public class JsonUtils {
                 //Add it to your inventory
                 if (newWeapon != null) {
                     getField("data", "weapon_body_list").getAsJsonArray().add(newWeapon);
-                    if (options.getFieldValue("maxAddedWeapons")) {
+                    if (options.getFieldAsBoolean("maxAddedWeapons")) {
                         //Update weapon bonuses
                         addWeaponBonus(weapon);
                         //Update weapon passives
                         updateWeaponPassives(weapon);
                     }
                     count++;
-                    write(weapon.getName() + "(" + weapon.getRarity() + "*, " + weapon.getWeaponSeries() + ")");
+                    Logging.write(weapon.getName() + "(" + weapon.getRarity() + "*, " + weapon.getWeaponSeries() + ")");
                 }
             }
         }
-        flushLog("Added weapons");
+        Logging.flushLog("Added weapons");
 
         testFlags.add("addMissingWeapons");
         return count;
@@ -1751,7 +1745,7 @@ public class JsonUtils {
             FacilityMeta fac = idToFacility.get(id);
             if(level != fac.getMaxLevel()){
                 upgradedExistingCount++;
-                write(fac.getName() + ": " + level + " -> " + fac.getMaxLevel());
+                Logging.write(fac.getName() + ": " + level + " -> " + fac.getMaxLevel());
             }
             keyIdMax = Math.max(keyIdMax, keyId);
             if(idToBuildCount.containsKey(id)){ //increment build count
@@ -1762,7 +1756,7 @@ public class JsonUtils {
             }
             newFacilities.add(buildFacility(idToFacility.get(id), keyId, x, y));
         }
-        flushLog("Levelled up " + upgradedExistingCount + " facilities");
+        Logging.flushLog("Levelled up " + upgradedExistingCount + " facilities");
 
         //below... might run into issues where players might end up having like 3 or 4 dojos...
         //possibly may want to remove adding missing facilities later
@@ -1793,10 +1787,10 @@ public class JsonUtils {
                 }
             }
             if(missingCount > 0){
-                write(idToFacility.get(id).getName() + " x" + missingCount);
+                Logging.write(idToFacility.get(id).getName() + " x" + missingCount);
             }
         }
-        flushLog("Added facilities");
+        Logging.flushLog("Added facilities");
         System.out.println("Upgraded " + upgradedExistingCount + " existing facilities, added " + addedCount +
                 " new facilities, and added " + addedDecoCount + " decoration facilities");
         //replace facilities list
@@ -2181,119 +2175,29 @@ public class JsonUtils {
         addTalisman("delphi", 747, 457, 456, 3); //negative str
     }
 
-    //Logs
-    private List<List<String>> log = new ArrayList<>();
-    private List<String> logKindaStream = new ArrayList<>();
+    // Options \\
 
-    public static String listPrettify(List<String> list){
-        int size = list.size();
-        StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < size; i++){
-            sb.append(list.get(i));
-            if(i != size - 1){
-                sb.append(", ");
-            }
-        }
-        return sb.toString();
-    }
-    public static List<String> toList(List<String> list){
-        int size = list.size();
-        List<String> out = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < size; i++){
-            sb.append(list.get(i));
-            if(i != size - 1){
-                sb.append(", ");
-            }
-            if(sb.length() > 110){
-                out.add(sb.toString());
-                sb.delete(0, sb.length());
-            }
-        }
-        if(sb.length() > 0){
-            out.add(sb.toString());
-        }
-        return out;
+    public void setOptions(Options options) {
+        this.options = options;
     }
 
-    private void log(String message){
-        log.add(Collections.singletonList(message));
-    }
+    // Options \\
 
-    public void write(String message){
-        logKindaStream.add(message);
-    }
-
-    private void flushLog(String message){
-        log.add(Collections.singletonList(message + ": "));
-        log.add(toList(logKindaStream));
-        logKindaStream.clear();
-    }
-
-    public void clearLogs(){
-        log.clear();
-    }
-
-    public void printLogs(){
-        for (int i = 0; i < log.size(); i++){
-            List<String> messages = log.get(i);
-            for (String message : messages) {
-                System.out.println("[" + (i+1) + "] " + message);
-            }
-        }
-    }
-
-    //
-
-    public static boolean checkIfJsonObject(String path) {
+    public static int checkIfJsonObject(String path) {
         JsonReader reader = null;
         try {
             reader = new JsonReader(new FileReader(path));
         } catch (FileNotFoundException ignored) {
-            return false;
+            return 1;
         }
 
         try {
             GSON.fromJson(reader, JsonObject.class);
         } catch (JsonSyntaxException e) {
             System.out.println("File: " + path + " does not appear to be in JSON format!");
-            return false;
+            return 2;
         }
-        return true;
-    }
-
-    // Options //
-
-    public void editOption(String fieldName, boolean fieldValue) {
-        options.editOption(fieldName, fieldValue);
-    }
-
-    public void exportOptions() {
-        options.export();
-    }
-
-    public boolean hasOptions() {
-        return new File(optionsPath).exists();
-    }
-
-    public void createNewOptionsFile () {
-        options.export(); //when no options file found, default options are used --> export those
-    }
-
-    public boolean toPromptEditOptions () {
-        if (options.hasMissingOptions()) {
-            System.out.println("Missing options found in the options file...");
-            System.out.println("Using default for missing options, and exporting options file.");
-            options.export();
-            System.out.println("Prompting edit options.");
-            return true;
-        }
-        return options.toPromptEditOptions();
-
-    }
-
-    public Options getOptions () {
-        return options;
+        return 0;
     }
 
     // Team Editing?

@@ -1,6 +1,7 @@
 [
     {
         "FullName": "AC-011 Garland",
+        "BaseId": 210117,
         "Id": 20050312,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -14,6 +15,7 @@
     },
     {
         "FullName": "Agni",
+        "BaseId": 210016,
         "Id": 20050101,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -27,6 +29,7 @@
     },
     {
         "FullName": "Andromeda",
+        "BaseId": 210115,
         "Id": 20050516,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -40,6 +43,7 @@
     },
     {
         "FullName": "Apollo",
+        "BaseId": 210103,
         "Id": 20050109,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -53,6 +57,7 @@
     },
     {
         "FullName": "Arctos",
+        "BaseId": 210030,
         "Id": 20050108,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -66,6 +71,7 @@
     },
     {
         "FullName": "Ariel",
+        "BaseId": 210116,
         "Id": 20050313,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -79,6 +85,7 @@
     },
     {
         "FullName": "Ars\u00e8ne",
+        "BaseId": 210138,
         "Id": 20050522,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -92,6 +99,7 @@
     },
     {
         "FullName": "Ars\u00e8ne",
+        "BaseId": 210138,
         "Id": 29900010,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -105,6 +113,7 @@
     },
     {
         "FullName": "Astral Imp",
+        "BaseId": 210069,
         "Id": 20030403,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -118,6 +127,7 @@
     },
     {
         "FullName": "Azazel",
+        "BaseId": 210126,
         "Id": 20050518,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -131,19 +141,7 @@
     },
     {
         "FullName": "Bahamut",
-        "Id": 29900020,
-        "Rarity": 5,
-        "MaxLimitBreakCount": 4,
-        "IsPlayable": 0,
-        "Abilities15": 330000483,
-        "Abilities16": 0,
-        "Abilities25": 0,
-        "Abilities26": 0,
-        "Abilities21": 0,
-        "ElementalTypeId": 5
-    },
-    {
-        "FullName": "Bahamut",
+        "BaseId": 210162,
         "Id": 29900026,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -156,7 +154,22 @@
         "ElementalTypeId": 5
     },
     {
+        "FullName": "Bahamut",
+        "BaseId": 210172,
+        "Id": 29900020,
+        "Rarity": 5,
+        "MaxLimitBreakCount": 4,
+        "IsPlayable": 0,
+        "Abilities15": 330000483,
+        "Abilities16": 0,
+        "Abilities25": 0,
+        "Abilities26": 0,
+        "Abilities21": 0,
+        "ElementalTypeId": 5
+    },
+    {
         "FullName": "Barbatos",
+        "BaseId": 210083,
         "Id": 20050517,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -170,6 +183,7 @@
     },
     {
         "FullName": "Beast Form",
+        "BaseId": 210178,
         "Id": 29900023,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -183,6 +197,7 @@
     },
     {
         "FullName": "Bronze Fafnir",
+        "BaseId": 210089,
         "Id": 20040504,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -196,6 +211,7 @@
     },
     {
         "FullName": "Brunhilda",
+        "BaseId": 210002,
         "Id": 20040101,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -209,6 +225,7 @@
     },
     {
         "FullName": "Brunhilda",
+        "BaseId": 210104,
         "Id": 29900001,
         "Rarity": 0,
         "MaxLimitBreakCount": 0,
@@ -222,6 +239,7 @@
     },
     {
         "FullName": "Brunhilda",
+        "BaseId": 210113,
         "Id": 29900002,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -235,6 +253,7 @@
     },
     {
         "FullName": "Carmen",
+        "BaseId": 210149,
         "Id": 29900011,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -248,6 +267,7 @@
     },
     {
         "FullName": "Cat S\u00ecth",
+        "BaseId": 200017,
         "Id": 29900007,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -261,6 +281,7 @@
     },
     {
         "FullName": "Cat S\u00ecth",
+        "BaseId": 200017,
         "Id": 29900009,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -274,6 +295,7 @@
     },
     {
         "FullName": "Cerberus",
+        "BaseId": 210024,
         "Id": 20050104,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -287,6 +309,7 @@
     },
     {
         "FullName": "Chthonius",
+        "BaseId": 200010,
         "Id": 20050510,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -300,6 +323,7 @@
     },
     {
         "FullName": "Cinder Drake",
+        "BaseId": 210022,
         "Id": 20030102,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -313,6 +337,7 @@
     },
     {
         "FullName": "Corsaint Phoenix",
+        "BaseId": 210056,
         "Id": 20050403,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -326,6 +351,7 @@
     },
     {
         "FullName": "Cupid",
+        "BaseId": 210049,
         "Id": 20050405,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -339,6 +365,7 @@
     },
     {
         "FullName": "Daikokuten",
+        "BaseId": 210110,
         "Id": 20050410,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -352,6 +379,7 @@
     },
     {
         "FullName": "Divine Dragon",
+        "BaseId": 210093,
         "Id": 29900006,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -365,6 +393,7 @@
     },
     {
         "FullName": "Dragonyule Jeanne",
+        "BaseId": 210076,
         "Id": 20050205,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -378,6 +407,7 @@
     },
     {
         "FullName": "Dreadking Rathalos",
+        "BaseId": 210122,
         "Id": 20050112,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -391,6 +421,7 @@
     },
     {
         "FullName": "Ebisu",
+        "BaseId": 210114,
         "Id": 20050512,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -404,6 +435,7 @@
     },
     {
         "FullName": "Epimetheus",
+        "BaseId": 210112,
         "Id": 20050514,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -417,6 +449,7 @@
     },
     {
         "FullName": "Erasmus",
+        "BaseId": 210055,
         "Id": 20050105,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -430,6 +463,7 @@
     },
     {
         "FullName": "Fatalis",
+        "BaseId": 210123,
         "Id": 20050513,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -443,6 +477,7 @@
     },
     {
         "FullName": "Freyja",
+        "BaseId": 210084,
         "Id": 20050308,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -456,6 +491,7 @@
     },
     {
         "FullName": "Fubuki",
+        "BaseId": 210059,
         "Id": 20030201,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -469,6 +505,7 @@
     },
     {
         "FullName": "Fudo Myo-o",
+        "BaseId": 210169,
         "Id": 20050320,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -482,6 +519,7 @@
     },
     {
         "FullName": "Gabriel",
+        "BaseId": 210145,
         "Id": 20050214,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -495,6 +533,7 @@
     },
     {
         "FullName": "Gaibhne & Creidhne",
+        "BaseId": 210120,
         "Id": 20050211,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -508,6 +547,7 @@
     },
     {
         "FullName": "Gala Bahamut",
+        "BaseId": 210162,
         "Id": 20050525,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -521,6 +561,7 @@
     },
     {
         "FullName": "Gala Beast Ciella",
+        "BaseId": 210167,
         "Id": 20050217,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -534,6 +575,7 @@
     },
     {
         "FullName": "Gala Beast Volk",
+        "BaseId": 210161,
         "Id": 20050319,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -547,6 +589,7 @@
     },
     {
         "FullName": "Gala Cat S\u00ecth",
+        "BaseId": 200017,
         "Id": 20050519,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -560,6 +603,7 @@
     },
     {
         "FullName": "Gala Chronos Nyx",
+        "BaseId": 210164,
         "Id": 20050418,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -573,6 +617,7 @@
     },
     {
         "FullName": "Gala Elysium",
+        "BaseId": 210173,
         "Id": 20050419,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -586,6 +631,7 @@
     },
     {
         "FullName": "Gala Mars",
+        "BaseId": 200009,
         "Id": 20050113,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -599,6 +645,7 @@
     },
     {
         "FullName": "Gala Reborn Agni",
+        "BaseId": 210147,
         "Id": 20050117,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -612,6 +659,7 @@
     },
     {
         "FullName": "Gala Reborn Jeanne",
+        "BaseId": 210144,
         "Id": 20050414,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -625,6 +673,7 @@
     },
     {
         "FullName": "Gala Reborn Nidhogg",
+        "BaseId": 210155,
         "Id": 20050524,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -638,6 +687,7 @@
     },
     {
         "FullName": "Gala Reborn Poseidon",
+        "BaseId": 210134,
         "Id": 20050213,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -651,6 +701,7 @@
     },
     {
         "FullName": "Gala Reborn Zephyr",
+        "BaseId": 210143,
         "Id": 20050316,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -664,6 +715,7 @@
     },
     {
         "FullName": "Gala Thor",
+        "BaseId": 200018,
         "Id": 20050412,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -677,6 +729,7 @@
     },
     {
         "FullName": "Garuda",
+        "BaseId": 210036,
         "Id": 20050304,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -690,6 +743,7 @@
     },
     {
         "FullName": "Gilgamesh",
+        "BaseId": 210048,
         "Id": 20050404,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -703,6 +757,7 @@
     },
     {
         "FullName": "Giovanni",
+        "BaseId": 210135,
         "Id": 20050521,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -716,6 +771,7 @@
     },
     {
         "FullName": "Gloom Drake",
+        "BaseId": 210066,
         "Id": 20030502,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -729,6 +785,7 @@
     },
     {
         "FullName": "Gold Fafnir",
+        "BaseId": 210091,
         "Id": 20050507,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -742,6 +799,7 @@
     },
     {
         "FullName": "Gozu Tenno",
+        "BaseId": 210136,
         "Id": 20050116,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -755,6 +813,7 @@
     },
     {
         "FullName": "Gust Drake",
+        "BaseId": 210064,
         "Id": 20030302,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -768,6 +827,7 @@
     },
     {
         "FullName": "Halloween Maritimus",
+        "BaseId": 210097,
         "Id": 20050208,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -781,6 +841,7 @@
     },
     {
         "FullName": "Halloween Silke",
+        "BaseId": 210075,
         "Id": 20040405,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -794,6 +855,7 @@
     },
     {
         "FullName": "Hastur",
+        "BaseId": 210105,
         "Id": 20050311,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -807,6 +869,7 @@
     },
     {
         "FullName": "Heavenly Wings",
+        "BaseId": 210165,
         "Id": 29900017,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -820,6 +883,7 @@
     },
     {
         "FullName": "High Brunhilda",
+        "BaseId": 210039,
         "Id": 20050102,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -833,6 +897,7 @@
     },
     {
         "FullName": "High Chthonius",
+        "BaseId": 210148,
         "Id": 20050523,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -846,6 +911,7 @@
     },
     {
         "FullName": "High Jupiter",
+        "BaseId": 210041,
         "Id": 20050402,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -859,6 +925,7 @@
     },
     {
         "FullName": "High Mercury",
+        "BaseId": 210040,
         "Id": 20050202,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -872,6 +939,7 @@
     },
     {
         "FullName": "High Midgardsormr",
+        "BaseId": 210038,
         "Id": 20050302,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -885,6 +953,7 @@
     },
     {
         "FullName": "High Zodiark",
+        "BaseId": 210042,
         "Id": 20050502,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -898,6 +967,7 @@
     },
     {
         "FullName": "Hikage",
+        "BaseId": 210062,
         "Id": 20030501,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -911,6 +981,7 @@
     },
     {
         "FullName": "Hinata",
+        "BaseId": 210061,
         "Id": 20030401,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -924,6 +995,7 @@
     },
     {
         "FullName": "Homura",
+        "BaseId": 210021,
         "Id": 20030101,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -937,6 +1009,7 @@
     },
     {
         "FullName": "Horus",
+        "BaseId": 210124,
         "Id": 20050114,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -950,6 +1023,7 @@
     },
     {
         "FullName": "Ifrit",
+        "BaseId": 210007,
         "Id": 20040103,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -963,6 +1037,7 @@
     },
     {
         "FullName": "Jeanne d'Arc",
+        "BaseId": 210020,
         "Id": 20050401,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -976,6 +1051,7 @@
     },
     {
         "FullName": "Juggernaut",
+        "BaseId": 210014,
         "Id": 20040502,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -989,6 +1065,7 @@
     },
     {
         "FullName": "Jupiter",
+        "BaseId": 210004,
         "Id": 20040401,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1002,6 +1079,7 @@
     },
     {
         "FullName": "Jupiter",
+        "BaseId": 210174,
         "Id": 29900021,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1015,6 +1093,7 @@
     },
     {
         "FullName": "Kagutsuchi",
+        "BaseId": 210107,
         "Id": 20050110,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1028,6 +1107,7 @@
     },
     {
         "FullName": "Kamuy",
+        "BaseId": 210109,
         "Id": 20050209,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1041,6 +1121,7 @@
     },
     {
         "FullName": "Kindling Imp",
+        "BaseId": 210023,
         "Id": 20030103,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -1054,6 +1135,7 @@
     },
     {
         "FullName": "Konohana Sakuya",
+        "BaseId": 210082,
         "Id": 20050107,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1067,6 +1149,7 @@
     },
     {
         "FullName": "Leviathan",
+        "BaseId": 210017,
         "Id": 20050203,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1080,6 +1163,7 @@
     },
     {
         "FullName": "Liger",
+        "BaseId": 210043,
         "Id": 20050407,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1093,6 +1177,7 @@
     },
     {
         "FullName": "Lindworm",
+        "BaseId": 210013,
         "Id": 20040403,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1106,6 +1191,7 @@
     },
     {
         "FullName": "Long Long",
+        "BaseId": 210080,
         "Id": 20050305,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1119,6 +1205,7 @@
     },
     {
         "FullName": "Lumi\u00e8re Pandora",
+        "BaseId": 210142,
         "Id": 20050413,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1132,6 +1219,7 @@
     },
     {
         "FullName": "Marishiten",
+        "BaseId": 210077,
         "Id": 20050506,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1145,6 +1233,7 @@
     },
     {
         "FullName": "Maritimus",
+        "BaseId": 210072,
         "Id": 20050505,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1158,6 +1247,7 @@
     },
     {
         "FullName": "Mars",
+        "BaseId": 200009,
         "Id": 29900008,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -1171,6 +1261,7 @@
     },
     {
         "FullName": "Menoetius",
+        "BaseId": 210137,
         "Id": 20050317,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1184,6 +1275,7 @@
     },
     {
         "FullName": "Mercury",
+        "BaseId": 210003,
         "Id": 20040201,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1197,19 +1289,7 @@
     },
     {
         "FullName": "Mercury",
-        "Id": 29900016,
-        "Rarity": 5,
-        "MaxLimitBreakCount": 0,
-        "IsPlayable": 0,
-        "Abilities15": 0,
-        "Abilities16": "",
-        "Abilities25": 0,
-        "Abilities26": "",
-        "Abilities21": 0,
-        "ElementalTypeId": 2
-    },
-    {
-        "FullName": "Mercury",
+        "BaseId": 210003,
         "Id": 29900024,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1222,7 +1302,22 @@
         "ElementalTypeId": 2
     },
     {
+        "FullName": "Mercury",
+        "BaseId": 210160,
+        "Id": 29900016,
+        "Rarity": 5,
+        "MaxLimitBreakCount": 0,
+        "IsPlayable": 0,
+        "Abilities15": 0,
+        "Abilities16": "",
+        "Abilities25": 0,
+        "Abilities26": "",
+        "Abilities21": 0,
+        "ElementalTypeId": 2
+    },
+    {
         "FullName": "Metamorphosis",
+        "BaseId": 210153,
         "Id": 29900014,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -1236,6 +1331,7 @@
     },
     {
         "FullName": "Metamorphosis",
+        "BaseId": 210170,
         "Id": 29900018,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1249,6 +1345,7 @@
     },
     {
         "FullName": "Michael",
+        "BaseId": 210168,
         "Id": 20050321,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1262,6 +1359,7 @@
     },
     {
         "FullName": "Midgardsormr",
+        "BaseId": 210001,
         "Id": 20040301,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1275,6 +1373,7 @@
     },
     {
         "FullName": "Midgardsormr",
+        "BaseId": 210001,
         "Id": 29900015,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -1288,6 +1387,7 @@
     },
     {
         "FullName": "Midgardsormr Zero",
+        "BaseId": 210131,
         "Id": 20050315,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1301,6 +1401,7 @@
     },
     {
         "FullName": "Mini Hildy",
+        "BaseId": 210133,
         "Id": 20050115,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1314,6 +1415,7 @@
     },
     {
         "FullName": "Mini Jupi",
+        "BaseId": 210166,
         "Id": 20050417,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1327,6 +1429,7 @@
     },
     {
         "FullName": "Mini Mercs",
+        "BaseId": 210146,
         "Id": 20050215,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1340,6 +1443,7 @@
     },
     {
         "FullName": "Mini Mids",
+        "BaseId": 210111,
         "Id": 20050310,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1353,6 +1457,7 @@
     },
     {
         "FullName": "Mini Zodi",
+        "BaseId": 210127,
         "Id": 20050515,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1366,6 +1471,7 @@
     },
     {
         "FullName": "Moon Drake",
+        "BaseId": 210065,
         "Id": 20030402,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -1379,6 +1485,7 @@
     },
     {
         "FullName": "Nidhogg",
+        "BaseId": 210019,
         "Id": 20050501,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1392,6 +1499,7 @@
     },
     {
         "FullName": "Nimis",
+        "BaseId": 210053,
         "Id": 20050210,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1405,6 +1513,7 @@
     },
     {
         "FullName": "Nyarlathotep",
+        "BaseId": 210046,
         "Id": 20050508,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1418,6 +1527,7 @@
     },
     {
         "FullName": "Nyarlathotep",
+        "BaseId": 210071,
         "Id": 29900004,
         "Rarity": 0,
         "MaxLimitBreakCount": 0,
@@ -1431,6 +1541,7 @@
     },
     {
         "FullName": "Pallid Imp",
+        "BaseId": 210070,
         "Id": 20030503,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -1444,6 +1555,7 @@
     },
     {
         "FullName": "Parallel Zodiark",
+        "BaseId": 210095,
         "Id": 20050511,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1457,6 +1569,7 @@
     },
     {
         "FullName": "Pazuzu",
+        "BaseId": 210026,
         "Id": 20050306,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1470,6 +1583,7 @@
     },
     {
         "FullName": "Pele",
+        "BaseId": 210057,
         "Id": 20050103,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1483,6 +1597,7 @@
     },
     {
         "FullName": "Peng Lai",
+        "BaseId": 210079,
         "Id": 20050206,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1496,6 +1611,7 @@
     },
     {
         "FullName": "Phantom",
+        "BaseId": 210045,
         "Id": 20050504,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1509,6 +1625,7 @@
     },
     {
         "FullName": "Phoenix",
+        "BaseId": 210006,
         "Id": 20040102,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1522,6 +1639,7 @@
     },
     {
         "FullName": "Pithos",
+        "BaseId": 210151,
         "Id": 29900013,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -1535,6 +1653,7 @@
     },
     {
         "FullName": "Poli\u02bbahu",
+        "BaseId": 210008,
         "Id": 20040202,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1548,6 +1667,7 @@
     },
     {
         "FullName": "Pop-Star Siren",
+        "BaseId": 210094,
         "Id": 20050409,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1561,6 +1681,7 @@
     },
     {
         "FullName": "Poseidon",
+        "BaseId": 210025,
         "Id": 20050201,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1574,6 +1695,7 @@
     },
     {
         "FullName": "Primal Brunhilda",
+        "BaseId": 210177,
         "Id": 20050119,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1587,6 +1709,7 @@
     },
     {
         "FullName": "Primal Midgardsormr",
+        "BaseId": 210179,
         "Id": 29900027,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1600,6 +1723,7 @@
     },
     {
         "FullName": "Prometheus",
+        "BaseId": 210052,
         "Id": 20050106,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1613,6 +1737,7 @@
     },
     {
         "FullName": "Puppy",
+        "BaseId": 210128,
         "Id": 29900005,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1626,6 +1751,7 @@
     },
     {
         "FullName": "Ramiel",
+        "BaseId": 210132,
         "Id": 20050520,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1639,6 +1765,7 @@
     },
     {
         "FullName": "Raphael",
+        "BaseId": 210154,
         "Id": 20050415,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1652,6 +1779,7 @@
     },
     {
         "FullName": "Rathalos",
+        "BaseId": 210121,
         "Id": 20050111,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1665,6 +1793,7 @@
     },
     {
         "FullName": "Roc",
+        "BaseId": 210050,
         "Id": 20040302,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1678,6 +1807,7 @@
     },
     {
         "FullName": "Rose Queen",
+        "BaseId": 210152,
         "Id": 20050318,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1691,6 +1821,7 @@
     },
     {
         "FullName": "Rush",
+        "BaseId": 210118,
         "Id": 29900003,
         "Rarity": 0,
         "MaxLimitBreakCount": 0,
@@ -1704,6 +1835,7 @@
     },
     {
         "FullName": "Shinobi",
+        "BaseId": 210087,
         "Id": 20050509,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1717,6 +1849,7 @@
     },
     {
         "FullName": "Shishimai",
+        "BaseId": 210078,
         "Id": 20050406,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1730,6 +1863,7 @@
     },
     {
         "FullName": "Silke",
+        "BaseId": 210015,
         "Id": 20040503,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1743,6 +1877,7 @@
     },
     {
         "FullName": "Silver Fafnir",
+        "BaseId": 210090,
         "Id": 20040505,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1756,6 +1891,7 @@
     },
     {
         "FullName": "Simurgh",
+        "BaseId": 210081,
         "Id": 20050207,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1769,6 +1905,7 @@
     },
     {
         "FullName": "Siren",
+        "BaseId": 210054,
         "Id": 20050204,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1782,6 +1919,7 @@
     },
     {
         "FullName": "Snow Drake",
+        "BaseId": 210063,
         "Id": 20030202,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -1795,6 +1933,7 @@
     },
     {
         "FullName": "Stribog",
+        "BaseId": 210011,
         "Id": 20040303,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1808,6 +1947,7 @@
     },
     {
         "FullName": "Styx",
+        "BaseId": 210130,
         "Id": 20050212,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1821,6 +1961,7 @@
     },
     {
         "FullName": "Summer Cat S\u00ecth",
+        "BaseId": 210158,
         "Id": 20050416,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1834,6 +1975,7 @@
     },
     {
         "FullName": "Summer Cat S\u00ecth",
+        "BaseId": 210158,
         "Id": 29900019,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
@@ -1847,6 +1989,7 @@
     },
     {
         "FullName": "Summer Konohana Sakuya",
+        "BaseId": 210125,
         "Id": 20050314,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1860,6 +2003,7 @@
     },
     {
         "FullName": "Summer Marishiten",
+        "BaseId": 210156,
         "Id": 20050216,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1873,6 +2017,7 @@
     },
     {
         "FullName": "Sylvia",
+        "BaseId": 210010,
         "Id": 20050303,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1886,6 +2031,7 @@
     },
     {
         "FullName": "Takemikazuchi",
+        "BaseId": 210051,
         "Id": 20050408,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1899,6 +2045,7 @@
     },
     {
         "FullName": "Thor",
+        "BaseId": 200018,
         "Id": 29900025,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1912,6 +2059,7 @@
     },
     {
         "FullName": "Tie Shan Gongzhu",
+        "BaseId": 210085,
         "Id": 20050411,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1925,6 +2073,7 @@
     },
     {
         "FullName": "Tsumuji",
+        "BaseId": 210060,
         "Id": 20030301,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -1938,6 +2087,7 @@
     },
     {
         "FullName": "Unicorn",
+        "BaseId": 210012,
         "Id": 20040402,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1951,6 +2101,7 @@
     },
     {
         "FullName": "Uriel",
+        "BaseId": 210163,
         "Id": 20050118,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -1964,6 +2115,7 @@
     },
     {
         "FullName": "Vayu",
+        "BaseId": 210098,
         "Id": 20050309,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -1977,6 +2129,7 @@
     },
     {
         "FullName": "Vodyanoy",
+        "BaseId": 210058,
         "Id": 20040203,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -1990,6 +2143,7 @@
     },
     {
         "FullName": "Wellspring Imp",
+        "BaseId": 210067,
         "Id": 20030203,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -2003,6 +2157,7 @@
     },
     {
         "FullName": "Yulong",
+        "BaseId": 210074,
         "Id": 20050307,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -2016,6 +2171,7 @@
     },
     {
         "FullName": "Zephyr",
+        "BaseId": 210018,
         "Id": 20050301,
         "Rarity": 5,
         "MaxLimitBreakCount": 5,
@@ -2029,6 +2185,7 @@
     },
     {
         "FullName": "Zephyr Imp",
+        "BaseId": 210068,
         "Id": 20030303,
         "Rarity": 3,
         "MaxLimitBreakCount": 4,
@@ -2042,6 +2199,7 @@
     },
     {
         "FullName": "Zodiark",
+        "BaseId": 210005,
         "Id": 20040501,
         "Rarity": 4,
         "MaxLimitBreakCount": 4,
@@ -2055,6 +2213,7 @@
     },
     {
         "FullName": "Zodiark",
+        "BaseId": 210175,
         "Id": 29900022,
         "Rarity": 5,
         "MaxLimitBreakCount": 4,
@@ -2068,6 +2227,7 @@
     },
     {
         "FullName": "Zorro",
+        "BaseId": 210150,
         "Id": 29900012,
         "Rarity": 5,
         "MaxLimitBreakCount": 0,
