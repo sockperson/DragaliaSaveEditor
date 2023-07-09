@@ -76,6 +76,13 @@ public class Logging {
         log.add(Collections.singletonList(printMsg));
     }
 
+    public static void write(String message, List<String> msgs) {
+        for (String str : msgs) {
+            write(str);
+        }
+        flushLog(message);
+    }
+
     public static void write(String message){
         logKindaStream.add(message);
     }

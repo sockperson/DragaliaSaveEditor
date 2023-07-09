@@ -237,6 +237,7 @@ public class SaveEditor {
         System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
 
         util.deleteDupeIds(); // sanity check for dupe IDs. shouldn't happen
+        util.applyFixes();
 
         util.setOptions(options);
 

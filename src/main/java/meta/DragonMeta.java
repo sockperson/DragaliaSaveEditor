@@ -59,7 +59,7 @@ public class DragonMeta {
 
     // [baseId][01][1/2]
     public int getDragonStoryId(int num) {
-        return (baseId * 1000) + (10) + (num);
+        return Integer.parseInt(baseId + "01" + num);
     }
 
     private static final int TALONSTONE = 201005001;

@@ -131,6 +131,7 @@ public class JsonUtils {
         Logging.log("noDupeTalismanKeyIdTest(): " + tests.noDupeTalismanKeyIdTest());
         Logging.log("noDupeWeaponSkinIdTest(): " + tests.noDupeWeaponSkinIdTest());
         Logging.log("noDupeCrestIdTest(): " + tests.noDupeCrestIdTest());
+        Logging.log("noDupeStoryIdTest(): " + tests.noDupeStoryIdTest());
         Logging.log("weaponPassivesIdTest(): " + tests.weaponPassivesIdTest());
         Logging.log("weaponPassivesIdPerWeaponTest(): " + tests.weaponPassivesIdPerWeaponTest());
         if(!tests.getIfAllPassed()){
@@ -772,6 +773,25 @@ public class JsonUtils {
         return false;
     }
 
+    // Returns whether the array at 'fields' contains a duplicate value of 'fieldName'
+    // String fieldName: the field to check for
+    // String... fields: field traverse path
+    // ex: "unit_story_id", "data", "unit_story_list": checks whether the story list has a duplicate story ID
+    // returns -1 if none was found
+    public int arrayHasDuplicateValue (String fieldName, String... fields) {
+        Set<Integer> set = new HashSet<>();
+        JsonArray jsonArray = getFieldAsJsonArray(fields);
+        for (JsonElement jsonEle : jsonArray) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            int val = jsonObj.get(fieldName).getAsInt();
+            if (set.contains(val)) {
+                return val;
+            }
+            set.add(val);
+        }
+        return -1;
+    }
+
     // Returns value of a field for the object in array corresponding to 'fields',
     // with a value matching the value in 'checkFieldName'
     // String valueFieldName: the field to return value for
@@ -1267,6 +1287,36 @@ public class JsonUtils {
         }
     }
 
+    public void applyFixes() {
+        fixMissingDragonStories();
+    }
+
+    public void fixMissingDragonStories() {
+        List<String> addedDragonStories = new ArrayList<>();
+        //Compile a list of ID's from your encyclopedia
+        Set<Integer> albumIDSet = getSetFromField("dragon_id", "data", "album_dragon_list");
+        for (Integer dragonId : albumIDSet) {
+            DragonMeta dragon = idToDragon.get(dragonId);
+            int id = dragon.getId();
+            int bondLevel = getValueFromObjInArray("reliability_level", "dragon_id",
+                    id, "data", "dragon_reliability_list");
+            if (bondLevel >= 5) {
+                if(addDragonStory(dragon.getDragonStoryId(1))) {
+                    addedDragonStories.add(dragon.getName() +  " Part 1");
+                }
+            }
+            if (bondLevel >= 15) {
+                if(addDragonStory(dragon.getDragonStoryId(2))) {
+                    addedDragonStories.add(dragon.getName() +  " Part 2");
+                }
+            }
+        }
+        if (!addedDragonStories.isEmpty()) {
+            Logging.print("Added {0} dragon stories that should have been in the savefile.", addedDragonStories.size());
+            Logging.write("Added missing dragon stories", addedDragonStories);
+        }
+    }
+
     // Hacked Utils \\
 
     private void addHackedUnit(int id){
@@ -1597,14 +1647,16 @@ public class JsonUtils {
         return out;
     }
 
-    public void addDragonStory(int id) {
+    // returns true if a dragon story was added
+    public boolean addDragonStory(int id) {
         if (arrayHasValue("unit_story_id", id, "data", "unit_story_list")) {
-            return; // dont add anything if story already exists
+            return false; // dont add anything if story already exists
         }
         JsonObject dragonStory = new JsonObject();
         dragonStory.addProperty("unit_story_id", id);
         dragonStory.addProperty("is_read", 0);
         getFieldAsJsonArray("data", "unit_story_list").add(dragonStory);
+        return true;
     }
 
     public void addDragon(String drgName) {
@@ -1971,6 +2023,10 @@ public class JsonUtils {
             // Update dragon bond obj
             updateDragonBond(id);
 
+            // add dragon stories
+            addDragonStory(dragon.getDragonStoryId(1));
+            addDragonStory(dragon.getDragonStoryId(2));
+
             // Update encyclopedia max level/unbound obj
             for (JsonElement jsonEle2 : getFieldAsJsonArray("data", "album_dragon_list")){
                 JsonObject encycloData = jsonEle2.getAsJsonObject();
@@ -2291,7 +2347,6 @@ public class JsonUtils {
         try {
             GSON.fromJson(reader, JsonObject.class);
         } catch (JsonSyntaxException e) {
-            System.out.println("File: " + path + " does not appear to be in JSON format!");
             return 2;
         }
         return 0;
