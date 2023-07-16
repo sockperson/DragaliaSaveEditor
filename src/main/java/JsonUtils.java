@@ -1105,8 +1105,12 @@ public class JsonUtils {
         int refines = 0;
         int fiveStarSlotCount = 0;
         int sindomSlotCount = 0;
-        //can't make copies of Mega Man collab weapons apparently...
-        int copiesCount = weaponData.getName().contains("Mega") ? 1 : 4;
+
+        boolean isMegaManWeapon = weaponData.getName().contains("Mega") && weaponData.getElementId() == 99;
+        boolean isLuckyPaddle = weaponData.getId() == 30159904;
+        // can't make copies of Mega Man collab weapons apparently...
+        // and the lucky paddle too apparently
+        int copiesCount = (isMegaManWeapon || isLuckyPaddle) ? 1 : 4;
         switch (weaponSeries) {
             case "Core":
                 switch (rarity) {
