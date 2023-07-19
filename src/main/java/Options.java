@@ -1,3 +1,5 @@
+import meta.AdventurerMeta;
+
 import java.io.*;
 import java.util.*;
 
@@ -12,6 +14,8 @@ public class Options {
             "(bool):openTeamEditor=false", "(bool):maxDragonBonds=true", "(string):defaultSaveName=?"
     };
 
+    private String[] portraitAdventurersNameAndDefaults;
+
     private List<String> optionNames = new ArrayList<>();
 
     private String optionsPath = "";
@@ -20,6 +24,7 @@ public class Options {
     private boolean hasMissingOptions = false;
 
     public Options (String optionsPath) {
+        initializePortraitAdventurersNameAndDefaults();
         initializeOptionDefaultMap();
         this.optionsPath = optionsPath;
         try {
@@ -107,6 +112,31 @@ public class Options {
         // return true --> no missing options
         // return false --> there are missing options
         return missingOptions.isEmpty();
+    }
+
+    private static final String[][] portraitDefaults = new String[][]{
+            new String[]{"Naveed", "Xander", "Bondforged Prince", "Civilian Leif", "Gala Alex"},
+            new String[]{"Nobunaga", "Gala Mascula", "Harle", "", ""},
+            new String[]{"Summer Mitsuhide", "Mitsuba", "Gala Notte", "", ""},
+            new String[]{"Gala Gatov", "Lazry", "Valentine's Melody", "", ""},
+            new String[]{"Emma", "Xainfried", "Kirsty", "", ""},
+            new String[]{"Summer Alex", "Hunter Sarisse", "", "", ""},
+            new String[]{"Seimei", "Gala Emile", "", "", ""},
+            new String[]{"Ayaha & Otoha", "Dragonyule Lily", "", "", ""},
+            new String[]{"Dragonyule Ilia", "Lapis", "", "", ""}
+    };
+
+    private void initializePortraitAdventurersNameAndDefaults() {
+        String[] out = new String[45];
+        for (int element = 1; element <= 5; element++) {
+            for (int weapon = 1; weapon <= 9; weapon++) {
+                String eleString = AdventurerMeta.getElementString(element);
+                String wepString = AdventurerMeta.getWeaponTypeString(weapon);
+                String optionString = "portrait" + eleString + wepString + "Name";
+                int index = element * weapon;
+                out[index] = "(string):" + optionString + "=" + portraitDefaults[weapon][element];
+            }
+        }
     }
 
     private void initializeOptionDefaultMap() {

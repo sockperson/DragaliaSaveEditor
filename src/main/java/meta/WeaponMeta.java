@@ -36,30 +36,11 @@ public class WeaponMeta {
     public String getFunctionalName(){ return functionalName; }
 
     public String getElementString () {
-        switch (elementId) {
-            case 1: return "Flame";
-            case 2: return "Water";
-            case 3: return "Wind";
-            case 4: return "Light";
-            case 5: return "Shadow";
-            case 99: return "Null";
-        }
-        return "?";
+        return AdventurerMeta.getElementString(elementId);
     }
 
     public String getWeaponTypeString () {
-        switch (weaponTypeId) {
-            case 1: return "Sword";
-            case 2: return "Blade";
-            case 3: return "Dagger";
-            case 4: return "Axe";
-            case 5: return "Lance";
-            case 6: return "Bow";
-            case 7: return "Wand";
-            case 8: return "Staff";
-            case 9: return "Manacaster";
-        }
-        return "?";
+        return AdventurerMeta.getWeaponTypeString(elementId);
     }
 
     private String genFunctionalName () {
