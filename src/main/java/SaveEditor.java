@@ -167,6 +167,8 @@ public class SaveEditor {
         String programPath = getFilePath();
         String optionsPath = getPath(programPath, "DLSaveEditor_options.txt");
         String teamDataPath = getPath(programPath, "teams.json");
+        // resources
+        DragaliaData.init();
         // options file stuff
         options = new Options(optionsPath);
         System.out.println();
@@ -231,132 +233,133 @@ public class SaveEditor {
                 }
             }
         }
-
-        JsonUtils util = new JsonUtils(savePath, programPath, isOutOfIDE);
+        // JsonUtils
+        JsonUtils.init(savePath, programPath, isOutOfIDE);
         System.out.println("Save data found at: " + savePath + "\n");
-        System.out.println("Hello " + util.getFieldAsString("data", "user_data", "name") + "!");
+        System.out.println("Hello " + JsonUtils.getFieldAsString("data", "user_data", "name") + "!");
 
-        util.deleteDupeIds(); // sanity check for dupe IDs. shouldn't happen
-        util.applyFixes();
-
-        util.setOptions(options);
+        JsonUtils.deleteDupeIds(); // sanity check for dupe IDs. shouldn't happen
+        JsonUtils.applyFixes();
 
         if(options.getFieldAsBoolean("openTeamEditor")) {
             yesNoQuestion("Enter teams manager?",
                     () -> {
-                        util.enterTeamEditor(teamDataPath);
+                        TeamsUtil.init(teamDataPath);
+                        TeamsUtil.run();
                     });
         }
 
-        yesNoQuestion("Uncap mana? (Sets mana to 10m)", () -> util.uncapMana());
-        yesNoQuestion("Set rupies count to 2b?", () -> util.setRupies());
+        yesNoQuestion("Uncap mana? (Sets mana to 10m)", JsonUtils::uncapMana);
+        yesNoQuestion("Set rupies count to 2b?", JsonUtils::setRupies);
         yesNoQuestion(
                 "Rob Donkay? (Sets wyrmites to 710k, singles to 2.6k, tenfolds to 170)",
                 "Thanks Donkay!",
-                () -> util.plunderDonkay());
-        yesNoQuestion("Play Ch13 Ex1-2 Battle On The Byroad? (Sets eldwater to 10m)", () -> util.battleOnTheByroad());
+                JsonUtils::plunderDonkay);
+        yesNoQuestion("Play Ch13 Ex1-2 Battle On The Byroad? (Sets eldwater to 10m)", JsonUtils::battleOnTheByroad);
         //check for invisible adventurers (skipped raid welfares)
-        List<String> skippedTempAdventurers = util.checkSkippedTempAdventurers();
+        List<String> skippedTempAdventurers = JsonUtils.checkSkippedTempAdventurers();
         if(skippedTempAdventurers.size() > 0){
             System.out.println("Skipped raid welfare adventurers: " + Logging.listPrettify(skippedTempAdventurers) + " found.");
             yesNoQuestion("\tWould you like to max out their friendship level and add them to your roster?",
                     "Done!",
-                    () -> util.setAdventurerVisibleFlags());
+                    JsonUtils::setAdventurerVisibleFlags);
         }
         yesNoQuestion(
                 "Max out existing adventurers/dragon/weapons/wyrmprints?",
                 () -> {
                     yesNoQuestion("\tMax out existing adventurers?",
-                            () -> util.maxAdventurers());
+                            JsonUtils::maxAdventurers);
                     yesNoQuestion("\tMax out existing dragons?",
-                            () -> util.maxDragons());
+                            JsonUtils::maxDragons);
                     yesNoQuestion("\tMax out existing weapons?",
-                            () -> util.maxWeapons());
+                            JsonUtils::maxWeapons);
                     yesNoQuestion("\tMax out existing wyrmprints?",
-                            () -> util.maxWyrmprints());
+                            JsonUtils::maxWyrmprints);
                 });
         yesNoQuestion(
                 "Add all missing adventurers to roster?",
-                () -> System.out.println("Added " + util.addMissingAdventurers() + " missing adventurers."),
+                () -> System.out.println("Added " + JsonUtils.addMissingAdventurers() + " missing adventurers."),
                 () -> yesNoQuestion("\tWould you like to add specific adventurers to roster?",
                         () -> continuousInput("\t\tEnter adventurer name",
-                        (advName) -> util.addAdventurer(advName))));
+                                JsonUtils::addAdventurer)));
         yesNoQuestion(
                 "Add all missing dragons to roster?",
                 () -> {
                         yesNoQuestion(
                             "\tInclude 3-star and 4-star dragons?",
-                            () -> System.out.println(util.addMissingDragons(false)),
-                            () -> System.out.println(util.addMissingDragons(true)));
+                            () -> System.out.println(JsonUtils.addMissingDragons(false)),
+                            () -> System.out.println(JsonUtils.addMissingDragons(true)));
                         yesNoQuestion("\tAdd additional dragons to roster?",
                             () -> continuousInput("\t\tEnter dragon name",
-                            (dragonName) -> util.addDragon(dragonName)));
+                                    JsonUtils::addDragon));
                     },
                 () -> yesNoQuestion("\tWould you like to add additional specific dragons to roster?",
                         () -> continuousInput("\t\tEnter dragon name",
-                        (dragonName) -> util.addDragon(dragonName))));
+                                JsonUtils::addDragon)));
         yesNoQuestion(
                 "Add all missing weapons?",
-                () -> System.out.println("Added " + util.addMissingWeapons() + " missing weapons."));
+                () -> System.out.println("Added " + JsonUtils.addMissingWeapons() + " missing weapons."));
         yesNoQuestion(
                 "Add all missing wyrmprints?",
-                () -> System.out.println("Added " + util.addMissingWyrmprints() + " missing wyrmprints."));
+                () -> System.out.println("Added " + JsonUtils.addMissingWyrmprints() + " missing wyrmprints."));
         yesNoQuestion(
                 "Set all material counts to 30,000?",
                 "Done!",
-                () -> util.addMaterials());
+                JsonUtils::addMaterials);
         yesNoQuestion(
                 "Enter the Kaleidoscape? (Replaces portrait print inventory to a strong set of prints)",
                 () -> yesNoQuestion(
                         "\tThis will completely replace portrait prints that you own. Is this ok?",
                         "Done!",
-                        () -> util.backToTheMines()));
+                        JsonUtils::backToTheMines));
         yesNoQuestion("Add missing weapon skins?",
-                () -> System.out.println("Added " + util.addMissingWeaponSkins() + " missing weapon skins."));
-        yesNoQuestion("Max Halidom facilities?", () -> util.maxFacilities());
+                () -> System.out.println("Added " + JsonUtils.addMissingWeaponSkins() + " missing weapon skins."));
+        yesNoQuestion("Max Halidom facilities?", JsonUtils::maxFacilities);
         yesNoQuestion(
                 "Do additional hacked options? (Enter 'n' if you wish to keep your save data \"vanilla\")",
                 () -> {
                         yesNoQuestion("\tGenerate random portrait prints? (This will replace your portrait print inventory)",
-                            () -> util.kscapeRandomizer());
+                                JsonUtils::kscapeRandomizer);
                         yesNoQuestion("\tAdd some hacked portrait prints?",
-                            () -> util.addGoofyKscapes());
+                                JsonUtils::addGoofyKscapes);
                         maybeQuestion(
                                 "\tAdd unplayable units? (Note: These units are not fully implemented and may cause softlocks or crashes.)",
                                 "\tHidden Option: Extra options for adding unplayable units",
                             () -> {
                                 yesNoQuestion("\tAdd unit: Tutorial Zethia?",
-                                        () -> util.addTutorialZethia());
+                                        JsonUtils::addTutorialZethia);
                                 yesNoQuestion("\tAdd units: Story Leif(s)?",
-                                        () -> util.addStoryLeifs());
+                                        JsonUtils::addStoryLeifs);
                                 yesNoQuestion("\tAdd unit: Sharpshooter Cleo",
-                                        () -> util.addGunnerCleo());
+                                        JsonUtils::addGunnerCleo);
                                 yesNoQuestion("\tAdd unique shapeshift dragons?",
-                                        () -> util.addUniqueShapeshiftDragons());
+                                        JsonUtils::addUniqueShapeshiftDragons);
                             },
                             () -> {
                                 yesNoQuestion("\tAdd unit: Dog?",
-                                        () -> util.addDog());
+                                        JsonUtils::addDog);
                                 yesNoQuestion("\tAdd units: Anniversary Notte(s)?",
-                                        () -> util.addNottes());
+                                        JsonUtils::addNottes);
                                 yesNoQuestion("\tAdd units: Story NPCs (a lot)?",
-                                        () -> util.addStoryNPCs());
+                                        JsonUtils::addStoryNPCs);
                                 yesNoQuestion("\tAdd units: ABR 3-star units?",
-                                        () -> util.addABR3Stars());
+                                        JsonUtils::addABR3Stars);
                                 yesNoQuestion("\tAdd other dragons (a lot)?",
-                                        () -> util.addUnplayableDragons());
+                                        JsonUtils::addUnplayableDragons);
                             });
                         }
                 );
         System.out.println("\nFinished editing save...getting ready for exporting.");
-        boolean passedTests = util.checkIfTestsPassed();
-        if(passedTests){
-            if(util.isSaveData2Present()){
+        if(Tests.didTestsPass()){
+            if(JsonUtils.isSaveData2Present()){
                 SaveEditor.yesNoQuestion(
                         "savedata2.txt already exists in this directory. Would you like to overwrite it?",
-                        () -> util.setOverwrite(true));
+                        () -> JsonUtils.setOverwrite(true));
             }
-            util.writeToFile();
+            JsonUtils.writeToFile();
+        } else {
+            System.out.println("One or more tests failed... cannot export savedata. " +
+                    "Contact @sockperson if this message appears.");
         }
         System.out.println();
         yesNoQuestion("View logs?", () -> Logging.printLogs());

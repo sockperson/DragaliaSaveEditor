@@ -2,62 +2,55 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 public class Tests {
 
-    private JsonUtils jsonUtils;
-    private JsonObject jsonData;
-    private boolean didAllPass = true;
+    private static boolean didAllPass = true;
 
-    private List<String> testFlags;
+    private static List<String> testFlags = new ArrayList<>();
 
-    public Tests(JsonUtils jsonUtils){
-        this.jsonUtils = jsonUtils;
-        jsonData = jsonUtils.getJsonData();
-        this.testFlags = jsonUtils.getTestFlags();
-    }
-
-    public String noDupeCharaIdTest(){
-        int offendingId = jsonUtils.arrayHasDuplicateValue("chara_id", "data", "chara_list");
+    public static String noDupeCharaIdTest(){
+        int offendingId = JsonUtils.arrayHasDuplicateValue("chara_id", "data", "chara_list");
         return boolToString(offendingId == -1, offendingId);
     }
 
-    public String noDupeDragonKeyIdTest(){
-        int offendingId = jsonUtils.arrayHasDuplicateValue("dragon_key_id", "data", "dragon_list");
+    public static String noDupeDragonKeyIdTest(){
+        int offendingId = JsonUtils.arrayHasDuplicateValue("dragon_key_id", "data", "dragon_list");
         return boolToString(offendingId == -1, offendingId);
     }
 
-    public String noDupeTalismanKeyIdTest(){
-        int offendingId = jsonUtils.arrayHasDuplicateValue("talisman_key_id", "data", "talisman_list");
+    public static String noDupeTalismanKeyIdTest(){
+        int offendingId = JsonUtils.arrayHasDuplicateValue("talisman_key_id", "data", "talisman_list");
         return boolToString(offendingId == -1, offendingId);
     }
 
-    public String noDupeWeaponSkinIdTest(){
-        int offendingId = jsonUtils.arrayHasDuplicateValue("weapon_skin_id", "data", "weapon_skin_list");
+    public static String noDupeWeaponSkinIdTest(){
+        int offendingId = JsonUtils.arrayHasDuplicateValue("weapon_skin_id", "data", "weapon_skin_list");
         return boolToString(offendingId == -1, offendingId);
     }
 
-    public String noDupeCrestIdTest(){
-        int offendingId = jsonUtils.arrayHasDuplicateValue("ability_crest_id", "data", "ability_crest_list");
+    public static String noDupeCrestIdTest(){
+        int offendingId = JsonUtils.arrayHasDuplicateValue("ability_crest_id", "data", "ability_crest_list");
         return boolToString(offendingId == -1, offendingId);
     }
 
-    public String weaponPassivesIdTest() {
+    public static String weaponPassivesIdTest() {
         if (!hasFlags("maxWeapons", "addMissingWeapons")) {
             return "N/A";
         }
-        JsonArray list = jsonData.get("data").getAsJsonObject().get("weapon_passive_ability_list").getAsJsonArray();
+        JsonArray list = JsonUtils.jsonData.get("data").getAsJsonObject().get("weapon_passive_ability_list").getAsJsonArray();
         return boolToString(list.size() == 423, Integer.toString(list.size()));
     }
 
-    public String weaponPassivesIdPerWeaponTest() {
+    public static String weaponPassivesIdPerWeaponTest() {
         if (!hasFlags("maxWeapons", "addMissingWeapons")) {
             return "N/A";
         }
-        JsonArray list = jsonData.get("data").getAsJsonObject().get("weapon_body_list").getAsJsonArray();
+        JsonArray list = JsonUtils.jsonData.get("data").getAsJsonObject().get("weapon_body_list").getAsJsonArray();
         int abilityCount = 0;
         for (JsonElement jsonEle : list) {
             JsonObject jsonObj = jsonEle.getAsJsonObject();
@@ -71,12 +64,12 @@ public class Tests {
         return boolToString(abilityCount == 423, Integer.toString(abilityCount));
     }
 
-    public String noDupeStoryIdTest() {
-        int offendingId = jsonUtils.arrayHasDuplicateValue("unit_story_id", "data", "unit_story_list");
+    public static String noDupeStoryIdTest() {
+        int offendingId = JsonUtils.arrayHasDuplicateValue("unit_story_id", "data", "unit_story_list");
         return boolToString(offendingId == -1, offendingId);
     }
 
-    public boolean hasFlags(String... flags) {
+    public static boolean hasFlags(String... flags) {
         for (String flag : flags) {
             if(!testFlags.contains(flag)) {
                 return false;
@@ -85,25 +78,33 @@ public class Tests {
         return true;
     }
 
-    private boolean assertEquals(Object val1, Object val2){
-        return val1.equals(val2);
-    }
-
-    private String boolToString(boolean val, String oops){
+    private static String boolToString(boolean val, String oops){
         if(!val){
             didAllPass = false;
         }
         return val ? "PASSED" : ("FAILED: " + oops);
     }
 
-    private String boolToString(boolean val, int oops){
+    private static String boolToString(boolean val, int oops){
         if(!val){
             didAllPass = false;
         }
         return val ? "PASSED" : ("FAILED: " + oops);
     }
 
-    public boolean getIfAllPassed(){
+    public static void addTestFlag(String flag) {
+        testFlags.add(flag);
+    }
+
+    public static boolean didTestsPass(){
+        Logging.log("noDupeCharaIdTest(): " + Tests.noDupeCharaIdTest());
+        Logging.log("noDupeDragonKeyIdTest(): " + Tests.noDupeDragonKeyIdTest());
+        Logging.log("noDupeTalismanKeyIdTest(): " + Tests.noDupeTalismanKeyIdTest());
+        Logging.log("noDupeWeaponSkinIdTest(): " + Tests.noDupeWeaponSkinIdTest());
+        Logging.log("noDupeCrestIdTest(): " + Tests.noDupeCrestIdTest());
+        Logging.log("noDupeStoryIdTest(): " + Tests.noDupeStoryIdTest());
+        Logging.log("weaponPassivesIdTest(): " + Tests.weaponPassivesIdTest());
+        Logging.log("weaponPassivesIdPerWeaponTest(): " + Tests.weaponPassivesIdPerWeaponTest());
         return didAllPass;
     }
 

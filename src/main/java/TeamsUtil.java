@@ -16,15 +16,28 @@ import java.util.*;
 
 public class TeamsUtil {
 
-    private JsonUtils jsonUtils;
-    private String teamDataPath;
+    private static String teamDataPath;
 
-    private HashMap<String, List<Integer>> talismanMap = new HashMap<>();
-    private JsonObject teamsData = new JsonObject();
+    private static HashMap<String, List<Integer>> talismanMap = new HashMap<>();
+    private static JsonObject teamsData = new JsonObject();
 
-    public TeamsUtil (JsonUtils util, String teamDataPath) {
-        this.jsonUtils = util;
-        this.teamDataPath = teamDataPath;
+    private static final HashMap<Integer, String> slot1_idToShorthand = new HashMap<>();
+    private static final HashMap<String, String> slot1_shorthandToId = new HashMap<>();
+    private static final HashMap<String, String> slot1_shorthandToIdAlternate = new HashMap<>();
+
+    private static final HashMap<Integer, String> slot2_idToShorthand = new HashMap<>();
+    private static final HashMap<String, String> slot2_shorthandToId = new HashMap<>();
+    private static final HashMap<String, String> slot2_shorthandToIdAlternate = new HashMap<>();
+
+    private static final HashMap<Integer, String> slot3_idToShorthand = new HashMap<>();
+    private static final HashMap<String, String> slot3_shorthandToId = new HashMap<>();
+    private static final HashMap<String, String> slot3_shorthandToIdAlternate = new HashMap<>();
+
+    private static final String[] fileNames = new String[]{"wyrmprintShorthandsSlot1.txt",
+            "wyrmprintShorthandsSlot2.txt", "wyrmprintShorthandsSlot3.txt"};
+
+    public static void init(String teamDataPath) {
+        TeamsUtil.teamDataPath = teamDataPath;
         try {
             readShorthandsData();
         } catch (IOException e) {
@@ -32,37 +45,22 @@ public class TeamsUtil {
         }
     }
 
-    private final HashMap<Integer, String> slot1_idToShorthand = new HashMap<>();
-    private final HashMap<String, String> slot1_shorthandToId = new HashMap<>();
-    private final HashMap<String, String> slot1_shorthandToIdAlternate = new HashMap<>();
-
-    private final HashMap<Integer, String> slot2_idToShorthand = new HashMap<>();
-    private final HashMap<String, String> slot2_shorthandToId = new HashMap<>();
-    private final HashMap<String, String> slot2_shorthandToIdAlternate = new HashMap<>();
-
-    private final HashMap<Integer, String> slot3_idToShorthand = new HashMap<>();
-    private final HashMap<String, String> slot3_shorthandToId = new HashMap<>();
-    private final HashMap<String, String> slot3_shorthandToIdAlternate = new HashMap<>();
-
-    private final String[] fileNames = new String[]{"wyrmprintShorthandsSlot1.txt",
-            "wyrmprintShorthandsSlot2.txt", "wyrmprintShorthandsSlot3.txt"};
-
-    private void readShorthandsData() throws IOException {
+    private static void readShorthandsData() throws IOException {
         parseShorthandsFile(fileNames[0], slot1_idToShorthand, slot1_shorthandToId, slot1_shorthandToIdAlternate);
         parseShorthandsFile(fileNames[1], slot2_idToShorthand, slot2_shorthandToId, slot2_shorthandToIdAlternate);
         parseShorthandsFile(fileNames[2], slot3_idToShorthand, slot3_shorthandToId, slot3_shorthandToIdAlternate);
     }
 
-    private String[] splitCommaSeparatedString(String input) {
+    private static String[] splitCommaSeparatedString(String input) {
         String in = input.replace(" ", "");
         return in.split(",");
     }
 
-    private void parseShorthandsFile (String fileName,
+    private static void parseShorthandsFile (String fileName,
              HashMap<Integer, String> idToShorthand,
              HashMap<String, String> shorthandToId,
              HashMap<String, String> shorthandToIdAlternate) throws IOException {
-        BufferedReader br = jsonUtils.getBufferedReader("/team_import_stuff/" + fileName);
+        BufferedReader br = DragaliaData.getBufferedReader("/team_import_stuff/" + fileName);
         String out = br.readLine();
         while (out != null) {
             if (out.length() == 0) { // empty line
@@ -106,7 +104,7 @@ public class TeamsUtil {
         }
     }
 
-    private AdventurerMeta getAdventurerFromNameOrId(String charNameOrId) {
+    private static AdventurerMeta getAdventurerFromNameOrId(String charNameOrId) {
         AdventurerMeta adv;
         int id = -1;
         try {
@@ -114,9 +112,9 @@ public class TeamsUtil {
         } catch (NumberFormatException ignored) {}
 
         if (id != -1) {
-            adv = jsonUtils.idToAdventurer.get(id);
+            adv = DragaliaData.idToAdventurer.get(id);
         } else {
-            adv = jsonUtils.nameToAdventurer.get(charNameOrId.toUpperCase(Locale.ROOT));
+            adv = DragaliaData.nameToAdventurer.get(charNameOrId.toUpperCase(Locale.ROOT));
         }
 
         if (adv == null) {
@@ -127,7 +125,7 @@ public class TeamsUtil {
         return adv;
     }
 
-    private void exportTeams () {
+    private static void exportTeams () {
         FileWriter fileWriter;
         try {
             fileWriter = new FileWriter(teamDataPath);
@@ -152,13 +150,13 @@ public class TeamsUtil {
     // for ex: for slot 1, you had prints "prep, prep, strdb".
     // don't want to get 2 of The Chocolatiers print, so use a secondary print ID for the second one.
 
-    private int shorthandToId (String shorthandOrIdCased, String charNameOrId, int slot, List<Integer> history) {
+    private static int shorthandToId (String shorthandOrIdCased, String charNameOrId, int slot, List<Integer> history) {
         String shorthandOrId = shorthandOrIdCased.toUpperCase(Locale.ROOT);
 
         try {
             int id = Integer.parseInt(shorthandOrId);
-            if(jsonUtils.idToPrint.containsKey(id)) {
-                return jsonUtils.idToPrint.get(id).getId();
+            if(DragaliaData.idToPrint.containsKey(id)) {
+                return DragaliaData.idToPrint.get(id).getId();
             } else {
                 System.out.println("Unable to find wyrmprint with numeric ID: " + id);
                 return 0;
@@ -233,7 +231,7 @@ public class TeamsUtil {
        }
     }
 
-    private String idToShorthand (int id, int slot) {
+    private static String idToShorthand (int id, int slot) {
         if (id == 0) {
             return "0";
         }
@@ -246,8 +244,8 @@ public class TeamsUtil {
         return "0";
     }
 
-    private JsonArray getTeamsFromGameData () {
-        JsonArray ingameTeams = jsonUtils.getFieldAsJsonArray("data", "party_list");
+    private static JsonArray getTeamsFromGameData () {
+        JsonArray ingameTeams = JsonUtils.getFieldAsJsonArray("data", "party_list");
 
         JsonArray outTeams = new JsonArray();
         for (JsonElement jsonEle : ingameTeams) {
@@ -273,17 +271,21 @@ public class TeamsUtil {
                 int chara_id = ingameMember.get("chara_id").getAsInt();
                 int dragon_key_id = ingameMember.get("equip_dragon_key_id").getAsInt();
                 int weapon_body_id = ingameMember.get("equip_weapon_body_id").getAsInt();
-                DragonMeta dragon = jsonUtils.getDragonFromKeyId(dragon_key_id);
+                DragonMeta dragon = JsonUtils.getDragonFromKeyId(dragon_key_id);
 
-                String charaName = (jsonUtils.idToAdventurer.containsKey(chara_id)) ? (jsonUtils.idToAdventurer.get(chara_id).getName()) : ("0");
+                String charaName = (DragaliaData.idToAdventurer.containsKey(chara_id))
+                        ? (DragaliaData.idToAdventurer.get(chara_id).getName()) : ("0");
                 String dragonName = (dragon != null) ? (dragon.getName()) : ("0");
-                String weaponName = (jsonUtils.idToWeapon.containsKey(weapon_body_id)) ? (jsonUtils.idToWeapon.get(weapon_body_id).getFunctionalName()) : ("0");
+                String weaponName = (DragaliaData.idToWeapon.containsKey(weapon_body_id))
+                        ? (DragaliaData.idToWeapon.get(weapon_body_id).getFunctionalName()) : ("0");
 
                 int ss1_id = ingameMember.get("edit_skill_1_chara_id").getAsInt();
                 int ss2_id = ingameMember.get("edit_skill_2_chara_id").getAsInt();
 
-                String ss1_name = (jsonUtils.idToAdventurer.containsKey(ss1_id)) ? (jsonUtils.idToAdventurer.get(ss1_id).getName()) : ("0");
-                String ss2_name = (jsonUtils.idToAdventurer.containsKey(ss2_id)) ? (jsonUtils.idToAdventurer.get(ss2_id).getName()) : ("0");
+                String ss1_name = (DragaliaData.idToAdventurer.containsKey(ss1_id))
+                        ? (DragaliaData.idToAdventurer.get(ss1_id).getName()) : ("0");
+                String ss2_name = (DragaliaData.idToAdventurer.containsKey(ss2_id))
+                        ? (DragaliaData.idToAdventurer.get(ss2_id).getName()) : ("0");
 
                 outMember.addProperty("teamSlot", ingameMember.get("unit_no").getAsInt());
                 outMember.addProperty("unitId", charaName);
@@ -308,7 +310,7 @@ public class TeamsUtil {
     }
 
     // a team in teams.json format
-    private JsonArray getDefaultTeamMembers () {
+    private static JsonArray getDefaultTeamMembers () {
         JsonArray outMembers = new JsonArray();
         for (int j = 1; j <= 4; j++) {
             JsonObject outMember = new JsonObject();
@@ -330,7 +332,7 @@ public class TeamsUtil {
     }
 
     // 1-54 teams in teams.json format
-    private JsonArray getDefaultTeams () {
+    private static JsonArray getDefaultTeams () {
         JsonArray outTeams = new JsonArray();
         for (int i = 1; i <= 54; i++) {
             JsonObject outTeam = new JsonObject();
@@ -343,7 +345,7 @@ public class TeamsUtil {
     }
 
     // default "party_setting_list" or team members in savedata.txt format
-    private JsonArray getDefaultPartySettingList () {
+    private static JsonArray getDefaultPartySettingList () {
         JsonArray out = new JsonArray();
         for (int i = 1; i <= 4; i++) {
             int chara_id = (i == 1) ? (10140101) : (0); // Euden or nothing
@@ -353,7 +355,7 @@ public class TeamsUtil {
     }
 
     // teams.json format
-    private JsonArray getDefaultTalismans () {
+    private static JsonArray getDefaultTalismans () {
         JsonArray out = new JsonArray();
         JsonObject outTalisman = new JsonObject();
         outTalisman.addProperty("name", "crit easy");
@@ -366,7 +368,7 @@ public class TeamsUtil {
         return out;
     }
 
-    private JsonObject getEmptyMember (int slot, int chara_id) {
+    private static JsonObject getEmptyMember (int slot, int chara_id) {
         JsonObject out = new JsonObject();
         out.addProperty("unit_no", slot);
         out.addProperty("chara_id", 0);
@@ -386,11 +388,11 @@ public class TeamsUtil {
         return out;
     }
 
-    public JsonArray generateNewTeams (boolean toGenerateFromGameData) {
+    public static JsonArray generateNewTeams (boolean toGenerateFromGameData) {
         return (toGenerateFromGameData) ? (getTeamsFromGameData()) : (getDefaultTeams());
     }
 
-    private void initializeTalismans () {
+    private static void initializeTalismans () {
         JsonArray talismans = teamsData.get("talismans").getAsJsonArray();
         for (JsonElement jsonEle : talismans) {
             JsonObject talisman = jsonEle.getAsJsonObject();
@@ -412,21 +414,21 @@ public class TeamsUtil {
             String title = "";
             try {
                 int advId = Integer.parseInt(advNameCased);
-                if (!jsonUtils.idToAdventurer.containsKey(advId)) {
+                if (!DragaliaData.idToAdventurer.containsKey(advId)) {
                     System.out.println("Failed to import talisman with name: '" +
                             name + "': adventurer ID '" + advId + "' not found");
                     continue;
                 }
-                title = jsonUtils.idToAdventurer.get(advId).getTitle();
-                portraitID = jsonUtils.kscapeLabelsMap.get(title);
+                title = DragaliaData.idToAdventurer.get(advId).getTitle();
+                portraitID = DragaliaData.kscapeLabelsMap.get(title);
             } catch (NumberFormatException ignored) {
-                if (!jsonUtils.nameToAdventurer.containsKey(advName)) {
+                if (!DragaliaData.nameToAdventurer.containsKey(advName)) {
                     System.out.println("Failed to import talisman with name: '" +
                             name + "': adventurer name '" + advNameCased + "' not found");
                     continue;
                 }
-                title = jsonUtils.nameToAdventurer.get(advName).getTitle();
-                portraitID = jsonUtils.kscapeLabelsMap.get(title);
+                title = DragaliaData.nameToAdventurer.get(advName).getTitle();
+                portraitID = DragaliaData.kscapeLabelsMap.get(title);
             }
 
             int id1 = talisman.get("id1").getAsInt();
@@ -447,7 +449,7 @@ public class TeamsUtil {
 
             List<Integer> talismanKeyIds = new ArrayList<>();
             for (int i = 0; i < count; i++) {
-                int talismanKeyId = jsonUtils.addTalisman(portraitID, id1, id2, id3);
+                int talismanKeyId = JsonUtils.addTalisman(portraitID, id1, id2, id3);
                 talismanKeyIds.add(talismanKeyId);
             }
             talismanMap.put(name.toUpperCase(Locale.ROOT), talismanKeyIds);
@@ -458,7 +460,7 @@ public class TeamsUtil {
     // JsonObject input: teams.json unit data
     // int slot: the slot (1-4) of the unit in the team
     // List<Integer> returnedDragonKeyIds: dragon key IDs returned from this method, used to check for dupe dragon key IDs
-    private JsonObject convertMemberData(JsonObject input, int slot, List<Integer> returnedDragonKeyIds,
+    private static JsonObject convertMemberData(JsonObject input, int slot, List<Integer> returnedDragonKeyIds,
                                          List<Integer> returnedTalismanKeyIds) {
         int unit_no = input.get("teamSlot").getAsInt();
         int chara_id = -1;
@@ -472,7 +474,7 @@ public class TeamsUtil {
         try { // numeric ID
             int unitIdInt = Integer.parseInt(unitIdString);
             if (unitIdInt != 0) {
-                if (!jsonUtils.idToAdventurer.containsKey(unitIdInt)) {
+                if (!DragaliaData.idToAdventurer.containsKey(unitIdInt)) {
                     Logging.print("Failed to import adventurer with numeric ID: '{0}'; could not find " +
                             "adventurer with this ID", unitIdInt);
                     return (slot == 1) ? (null) : (getEmptyMember(slot, 0));
@@ -488,12 +490,12 @@ public class TeamsUtil {
             }
         } catch (NumberFormatException ignored) { // name/alias
             String unitIdStringUpper = unitIdString.toUpperCase(Locale.ROOT);
-            if (!jsonUtils.nameToAdventurer.containsKey(unitIdStringUpper)) {
+            if (!DragaliaData.nameToAdventurer.containsKey(unitIdStringUpper)) {
                 Logging.print("Failed to import adventurer with ID: '{0}'; could not find " +
                         "adventurer with this name", unitIdString);
                 return (slot == 1) ? (null) : (getEmptyMember(slot, 0));
             }
-            chara_id = jsonUtils.nameToAdventurer.get(unitIdStringUpper).getId();
+            chara_id = DragaliaData.nameToAdventurer.get(unitIdStringUpper).getId();
         }
 
         // we're given a dragon name/alias OR a key ID... need to get a good key ID
@@ -506,7 +508,7 @@ public class TeamsUtil {
         try { // numeric keyID
             int keyIdInt = Integer.parseInt(dragonString);
             if (keyIdInt != 0) {
-                if (!jsonUtils.arrayHasValue("dragon_key_id", keyIdInt, "data", "dragon_list")) {
+                if (!JsonUtils.arrayHasValue("dragon_key_id", keyIdInt, "data", "dragon_list")) {
                     Logging.print("Failed to import dragon with numeric keyID: '{0}'; could not find " +
                             "dragon with this key ID", keyIdInt);
                     equip_dragon_key_id = 0;
@@ -518,13 +520,13 @@ public class TeamsUtil {
             }
         } catch (NumberFormatException ignored) { // name/alias
             String dragonStringUpper = dragonString.toUpperCase(Locale.ROOT);
-            if (!jsonUtils.nameToDragon.containsKey(dragonStringUpper)) {
+            if (!DragaliaData.nameToDragon.containsKey(dragonStringUpper)) {
                 Logging.print("Failed to import dragon with name/alias: '{0}'; could not find " +
                         "dragon with this name", dragonString);
                 equip_dragon_key_id = 0;
             } else {
-                int dragonID = jsonUtils.nameToDragon.get(dragonStringUpper).getId();
-                List<Integer> dragonKeyIds = jsonUtils.getKeyIdListSortedByAttr("dragon_key_id",
+                int dragonID = DragaliaData.nameToDragon.get(dragonStringUpper).getId();
+                List<Integer> dragonKeyIds = JsonUtils.getKeyIdListSortedByAttr("dragon_key_id",
                         "level", "dragon_id", dragonID, "data", "dragon_list");
                 dragonKeyIds.removeAll(returnedDragonKeyIds); // remove dragon key IDs that were already returned by this method
                 if (dragonKeyIds.size() == 0) {
@@ -543,7 +545,7 @@ public class TeamsUtil {
         try { // numeric ID
             int weaponSkinIdInt = Integer.parseInt(weaponSkinString);
             if (weaponSkinIdInt != 0) {
-                if (!jsonUtils.idToWeaponSkin.containsKey(weaponSkinIdInt)) {
+                if (!DragaliaData.idToWeaponSkin.containsKey(weaponSkinIdInt)) {
                     Logging.print("Failed to import weapon skin with numeric ID: '{0}'; could not find " +
                             "weapon skin with this ID", weaponSkinIdInt);
                     equip_weapon_skin_id = 0;
@@ -564,7 +566,7 @@ public class TeamsUtil {
         try { // numeric ID
             int weaponIdInt = Integer.parseInt(weaponString);
             if (weaponIdInt != 0) {
-                if (!jsonUtils.idToWeapon.containsKey(weaponIdInt)) {
+                if (!DragaliaData.idToWeapon.containsKey(weaponIdInt)) {
                     Logging.print("Failed to import weapon with numeric ID: '{0}'; could not find " +
                             "weapon with this ID", weaponIdInt);
                     equip_weapon_body_id = 0;
@@ -578,13 +580,13 @@ public class TeamsUtil {
             }
         } catch (NumberFormatException ignored) { // name/alias
             String weaponStringUpper = weaponString.toUpperCase(Locale.ROOT);
-            if (!jsonUtils.weaponFunctionalNameToWeapon.containsKey(weaponStringUpper)) {
+            if (!DragaliaData.weaponFunctionalNameToWeapon.containsKey(weaponStringUpper)) {
                 Logging.print("Failed to import weapon with name/shorthand: '{0}'; could not find " +
                         "weapon with this name", weaponString);
                 equip_weapon_body_id = 0;
                 equip_weapon_skin_id = 0; // remove weapon skin if weapon invalid
             } else {
-                equip_weapon_body_id = jsonUtils.weaponFunctionalNameToWeapon.get(weaponStringUpper).getId();
+                equip_weapon_body_id = DragaliaData.weaponFunctionalNameToWeapon.get(weaponStringUpper).getId();
             }
         }
 
@@ -628,7 +630,7 @@ public class TeamsUtil {
                     try { // numeric ID
                         int wyrmprintIdInt = Integer.parseInt(wyrmprintString);
                         if (wyrmprintIdInt != 0) {
-                            if (!jsonUtils.idToPrint.containsKey(wyrmprintIdInt)) {
+                            if (!DragaliaData.idToPrint.containsKey(wyrmprintIdInt)) {
                                 Logging.print("Failed to import wyrmprint with numeric ID: '{0}'; could not find " +
                                         "wyrmprint with this ID", wyrmprintIdInt);
                                 wyrmprintsOut[wpNum] = 0;
@@ -641,8 +643,8 @@ public class TeamsUtil {
                     } catch (NumberFormatException ignored) { // shorthand
                         String wyrmprintStringUpper = wyrmprintString.toUpperCase(Locale.ROOT);
                         String wyrmprintStringUpperUnspaced = wyrmprintStringUpper.replace(" ", "");
-                        if (jsonUtils.nameToPrint.containsKey(wyrmprintStringUpperUnspaced)) {
-                            int wyrmprintId = jsonUtils.nameToPrint.get(wyrmprintStringUpperUnspaced).getId();
+                        if (DragaliaData.nameToPrint.containsKey(wyrmprintStringUpperUnspaced)) {
+                            int wyrmprintId = DragaliaData.nameToPrint.get(wyrmprintStringUpperUnspaced).getId();
                             wyrmprintsOut[wpNum] = wyrmprintId;
                             slotHistory.add(wyrmprintId);
                         } else {
@@ -668,7 +670,7 @@ public class TeamsUtil {
         try { // numeric ID
             int talismanKeyIdInt = Integer.parseInt(talismanString);
             if (talismanKeyIdInt != 0) {
-                if (!jsonUtils.arrayHasValue("talisman_key_id", talismanKeyIdInt, "data", "talisman_list")) {
+                if (!JsonUtils.arrayHasValue("talisman_key_id", talismanKeyIdInt, "data", "talisman_list")) {
                     Logging.print("Failed to import talisman with numeric keyID: '{0}'; could not find " +
                             "talisman with this key ID", talismanKeyIdInt);
                     equip_talisman_key_id = 0;
@@ -708,7 +710,7 @@ public class TeamsUtil {
             try { // numeric ID
                 int sharedSkillId = Integer.parseInt(sharedSkillString);
                 if (sharedSkillId != 0) {
-                    if (!jsonUtils.idToAdventurer.containsKey(sharedSkillId)) {
+                    if (!DragaliaData.idToAdventurer.containsKey(sharedSkillId)) {
                         Logging.print("Failed to import shared skill with numeric ID: '{0}'; could not find " +
                                 "adventurer with this ID", sharedSkillId);
                         sharedSkillsOut[sharedSkillsOutIndex] = 0;
@@ -727,12 +729,12 @@ public class TeamsUtil {
                 }
             } catch (NumberFormatException ignored) { // name/alias
                 String sharedSkillStringUpper = sharedSkillString.toUpperCase(Locale.ROOT);
-                if (!jsonUtils.nameToAdventurer.containsKey(sharedSkillStringUpper)) {
+                if (!DragaliaData.nameToAdventurer.containsKey(sharedSkillStringUpper)) {
                     Logging.print("Failed to import shared skill with name/alias: '{0}'; could not find " +
                             "adventurer with this name", sharedSkillString);
                     sharedSkillsOut[sharedSkillsOutIndex] = 0;
                 } else {
-                    sharedSkillsOut[sharedSkillsOutIndex] = jsonUtils.nameToAdventurer.get(sharedSkillStringUpper).getId();
+                    sharedSkillsOut[sharedSkillsOutIndex] = DragaliaData.nameToAdventurer.get(sharedSkillStringUpper).getId();
                 }
             }
         }
@@ -756,7 +758,7 @@ public class TeamsUtil {
         return out;
     }
 
-    public JsonArray convertToPartyList () {
+    public static JsonArray convertToPartyList () {
         JsonArray outPartyList = new JsonArray();
         for (JsonElement jsonEle : teamsData.getAsJsonArray("teams")) {
             JsonObject teamOut = new JsonObject();
@@ -794,19 +796,19 @@ public class TeamsUtil {
         return outPartyList;
     }
 
-    private void exportTalismans() {
+    private static void exportTalismans() {
         JsonArray talismans = new JsonArray();
 
-        for (JsonElement jsonEle : jsonUtils.getFieldAsJsonArray("data", "talisman_list")) {
+        for (JsonElement jsonEle : JsonUtils.getFieldAsJsonArray("data", "talisman_list")) {
             JsonObject talisman = jsonEle.getAsJsonObject();
             int keyId = talisman.get("talisman_key_id").getAsInt();
             int labelId = talisman.get("talisman_id").getAsInt();
-            String a1 = jsonUtils.idToAbilityName.get(talisman.get("talisman_ability_id_1").getAsInt());
-            String a2 = jsonUtils.idToAbilityName.get(talisman.get("talisman_ability_id_2").getAsInt());
-            String a3 = jsonUtils.idToAbilityName.get(talisman.get("talisman_ability_id_3").getAsInt());
+            String a1 = DragaliaData.idToAbilityName.get(talisman.get("talisman_ability_id_1").getAsInt());
+            String a2 = DragaliaData.idToAbilityName.get(talisman.get("talisman_ability_id_2").getAsInt());
+            String a3 = DragaliaData.idToAbilityName.get(talisman.get("talisman_ability_id_3").getAsInt());
 
             JsonObject outTalisman = new JsonObject();
-            outTalisman.addProperty("adventurer", jsonUtils.kscapeLabelIdToAdventurer.get(labelId).getName());
+            outTalisman.addProperty("adventurer", DragaliaData.kscapeLabelIdToAdventurer.get(labelId).getName());
             outTalisman.addProperty("keyId", keyId);
             outTalisman.addProperty("ability1", a1);
             outTalisman.addProperty("ability2", a2);
@@ -845,7 +847,7 @@ public class TeamsUtil {
     // 15: equipped weapon skin must match weapon type of unit
     // 16: team name must be <= 20 characters
 
-    public boolean validatePartyList (JsonArray partyList) {
+    public static boolean validatePartyList (JsonArray partyList) {
         boolean returnVal = true;
         List<Integer> cond1_partyNums = new ArrayList<>();
         for (int i = 1; i <= 54; i++) {
@@ -939,35 +941,35 @@ public class TeamsUtil {
 
                 // Condition 3
                 if (equip_dragon_key_id != 0 &&
-                        !jsonUtils.arrayHasValue("dragon_key_id", equip_dragon_key_id, "data", "dragon_list")) {
+                        !JsonUtils.arrayHasValue("dragon_key_id", equip_dragon_key_id, "data", "dragon_list")) {
                     Logging.print("Could not validate party_list: " +
                             "there was a '{0}' of {1} that was not found in '{2}'",
                             "equip_dragon_key_id", String.valueOf(equip_dragon_key_id), "dragon_list");
                     returnVal = false;
                 }
                 if (chara_id != 0 &&
-                        !jsonUtils.arrayHasValue("chara_id", chara_id, "data", "chara_list")) {
+                        !JsonUtils.arrayHasValue("chara_id", chara_id, "data", "chara_list")) {
                     Logging.print("Could not validate party_list: " +
                                     "there was a '{0}' of {1} that was not found in '{2}'",
                             "chara_id", String.valueOf(chara_id), "chara_list");
                     returnVal = false;
                 }
                 if (equip_talisman_key_id != 0 &&
-                        !jsonUtils.arrayHasValue("talisman_key_id", equip_talisman_key_id, "data", "talisman_list")) {
+                        !JsonUtils.arrayHasValue("talisman_key_id", equip_talisman_key_id, "data", "talisman_list")) {
                     Logging.print("Could not validate party_list: " +
                                     "there was a '{0}' of {1} that was not found in '{2}'",
                             "equip_talisman_key_id", String.valueOf(equip_talisman_key_id), "talisman_list");
                     returnVal = false;
                 }
                 if (equip_weapon_body_id != 0 &&
-                        !jsonUtils.arrayHasValue("weapon_body_id", equip_weapon_body_id, "data", "weapon_body_list")) {
+                        !JsonUtils.arrayHasValue("weapon_body_id", equip_weapon_body_id, "data", "weapon_body_list")) {
                     Logging.print("Could not validate party_list: " +
                                     "there was a '{0}' of {1} that was not found in '{2}'",
                             "equip_weapon_body_id", String.valueOf(equip_weapon_body_id), "weapon_body_list");
                     returnVal = false;
                 }
                 if (equip_weapon_skin_id != 0 &&
-                        !jsonUtils.arrayHasValue("weapon_skin_id", equip_weapon_skin_id, "data", "weapon_skin_list")) {
+                        !JsonUtils.arrayHasValue("weapon_skin_id", equip_weapon_skin_id, "data", "weapon_skin_list")) {
                     Logging.print("Could not validate party_list: " +
                                     "there was a '{0}' of {1} that was not found in '{2}'",
                             "equip_weapon_skin_id", String.valueOf(equip_weapon_skin_id), "weapon_skin_list");
@@ -994,7 +996,7 @@ public class TeamsUtil {
                             cond4_printIdList.add(printID);
                             incrementCountMap(cond5_printIdToCountMap, printID); // for cond 5
                             // Condition 10 (ID validation)
-                            if (!jsonUtils.idToPrint.containsKey(printID)) {
+                            if (!DragaliaData.idToPrint.containsKey(printID)) {
                                 Logging.print("Could not validate party_list: " +
                                                 "'party_no' {0} 'unit_no' {1} had non-existent 'equip_crest_id' of {2}",
                                         party_no, unit_no, printID);
@@ -1038,49 +1040,49 @@ public class TeamsUtil {
                 }
 
                 // Condition 10
-                if (chara_id != 0 && !jsonUtils.idToAdventurer.containsKey(chara_id)) {
+                if (chara_id != 0 && !DragaliaData.idToAdventurer.containsKey(chara_id)) {
                     Logging.print("Could not validate party_list: " +
                                     "'party_no' {0} 'unit_no' {1} had non-existent 'chara_id' of {2}",
                             party_no, unit_no, chara_id);
                     returnVal = false;
                 } else {
-                    advMeta = (chara_id == 0) ? (null) : (jsonUtils.idToAdventurer.get(chara_id));
+                    advMeta = (chara_id == 0) ? (null) : (DragaliaData.idToAdventurer.get(chara_id));
                 }
-                if (equip_weapon_body_id != 0 && !jsonUtils.idToWeapon.containsKey(equip_weapon_body_id)) {
+                if (equip_weapon_body_id != 0 && !DragaliaData.idToWeapon.containsKey(equip_weapon_body_id)) {
                     Logging.print("Could not validate party_list: " +
                                     "'party_no' {0} 'unit_no' {1} had non-existent 'equip_weapon_body_id' of {2}",
                             party_no, unit_no, equip_weapon_body_id);
                     returnVal = false;
                 } else {
-                    weaponMeta = (equip_weapon_body_id == 0) ? (null) : (jsonUtils.idToWeapon.get(equip_weapon_body_id));
+                    weaponMeta = (equip_weapon_body_id == 0) ? (null) : (DragaliaData.idToWeapon.get(equip_weapon_body_id));
                 }
-                if (equip_weapon_skin_id != 0 && !jsonUtils.idToWeaponSkin.containsKey(equip_weapon_skin_id)) {
+                if (equip_weapon_skin_id != 0 && !DragaliaData.idToWeaponSkin.containsKey(equip_weapon_skin_id)) {
                     Logging.print("Could not validate party_list: " +
                                     "'party_no' {0} 'unit_no' {1} had non-existent 'equip_weapon_skin_id' of {2}",
                             party_no, unit_no, equip_weapon_skin_id);
                     returnVal = false;
                 } else {
-                    weaponSkinMeta = (equip_weapon_skin_id == 0) ? (null) : (jsonUtils.idToWeaponSkin.get(equip_weapon_skin_id));
+                    weaponSkinMeta = (equip_weapon_skin_id == 0) ? (null) : (DragaliaData.idToWeaponSkin.get(equip_weapon_skin_id));
                 }
                 // Wyrmprint ID validation above...
                 for (int i = 0; i < 2; i++) {
                     int sharedSkillID = edit_skill[i];
                     if (sharedSkillID != 0) {
-                        if (!jsonUtils.idToAdventurer.containsKey(sharedSkillID)) {
+                        if (!DragaliaData.idToAdventurer.containsKey(sharedSkillID)) {
                             Logging.print("Could not validate party_list: " +
                                             "'party_no' {0} 'unit_no' {1} had non-existent 'edit_skill_chara_id' of {2}",
                                     party_no, unit_no, sharedSkillID);
                             returnVal = false;
                         } else { // This ID refers to an adventurer...
                             // Condition 11
-                            if (!jsonUtils.idToAdventurer.get(sharedSkillID).hasSkillShare()) {
+                            if (!DragaliaData.idToAdventurer.get(sharedSkillID).hasSkillShare()) {
                                 Logging.print("Could not validate party_list: " +
                                                 "'party_no' {0} 'unit_no' {1} had 'edit_skill_chara_id' of {2}, " +
                                                 "which refers to an adventurer without a shared skill",
                                         party_no, unit_no, sharedSkillID);
                                 returnVal = false;
                             } else {
-                                boolean hasThisSSUnlocked = jsonUtils.getValueFromObjInArray(
+                                boolean hasThisSSUnlocked = JsonUtils.getValueFromObjInArray(
                                         "is_unlock_edit_skill", "chara_id", sharedSkillID,
                                         "data", "chara_list"
                                         ) == 1;
@@ -1161,7 +1163,7 @@ public class TeamsUtil {
             for (Map.Entry<Integer, Integer> printIdToCount : cond5_printIdToCountMap.entrySet()) {
                 int printID = printIdToCount.getKey();
                 int count = printIdToCount.getValue();
-                int equipableCount = jsonUtils.getValueFromObjInArray("equipable_count",
+                int equipableCount = JsonUtils.getValueFromObjInArray("equipable_count",
                         "ability_crest_id", printID, "data", "ability_crest_list");
                 if (equipableCount == -1) { // print was not found
                     Logging.print("Could not validate party_list: " +
@@ -1180,7 +1182,7 @@ public class TeamsUtil {
                 int weaponID = weaponIdToCount.getKey();
                 int count = weaponIdToCount.getValue();
                 if (weaponID != 0) {
-                    int equipableCount = jsonUtils.getValueFromObjInArray("equipable_count",
+                    int equipableCount = JsonUtils.getValueFromObjInArray("equipable_count",
                             "weapon_body_id", weaponID, "data", "weapon_body_list");
                     if (equipableCount == -1) { // weapon was not found
                         Logging.print("Could not validate party_list: " +
@@ -1214,7 +1216,7 @@ public class TeamsUtil {
         return returnVal;
     }
 
-    public void incrementCountMap(HashMap<Integer, Integer> map, int key) {
+    public static void incrementCountMap(HashMap<Integer, Integer> map, int key) {
         if (map.containsKey(key)) {
             int value = map.get(key);
             map.remove(key);
@@ -1224,7 +1226,7 @@ public class TeamsUtil {
         }
     }
 
-    public void run () {
+    public static void run () {
         if (!(JsonUtils.checkIfJsonObject(teamDataPath) == 0)) {
             System.out.println("Teams data not found... generating new teams data.");
             teamsData.add("talismans", getDefaultTalismans());
@@ -1235,7 +1237,7 @@ public class TeamsUtil {
             exportTeams();
         } else {
             System.out.println("Importing teams data...");
-            teamsData = jsonUtils.getJsonObject(teamDataPath);
+            teamsData = JsonUtils.getJsonObject(teamDataPath);
             if (SaveEditor.passYesNo("Generate new teams data?")) {
                 boolean toGenerateFromGameData =
                         SaveEditor.passYesNo("\tGenerate new teams data from savefile (y) or generate blank team data? (n)");
@@ -1306,27 +1308,27 @@ public class TeamsUtil {
                         "could not export to the savedata.");
                 // eh
                 System.out.println("Exporting savedata anyway lol");
-                if(jsonUtils.isSaveData2Present()){
+                if(JsonUtils.isSaveData2Present()){
                     SaveEditor.yesNoQuestion(
                             "savedata2.txt already exists in this directory. Would you like to overwrite it?",
-                            () -> jsonUtils.setOverwrite(true));
+                            () -> JsonUtils.setOverwrite(true));
                 }
                 System.out.println();
-                jsonUtils.writeToFile();
+                JsonUtils.writeToFile();
                 // eh
             } else {
                 System.out.println("Pasting teams data into savedata...");
-                jsonUtils.jsonData.get("data").getAsJsonObject().remove("party_list");
-                jsonUtils.jsonData.get("data").getAsJsonObject().add("party_list", partyList);
+                JsonUtils.jsonData.get("data").getAsJsonObject().remove("party_list");
+                JsonUtils.jsonData.get("data").getAsJsonObject().add("party_list", partyList);
 
                 System.out.print("Exporting savedata...");
-                if(jsonUtils.isSaveData2Present()){
+                if(JsonUtils.isSaveData2Present()){
                     SaveEditor.yesNoQuestion(
                             "savedata2.txt already exists in this directory. Would you like to overwrite it?",
-                            () -> jsonUtils.setOverwrite(true));
+                            () -> JsonUtils.setOverwrite(true));
                 }
                 System.out.println();
-                jsonUtils.writeToFile();
+                JsonUtils.writeToFile();
             }
         }
 

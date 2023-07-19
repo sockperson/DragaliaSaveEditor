@@ -133,8 +133,8 @@ public class Options {
                 String eleString = AdventurerMeta.getElementString(element);
                 String wepString = AdventurerMeta.getWeaponTypeString(weapon);
                 String optionString = "portrait" + eleString + wepString + "Name";
-                int index = element * weapon;
-                out[index] = "(string):" + optionString + "=" + portraitDefaults[weapon][element];
+                int index = element * weapon - 1;
+                out[index] = "(string):" + optionString + "=" + portraitDefaults[weapon - 1][element - 1];
             }
         }
     }

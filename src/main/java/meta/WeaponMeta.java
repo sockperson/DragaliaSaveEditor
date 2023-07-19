@@ -40,7 +40,7 @@ public class WeaponMeta {
     }
 
     public String getWeaponTypeString () {
-        return AdventurerMeta.getWeaponTypeString(elementId);
+        return AdventurerMeta.getWeaponTypeString(weaponTypeId);
     }
 
     private String genFunctionalName () {
