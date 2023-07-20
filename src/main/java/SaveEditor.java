@@ -9,7 +9,6 @@ public class SaveEditor {
 
     private static final Scanner input = new Scanner(System.in);
     private static boolean isOutOfIDE = false;
-    private static Options options;
 
     private static String getFilePath() {
         String programPath = null;
@@ -36,7 +35,7 @@ public class SaveEditor {
 
     //for writing Options values
     public static void writeOptionsValue(String question, String fieldName) {
-        String fieldVal = options.getFieldAsString(fieldName);
+        String fieldVal = Options.getFieldAsString(fieldName);
         if (fieldVal.equals("true")) {
             fieldVal = "y";
         } else if (fieldVal.equals("false")) {
@@ -48,9 +47,9 @@ public class SaveEditor {
         in = in.toUpperCase();
 
         if(in.equals("Y") || in.equals("YES")){
-            options.editBooleanOption(fieldName, true);
+            Options.editBooleanOption(fieldName, true);
         } else if (in.equals("N") || in.equals("NO")){
-            options.editBooleanOption(fieldName, false);
+            Options.editBooleanOption(fieldName, false);
         } else {
             System.out.println("Invalid Input. Enter 'y' or 'n'");
             writeOptionsValue(question, fieldName);
@@ -170,9 +169,9 @@ public class SaveEditor {
         // resources
         DragaliaData.init();
         // options file stuff
-        options = new Options(optionsPath);
+        Options.init(optionsPath);
         System.out.println();
-        if (options.getFieldAsBoolean("promptEditOptions")) {
+        if (Options.getFieldAsBoolean("promptEditOptions")) {
             yesNoQuestion("Edit save editing options?",
                     () -> {
                         writeOptionsValue("\tMax out added adventurers?", "maxAddedAdventurers");
@@ -182,17 +181,17 @@ public class SaveEditor {
                         writeOptionsValue("\tMax out dragon bond levels?", "maxDragonBonds");
                         writeOptionsValue("\tAsk to edit these options next time the program is run?", "promptEditOptions");
                         System.out.println("\tFinished editing options.");
-                        options.export();
+                        Options.export();
                     });
             System.out.println();
         }
         //
         String savePath = "";
         boolean validDefaultSavePath = false;
-        if (!options.getFieldAsString("defaultSaveName").equals("?")) {
+        if (!Options.getFieldAsString("defaultSaveName").equals("?")) {
             // default save path input
             System.out.println("Using this directory for default filepath.");
-            String defaultSaveName = options.getFieldAsString("defaultSaveName");
+            String defaultSaveName = Options.getFieldAsString("defaultSaveName");
             savePath = getPath(programPath, defaultSaveName);
             int fileCheckCode = JsonUtils.checkIfJsonObject(savePath);
             if (fileCheckCode == 1) {
@@ -241,7 +240,7 @@ public class SaveEditor {
         JsonUtils.deleteDupeIds(); // sanity check for dupe IDs. shouldn't happen
         JsonUtils.applyFixes();
 
-        if(options.getFieldAsBoolean("openTeamEditor")) {
+        if(Options.getFieldAsBoolean("openTeamEditor")) {
             yesNoQuestion("Enter teams manager?",
                     () -> {
                         TeamsUtil.init(teamDataPath);

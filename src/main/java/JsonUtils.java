@@ -12,13 +12,10 @@ public class JsonUtils {
 
     private static final int MAX_DRAGON_CAPACITY = 525;
 
-    private static Options options;
     public static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     private static String savePath;
-    private static String optionsPath;
     private static String jarPath;
-    private static String rsrcPath;
 
     private static boolean toOverwrite = false;
     private static boolean inJar = true;
@@ -33,7 +30,6 @@ public class JsonUtils {
         JsonUtils.savePath = savePath;      //
         JsonUtils.jarPath = jarPath;        //
         JsonUtils.inJar = inJar;            // used for exporting
-        rsrcPath = Paths.get(jarPath, "rsrc").toString();
         try {
             jsonData = getSaveData().getAsJsonObject();
         } catch (IOException e) {
@@ -204,7 +200,7 @@ public class JsonUtils {
         boolean hasManaSpiral = adv.hasManaSpiral();
         double bonus = hasManaSpiral ? 0.3 : 0.2;
         int elementID = adv.getElementId();
-        if (options.getFieldAsBoolean("maxAddedAdventurers")) {
+        if (Options.getFieldAsBoolean("maxAddedAdventurers")) {
             addAdventurerEncyclopediaBonus(elementID, bonus, bonus);
         } else { //bonus from adding new adventurer (no upgrades)
             addAdventurerEncyclopediaBonus(elementID, 0.1, 0.1);
@@ -233,7 +229,7 @@ public class JsonUtils {
         double hpBonus = has5UB ? 0.3 : 0.2;
         double strBonus = 0.1;
         int elementID = dragon.getElementId();
-        if (options.getFieldAsBoolean("maxAddedDragons")) {
+        if (Options.getFieldAsBoolean("maxAddedDragons")) {
             addDragonEncyclopediaBonus(elementID, hpBonus, strBonus);
         } else {
             addDragonEncyclopediaBonus(elementID, 0.1, 0.1);
@@ -472,7 +468,7 @@ public class JsonUtils {
         }
     }
 
-    private static JsonObject buildTalisman(String label, String[] combo, int keyIdOffset) {
+    private static JsonObject buildTalisman(int portraitId, String[] combo, int keyIdOffset) {
         JsonObject out = new JsonObject();
         int abilityId1 = 0;
         int abilityId2 = 0;
@@ -493,7 +489,7 @@ public class JsonUtils {
         }
 
         out.addProperty("talisman_key_id", 200000 + 100 * keyIdOffset);
-        out.addProperty("talisman_id", DragaliaData.kscapeLabelsMap.get(label));
+        out.addProperty("talisman_id", portraitId);
         out.addProperty("is_lock", 0);
         out.addProperty("is_new", 1);
         out.addProperty("talisman_ability_id_1", abilityId1);
@@ -532,7 +528,7 @@ public class JsonUtils {
         }
 
         //to add new unit as a level 1 un-upgraded unit
-        boolean minUnit = getTime == -1 && !options.getFieldAsBoolean("maxAddedAdventurers");
+        boolean minUnit = getTime == -1 && !Options.getFieldAsBoolean("maxAddedAdventurers");
 
         boolean hasManaSpiral = adventurerData.hasManaSpiral();
         JsonArray mc = new JsonArray();
@@ -606,7 +602,7 @@ public class JsonUtils {
         int a1Level = dragonData.getA1Max();
         int a2Level = dragonData.getA2Max();
 
-        boolean minDragon = !options.getFieldAsBoolean("maxAddedDragons");
+        boolean minDragon = !Options.getFieldAsBoolean("maxAddedDragons");
         if (!minDragon) {
             out.addProperty("dragon_key_id", keyIdMin + 200 * keyIdOffset);
             out.addProperty("dragon_id", dragonData.getId());
@@ -822,7 +818,7 @@ public class JsonUtils {
             emptyVoidWeaponAbilities.add(0);
         }
 
-        boolean minWeapon = getTime == -1 && !options.getFieldAsBoolean("maxAddedWeapons");
+        boolean minWeapon = getTime == -1 && !Options.getFieldAsBoolean("maxAddedWeapons");
 
         if (!minWeapon) {
             out.addProperty("weapon_body_id", weaponData.getId());                      //ID
@@ -863,7 +859,7 @@ public class JsonUtils {
         int augmentCount = 0;
 
         //to add new print as a level 1 un-upgraded print
-        boolean minPrint = getTime == -1 && !options.getFieldAsBoolean("maxAddedWyrmprints");
+        boolean minPrint = getTime == -1 && !Options.getFieldAsBoolean("maxAddedWyrmprints");
 
         switch (rarity) {
             case 2:
@@ -1240,7 +1236,7 @@ public class JsonUtils {
                     addDragonEncyclopediaBonus(dragon);
                     //Add dragon bond obj
                     if (id != 20050522) { //Arsene check
-                        if (options.getFieldAsBoolean("maxDragonBonds")) {
+                        if (Options.getFieldAsBoolean("maxDragonBonds")) {
                             // add dragon's roost materials
                             HashMap<Integer, Integer> dragonsRoostGifts = DragonMeta.getDragonsRoostGifts(1);
                             addMaterialsFromMap(dragonsRoostGifts);
@@ -1266,7 +1262,7 @@ public class JsonUtils {
 
     public static void updateDragonBond(int id) {
         // Update dragon bond obj
-        if (options.getFieldAsBoolean("maxDragonBonds")) {
+        if (Options.getFieldAsBoolean("maxDragonBonds")) {
             int bondLevel = getValueFromObjInArray("reliability_level", "dragon_id",
                     id, "data", "dragon_reliability_list");
             // add dragon's roost materials
@@ -1283,7 +1279,7 @@ public class JsonUtils {
         out.addProperty("dragon_id", id);
         out.addProperty("gettime", Instant.now().getEpochSecond());
         out.addProperty("last_contact_time", Instant.now().getEpochSecond());
-        if (options.getFieldAsBoolean("maxDragonBonds")) {
+        if (Options.getFieldAsBoolean("maxDragonBonds")) {
             out.addProperty("reliability_level", 30);
             out.addProperty("reliability_total_exp", 36300);
         } else {
@@ -1429,20 +1425,24 @@ public class JsonUtils {
         //for each kscape combo, put new kscape print data for each ele-weapon combo
 
         String[][] kscapeCombos = KscapeCombos.KSCAPES;
-        String[][] kscapeLabels = KscapeCombos.KSCAPE_LABELS;
         int keyIdOffset = 1;
         JsonObject jsonData = getField("data").getAsJsonObject();
         jsonData.remove("talisman_list");
         JsonArray talismans = new JsonArray();
         for (String[] kscapeCombo : kscapeCombos) {
             //for each ele-wep combo
-            for (String[] kscapeLabel : kscapeLabels) {
-                for (String label : kscapeLabel) {
-                    talismans.add(buildTalisman(label, kscapeCombo, keyIdOffset));
+            for (int element = 1; element <= 5; element++) {
+                for (int weapon = 1; weapon <= 9; weapon++) {
+                    String elementString = AdventurerMeta.getElementString(element);
+                    String weaponString = AdventurerMeta.getWeaponTypeString(weapon);
+                    String optionString = "portrait" + elementString + weaponString + "Name";
+                    String adventurerName = Options.getFieldAsString(optionString).toUpperCase(Locale.ROOT);
+                    AdventurerMeta adventurer = DragaliaData.nameToAdventurer.get(adventurerName);
+                    int portraitId = adventurer.getKscapeLabelId();
+                    talismans.add(buildTalisman(portraitId, kscapeCombo, keyIdOffset));
                     keyIdOffset++;
                 }
             }
-
         }
         jsonData.add("talisman_list", talismans);
 
@@ -1497,7 +1497,7 @@ public class JsonUtils {
                 //Add it to your inventory
                 if (newWeapon != null) {
                     getField("data", "weapon_body_list").getAsJsonArray().add(newWeapon);
-                    if (options.getFieldAsBoolean("maxAddedWeapons")) {
+                    if (Options.getFieldAsBoolean("maxAddedWeapons")) {
                         //Update weapon bonuses
                         addWeaponBonus(weapon);
                         //Update weapon passives
