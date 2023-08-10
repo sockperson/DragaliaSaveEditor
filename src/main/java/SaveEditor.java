@@ -2,12 +2,9 @@ import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Scanner;
-import java.util.function.Consumer;
 
 public class SaveEditor {
 
-    private static final Scanner input = new Scanner(System.in);
     private static boolean isOutOfIDE = false;
 
     private static String getFilePath() {
@@ -28,121 +25,6 @@ public class SaveEditor {
     //TODO convert these to while loop (this impl can cause a stack overflow lol)
     //this code sucks who wrote it
 
-    public static String input(String question) {
-        System.out.print(question + ": ");
-        return input.nextLine();
-    }
-
-    //for writing Options values
-    public static void writeOptionsValue(String question, String fieldName) {
-        String fieldVal = Options.getFieldAsString(fieldName);
-        if (fieldVal.equals("true")) {
-            fieldVal = "y";
-        } else if (fieldVal.equals("false")) {
-            fieldVal = "n";
-        }
-
-        System.out.print(question + " (y/n) (Current: " + fieldVal + "): ");
-        String in = input.nextLine();
-        in = in.toUpperCase();
-
-        if(in.equals("Y") || in.equals("YES")){
-            Options.editBooleanOption(fieldName, true);
-        } else if (in.equals("N") || in.equals("NO")){
-            Options.editBooleanOption(fieldName, false);
-        } else {
-            System.out.println("Invalid Input. Enter 'y' or 'n'");
-            writeOptionsValue(question, fieldName);
-        }
-    }
-
-    public static boolean passYesNo(String question) {
-        System.out.print(question + " (y/n): ");
-        String in = input.nextLine();
-        in = in.toUpperCase();
-
-        if(in.equals("Y") || in.equals("YES")){
-            return true;
-        } else if (in.equals("N") || in.equals("NO")){
-            return false;
-        } else {
-            System.out.println("Invalid Input. Enter 'y' or 'n'");
-            return passYesNo(question);
-        }
-    }
-
-    public static void yesNoQuestion(String question, String response, Runnable func){
-        System.out.print(question + " (y/n): ");        //print the question
-        String in = input.nextLine();                   //take in the input
-        in = in.toUpperCase();                          //make the input not case-sensitive
-        if(in.equals("Y") || in.equals("YES")){         //if input is 'Y', print response and run the function
-            System.out.println(response);
-            func.run();
-        } else if (in.equals("N") || in.equals("NO")){  //if input is 'N', do nothing
-            return;
-        } else {                                        //if input invalid, ask the question again
-            System.out.println("Invalid Input. Enter 'y' or 'n'");
-            yesNoQuestion(question, response, func);
-        }
-    }
-
-    public static void yesNoQuestion(String question, Runnable func){
-        System.out.print(question + " (y/n): ");        //print the question
-        String in = input.nextLine();                   //take in the input
-        in = in.toUpperCase();                          //make the input not case-sensitive
-        if(in.equals("Y") || in.equals("YES")){         //if input is 'Y', run the function
-            func.run();
-        } else if (in.equals("N") || in.equals("NO")){  //if input is 'N', do nothing
-            return;
-        } else {                                        //if input invalid, ask the question again
-            System.out.println("Invalid Input. Enter 'y' or 'n'");
-            yesNoQuestion(question, func);
-        }
-    }
-
-    private static void yesNoQuestion(String question, Runnable yesFunc, Runnable noFunc){
-        System.out.print(question + " (y/n): ");        //print the question
-        String in = input.nextLine();                   //take in the input
-        in = in.toUpperCase();                          //make the input not case-sensitive
-        if(in.equals("Y") || in.equals("YES")){         //if input is 'Y', run yesFunc
-            yesFunc.run();
-        } else if (in.equals("N") || in.equals("NO")){  //if input is 'N', run noFunc
-            noFunc.run();
-        } else {                                        //if input invalid, ask the question again
-            System.out.println("Invalid Input. Enter 'y' or 'n'");
-            yesNoQuestion(question, yesFunc, noFunc);
-        }
-    }
-
-    private static void maybeQuestion(String question, String response2, Runnable func, Runnable func2){
-        System.out.print(question + " (y/n): ");        //print the question
-        String in = input.nextLine();                   //take in the input
-        in = in.toUpperCase();                          //make the input not case-sensitive
-        if(in.equals("Y") || in.equals("YES")){         //if input is 'Y', print response and run the function
-            func.run();
-        } else if (in.equals("N") || in.equals("NO")){  //if input is 'N', do nothing
-            return;
-        } else if (in.equals("MITSUBAP")){              //do both of the funcs if secret input
-            System.out.println(response2);
-            func.run();
-            func2.run();
-        } else {                                        //if input invalid, ask the question again
-            System.out.println("Invalid Input. Enter 'y' or 'n'");
-            maybeQuestion(question, response2, func, func2);
-        }
-    }
-
-    private static void continuousInput(String val, Consumer<String> func){
-        while(true){
-            System.out.print(val + " (Enter 'exit' to return): ");
-            String in = input.nextLine().toUpperCase();
-            if(in.equals("EXIT")){
-                return;
-            }
-            func.accept(in);
-        }
-    }
-
     private static String getPath(String path, String more) {
         if(isOutOfIDE){
             return Paths.get(new File(path).getParent(), more).toString();
@@ -162,7 +44,7 @@ public class SaveEditor {
     }
 
     public static void main(String[] args){
-        System.out.println("\nDragalia Save Editor (v11.3)\n");
+        System.out.println("\nDragalia Save Editor (v11.4)\n");
         String programPath = getFilePath();
         String optionsPath = getPath(programPath, "DLSaveEditor_options.txt");
         String teamDataPath = getPath(programPath, "teams.json");
@@ -172,14 +54,14 @@ public class SaveEditor {
         Options.init(optionsPath);
         System.out.println();
         if (Options.getFieldAsBoolean("promptEditOptions")) {
-            yesNoQuestion("Edit save editing options?",
+            InputUtils.yesNoQuestion("Edit save editing options?",
                     () -> {
-                        writeOptionsValue("\tMax out added adventurers?", "maxAddedAdventurers");
-                        writeOptionsValue("\tMax out added dragons?", "maxAddedDragons");
-                        writeOptionsValue("\tMax out added wyrmprints?", "maxAddedWyrmprints");
-                        writeOptionsValue("\tMax out added weapons?", "maxAddedWeapons");
-                        writeOptionsValue("\tMax out dragon bond levels?", "maxDragonBonds");
-                        writeOptionsValue("\tAsk to edit these options next time the program is run?", "promptEditOptions");
+                        InputUtils.writeOptionsValue("\tMax out added adventurers?", "maxAddedAdventurers");
+                        InputUtils.writeOptionsValue("\tMax out added dragons?", "maxAddedDragons");
+                        InputUtils.writeOptionsValue("\tMax out added wyrmprints?", "maxAddedWyrmprints");
+                        InputUtils.writeOptionsValue("\tMax out added weapons?", "maxAddedWeapons");
+                        InputUtils.writeOptionsValue("\tMax out dragon bond levels?", "maxDragonBonds");
+                        InputUtils.writeOptionsValue("\tAsk to edit these options next time the program is run?", "promptEditOptions");
                         System.out.println("\tFinished editing options.");
                         Options.export();
                     });
@@ -206,7 +88,7 @@ public class SaveEditor {
             // normal save path input
             System.out.println("(Leave this input empty and press 'Enter' key if the save file (savedata.txt) is in the same folder as this program.)");
             System.out.print("Enter path for save file: ");
-            String path = input.nextLine();
+            String path = InputUtils.input.nextLine();
             boolean isFilePathInvalid = true;
             while(isFilePathInvalid){
                 if(path.equals("")){
@@ -228,7 +110,7 @@ public class SaveEditor {
                     }
                     System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
                     System.out.print("Enter path for save file: ");
-                    path = input.nextLine();
+                    path = InputUtils.input.nextLine();
                 }
             }
         }
@@ -242,109 +124,119 @@ public class SaveEditor {
         JsonUtils.validate();
 
         if(Options.getFieldAsBoolean("openTeamEditor")) {
-            yesNoQuestion("Enter teams manager?",
+            InputUtils.yesNoQuestion("Enter teams manager?",
                     () -> {
                         TeamsUtil.init(teamDataPath);
                         TeamsUtil.run();
                     });
         }
 
-        yesNoQuestion("Uncap mana? (Sets mana to 10m)", JsonUtils::uncapMana);
-        yesNoQuestion("Set rupies count to 2b?", JsonUtils::setRupies);
-        yesNoQuestion(
+        InputUtils.yesNoQuestion("Uncap mana? (Sets mana to 10m)", JsonUtils::uncapMana);
+        InputUtils.yesNoQuestion("Set rupies count to 2b?", JsonUtils::setRupies);
+        InputUtils.yesNoQuestion(
                 "Rob Donkay? (Sets wyrmites to 710k, singles to 2.6k, tenfolds to 170)",
                 "Thanks Donkay!",
                 JsonUtils::plunderDonkay);
-        yesNoQuestion("Play Ch13 Ex1-2 Battle On The Byroad? (Sets eldwater to 10m)", JsonUtils::battleOnTheByroad);
+        InputUtils.yesNoQuestion("Play Ch13 Ex1-2 Battle On The Byroad? (Sets eldwater to 10m)", JsonUtils::battleOnTheByroad);
         //check for invisible adventurers (skipped raid welfares)
         List<String> skippedTempAdventurers = JsonUtils.checkSkippedTempAdventurers();
         if(skippedTempAdventurers.size() > 0){
             System.out.println("Skipped raid welfare adventurers: " + Logging.listPrettify(skippedTempAdventurers) + " found.");
-            yesNoQuestion("\tWould you like to max out their friendship level and add them to your roster?",
+            InputUtils.yesNoQuestion("\tWould you like to max out their friendship level and add them to your roster?",
                     "Done!",
                     JsonUtils::setAdventurerVisibleFlags);
         }
-        yesNoQuestion(
+        InputUtils.yesNoQuestion(
                 "Max out existing adventurers/dragon/weapons/wyrmprints?",
                 () -> {
-                    yesNoQuestion("\tMax out existing adventurers?",
+                    InputUtils.yesNoQuestion("\tMax out existing adventurers?",
                             JsonUtils::maxAdventurers);
-                    yesNoQuestion("\tMax out existing dragons?",
+                    InputUtils.yesNoQuestion("\tMax out existing dragons?",
                             JsonUtils::maxDragons);
-                    yesNoQuestion("\tMax out existing weapons?",
+                    InputUtils.yesNoQuestion("\tMax out existing weapons?",
                             JsonUtils::maxWeapons);
-                    yesNoQuestion("\tMax out existing wyrmprints?",
+                    InputUtils.yesNoQuestion("\tMax out existing wyrmprints?",
                             JsonUtils::maxWyrmprints);
                 });
-        yesNoQuestion(
+        InputUtils.yesNoQuestion(
                 "Add all missing adventurers to roster?",
                 () -> System.out.println("Added " + JsonUtils.addMissingAdventurers() + " missing adventurers."),
-                () -> yesNoQuestion("\tWould you like to add specific adventurers to roster?",
-                        () -> continuousInput("\t\tEnter adventurer name",
+                () -> InputUtils.yesNoQuestion("\tWould you like to add specific adventurers to roster?",
+                        () -> InputUtils.continuousInput("\t\tEnter adventurer name",
                                 JsonUtils::addAdventurer)));
-        yesNoQuestion(
+        InputUtils.yesNoQuestion(
                 "Add all missing dragons to roster?",
                 () -> {
-                        yesNoQuestion(
+                    InputUtils.yesNoQuestion(
                             "\tInclude 3-star and 4-star dragons?",
                             () -> System.out.println(JsonUtils.addMissingDragons(false)),
                             () -> System.out.println(JsonUtils.addMissingDragons(true)));
-                        yesNoQuestion("\tAdd additional dragons to roster?",
-                            () -> continuousInput("\t\tEnter dragon name",
+                    InputUtils.yesNoQuestion("\tAdd additional dragons to roster?",
+                            () -> InputUtils.continuousInput("\t\tEnter dragon name",
                                     JsonUtils::addDragon));
                     },
-                () -> yesNoQuestion("\tWould you like to add additional specific dragons to roster?",
-                        () -> continuousInput("\t\tEnter dragon name",
+                () -> InputUtils.yesNoQuestion("\tWould you like to add additional specific dragons to roster?",
+                        () -> InputUtils.continuousInput("\t\tEnter dragon name",
                                 JsonUtils::addDragon)));
-        yesNoQuestion(
+        InputUtils.yesNoQuestion(
                 "Add all missing weapons?",
                 () -> System.out.println("Added " + JsonUtils.addMissingWeapons() + " missing weapons."));
-        yesNoQuestion(
+        InputUtils.yesNoQuestion(
                 "Add all missing wyrmprints?",
                 () -> System.out.println("Added " + JsonUtils.addMissingWyrmprints() + " missing wyrmprints."));
-        yesNoQuestion(
+        InputUtils.yesNoQuestion(
                 "Set all material counts to 30,000?",
                 "Done!",
                 JsonUtils::addMaterials);
-        yesNoQuestion(
+        InputUtils.yesNoQuestion(
                 "Enter the Kaleidoscape? (Replaces portrait print inventory to a strong set of prints)",
-                () -> yesNoQuestion(
+                () -> InputUtils.yesNoQuestion(
                         "\tThis will completely replace portrait prints that you own. Is this ok?",
                         "Done!",
                         JsonUtils::backToTheMines));
-        yesNoQuestion("Add missing weapon skins?",
+        InputUtils.yesNoQuestion("Add missing weapon skins?",
                 () -> System.out.println("Added " + JsonUtils.addMissingWeaponSkins() + " missing weapon skins."));
-        yesNoQuestion("Max Halidom facilities?", JsonUtils::maxFacilities);
-        yesNoQuestion(
+        InputUtils.yesNoQuestion("Max Halidom facilities?", JsonUtils::maxFacilities);
+        InputUtils.yesNoQuestion("Set epithet?",
+                () -> InputUtils.validatedInputAndCall(
+                        "\tEnter epithet name",
+                        (name) -> DragaliaData.nameToEpithetId.containsKey(name),
+                        (name) -> {
+                            JsonUtils.setEpithet(name);
+                            System.out.println("Set epithet!");
+                        },
+                        "\tUnknown epithet name."
+                ));
+        InputUtils.yesNoQuestion(
                 "Do additional hacked options? (Enter 'n' if you wish to keep your save data \"vanilla\")",
                 () -> {
-                        yesNoQuestion("\tGenerate random portrait prints? (This will replace your portrait print inventory)",
+                        InputUtils.yesNoQuestion("\tGenerate random portrait prints? (This will replace your portrait print inventory)",
                                 JsonUtils::kscapeRandomizer);
-                        yesNoQuestion("\tAdd some hacked portrait prints?",
+                        InputUtils.yesNoQuestion("\tAdd some hacked portrait prints?",
                                 JsonUtils::addGoofyKscapes);
-                        maybeQuestion(
+                        InputUtils.maybeQuestion(
                                 "\tAdd unplayable units? (Note: These units are not fully implemented and may cause softlocks or crashes.)",
                                 "\tHidden Option: Extra options for adding unplayable units",
                             () -> {
-                                yesNoQuestion("\tAdd unit: Tutorial Zethia?",
+                                InputUtils.yesNoQuestion("\tAdd unit: Tutorial Zethia?",
                                         JsonUtils::addTutorialZethia);
-                                yesNoQuestion("\tAdd units: Story Leif(s)?",
+                                InputUtils.yesNoQuestion("\tAdd units: Story Leif(s)?",
                                         JsonUtils::addStoryLeifs);
-                                yesNoQuestion("\tAdd unit: Sharpshooter Cleo",
+                                InputUtils.yesNoQuestion("\tAdd unit: Sharpshooter Cleo",
                                         JsonUtils::addGunnerCleo);
-                                yesNoQuestion("\tAdd unique shapeshift dragons?",
+                                InputUtils.yesNoQuestion("\tAdd unique shapeshift dragons?",
                                         JsonUtils::addUniqueShapeshiftDragons);
                             },
                             () -> {
-                                yesNoQuestion("\tAdd unit: Dog?",
+                                InputUtils.yesNoQuestion("\tAdd unit: Dog?",
                                         JsonUtils::addDog);
-                                yesNoQuestion("\tAdd units: Anniversary Notte(s)?",
+                                InputUtils.yesNoQuestion("\tAdd units: Anniversary Notte(s)?",
                                         JsonUtils::addNottes);
-                                yesNoQuestion("\tAdd units: Story NPCs (a lot)?",
+                                InputUtils.yesNoQuestion("\tAdd units: Story NPCs (a lot)?",
                                         JsonUtils::addStoryNPCs);
-                                yesNoQuestion("\tAdd units: ABR 3-star units?",
+                                InputUtils.yesNoQuestion("\tAdd units: ABR 3-star units?",
                                         JsonUtils::addABR3Stars);
-                                yesNoQuestion("\tAdd other dragons (a lot)?",
+                                InputUtils.yesNoQuestion("\tAdd other dragons (a lot)?",
                                         JsonUtils::addUnplayableDragons);
                             });
                         }
@@ -352,7 +244,7 @@ public class SaveEditor {
         System.out.println("\nFinished editing save...getting ready for exporting.");
         if(Tests.didTestsPass()){
             if(JsonUtils.isSaveData2Present()){
-                SaveEditor.yesNoQuestion(
+                InputUtils.yesNoQuestion(
                         "savedata2.txt already exists in this directory. Would you like to overwrite it?",
                         () -> JsonUtils.setOverwrite(true));
             }
@@ -362,10 +254,10 @@ public class SaveEditor {
                     "Contact @sockperson if this message appears.");
         }
         System.out.println();
-        yesNoQuestion("View logs?", () -> Logging.printLogs());
+        InputUtils.yesNoQuestion("View logs?", () -> Logging.printLogs());
         System.out.println();
         System.out.println("Program finished. Enter anything to exit...");
-        input.nextLine();
+        InputUtils.input.nextLine();
     }
 
 }

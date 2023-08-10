@@ -39,6 +39,7 @@ public class DragaliaData {
     public static HashMap<Integer, FacilityMeta> idToFacility = new HashMap<>();
     public static HashMap<Integer, MaterialMeta> idToMaterial = new HashMap<>();
     public static HashMap<Integer, String> idToAbilityName = new HashMap<>();
+    public static HashMap<String, Integer> nameToEpithetId = new HashMap<>();
 
     //Alias Maps
     public static HashMap<String, List<String>> adventurerAliases = new HashMap<>();
@@ -62,6 +63,7 @@ public class DragaliaData {
             readFacilitiesData();
             readMaterialsData();
             readAbilityData();
+            readEpithetsData();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -315,6 +317,23 @@ public class DragaliaData {
             boolean isPlayable = weaponSkin.get("IsPlayable").getAsInt() == 1;
             WeaponSkinMeta weaponSkinMeta = new WeaponSkinMeta(name, id, weaponTypeId, isPlayable);
             idToWeaponSkin.put(id, weaponSkinMeta);
+        }
+    }
+
+    private static void readEpithetsData() {
+        JsonObject epithets = getJsonObjectFromRsrc("epithets.json");
+        for (Map.Entry<String, JsonElement> entry : epithets.entrySet()) {
+            String nameUpper = entry.getKey().toUpperCase(Locale.ROOT);
+            JsonElement jsonEle = entry.getValue();
+
+            int id = -1;
+            try {
+                id = jsonEle.getAsInt();
+            } catch (NumberFormatException poop) {
+                continue; // ignore the id->name mappings
+            }
+
+            nameToEpithetId.put(nameUpper, id);
         }
     }
 

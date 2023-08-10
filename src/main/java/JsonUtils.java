@@ -1003,6 +1003,11 @@ public class JsonUtils {
         }
     }
 
+    public static void setEpithet (String name) {
+        int id = DragaliaData.nameToEpithetId.get(name);
+        writeInteger(id, "data", "user_data", "mana_point");
+    }
+
     // Hacked Utils \\
 
     private static void addHackedUnit(int id){

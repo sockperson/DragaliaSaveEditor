@@ -1231,16 +1231,16 @@ public class TeamsUtil {
             System.out.println("Teams data not found... generating new teams data.");
             teamsData.add("talismans", getDefaultTalismans());
             boolean toGenerateFromGameData =
-                    SaveEditor.passYesNo("Generate new teams data from savefile (y) or generate blank team data? (n)");
+                    InputUtils.passYesNo("Generate new teams data from savefile (y) or generate blank team data? (n)");
             teamsData.add("teams", generateNewTeams(toGenerateFromGameData));
             System.out.println("Exporting teams data...");
             exportTeams();
         } else {
             System.out.println("Importing teams data...");
             teamsData = JsonUtils.getJsonObject(teamDataPath);
-            if (SaveEditor.passYesNo("Generate new teams data?")) {
+            if (InputUtils.passYesNo("Generate new teams data?")) {
                 boolean toGenerateFromGameData =
-                        SaveEditor.passYesNo("\tGenerate new teams data from savefile (y) or generate blank team data? (n)");
+                        InputUtils.passYesNo("\tGenerate new teams data from savefile (y) or generate blank team data? (n)");
                 teamsData.remove("teams");
                 teamsData.add("teams", generateNewTeams(toGenerateFromGameData));
                 System.out.println("Exporting teams data...");
@@ -1248,23 +1248,23 @@ public class TeamsUtil {
             }
         }
 
-        if (SaveEditor.passYesNo("Export talisman list from savedata?")) {
+        if (InputUtils.passYesNo("Export talisman list from savedata?")) {
             exportTalismans();
             System.out.println("Exported talisman data to talismanList.json.");
         }
 
-        if (SaveEditor.passYesNo("Generate new talismans?")) {
+        if (InputUtils.passYesNo("Generate new talismans?")) {
             while (true) {
-                String talismanName = SaveEditor.input("\tEnter talisman name (Enter 'exit' to return)");
+                String talismanName = InputUtils.input("\tEnter talisman name (Enter 'exit' to return)");
                 if (talismanName.toLowerCase(Locale.ROOT).equals("exit")) {
                     break;
                 }
 
-                String adventurerName = SaveEditor.input("\tEnter adventurer name");
-                String countStr = SaveEditor.input("\tEnter talisman count (1-4)");
-                String id1Str = SaveEditor.input("\tEnter ability ID 1");
-                String id2Str = SaveEditor.input("\tEnter ability ID 2");
-                String id3Str = SaveEditor.input("\tEnter ability ID 3");
+                String adventurerName = InputUtils.input("\tEnter adventurer name");
+                String countStr = InputUtils.input("\tEnter talisman count (1-4)");
+                String id1Str = InputUtils.input("\tEnter ability ID 1");
+                String id2Str = InputUtils.input("\tEnter ability ID 2");
+                String id3Str = InputUtils.input("\tEnter ability ID 3");
 
                 int count = -1;
                 int id1 = -1;
@@ -1300,7 +1300,7 @@ public class TeamsUtil {
         System.out.println("Initializing talisman data...");
         initializeTalismans();
 
-        if (SaveEditor.passYesNo("Paste teams.json data into savedata party list and export?")) {
+        if (InputUtils.passYesNo("Paste teams.json data into savedata party list and export?")) {
             JsonArray partyList = convertToPartyList();
             System.out.println("Validating imported team data...");
             if (!validatePartyList(partyList)) {
@@ -1309,7 +1309,7 @@ public class TeamsUtil {
                 // eh
                 System.out.println("Exporting savedata anyway lol");
                 if(JsonUtils.isSaveData2Present()){
-                    SaveEditor.yesNoQuestion(
+                    InputUtils.yesNoQuestion(
                             "savedata2.txt already exists in this directory. Would you like to overwrite it?",
                             () -> JsonUtils.setOverwrite(true));
                 }
@@ -1323,7 +1323,7 @@ public class TeamsUtil {
 
                 System.out.print("Exporting savedata...");
                 if(JsonUtils.isSaveData2Present()){
-                    SaveEditor.yesNoQuestion(
+                    InputUtils.yesNoQuestion(
                             "savedata2.txt already exists in this directory. Would you like to overwrite it?",
                             () -> JsonUtils.setOverwrite(true));
                 }
