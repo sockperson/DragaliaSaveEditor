@@ -11,7 +11,8 @@ public class Options {
     private static String[] optionNameAndDefaults = new String[]{
             "(bool):maxAddedAdventurers=true", "(bool):maxAddedWyrmprints=true", "(bool):maxAddedDragons=true",
             "(bool):maxAddedWeapons=true", "(bool):showOptionsValues=false", "(bool):promptEditOptions=true",
-            "(bool):openTeamEditor=false", "(bool):maxDragonBonds=true", "(string):defaultSaveName=?"
+            "(bool):openTeamEditor=false", "(bool):maxDragonBonds=true", "(string):defaultSaveName=?",
+            "(bool):doSuperPortraitStats=false"
     };
 
     private static String[] portraitAdventurersNameAndDefaults = new String[]{};

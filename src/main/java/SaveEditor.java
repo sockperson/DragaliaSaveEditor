@@ -239,6 +239,7 @@ public class SaveEditor {
 
         JsonUtils.deleteDupeIds(); // sanity check for dupe IDs. shouldn't happen
         JsonUtils.applyFixes();
+        JsonUtils.validate();
 
         if(Options.getFieldAsBoolean("openTeamEditor")) {
             yesNoQuestion("Enter teams manager?",

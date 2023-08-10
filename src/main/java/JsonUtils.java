@@ -3,6 +3,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.time.Instant;
 import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
@@ -468,6 +470,23 @@ public class JsonUtils {
         }
     }
 
+    //
+    // String fieldName: the field to run 'func' for
+    // String... fields: field traverse path
+    public static boolean arrayForEachCheck (Function<Integer, Boolean> func, String fieldName, String... fields) {
+        boolean returnValue = true;
+        JsonArray jsonArray = getFieldAsJsonArray(fields);
+        for (JsonElement jsonEle : jsonArray) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            int value = jsonObj.get(fieldName).getAsInt();
+            if(!func.apply(value)) {
+                returnValue = false;
+                Logging.print("'{0}' of ID '{1}' should not be valid for '{2}'", fieldName, String.valueOf(value), fields[1]);
+            }
+        }
+        return returnValue;
+    }
+
     private static JsonObject buildTalisman(int portraitId, String[] combo, int keyIdOffset) {
         JsonObject out = new JsonObject();
         int abilityId1 = 0;
@@ -487,6 +506,7 @@ public class JsonUtils {
                     break;
             }
         }
+        int additional_stats = Options.getFieldAsBoolean("doSuperPortraitStats") ? 250_000 : 0;
 
         out.addProperty("talisman_key_id", 200000 + 100 * keyIdOffset);
         out.addProperty("talisman_id", portraitId);
@@ -495,8 +515,8 @@ public class JsonUtils {
         out.addProperty("talisman_ability_id_1", abilityId1);
         out.addProperty("talisman_ability_id_2", abilityId2);
         out.addProperty("talisman_ability_id_3", abilityId3);
-        out.addProperty("additional_hp", 0);
-        out.addProperty("additional_attack", 0);
+        out.addProperty("additional_hp", additional_stats);
+        out.addProperty("additional_attack", additional_stats);
         out.addProperty("gettime", Instant.now().getEpochSecond());
 
         return out;
@@ -929,11 +949,35 @@ public class JsonUtils {
         }
     }
 
+    public static void validate() {
+        System.out.println("Validating save file...");
+        validateIDs();
+    }
+
+    private static void validateIDs() {
+        boolean validAdventurers = arrayForEachCheck(id -> DragaliaData.idToAdventurer.containsKey(id),
+                "chara_id", "data", "chara_list");
+        boolean validDragons = arrayForEachCheck(id -> DragaliaData.idToDragon.containsKey(id),
+                "dragon_id", "data", "dragon_list");
+        boolean validWyrmprints = arrayForEachCheck(id -> DragaliaData.idToPrint.containsKey(id),
+                "ability_crest_id", "data", "ability_crest_list");
+        boolean validFacilities = arrayForEachCheck(id -> DragaliaData.idToFacility.containsKey(id),
+                "plant_id", "data", "build_list");
+        boolean validWeapons = arrayForEachCheck(id -> DragaliaData.idToWeapon.containsKey(id),
+                "weapon_body_id", "data", "weapon_body_list");
+
+        boolean valid = validAdventurers && validDragons && validWyrmprints
+                && validFacilities && validWeapons;
+        if (!valid) {
+            System.out.println("Detected 1 or more issues with the save.");
+        }
+    }
+
     public static void applyFixes() {
         fixMissingDragonStories();
     }
 
-    public static void fixMissingDragonStories() {
+    private static void fixMissingDragonStories() {
         List<String> addedDragonStories = new ArrayList<>();
         //Compile a list of ID's from your encyclopedia
         Set<Integer> albumIDSet = getSetFromField("dragon_id", "data", "album_dragon_list");
