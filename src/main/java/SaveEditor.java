@@ -44,7 +44,7 @@ public class SaveEditor {
     }
 
     public static void main(String[] args){
-        System.out.println("\nDragalia Save Editor (v11.4.2)\n");
+        System.out.println("\nDragalia Save Editor (v11.4.3)\n");
         String programPath = getFilePath();
         String optionsPath = getPath(programPath, "DLSaveEditor_options.txt");
         String teamDataPath = getPath(programPath, "teams.json");

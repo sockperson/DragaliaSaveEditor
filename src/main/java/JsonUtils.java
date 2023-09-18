@@ -1188,7 +1188,9 @@ public class JsonUtils {
                 //Add it to your roster
                 if (newUnit != null) {
                     getField("data", "chara_list").getAsJsonArray().add(newUnit);
-                    unlockAdventurerStory(id);
+                    if (Options.getFieldAsBoolean("maxAddedAdventurers")) {
+                        unlockAdventurerStory(id);
+                    }
                     addAdventurerEncyclopediaBonus(adventurer);
                     count++;
                     Logging.write(adventurer.getName());
@@ -1219,7 +1221,9 @@ public class JsonUtils {
         //Add it to your roster
         if (newUnit != null) {
             getField("data", "chara_list").getAsJsonArray().add(newUnit);
-            unlockAdventurerStory(id);
+            if (Options.getFieldAsBoolean("maxAddedAdventurers")) {
+                unlockAdventurerStory(id);
+            }
             addAdventurerEncyclopediaBonus(advData);
             System.out.println("Added '" + name + "'!");
         }
