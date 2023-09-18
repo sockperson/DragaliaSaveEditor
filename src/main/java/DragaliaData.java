@@ -41,6 +41,10 @@ public class DragaliaData {
     public static HashMap<Integer, String> idToAbilityName = new HashMap<>();
     public static HashMap<String, Integer> nameToEpithetId = new HashMap<>();
 
+    // Lists
+    public static List<Integer> unplayableAdventurerIds = new ArrayList<>();
+    public static List<Integer> unplayableDragonIds = new ArrayList<>();
+
     //Alias Maps
     public static HashMap<String, List<String>> adventurerAliases = new HashMap<>();
     public static HashMap<String, List<String>> dragonAliases = new HashMap<>();
@@ -64,8 +68,39 @@ public class DragaliaData {
             readMaterialsData();
             readAbilityData();
             readEpithetsData();
+
+            literallyUnplayable();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    private static void literallyUnplayable() {
+        // Adventurers
+        List<Integer> some = new ArrayList<>(Arrays.asList(19900001, 19900002,
+                19900005, 19900004, 19900003, 19900006, 99900009));
+        unplayableAdventurerIds.addAll(some);
+        for (int i = 0; i < 67; i++) {
+            unplayableAdventurerIds.add(19100001 + i);
+        }
+        for(int i = 0; i < 9; i++){
+            unplayableAdventurerIds.add(99130001 + i * 100000);
+        }
+
+        // Dragons
+        List<Integer> someMore = new ArrayList<>(Arrays.asList(29900006, 29900014,
+                29900017, 29900018, 29900023));
+        unplayableDragonIds.addAll(someMore);
+        for(int i = 0; i < 27; i++){
+            unplayableDragonIds.add(29900001 + i);
+        }
+        List<Integer> moreMore = new ArrayList<>(Arrays.asList(29800001, 29800002,
+                29800003, 29940301, 29950405, 29950116, 29950522, 29950317,
+                29950523, 29950518, 29950415, 29950524, 29950416, 29950525,
+                29950121, 29950320));
+        unplayableDragonIds.addAll(moreMore);
+        for(int i = 0; i < 6; i++){
+            unplayableDragonIds.add(21000001 + i);
         }
     }
 

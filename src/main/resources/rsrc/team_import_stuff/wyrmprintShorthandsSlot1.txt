@@ -1,4 +1,5 @@
 ### offense (slot 1, 5*) ###
+resoff: 40050099
 fs, fsdmg, fs(lance): 40050091
 cr: auto_cr
 (sword)cr, auto_cr_sword: 40050145

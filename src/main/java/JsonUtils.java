@@ -955,9 +955,13 @@ public class JsonUtils {
     }
 
     private static void validateIDs() {
-        boolean validAdventurers = arrayForEachCheck(id -> DragaliaData.idToAdventurer.containsKey(id),
+        boolean validAdventurers = arrayForEachCheck(id ->
+                        DragaliaData.idToAdventurer.containsKey(id) ||
+                        DragaliaData.unplayableAdventurerIds.contains(id),
                 "chara_id", "data", "chara_list");
-        boolean validDragons = arrayForEachCheck(id -> DragaliaData.idToDragon.containsKey(id),
+        boolean validDragons = arrayForEachCheck(id ->
+                        DragaliaData.idToDragon.containsKey(id) ||
+                        DragaliaData.unplayableDragonIds.contains(id),
                 "dragon_id", "data", "dragon_list");
         boolean validWyrmprints = arrayForEachCheck(id -> DragaliaData.idToPrint.containsKey(id),
                 "ability_crest_id", "data", "ability_crest_list");
@@ -1005,7 +1009,7 @@ public class JsonUtils {
 
     public static void setEpithet (String name) {
         int id = DragaliaData.nameToEpithetId.get(name);
-        writeInteger(id, "data", "user_data", "mana_point");
+        writeInteger(id, "data", "user_data", "emblem_id");
     }
 
     // Hacked Utils \\
@@ -1825,7 +1829,9 @@ public class JsonUtils {
         for(JsonElement jsonEle : getFieldAsJsonArray("data", "chara_list")){
             JsonObject adv = jsonEle.getAsJsonObject();
             if(adv.get("list_view_flag").getAsInt() == 0){
-                skippedAdvs.add(DragaliaData.idToAdventurer.get(adv.get("chara_id").getAsInt()).getName());
+                int charaId = adv.get("chara_id").getAsInt();
+                String name = DragaliaData.idToAdventurer.getOrDefault(charaId, AdventurerMeta.DUMMY).getName();
+                skippedAdvs.add(name);
             }
         }
         return skippedAdvs;

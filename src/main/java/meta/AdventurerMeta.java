@@ -10,6 +10,13 @@ public class AdventurerMeta {
 
     private boolean hasSkillShare, hasManaSpiral;
 
+    public static AdventurerMeta DUMMY = new AdventurerMeta(
+            "missingNo", "missingTitle", 0, 0, 0, 0,
+            0, false, false, 0,
+            0, 0, 0, 0, 0, 0, 0,
+            "?", "?", "?", 0
+    );
+
     public AdventurerMeta(String name, String title, int id, int elementId, int maxHp, int maxStr,
                           int maxLimitBreakCount, boolean hasSkillShare, boolean hasManaSpiral, int maxA3Level,
                           int minHp3, int minHp4, int minHp5, int minStr3, int minStr4, int minStr5, int baseRarity,
