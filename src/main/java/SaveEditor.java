@@ -8,7 +8,7 @@ public class SaveEditor {
     private static boolean isOutOfIDE = false;
 
     public static void main(String[] args){
-        System.out.println("\nDragalia Save Editor (v11.4.3)\n");
+        System.out.println("\nDragalia Save Editor (v11.5)\n");
         String programPath = PathHandler.getProgramPath();
         isOutOfIDE = PathHandler.getIsOutOfIDE();
         String optionsPath = PathHandler.getPath(programPath, "DLSaveEditor_options.txt", isOutOfIDE);
