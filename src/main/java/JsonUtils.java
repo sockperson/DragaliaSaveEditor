@@ -148,12 +148,17 @@ public class JsonUtils {
         jsonObj.addProperty(lastMemberName, value);
     }
 
-    // no validation
     private static JsonElement getField(String... memberNames) {
         JsonElement jsonEle = jsonData;
         for (String memberName : memberNames) {
             if (jsonEle.isJsonObject()) {
-                jsonEle = jsonEle.getAsJsonObject().get(memberName);
+                JsonObject jsonObj = jsonEle.getAsJsonObject();
+                if (jsonObj.has(memberName)) {
+                    jsonEle = jsonEle.getAsJsonObject().get(memberName);
+                } else {
+                    Logging.print("Could not find field '{0}' in the save file- this shouldn't happen", memberName);
+                    SaveEditor.exit();
+                }
             }
         }
         return jsonEle;
@@ -2033,6 +2038,10 @@ public class JsonUtils {
         addTalisman("delphi", 747, 457, 456, 3); //negative str
     }
 
+
+    // return 0 --> valid save file
+    // return 1 --> file path does not exist
+    // return 2 --> file path exists but is not JSON
     public static int checkIfJsonObject(String path) {
         JsonReader reader = null;
         try {
@@ -2041,11 +2050,10 @@ public class JsonUtils {
             return 1;
         }
 
-        try {
-            GSON.fromJson(reader, JsonObject.class);
-        } catch (JsonSyntaxException e) {
+        if (GSON.fromJson(reader, JsonObject.class) == null) {
             return 2;
         }
+
         return 0;
     }
 

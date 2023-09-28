@@ -7,49 +7,16 @@ public class SaveEditor {
 
     private static boolean isOutOfIDE = false;
 
-    private static String getFilePath() {
-        String programPath = null;
-        try {
-            programPath = new File(SaveEditor.class.getProtectionDomain().getCodeSource().getLocation().toURI()).getPath();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-        //probably jank
-        int length = programPath.length();
-        String extension = programPath.substring(length - 4, length);
-        isOutOfIDE = extension.equals(".jar") || extension.equals(".exe");
-        return programPath;
-    }
-
-
-    //TODO convert these to while loop (this impl can cause a stack overflow lol)
-    //this code sucks who wrote it
-
-    private static String getPath(String path, String more) {
-        if(isOutOfIDE){
-            return Paths.get(new File(path).getParent(), more).toString();
-        } else {
-            return getPathInIDE(path, more);
-        }
-    }
-
-    private static String getPathInIDE(String programPath, String more) {
-        int indexOfDir = programPath.indexOf("DragaliaSaveEditor");
-        if(indexOfDir == -1){
-            System.out.println("Directory 'DragaliaSaveEditor' not found!");
-            System.exit(98);
-        }
-        String editorPath = Paths.get(programPath.substring(0, indexOfDir), "DragaliaSaveEditor").toString();
-        return Paths.get(editorPath, more).toString();
-    }
-
     public static void main(String[] args){
         System.out.println("\nDragalia Save Editor (v11.4.3)\n");
-        String programPath = getFilePath();
-        String optionsPath = getPath(programPath, "DLSaveEditor_options.txt");
-        String teamDataPath = getPath(programPath, "teams.json");
+        String programPath = PathHandler.getProgramPath();
+        isOutOfIDE = PathHandler.getIsOutOfIDE();
+        String optionsPath = PathHandler.getPath(programPath, "DLSaveEditor_options.txt", isOutOfIDE);
+        String teamDataPath = PathHandler.getPath(programPath, "teams.json", isOutOfIDE);
+
         // resources
         DragaliaData.init();
+
         // options file stuff
         Options.init(optionsPath);
         System.out.println();
@@ -61,43 +28,52 @@ public class SaveEditor {
                         InputUtils.writeOptionsValue("\tMax out added wyrmprints?", "maxAddedWyrmprints");
                         InputUtils.writeOptionsValue("\tMax out added weapons?", "maxAddedWeapons");
                         InputUtils.writeOptionsValue("\tMax out dragon bond levels?", "maxDragonBonds");
+                        InputUtils.writeOptionsValue("\tSkip automatically finding a savefile in this directory?", "ignoreAutoFindingSaveFile");
                         InputUtils.writeOptionsValue("\tAsk to edit these options next time the program is run?", "promptEditOptions");
                         System.out.println("\tFinished editing options.");
                         Options.export();
                     });
             System.out.println();
         }
-        //
+
+        //// Save file checking
         String savePath = "";
-        boolean validDefaultSavePath = false;
+
+        // Check for default save path specified in options
         if (!Options.getFieldAsString("defaultSaveName").equals("?")) {
             // default save path input
-            System.out.println("Using this directory for default filepath.");
+            System.out.println("Using default savefile name specified in options.");
             String defaultSaveName = Options.getFieldAsString("defaultSaveName");
-            savePath = getPath(programPath, defaultSaveName);
-            int fileCheckCode = JsonUtils.checkIfJsonObject(savePath);
+            String maybeSavePath = PathHandler.getPath(programPath, defaultSaveName, isOutOfIDE);
+            int fileCheckCode = JsonUtils.checkIfJsonObject(maybeSavePath);
             if (fileCheckCode == 1) {
-                Logging.print("savedata not found at path: '{0}'! Did you forget to include the file extension? (.txt or .json)\n", savePath);
+                Logging.print("savedata not found at path: '{0}'! Did you forget to include the file extension? (.txt or .json)\n", maybeSavePath);
             }
             if (fileCheckCode == 2) {
-                Logging.print("savedata at path: '{0}' does not appear to be in JSON format!\n", savePath);
+                Logging.print("savedata at path: '{0}' does not appear to be in JSON format!\n", maybeSavePath);
             }
-            validDefaultSavePath = fileCheckCode == 0;
+            savePath = (fileCheckCode == 0) ? (maybeSavePath) : ("");
         }
-        if (!validDefaultSavePath) {
-            // normal save path input
-            System.out.println("(Leave this input empty and press 'Enter' key if the save file (savedata.txt) is in the same folder as this program.)");
+
+        // Check for generic default save names "save.json", "savedata.txt", etc
+        if (savePath.equals("")) { // if save path still empty
+            if (!Options.getFieldAsBoolean("ignoreAutoFindingSaveFile")) {
+                System.out.println("Attempting to find a save file in this directory. (This can be disabled in options)");
+                savePath = PathHandler.validateDefaultSavePaths(programPath, isOutOfIDE);
+            } else {
+                System.out.println("Skipping automatically finding a save file.");
+            }
+        }
+
+        // Check for user input save names
+        if (savePath.equals("")) { // if save path still empty
             System.out.print("Enter path for save file: ");
             String path = InputUtils.input.nextLine();
             boolean isFilePathInvalid = true;
             while(isFilePathInvalid){
-                if(path.equals("")){
-                    savePath = getPath(programPath, "savedata.txt");
-                } else {
-                    if (!path.contains("/")) {
-                        System.out.println("Using this directory for filepath.");
-                        savePath = getPath(programPath, path);
-                    }
+                if (!path.contains("/")) {
+                    System.out.println("Using this directory for filepath.");
+                    savePath = PathHandler.getPath(programPath, path, isOutOfIDE);
                 }
                 int fileCheckCode = JsonUtils.checkIfJsonObject(savePath);
                 isFilePathInvalid = fileCheckCode != 0;
@@ -108,12 +84,13 @@ public class SaveEditor {
                     if (fileCheckCode == 2) {
                         Logging.print("savedata at path: '{0}' does not appear to be in JSON format!\n", savePath);
                     }
-                    System.out.println("(Leave this input empty and press 'Enter' key if the save file is in the same folder as this program.)");
                     System.out.print("Enter path for save file: ");
                     path = InputUtils.input.nextLine();
                 }
             }
         }
+
+
         // JsonUtils
         JsonUtils.init(savePath, programPath, isOutOfIDE);
         System.out.println("Save data found at: " + savePath + "\n");
@@ -260,4 +237,9 @@ public class SaveEditor {
         InputUtils.input.nextLine();
     }
 
+    public static void exit() {
+        System.out.println("The program encountered an error ^, enter anything to exit.");
+        InputUtils.input.nextLine();
+        System.exit(42);
+    }
 }

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Logging {
 
-    public static void print(String msg, String... vals) {
+    public static String formatString(String msg, String... vals) {
         String printMsg = msg;
         int count = 0;
         for (String val : vals) {
@@ -12,7 +12,11 @@ public class Logging {
             printMsg = printMsg.replace(marker, val);
             count++;
         }
-        System.out.println(printMsg);
+        return printMsg;
+    }
+
+    public static void print(String msg, String... vals) {
+        System.out.println(formatString(msg, vals));
     }
 
     public static void print(String msg, int... vals) {
