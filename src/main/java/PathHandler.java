@@ -44,7 +44,7 @@ public class PathHandler {
     private static final String[] saveExtensions = new String[]{".txt", ".json"};
 
     public static String validateDefaultSavePaths(String programPath, boolean isOutOfIDE) {
-        String outMsg = "Could not automatically find a save file.";
+        String outMsg = "Could not automatically find a save file. (Is there a savedata.txt/savedata.json in this folder?)";
         boolean foundValidSave = false;
 
         String savePath = "";
