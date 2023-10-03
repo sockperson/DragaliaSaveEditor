@@ -47,7 +47,7 @@ public class Tests {
     }
 
     public static String weaponPassivesIdPerWeaponTest() {
-        if (!hasFlags("maxWeapons", "addMissingWeapons")) {
+        if (!hasFlags("maxWeapons", "addMissingWeaponsMaxed")) {
             return "N/A";
         }
         JsonArray list = JsonUtils.jsonData.get("data").getAsJsonObject().get("weapon_body_list").getAsJsonArray();

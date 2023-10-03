@@ -1,9 +1,7 @@
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.time.Instant;
 import java.util.*;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 import com.google.gson.*;
@@ -877,7 +875,9 @@ public class JsonUtils {
         return out;
     }
 
-    private static JsonObject buildWyrmprintFromExisting(WyrmprintMeta printData, int getTime, boolean isFavorite) {
+    // getTime == -1 --> new wyrmprint
+    // getTime != -1 --> build wyrmprint from existing
+    private static JsonObject buildWyrmprint(WyrmprintMeta printData, int getTime, boolean isFavorite) {
         JsonObject out = new JsonObject();
         int rarity = printData.getRarity();
         int level = 1;
@@ -922,7 +922,7 @@ public class JsonUtils {
             out.addProperty("ability_crest_id", printData.getId());
             out.addProperty("buildup_count", 0);
             out.addProperty("limit_break_count", 0);
-            out.addProperty("equipable_count", 0);
+            out.addProperty("equipable_count", 1);
             out.addProperty("hp_plus_count", 0);
             out.addProperty("attack_plus_count", 0);
             out.addProperty("is_new", 1);
@@ -932,25 +932,36 @@ public class JsonUtils {
         return out;
     }
 
-    private static void unlockAdventurerStory(int id) {
-        if (id == 10750102 || id == 10140101) {
-            return; //Mega Man, Euden have no stories to tell
-        }
+    private static Set<Integer> getOwnedStories() {
         //Compile list of adventurer stories in savedata
         Set<Integer> ownedStories = new HashSet<>();
         getFieldAsJsonArray("data", "unit_story_list").forEach(jsonEle ->
                 ownedStories.add(jsonEle.getAsJsonObject().get("unit_story_id").getAsInt()));
+        return ownedStories;
+    }
+
+    private static void addStory(int id) {
+        JsonObject story = new JsonObject();
+        story.addProperty("unit_story_id", id);
+        story.addProperty("is_read", 0);
+        getFieldAsJsonArray("data", "unit_story_list").add(story);
+    }
+
+    private static void unlockAdventurerStory(int id, boolean toUnlockFirstStoryOnly) {
+        if (id == 10750102 || id == 10140101) {
+            return; //Mega Man, Euden have no stories to tell
+        }
+        //Compile list of adventurer stories in savedata
+        Set<Integer> ownedStories = getOwnedStories();
 
         List<Integer> storyIDs = DragaliaData.adventurerStoryMap.get(id);
-        for(int i = 0; i < 5; i ++){
+        int storyCount = (toUnlockFirstStoryOnly) ? (1) : (5);
+        for(int i = 0; i < storyCount; i ++){
             int storyID = storyIDs.get(i);
             if(ownedStories.contains(storyID)){
                 continue; //dont add story if u already have it
             }
-            JsonObject story = new JsonObject();
-            story.addProperty("unit_story_id", storyID);
-            story.addProperty("is_read", 0);
-            getFieldAsJsonArray("data", "unit_story_list").add(story);
+            addStory(storyID);
         }
     }
 
@@ -984,6 +995,7 @@ public class JsonUtils {
 
     public static void applyFixes() {
         fixMissingDragonStories();
+        fixMissingFirstAdventurerStories();
     }
 
     private static void fixMissingDragonStories() {
@@ -1009,6 +1021,26 @@ public class JsonUtils {
         if (!addedDragonStories.isEmpty()) {
             Logging.print("Added {0} dragon stories that should have been in the savefile.", addedDragonStories.size());
             Logging.write("Added missing dragon stories", addedDragonStories);
+        }
+    }
+
+    private static void fixMissingFirstAdventurerStories() {
+
+        JsonArray ownedAdventurers = getFieldAsJsonArray("data", "chara_list");
+        Set<Integer> ownedStories = getOwnedStories();
+
+        for (JsonElement jsonEle : ownedAdventurers) {
+            JsonObject adventurer = jsonEle.getAsJsonObject();
+            int adventurerId = adventurer.get("chara_id").getAsInt();
+            if (DragaliaData.adventurerStoryMap.containsKey(adventurerId)) {
+                int firstStoryId = DragaliaData.adventurerStoryMap.get(adventurerId).get(0);
+                if (!ownedStories.contains(firstStoryId)) {
+                    addStory(firstStoryId);
+                    String adventurerName = DragaliaData.idToAdventurer.get(adventurerId).getName();
+                    Logging.print("Added missing first story of ID '{0}' for adventurer '{1}'",
+                            Integer.toString(adventurerId), adventurerName);
+                }
+            }
         }
     }
 
@@ -1193,9 +1225,7 @@ public class JsonUtils {
                 //Add it to your roster
                 if (newUnit != null) {
                     getField("data", "chara_list").getAsJsonArray().add(newUnit);
-                    if (Options.getFieldAsBoolean("maxAddedAdventurers")) {
-                        unlockAdventurerStory(id);
-                    }
+                    unlockAdventurerStory(id, !Options.getFieldAsBoolean("maxAddedAdventurers"));
                     addAdventurerEncyclopediaBonus(adventurer);
                     count++;
                     Logging.write(adventurer.getName());
@@ -1226,9 +1256,7 @@ public class JsonUtils {
         //Add it to your roster
         if (newUnit != null) {
             getField("data", "chara_list").getAsJsonArray().add(newUnit);
-            if (Options.getFieldAsBoolean("maxAddedAdventurers")) {
-                unlockAdventurerStory(id);
-            }
+            unlockAdventurerStory(id, !Options.getFieldAsBoolean("maxAddedAdventurers"));
             addAdventurerEncyclopediaBonus(advData);
             System.out.println("Added '" + name + "'!");
         }
@@ -1245,7 +1273,7 @@ public class JsonUtils {
             int id = entry.getKey();
             if (!ownedIdSet.contains(id)) { //If you don't own this print
                 //Construct new print
-                JsonObject newPrint = buildWyrmprintFromExisting(wyrmprint, -1, false);
+                JsonObject newPrint = buildWyrmprint(wyrmprint, -1, false);
                 //Add it to your inventory
                 getField("data", "ability_crest_list").getAsJsonArray().add(newPrint);
                 count++;
@@ -1572,7 +1600,9 @@ public class JsonUtils {
         }
         Logging.flushLog("Added weapons");
 
-        Tests.addTestFlag("addMissingWeapons");
+        if (Options.getFieldAsBoolean("maxAddedWeapons")) {
+            Tests.addTestFlag("addMissingWeaponsMaxed");
+        }
         return count;
     }
 
@@ -1702,7 +1732,7 @@ public class JsonUtils {
             }
             addAdventurerEncyclopediaBonus(elementId, hpBonus, strBonus);
             //Unlock adventurer stories
-            unlockAdventurerStory(id);
+            unlockAdventurerStory(id, false);
         }
         //Replace current adventurer list
         getFieldAsJsonObject("data").remove("chara_list");
@@ -1823,7 +1853,7 @@ public class JsonUtils {
             boolean isFavorite = ownedWyrmprint.get("is_favorite").getAsInt() == 1;
             WyrmprintMeta wyrmprint = DragaliaData.idToPrint.get(id);
             //Construct new print
-            JsonObject updatedPrint = buildWyrmprintFromExisting(wyrmprint, getTime, isFavorite);
+            JsonObject updatedPrint = buildWyrmprint(wyrmprint, getTime, isFavorite);
             updatedWyrmprints.add(updatedPrint);
         }
         //Replace current adventurer list
