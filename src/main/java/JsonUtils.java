@@ -201,6 +201,31 @@ public class JsonUtils {
         return -1;
     }
 
+    // find how much this adventurer has contributed to encyclopedia hp
+    private static double getAdventurerEncyclopediaHp(JsonObject jsonAdv) {
+        // base: +0.1, lv80: +0.1, lv100: +0.1
+        int level = jsonAdv.get("level").getAsInt();
+        if (level == 100) {
+            return 0.3;
+        } else if (level >= 80) {
+            return 0.2;
+        }
+        return 0.1;
+    }
+
+    // find how much this adventurer has contributed to encyclopedia str
+    private static double getAdventurerEncyclopediaStr(JsonObject jsonAdv) {
+        // base: +0.1, lv80: +0.1, lv100: +0.1
+        JsonArray mc = jsonAdv.get("mana_circle_piece_id_list").getAsJsonArray();
+        int mcLevel = mc.size();
+        if (mcLevel == 70) {
+            return 0.3;
+        } else if (mcLevel >= 50) {
+            return 0.2;
+        }
+        return 0.1;
+    }
+
     private static void addAdventurerEncyclopediaBonus(AdventurerMeta adv) {
         boolean hasManaSpiral = adv.hasManaSpiral();
         double bonus = hasManaSpiral ? 0.3 : 0.2;
@@ -414,6 +439,23 @@ public class JsonUtils {
             }
         }
         return false;
+    }
+
+    // Deletes an object in 'fields' that has 'fieldName' value
+    // String fieldName: the field to check for 'value'
+    // int value: the value to check for
+    // String... fields: field traverse path
+    // ex: "chara_id", 1000, "data", "chara_list": deletes object of "chara_id" 1000
+    public static JsonObject arrayDeleteValue (String fieldName, int value, String... fields) {
+        JsonArray jsonArray = getFieldAsJsonArray(fields);
+        for (JsonElement jsonEle : jsonArray) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            if (jsonObj.get(fieldName).getAsInt() == value) {
+                jsonArray.remove(jsonObj);
+                return jsonObj;
+            }
+        }
+        return null;
     }
 
     // Returns whether the array at 'fields' contains a duplicate value of 'fieldName'
@@ -1234,6 +1276,48 @@ public class JsonUtils {
         }
         Logging.flushLog("Added adventurers");
         return count;
+    }
+
+    public static void minifyAdventurer(String advName) {
+        AdventurerMeta adv = DragaliaData.nameToAdventurer.get(advName);
+        int id = adv.getId();
+
+        JsonObject deletedAdventurer = arrayDeleteValue("chara_id", id, "data", "chara_list");
+        if (deletedAdventurer != null) {
+            // ^ adventurer is deleted
+
+            // delete stories
+            if (DragaliaData.adventurerStoryMap.containsKey(id)) {
+                List<Integer> stories = DragaliaData.adventurerStoryMap.get(id);
+                for (int i = 1; i < stories.size(); i++) {
+                    int storyId = stories.get(i);
+                    if (arrayDeleteValue("unit_story_id", storyId, "data", "unit_story_list") != null) {
+                        Logging.print("Deleted story of ID '{0}'", storyId);
+                    }
+                }
+            }
+
+            // modify encyclopedia bonuses
+            double encycloHpMinus = -1 * getAdventurerEncyclopediaHp(deletedAdventurer);
+            double encycloStrMinus = -1 * getAdventurerEncyclopediaStr(deletedAdventurer);
+            int elementId = adv.getElementId();
+            addAdventurerEncyclopediaBonus(elementId, encycloHpMinus, encycloStrMinus);
+            System.out.println("Removed HP: " + encycloHpMinus + ", STR: " + encycloStrMinus +
+                    " from encyclopedia bonuses");
+
+            // re-add adventurer
+            // shouldn't really need to temp edit the options value lol
+            // should fix that
+            String optionsToMaxAddedAdventurers = Options.getFieldAsString("maxAddedAdventurers");
+            Options.editOption("maxAddedAdventurers", "false");
+            addAdventurer(advName);
+            Options.editOption("maxAddedAdventurers", optionsToMaxAddedAdventurers);
+
+            System.out.println("Minified " + advName + "!");
+        } else {
+            System.out.println("Adventurer does not exist in 'chara_list'");
+        }
+
     }
 
     public static void addAdventurer(String advName) {

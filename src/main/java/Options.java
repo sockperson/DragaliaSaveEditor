@@ -12,7 +12,8 @@ public class Options {
             "(bool):maxAddedAdventurers=true", "(bool):maxAddedWyrmprints=true", "(bool):maxAddedDragons=true",
             "(bool):maxAddedWeapons=true", "(bool):showOptionsValues=false", "(bool):promptEditOptions=true",
             "(bool):openTeamEditor=false", "(bool):maxDragonBonds=true", "(string):defaultSaveName=?",
-            "(bool):doSuperPortraitStats=false", "(bool):ignoreAutoFindingSaveFile=false"
+            "(bool):doSuperPortraitStats=false", "(bool):ignoreAutoFindingSaveFile=false",
+            "(bool):openMinifyAdventurers=false"
     };
 
     private static String[] portraitAdventurersNameAndDefaults = new String[]{};

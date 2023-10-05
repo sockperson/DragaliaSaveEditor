@@ -8,7 +8,7 @@ public class SaveEditor {
     private static boolean isOutOfIDE = false;
 
     public static void main(String[] args){
-        System.out.println("\nDragalia Save Editor (v11.5.2)\n");
+        System.out.println("\nDragalia Save Editor (v11.6)\n");
         String programPath = PathHandler.getProgramPath();
         isOutOfIDE = PathHandler.getIsOutOfIDE();
         String optionsPath = PathHandler.getPath(programPath, "DLSaveEditor_options.txt", isOutOfIDE);
@@ -100,6 +100,7 @@ public class SaveEditor {
         JsonUtils.applyFixes();
         JsonUtils.validate();
 
+        // Hidden option
         if(Options.getFieldAsBoolean("openTeamEditor")) {
             InputUtils.yesNoQuestion("Enter teams manager?",
                     () -> {
@@ -108,6 +109,7 @@ public class SaveEditor {
                     });
         }
 
+        // Save Editor
         InputUtils.yesNoQuestion("Uncap mana? (Sets mana to 10m)", JsonUtils::uncapMana);
         InputUtils.yesNoQuestion("Set rupies count to 2b?", JsonUtils::setRupies);
         InputUtils.yesNoQuestion(
@@ -184,6 +186,20 @@ public class SaveEditor {
                         },
                         "\tUnknown epithet name."
                 ));
+
+        // Hidden Option
+        if (Options.getFieldAsBoolean("openMinifyAdventurers")) {
+            InputUtils.yesNoQuestion("Minify adventurer?",
+                    () -> InputUtils.validatedInputAndCallContinuous(
+                            "\tEnter adventurer name",
+                            (name) -> DragaliaData.nameToAdventurer.containsKey(name),
+                            (name) -> {
+                                JsonUtils.minifyAdventurer(name);
+                            },
+                            "\tUnknown adventurer name."
+                    ));
+        }
+
         InputUtils.yesNoQuestion(
                 "Do additional hacked options? (Enter 'n' if you wish to keep your save data \"vanilla\")",
                 () -> {

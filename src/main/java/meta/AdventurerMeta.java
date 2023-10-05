@@ -1,5 +1,7 @@
 package meta;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class AdventurerMeta {
@@ -9,6 +11,8 @@ public class AdventurerMeta {
     private int minHp3, minHp4, minHp5, minStr3, minStr4, minStr5, baseRarity, kscapeLabelId;
 
     private boolean hasSkillShare, hasManaSpiral;
+
+    private List<Integer> storyIds = new ArrayList<>();
 
     public static AdventurerMeta DUMMY = new AdventurerMeta(
             "missingNo", "missingTitle", 0, 0, 0, 0,
@@ -20,8 +24,7 @@ public class AdventurerMeta {
     public AdventurerMeta(String name, String title, int id, int elementId, int maxHp, int maxStr,
                           int maxLimitBreakCount, boolean hasSkillShare, boolean hasManaSpiral, int maxA3Level,
                           int minHp3, int minHp4, int minHp5, int minStr3, int minStr4, int minStr5, int baseRarity,
-                          String manaCircleType, String elementType, String weaponType, int kscapeLabelId
-                          ){
+                          String manaCircleType, String elementType, String weaponType, int kscapeLabelId){
         this.name = name;
         this.title = title;
         this.id = id;

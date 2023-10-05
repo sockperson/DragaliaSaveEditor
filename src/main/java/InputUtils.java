@@ -130,6 +130,22 @@ public class InputUtils {
         }
     }
 
+    // ^
+    public static void validatedInputAndCallContinuous(String val, Predicate<String> pred, Consumer<String> func, String errMessage) {
+        while (true) {
+            System.out.print(val + " (Enter 'exit' to return): ");
+            String in = input.nextLine().toUpperCase(Locale.ROOT);
+            if (in.equals("EXIT")) {
+                return;
+            }
+            if (pred.test(in)) {
+                func.accept(in);
+            } else {
+                System.out.println(errMessage);
+            }
+        }
+    }
+
     public static void continuousInput(String val, Consumer<String> func){
         while(true){
             System.out.print(val + " (Enter 'exit' to return): ");
