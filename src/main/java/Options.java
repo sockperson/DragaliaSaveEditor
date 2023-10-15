@@ -13,7 +13,7 @@ public class Options {
             "(bool):maxAddedWeapons=true", "(bool):showOptionsValues=false", "(bool):promptEditOptions=true",
             "(bool):openTeamEditor=false", "(bool):maxDragonBonds=true", "(string):defaultSaveName=?",
             "(bool):doSuperPortraitStats=false", "(bool):ignoreAutoFindingSaveFile=false",
-            "(bool):openMinifyAdventurers=false"
+            "(bool):openTaEdits=false"
     };
 
     private static String[] portraitAdventurersNameAndDefaults = new String[]{};

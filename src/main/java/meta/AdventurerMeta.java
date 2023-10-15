@@ -10,21 +10,20 @@ public class AdventurerMeta {
     private int id, elementId, maxHp, maxStr, maxLimitBreakCount, maxA3Level;
     private int minHp3, minHp4, minHp5, minStr3, minStr4, minStr5, baseRarity, kscapeLabelId;
 
-    private boolean hasSkillShare, hasManaSpiral;
-
-    private List<Integer> storyIds = new ArrayList<>();
+    private boolean hasSkillShare, hasManaSpiral, isStoryUnit;
 
     public static AdventurerMeta DUMMY = new AdventurerMeta(
             "missingNo", "missingTitle", 0, 0, 0, 0,
             0, false, false, 0,
             0, 0, 0, 0, 0, 0, 0,
-            "?", "?", "?", 0
+            "?", "?", "?", 0, false
     );
 
     public AdventurerMeta(String name, String title, int id, int elementId, int maxHp, int maxStr,
                           int maxLimitBreakCount, boolean hasSkillShare, boolean hasManaSpiral, int maxA3Level,
                           int minHp3, int minHp4, int minHp5, int minStr3, int minStr4, int minStr5, int baseRarity,
-                          String manaCircleType, String elementType, String weaponType, int kscapeLabelId){
+                          String manaCircleType, String elementType, String weaponType, int kscapeLabelId,
+                          boolean isStoryUnit){
         this.name = name;
         this.title = title;
         this.id = id;
@@ -46,6 +45,7 @@ public class AdventurerMeta {
         this.elementType = elementType;
         this.weaponType = weaponType;
         this.kscapeLabelId = kscapeLabelId;
+        this.isStoryUnit = isStoryUnit;
     }
 
     public String getName(){ return name; }
@@ -62,7 +62,11 @@ public class AdventurerMeta {
     public int getMaxA3Level(){ return maxA3Level; }
     public int getBaseRarity() {return baseRarity; }
     public int getKscapeLabelId() { return kscapeLabelId; }
+    public boolean isStoryUnit() { return isStoryUnit; }
 
+    public boolean hasSkillShareByDefault () {
+        return isStoryUnit && hasSkillShare;
+    }
 
     public int getMinHp () {
         switch (baseRarity) {

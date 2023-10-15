@@ -601,6 +601,7 @@ public class JsonUtils {
         for (int i = 1; i <= mcLevel; i++) {
             mc.add(i);
         }
+
         if (!minUnit) { //maxed unit
             out.addProperty("chara_id", adventurerData.getId());
             out.addProperty("rarity", 5);
@@ -650,7 +651,7 @@ public class JsonUtils {
             out.addProperty("ex_ability_level", 1);
             out.addProperty("ex_ability_2_level", 1);
             out.addProperty("is_temporary", 0);
-            out.addProperty("is_unlock_edit_skill", 0);
+            out.addProperty("is_unlock_edit_skill", adventurerData.hasSkillShareByDefault() ? 1 : 0);
             out.add("mana_circle_piece_id_list", new JsonArray());
             out.addProperty("list_view_flag", 1);
         }
@@ -1418,7 +1419,10 @@ public class JsonUtils {
                             addDragonStory(dragon.getDragonStoryId(1));
                             addDragonStory(dragon.getDragonStoryId(2));
                         }
-                        getField("data", "dragon_reliability_list").getAsJsonArray().add(buildDragonBondObj(id));
+                        //Check if bond object already exists
+                        if (!arrayHasValue("dragon_id", id, "data", "dragon_reliability_list")) {
+                            getField("data", "dragon_reliability_list").getAsJsonArray().add(buildDragonBondObj(id));
+                        }
                     }
                 } else { // if you've owned this dragon before, then update dragon bonds
                     // Update dragon bond obj
@@ -1512,7 +1516,8 @@ public class JsonUtils {
             getFieldAsJsonArray("data", "album_dragon_list").add(buildDragonAlbumData(drgData));
             addDragonEncyclopediaBonus(drgData);
             //Add dragon bond obj
-            if (id != 20050522) { //Arsene check
+            //Arsene check, and check if bond object already exists
+            if (id != 20050522 && !arrayHasValue("dragon_id", id, "data", "dragon_reliability_list")) {
                 getField("data", "dragon_reliability_list").getAsJsonArray().add(buildDragonBondObj(id));
             }
         }
@@ -1548,6 +1553,33 @@ public class JsonUtils {
         newItem.addProperty("material_id", id);
         newItem.addProperty("quantity", addCount);
         items.add(newItem);
+    }
+
+    public static void deaugAdventurers() {
+        JsonArray advs = getFieldAsJsonArray("data", "chara_list");
+        for (JsonElement jsonEle: advs) {
+            JsonObject adv = jsonEle.getAsJsonObject();
+            adv.remove("hp_plus_count");
+            adv.addProperty("hp_plus_count", 0);
+        }
+    }
+
+    public static void deaugDragons() {
+        JsonArray drgs = getFieldAsJsonArray("data", "dragon_list");
+        for (JsonElement jsonEle: drgs) {
+            JsonObject drg = jsonEle.getAsJsonObject();
+            drg.remove("hp_plus_count");
+            drg.addProperty("hp_plus_count", 0);
+        }
+    }
+
+    public static void deaugWyrmprints() {
+        JsonArray wps = getFieldAsJsonArray("data", "ability_crest_list");
+        for (JsonElement jsonEle: wps) {
+            JsonObject wp = jsonEle.getAsJsonObject();
+            wp.remove("hp_plus_count");
+            wp.addProperty("hp_plus_count", 0);
+        }
     }
 
     public static void addMaterials() {

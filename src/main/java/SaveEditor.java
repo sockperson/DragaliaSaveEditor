@@ -188,7 +188,7 @@ public class SaveEditor {
                 ));
 
         // Hidden Option
-        if (Options.getFieldAsBoolean("openMinifyAdventurers")) {
+        if (Options.getFieldAsBoolean("openTaEdits")) {
             InputUtils.yesNoQuestion("Minify adventurer?",
                     () -> InputUtils.validatedInputAndCallContinuous(
                             "\tEnter adventurer name",
@@ -198,6 +198,12 @@ public class SaveEditor {
                             },
                             "\tUnknown adventurer name."
                     ));
+            InputUtils.yesNoQuestion("Deaug HP?",
+                    () -> {
+                        InputUtils.yesNoQuestion("Deaug adventurer HP?", JsonUtils::deaugAdventurers);
+                        InputUtils.yesNoQuestion("Deaug dragon HP?", JsonUtils::deaugDragons);
+                        InputUtils.yesNoQuestion("Deaug wyrmprint HP?", JsonUtils::deaugWyrmprints);
+                    });
         }
 
         InputUtils.yesNoQuestion(

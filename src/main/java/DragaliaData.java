@@ -51,6 +51,9 @@ public class DragaliaData {
 
     public static JsonObject maxedFacilityBonuses;
 
+    private static final List<String> storyAdventurerNames = Arrays.asList("The Prince",
+        "Elisanne", "Ranzal", "Cleo", "Luca", "Alex", "Laxi", "Chelle", "Zena");
+
     public static void init() {
         Logging.log("Initializing DragaliaData...");
         try {
@@ -152,6 +155,7 @@ public class DragaliaData {
                 hp = JsonUtils.getSum(adv, "MaxHp", "PlusHp0", "PlusHp1", "PlusHp2", "PlusHp3", "PlusHp4", "McFullBonusHp5");
                 str = JsonUtils.getSum(adv, "MaxAtk", "PlusAtk0", "PlusAtk1", "PlusAtk2", "PlusAtk3", "PlusAtk4", "McFullBonusAtk5");
             }
+
             int maxA3Level = 1;
             if(adv.get("Abilities32").getAsInt() != 0){
                 maxA3Level = 2;
@@ -159,16 +163,22 @@ public class DragaliaData {
                     maxA3Level = 3;
                 }
             }
+
             String manaCircleType = adv.get("ManaCircleName").getAsString();
+
             String title = adv.get("Title").getAsString();
+
             int kscapeLabelId = kscapeLabelsMap.get(title);
+
+            boolean isStoryAdventurer = storyAdventurerNames.contains(baseName);
+
             AdventurerMeta unit = new AdventurerMeta(baseName, title, id,
                     adv.get("ElementalTypeId").getAsInt(), hp, str,adv.get("MaxLimitBreakCount").getAsInt(),
                     adv.get("EditSkillCost").getAsInt() != 0, hasManaSpiral, maxA3Level,
                     adv.get("MinHp3").getAsInt(), adv.get("MinHp4").getAsInt(), adv.get("MinHp5").getAsInt(),
                     adv.get("MinAtk3").getAsInt(), adv.get("MinAtk4").getAsInt(), adv.get("MinAtk5").getAsInt(),
                     adv.get("Rarity").getAsInt(), manaCircleType, adv.get("ElementalType").getAsString(),
-                    adv.get("WeaponType").getAsString(), kscapeLabelId
+                    adv.get("WeaponType").getAsString(), kscapeLabelId, isStoryAdventurer
             );
             idToAdventurer.put(id, unit);
             nameToAdventurer.put(name, unit);
