@@ -1,14 +1,12 @@
-import java.io.*;
-import java.net.URISyntaxException;
-import java.nio.file.Paths;
 import java.util.List;
 
 public class SaveEditor {
 
     private static boolean isOutOfIDE = false;
+    private static final String version = "11.8";
 
     public static void main(String[] args){
-        System.out.println("\nDragalia Save Editor (v11.7)\n");
+        System.out.println("\nDragalia Save Editor (v" + version + ")\n");
         String programPath = PathHandler.getProgramPath();
         isOutOfIDE = PathHandler.getIsOutOfIDE();
         String optionsPath = PathHandler.getPath(programPath, "DLSaveEditor_options.txt", isOutOfIDE);

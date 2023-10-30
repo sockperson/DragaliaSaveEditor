@@ -1037,11 +1037,15 @@ public class JsonUtils {
     }
 
     public static void applyFixes() {
-        fixMissingDragonStories();
-        fixMissingFirstAdventurerStories();
+        boolean fixed = fixMissingDragonStories();
+        fixed |= fixMissingFirstAdventurerStories();
+        fixed |= fixMissingDragonBonds();
+        if (fixed) {
+            System.out.println("Fixes were applied.");
+        }
     }
 
-    private static void fixMissingDragonStories() {
+    private static boolean fixMissingDragonStories() {
         List<String> addedDragonStories = new ArrayList<>();
         //Compile a list of ID's from your encyclopedia
         Set<Integer> albumIDSet = getSetFromField("dragon_id", "data", "album_dragon_list");
@@ -1064,11 +1068,13 @@ public class JsonUtils {
         if (!addedDragonStories.isEmpty()) {
             Logging.print("Added {0} dragon stories that should have been in the savefile.", addedDragonStories.size());
             Logging.write("Added missing dragon stories", addedDragonStories);
+            return true;
         }
+        return false;
     }
 
-    private static void fixMissingFirstAdventurerStories() {
-
+    private static boolean fixMissingFirstAdventurerStories() {
+        boolean fixed = false;
         JsonArray ownedAdventurers = getFieldAsJsonArray("data", "chara_list");
         Set<Integer> ownedStories = getOwnedStories();
 
@@ -1082,9 +1088,28 @@ public class JsonUtils {
                     String adventurerName = DragaliaData.idToAdventurer.get(adventurerId).getName();
                     Logging.print("Added missing first story of ID '{0}' for adventurer '{1}'",
                             Integer.toString(adventurerId), adventurerName);
+                    fixed = true;
                 }
             }
         }
+        return fixed;
+    }
+
+    private static boolean fixMissingDragonBonds() {
+        boolean fixed = false;
+        JsonArray ownedDragons = getFieldAsJsonArray("data", "dragon_list");
+        for (JsonElement jsonEle : ownedDragons) {
+            JsonObject dragon = jsonEle.getAsJsonObject();
+            int id = dragon.get("dragon_id").getAsInt();
+            String dragonName = DragaliaData.idToDragon.get(id).getName();
+            if (!arrayHasValue("dragon_id", id, "data", "dragon_reliability_list")) {
+                getFieldAsJsonArray("data", "dragon_reliability_list").add(buildDragonBondObj(id));
+                Logging.print("Added missing dragon bond object for dragon ID '{0}' ('{1}')",
+                        Integer.toString(id), dragonName);
+                fixed = true;
+            }
+        }
+        return fixed;
     }
 
     public static void setEpithet (String name) {
@@ -1410,19 +1435,17 @@ public class JsonUtils {
                     getFieldAsJsonArray("data", "album_dragon_list").add(buildDragonAlbumData(dragon));
                     addDragonEncyclopediaBonus(dragon);
                     //Add dragon bond obj
-                    if (id != 20050522) { //Arsene check
-                        if (Options.getFieldAsBoolean("maxDragonBonds")) {
-                            // add dragon's roost materials
-                            HashMap<Integer, Integer> dragonsRoostGifts = DragonMeta.getDragonsRoostGifts(1);
-                            addMaterialsFromMap(dragonsRoostGifts);
-                            // add dragon stories
-                            addDragonStory(dragon.getDragonStoryId(1));
-                            addDragonStory(dragon.getDragonStoryId(2));
-                        }
-                        //Check if bond object already exists
-                        if (!arrayHasValue("dragon_id", id, "data", "dragon_reliability_list")) {
-                            getField("data", "dragon_reliability_list").getAsJsonArray().add(buildDragonBondObj(id));
-                        }
+                    if (Options.getFieldAsBoolean("maxDragonBonds")) {
+                        // add dragon's roost materials
+                        HashMap<Integer, Integer> dragonsRoostGifts = DragonMeta.getDragonsRoostGifts(1);
+                        addMaterialsFromMap(dragonsRoostGifts);
+                        // add dragon stories
+                        addDragonStory(dragon.getDragonStoryId(1));
+                        addDragonStory(dragon.getDragonStoryId(2));
+                    }
+                    //Check if bond object already exists
+                    if (!arrayHasValue("dragon_id", id, "data", "dragon_reliability_list")) {
+                        getField("data", "dragon_reliability_list").getAsJsonArray().add(buildDragonBondObj(id));
                     }
                 } else { // if you've owned this dragon before, then update dragon bonds
                     // Update dragon bond obj
@@ -1457,7 +1480,8 @@ public class JsonUtils {
         out.addProperty("dragon_id", id);
         out.addProperty("gettime", Instant.now().getEpochSecond());
         out.addProperty("last_contact_time", Instant.now().getEpochSecond());
-        if (Options.getFieldAsBoolean("maxDragonBonds")) {
+        boolean isArsene = id == 20050522;
+        if (Options.getFieldAsBoolean("maxDragonBonds") || isArsene) {
             out.addProperty("reliability_level", 30);
             out.addProperty("reliability_total_exp", 36300);
         } else {
@@ -1516,8 +1540,8 @@ public class JsonUtils {
             getFieldAsJsonArray("data", "album_dragon_list").add(buildDragonAlbumData(drgData));
             addDragonEncyclopediaBonus(drgData);
             //Add dragon bond obj
-            //Arsene check, and check if bond object already exists
-            if (id != 20050522 && !arrayHasValue("dragon_id", id, "data", "dragon_reliability_list")) {
+            //Check if bond object already exists
+            if (!arrayHasValue("dragon_id", id, "data", "dragon_reliability_list")) {
                 getField("data", "dragon_reliability_list").getAsJsonArray().add(buildDragonBondObj(id));
             }
         }
