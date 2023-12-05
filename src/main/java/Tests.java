@@ -69,6 +69,19 @@ public class Tests {
         return boolToString(offendingId == -1, offendingId);
     }
 
+    public static String allDragonsHaveBondTest() {
+        Set<Integer> ownedDragonIds =
+                JsonUtils.getSetFromField("dragon_id", "data", "dragon_list");
+        Set<Integer> ownedBondDragonIds =
+                JsonUtils.getSetFromField("dragon_id", "data", "dragon_reliability_list");
+        ownedDragonIds.removeAll(ownedBondDragonIds);
+        int offendingId = -1;
+        if (!ownedDragonIds.isEmpty()) {
+            offendingId = ownedDragonIds.iterator().next();
+        }
+        return boolToString(offendingId == -1, offendingId);
+    }
+
     public static boolean hasFlags(String... flags) {
         for (String flag : flags) {
             if(!testFlags.contains(flag)) {
@@ -105,6 +118,7 @@ public class Tests {
         Logging.log("noDupeStoryIdTest(): " + Tests.noDupeStoryIdTest());
         Logging.log("weaponPassivesIdTest(): " + Tests.weaponPassivesIdTest());
         Logging.log("weaponPassivesIdPerWeaponTest(): " + Tests.weaponPassivesIdPerWeaponTest());
+        Logging.log("allDragonsHaveBondTest(): " + Tests.allDragonsHaveBondTest());
         return didAllPass;
     }
 
