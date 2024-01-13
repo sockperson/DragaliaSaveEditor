@@ -113,6 +113,22 @@ public class AdventurerMeta {
         return 0;
     }
 
+    public int getMaxS1Level () {
+        if (id == 10750102) { // Mega Man
+            return 1;
+        } else {
+            return hasManaSpiral ? 4 : 3;
+        }
+    }
+
+    public int getMaxS2Level () {
+        if (id == 10750102) { // Mega Man
+            return 1;
+        } else {
+            return hasManaSpiral ? 3 : 2;
+        }
+    }
+
     public static String getElementString (int elementId) {
         switch (elementId) {
             case 1: return "Flame";

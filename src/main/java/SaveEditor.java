@@ -3,7 +3,7 @@ import java.util.List;
 public class SaveEditor {
 
     private static boolean isOutOfIDE = false;
-    private static final String version = "11.8";
+    private static final String version = "11.9";
 
     public static void main(String[] args){
         System.out.println("\nDragalia Save Editor (v" + version + ")\n");
@@ -119,6 +119,11 @@ public class SaveEditor {
         List<String> skippedTempAdventurers = JsonUtils.checkSkippedTempAdventurers();
         if(skippedTempAdventurers.size() > 0){
             System.out.println("Skipped raid welfare adventurers: " + Logging.listPrettify(skippedTempAdventurers) + " found.");
+            if (skippedTempAdventurers.size() > 20) {
+                System.out.println("(If a lot of adventurer names are being shown, then this " +
+                        "may be an indicator that the adventurer 'list_view_flag' field is not" +
+                        "being set or exported properly on the server the savefile came from.)");
+            }
             InputUtils.yesNoQuestion("\tWould you like to max out their friendship level and add them to your roster?",
                     "Done!",
                     JsonUtils::setAdventurerVisibleFlags);

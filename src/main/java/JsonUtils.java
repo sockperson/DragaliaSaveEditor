@@ -530,6 +530,32 @@ public class JsonUtils {
         return returnValue;
     }
 
+    public static boolean rebuildWithNoDupes (String fieldName, boolean toPrint, String listName) {
+        boolean returnValue = false;
+        JsonArray jsonArray = getFieldAsJsonArray("data", listName);
+        Set<Integer> ids = new HashSet<>();
+        JsonArray out = new JsonArray();
+        for (JsonElement jsonEle : jsonArray) {
+            JsonObject jsonObj = jsonEle.getAsJsonObject();
+            int value = jsonObj.get(fieldName).getAsInt();
+            if (ids.contains(value)) {
+                if (toPrint) {
+                    Logging.print("Value of '{0}' was already detected in array '{1}'",
+                            String.valueOf(value),
+                            listName);
+                    returnValue = true;
+                }
+            } else {
+                ids.add(value);
+                out.add(jsonObj);
+            }
+        }
+        //Replace current list
+        getFieldAsJsonObject("data").remove(listName);
+        getFieldAsJsonObject("data").add(listName, out);
+        return returnValue;
+    }
+
     private static Set<Integer> getOwnedStories() {
         //Compile list of adventurer stories in savedata
         Set<Integer> ownedStories = new HashSet<>();
@@ -592,11 +618,15 @@ public class JsonUtils {
     }
 
     public static void applyFixes() {
+        System.out.println("Applying fixes...");
         boolean fixed = fixMissingDragonStories();
         fixed |= fixMissingFirstAdventurerStories();
         fixed |= fixMissingDragonBonds();
+        fixed |= fixDupeStories();
         if (fixed) {
             System.out.println("Fixes were applied.");
+        } else {
+            System.out.println("No fixes needed to be applied.");
         }
     }
 
@@ -665,6 +695,10 @@ public class JsonUtils {
             }
         }
         return fixed;
+    }
+
+    private static boolean fixDupeStories() {
+        return rebuildWithNoDupes("unit_story_id", true, "unit_story_list");
     }
 
     public static void setEpithet (String name) {

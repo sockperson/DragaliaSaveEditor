@@ -90,8 +90,8 @@ public class Builders {
             out.addProperty("limit_break_count", adventurerData.getMaxLimitBreakCount());
             out.addProperty("is_new", 1);
             out.addProperty("gettime", getTime == -1 ? Instant.now().getEpochSecond() : getTime);
-            out.addProperty("skill_1_level", hasManaSpiral ? 4 : 3);
-            out.addProperty("skill_2_level", hasManaSpiral ? 3 : 2);
+            out.addProperty("skill_1_level", adventurerData.getMaxS1Level());
+            out.addProperty("skill_2_level", adventurerData.getMaxS2Level());
             out.addProperty("ability_1_level", hasManaSpiral ? 3 : 2);
             out.addProperty("ability_2_level", hasManaSpiral ? 3 : 2);
             out.addProperty("ability_3_level", adventurerData.getMaxA3Level()); //this varies per adventurer
